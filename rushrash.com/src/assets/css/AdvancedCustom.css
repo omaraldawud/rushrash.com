@@ -1,0 +1,221 @@
+
+
+
+.hover-gold {
+  transition: color 0.3s ease;
+}
+
+.hover-gold:hover {
+  color: #ffc107 !important;
+  text-decoration: underline !important;
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-nav {
+    justify-content: center !important;
+    margin: 1rem 0;
+  }
+  
+  .footer-cta {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+}
+
+/* .text-danger {
+  color: #0D6EFD !important;
+} */
+
+.accordion-button {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.text-adv-green {
+  color: #B8D16E;
+}
+
+.text-adv-green:hover {
+  color: #218838; /* Darker green on hover */
+}
+
+/* Main Menu */
+.main-link {
+  color: #d0e0f9;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.main-link:hover {
+  color: white; /* darker shade on hover */
+  text-decoration: underline;
+}
+
+.main-link.active {
+  color: white;  
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+/* for Cards */
+.creative-card {
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0707ed, #d41111);
+  box-shadow:
+    0 4px 6px rgba(200, 56, 71, 0.15),
+    0 10px 20px rgba(200, 56, 71, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.creative-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 12px 24px rgba(200, 56, 71, 0.3),
+    0 20px 40px rgba(200, 56, 71, 0.25);
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  height: 180px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.creative-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(200, 56, 71, 0.6);
+  color: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  border-radius: 16px 16px 0 0;
+}
+
+.creative-card:hover .overlay {
+  opacity: 1;
+}
+
+.creative-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+nav {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.main-link {
+  color: #2E86C9;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-link:hover,
+.main-link.active {
+  color: #DC3545;
+  text-decoration: none;
+}
+
+.main-link.active::after,
+.main-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #DC3545;
+}
+
+.brand-section img {
+  max-height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.brand-section img:hover {
+  filter: grayscale(0%);
+}
+
+
+/* Testimonials */
+#testimonial-tabs.nav-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* for Firefox */
+}
+
+#testimonial-tabs.nav-tabs::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari */
+}
+
+#testimonial-tabs .nav-link {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+
+.section-box {
+  background-color: #f9f9f9; /* or #f4f4f6, #eef2f7, etc. */
+  border: 1px solid #ddd;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.customer-feedback {
+  background-color: #f8f9fa;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.border-3 {
+  border-width: 3px!important;
+}

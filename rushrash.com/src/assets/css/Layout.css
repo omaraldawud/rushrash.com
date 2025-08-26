@@ -1,0 +1,35 @@
+/* Container spacing */
+.my-content-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .my-content-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-content {
+    order: 1;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  /* Make buttons/images adapt */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, .h1 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}

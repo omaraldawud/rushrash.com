@@ -1,0 +1,151 @@
+.printable-coupon-card {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #fff9f9 100%) !important;
+  border: 3px dashed #dc3545 !important;
+  height: 100%; /* Ensure all cards have equal height in row */
+}
+
+/* Remove the media query max-width constraints since grid will handle sizing */
+@media (min-width: 576px) {
+  .printable-coupon-card {
+    max-width: 100%; /* Let the grid control the width */
+  }
+}
+
+/* Optional: Add hover effect for better interactivity */
+.printable-coupon-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive sizing */
+@media (min-width: 576px) {
+  .printable-coupon-card {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .printable-coupon-card {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .printable-coupon-card {
+    max-width: 450px;
+  }
+}
+
+.coupon-title {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .coupon-title {
+    font-size: 1.4rem;
+  }
+}
+
+.coupon-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #dc3545 0%, #ffc107 50%, #dc3545 100%);
+  border-radius: 3px;
+}
+
+.coupon-image {
+  max-width: 150px;
+  border: 4px solid #dc3545;
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.3);
+}
+
+@media (min-width: 768px) {
+  .coupon-image {
+    max-width: 180px;
+  }
+}
+
+.discount-amount {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  padding: 1rem !important;
+  border: 3px dashed #ffc107 !important;
+  margin: 1rem 0;
+}
+
+.discount-figure {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+}
+
+.coupon-code-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 3px dashed #6c757d !important;
+  position: relative;
+}
+
+.coupon-code-section::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 3px solid #dc3545;
+  border-radius: 12px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.coupon-code-value {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fine-print {
+  border-top: 3px dashed #dee2e6 !important;
+}
+
+.cut-line-top,
+.cut-line-bottom {
+  border-top: 2px dashed #6c757d;
+  height: 2px;
+}
+
+.cut-line-bottom {
+  border-top: none;
+  border-bottom: 2px dashed #6c757d;
+}
+
+.scissor-icon {
+  background: white;
+  padding: 0.4rem;
+  border: 2px solid #6c757d;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+/* Print styles */
+@media print {
+  .printable-coupon-card {
+    box-shadow: none !important;
+    border: 4px dashed #000 !important;
+    max-width: 100% !important;
+  }
+  
+  .cut-line-top,
+  .cut-line-bottom {
+    display: block !important;
+  }
+}

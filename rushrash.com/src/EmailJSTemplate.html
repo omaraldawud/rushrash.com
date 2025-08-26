@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Email Preview</title>
+  </head>
+  <body style="background-color: #f0f2f5; padding: 20px">
+    <div
+      style="
+        font-family: system-ui, sans-serif, Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      "
+    >
+      <!-- Header with Logo and Company Name -->
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding: 15px;
+          background-color: #5aa9ff;
+          color: #fff;
+          border-radius: 6px;
+          margin-bottom: 10px;
+        "
+      >
+        <img
+          style="height: 50px"
+          src="http://localhost:5173/images/advanced-garage-door-inc-logo-tr.png"
+          alt="Advanced Garage Door Inc."
+        />
+        <div>
+          <h2 style="margin: 0; font-size: 18px">Advanced Garage Door Inc.</h2>
+          <p style="margin: 2px 0 0; font-size: 13px">
+            New Contact Form Submission &ndash; Please respond promptly
+          </p>
+        </div>
+      </div>
+      <!-- Menu Row -->
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          background-color: #d0e7ff;
+          padding: 8px 0;
+          border-radius: 6px;
+          font-size: 12px;
+          margin-bottom: 20px;
+        "
+      >
+        <a
+          style="color: #0d6efd; text-decoration: none"
+          href="https://advancedgaragedoorinc.com/garage_door_services.html"
+          >Garage Door Services</a
+        >
+        <a
+          style="color: #0d6efd; text-decoration: none"
+          href="https://advancedgaragedoorinc.com/garage_door_openers.html"
+          >Garage Door Openers</a
+        >
+        <a
+          style="color: #0d6efd; text-decoration: none"
+          href="https://advancedgaragedoorinc.com/garage_door_contactus.html"
+          >Contact Advance Garage Doors</a
+        >
+        <strong
+          ><a
+            style="color: #0d6efd; text-decoration: none"
+            href="tel:18005236677"
+            >📞<span style="color: #e03e2d">
+              Call Us Now (630) 241 - 2481</span
+            ></a
+          ></strong
+        >
+      </div>
+      <!-- Sender Info -->
+      <div
+        style="
+          margin-bottom: 20px;
+          padding: 15px;
+          border: 1px solid #e0e0e0;
+          border-radius: 6px;
+          background-color: #f9f9f9;
+        "
+      >
+        <table
+          role="presentation"
+          border="0"
+          width="100%"
+          cellspacing="0"
+          cellpadding="0"
+        >
+          <tbody>
+            <tr>
+              <!-- Avatar/Icon -->
+              <td
+                style="
+                  vertical-align: top;
+                  width: 60px;
+                  text-align: center;
+                  padding-right: 15px;
+                "
+              >
+                <div style="font-size: 28px">👤</div>
+              </td>
+              <!-- Details -->
+              <td style="vertical-align: top">
+                <div
+                  style="
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #0d6efd;
+                    margin-bottom: 4px;
+                  "
+                >
+                  {{name}}
+                </div>
+                <div style="font-size: 14px; color: #555; margin-bottom: 6px">
+                  <strong>Phone:</strong> {{phone}}
+                </div>
+                <div style="font-size: 14px; color: #555; margin-bottom: 6px">
+                  <strong>Email:</strong> {{email}}
+                </div>
+                <div style="font-size: 14px; color: #555; margin-bottom: 4px">
+                  <strong>Time:</strong> {{time}}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Message -->
+      <div
+        style="
+          margin-bottom: 20px;
+          padding: 15px;
+          border: 1px solid #e0e0e0;
+          border-radius: 6px;
+          background-color: #ffffff;
+        "
+      >
+        <div style="font-size: 15px; color: #333; line-height: 1.5">
+          {{message}}
+        </div>
+      </div>
+      <!-- Footer -->
+      <div
+        style="
+          font-size: 12px;
+          color: #888;
+          text-align: center;
+          margin-top: 20px;
+        "
+      >
+        This message was sent via the
+        <a
+          style="color: #0d6efd; text-decoration: none"
+          href="https://advancedgaragedoorinc.com/"
+          >Advanced Garage Door Inc</a
+        >
+        contact form.
+      </div>
+    </div>
+  </body>
+</html>

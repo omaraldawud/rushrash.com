@@ -1,0 +1,90 @@
+//
+//
+import { Container, Row, Col, Card } from "react-bootstrap";
+import TestimonialTabs from "../components/helpers/TestimonialTabs";
+import ServicesSection from "../components/sections/ServicesSection";
+import AboutUsSection from "../components/sections/AboutUsSection";
+// JSON-LD Scheme 7 Meta SEO
+import SEOMeta from "../components/seo/SEOMeta";
+import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
+
+// main
+export default function About() {
+  return (
+    <>
+      // AboutUsPage.jsx
+      <div>
+        {/* Breadcrumb */}
+        <BreadcrumbSchema
+          items={[
+            { name: "Home", url: "https://advancedgaragedoorinc.com" },
+            {
+              name: "About Us",
+              url: "https://advancedgaragedoorinc.com/about",
+            },
+          ]}
+        />
+
+        {/* FAQ Schema */}
+        <FAQSchema
+          questions={[
+            {
+              question: "How long has Advanced Garage Door been in business?",
+              answer:
+                "We've been proudly serving the Chicago suburbs since 2005.",
+            },
+            {
+              question: "What brands are you authorized to install?",
+              answer:
+                "We're authorized dealers for Amarr garage doors and Chamberlain/LiftMaster openers.",
+            },
+            {
+              question:
+                "Do you service both residential and commercial properties?",
+              answer:
+                "Yes, our certified technicians handle both residential and commercial garage door systems.",
+            },
+          ]}
+        />
+
+        {/* Service Schema */}
+        <ServiceSchema
+          services={[
+            {
+              name: "24/7 Emergency Services",
+              description:
+                "Immediate response for broken springs, off-track doors, and opener failures",
+              serviceType: "EmergencyService",
+            },
+            {
+              name: "Free Consultations",
+              description:
+                "On-site assessments and price estimates for new installations",
+              offers: { price: "0" },
+            },
+          ]}
+        />
+
+        {/* SEO Meta */}
+        <SEOMeta
+          title="About Advanced Garage Door Inc | Trusted Since 2005 | Chicago Suburbs"
+          description="Family-owned garage door company serving Chicago suburbs since 2005. Authorized dealers for Amarr and LiftMaster. 24/7 emergency service available."
+          keywords="about garage door company, Chicago garage door service, authorized Amarr dealer, LiftMaster installer"
+          url="https://www.advancedgaragedoorinc.com/about"
+          image="https://www.advancedgaragedoorinc.com/images/about-team.jpg"
+          twitterHandle="@AdvancedGarageDoor"
+        />
+      </div>
+      <Container fluid>
+        <AboutUsSection />
+        <ServicesSection />
+        {/* Testimonials */}
+        <Row className="mt-5 py-5 bg-light rounded shadow-sm">
+          <Col>
+            <TestimonialTabs />
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
+}

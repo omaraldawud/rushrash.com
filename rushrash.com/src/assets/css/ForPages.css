@@ -1,0 +1,207 @@
+.header-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00bfff);
+}
+
+.benefits-list li {
+  padding-left: 2rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%2328a745'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E") no-repeat left center;
+}
+
+.process-icon {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.garage-door-types-section {
+  background: linear-gradient(145deg, #fafafa, #ffffff);
+  border-radius: 16px;
+  padding: 0 2rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.section-header {
+  position: relative;
+}
+
+.section-header .header-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #c83647, #ff6f61);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.garage-types-container .card {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.garage-types-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* maintain aspect ratio, fill container */
+}
+
+
+
+.garage-type-image {
+  width: 100%;        /* full width of col-md-6 */
+  height: 350px;      /* fixed height */
+  overflow: hidden;
+  display: flex;
+}
+
+.garage-type-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* maintain aspect ratio, fill container */
+  transition: opacity 0.3s ease; /* smooth fade when images change */
+  flex-shrink: 0;
+}
+
+/* Inside Pages Links NOT Main Menu*/
+
+a.inner-pages-links {
+  position: relative;
+  color: #c83647 !important;   /* your brand color */
+  text-decoration: none !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a.inner-pages-links:hover,
+a.inner-pages-links:focus {
+  color: #942630 !important; /* darker shade for hover */
+  text-decoration: underline !important;
+}
+
+.card-footer {
+  padding-top: 1rem;
+  border-top: none; /* remove default border if desired */
+}
+
+/* Hero Section Styling */
+
+.title-underline {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--bs-primary), var(--bs-info));
+  border-radius: 2px;
+}
+
+
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  animation: pulseBorder 3s infinite;
+  pointer-events: none;
+}
+
+/* Door Type */
+/* --- Hero Section --- */
+.door-types-hero {
+  background: linear-gradient(135deg, #0d6efd 0%, #00c6ff 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+  color: #fff;
+}
+
+.door-types-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 60%);
+  pointer-events: none;
+}
+
+/* Title underline */
+.title-underline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #ffc107;
+  border-radius: 2px;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.4));
+}
+
+/* --- Content Boxes --- */
+.features-box,
+.brands-box {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  backdrop-filter: blur(5px);
+}
+
+/* --- Thumbnails --- */
+.image-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 8px;
+}
+
+.img-thumbnail {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* --- Divider --- */
+.divider {
+  height: 3px;
+  width: 70px;
+  background-color: #ffc107;
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .garage-type-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .door-types-hero {
+    padding: 1.5rem 0;
+  }
+  
+  h1.display-4 {
+    font-size: 2.2rem;
+  }
+}

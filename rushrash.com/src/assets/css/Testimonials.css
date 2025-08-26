@@ -1,0 +1,40 @@
+@media (max-width: 575.98px) {
+  .testimonial-section .card-body {
+    padding: 1rem !important;
+  }
+
+  .testimonial-section .card-text.fs-5 {
+    font-size: 1rem !important;
+  }
+
+  .testimonial-section .d-flex.align-items-start > div {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-section .bg-light.p-3.rounded-2 {
+    padding: 0.75rem !important;
+    font-size: 0.85rem;
+  }
+}
+/* Make the paragraph smaller and easier to read on mobile */
+@media (max-width: 575.98px) {
+  /* Target the descriptive paragraph below buttons */
+  .testimonial-description p {
+    font-size: 0.6rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: white; /* Optional: keep in theme with .text-warning */
+  }
+
+  /* Slightly reduce h2 font size on mobile */
+  .testimonial-header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust spacing in buttons container */
+  .testimonial-header .btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+

@@ -1,0 +1,114 @@
+/* --- HEADER STYLING --- */
+.header-sec, .footer-sec {
+  background: linear-gradient(135deg, #0a192f, #1b263b); /* dark tech blue gradient */
+  color: #fff;
+  border-bottom: 3px solid #e63946; /* red accent line */
+    position: relative; /* make it a containing block for pseudo-element */
+  overflow: hidden;   /* hide anything outside header */
+}
+/* Top scan-line (red, left → right) */
+.header-sec::after {
+  content: "";
+  position: absolute;
+  top: 27%; /* slightly below the top */
+  left: -100%;
+  width: 100%;
+  height: 2px;
+    background:  rgba(100, 255, 255, 0.5); /* bluish-white */
+  box-shadow: 0 0 6px rgba(100, 255, 255, 0.3), 0 0 12px rgba(100, 255, 255, 0.2);
+  animation: scanline-right 8s linear infinite, pulse 2s ease-in-out infinite; /* slower movement */
+}
+
+
+/* Movement Animations */
+@keyframes scanline-right {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes scanline-left {
+  0% { left: 100%; }
+  100% { left: -100%; }
+}
+
+/* Pulse opacity effect */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Animations */
+@keyframes scanline-right {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes scanline-left {
+  0% { left: 100%; }
+  100% { left: -100%; }
+}
+
+/* Animations */
+@keyframes scanline-right {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes scanline-left {
+  0% { left: 100%; }
+  100% { left: -100%; }
+}
+/* --- Utility Bar --- */
+.utility-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.social-icons a {
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #e63946;
+}
+
+/* --- Logo + Company --- */
+.logo-img {
+  max-height: 80px;
+  width: auto;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.4));
+}
+
+.company-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+.company-subtitle {
+  font-size: 0.95rem;
+  color: #64ffda; /* neon tech green accent */
+  font-weight: 500;
+}
+
+/* --- Phone CTA --- */
+.phone-cta span {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.phone-box a {
+  background: #e63946;
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.phone-box a:hover {
+  background: #ff4d5a;
+  transform: scale(1.05);
+}

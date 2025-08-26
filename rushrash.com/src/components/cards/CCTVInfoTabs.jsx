@@ -1,0 +1,129 @@
+// src/components/cards/CCTVInfoTabs.jsx
+import React, { useState } from "react";
+import cctvTypeSections from "../../assets/data/cctv_types_sections_ds";
+import cctvSystemsDS from "../../assets/data/cctv_dvr_systems_ds";
+
+export default function CCTVInfoTabs() {
+  const tabs = [
+    {
+      label: "Camera Systems",
+      data: cctvTypeSections,
+      icon: "bi-camera-video",
+    },
+    { label: "DVRs / NVRs", data: cctvSystemsDS, icon: "bi-hdd-stack" },
+  ];
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <section>
+      <div className="container">
+        {/* Tab Navigation - Improved Styling */}
+        <div className="d-flex gap-1 bg-light p-2 mb-2 rounded-3 flex-wrap shadow-sm">
+          {tabs.map((tab, idx) => (
+            <button
+              key={idx}
+              className={`btn btn-lg d-flex align-items-center ${
+                idx === activeTab
+                  ? "btn-primary shadow"
+                  : "btn-outline-primary bg-white text-dark"
+              } rounded-2 transition-all`}
+              onClick={() => setActiveTab(idx)}
+              style={{
+                minWidth: "160px",
+                transition: "all 0.3s ease",
+              }}
+            >
+              <i className={`bi ${tab.icon} me-2`}></i>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Active Tab Content */}
+        <div className="tab-content">
+          {tabs[activeTab].data.map((section, idx) => (
+            <div
+              key={idx}
+              className="d-flex flex-column flex-md-row align-items-start mb-4 p-4 rounded-4 bg-white shadow-sm border-0 hover-lift"
+              style={{
+                transition: "transform 0.2s ease, box-shadow 0.2s ease",
+              }}
+            >
+              {/* Text Content */}
+              <div className="flex-grow-1 pe-md-4">
+                <div className="d-flex align-items-center mb-3">
+                  {section.icon && (
+                    <div className="bg-primary bg-opacity-10 p-2 rounded-3 me-3">
+                      <i
+                        className={`bi ${section.icon} text-primary`}
+                        style={{ fontSize: "1.5rem" }}
+                      ></i>
+                    </div>
+                  )}
+                  <h4 className="mb-0 text-dark fw-bold">{section.heading}</h4>
+                </div>
+
+                {section.items && section.items.length > 0 && (
+                  <ul className="list-unstyled mt-3 mb-0">
+                    {section.items.map((item, i) => (
+                      <li key={i} className="d-flex align-items-start mb-2">
+                        <i className="bi bi-check-circle-fill text-success me-2 mt-1 flex-shrink-0"></i>
+                        <span className="text-muted">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              {/* Image - Improved Styling */}
+              {section.image && (
+                <div className="flex-shrink-0 mt-4 mt-md-0">
+                  <div
+                    className="rounded-3 overflow-hidden shadow-sm"
+                    style={{
+                      width: "280px",
+                      height: "200px",
+                      minWidth: "280px",
+                    }}
+                  >
+                    <img
+                      src={section.image}
+                      alt={section.heading}
+                      className="img-fluid h-100 w-100"
+                      style={{
+                        objectFit: "cover",
+                        transition: "transform 0.3s ease",
+                      }}
+                      onMouseOver={(e) =>
+                        (e.currentTarget.style.transform = "scale(1.05)")
+                      }
+                      onMouseOut={(e) =>
+                        (e.currentTarget.style.transform = "scale(1)")
+                      }
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Add this to your global CSS */}
+      <style jsx>{`
+        .hover-lift:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+        }
+        .transition-all {
+          transition: all 0.3s ease;
+        }
+        .btn-outline-primary.bg-white:hover {
+          background: var(--bs-primary) !important;
+          color: white !important;
+        }
+      `}</style>
+    </section>
+  );
+}
