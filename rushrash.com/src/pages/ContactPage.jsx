@@ -1,8 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 
 import ContactForm from "../components/cta-forms/ContactForm";
-import WarningInfobox from "../components/helpers/WarningInfobox";
-import TestimonialTabs from "../components/helpers/TestimonialTabs";
 // JSON-LD Scheme 7 Meta SEO
 import SEOMeta from "../components/seo/SEOMeta";
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
@@ -122,16 +120,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <WarningInfobox
-          title="Broken Springs"
-          description="There are two kinds of garage door springs — torsion springs and extension springs..."
-          warningNote="Save on service calls by replacing both springs when one fails."
-          dangerContent="Garage door springs are under extreme tension. Improper handling can cause serious injury or death."
-          imageSrc="/images/parts/garage-door-springs.jpg"
-          imageAlt="Garage door spring mechanism"
-          imageCaption="Torsion spring system (left) vs extension springs (right)"
-          className="my-4" // Optional additional classes
-        />
+
         <div className="mt-3">
           <a
             href="garage_door_services.html"
@@ -150,12 +139,6 @@ export default function Contact() {
             </span>
           </a>
         </div>
-        {/* Testimonials */}
-        <Row className="mt-5 py-5 bg-light rounded shadow-sm">
-          <Col>
-            <TestimonialTabs />
-          </Col>
-        </Row>
       </section>
     </>
   );

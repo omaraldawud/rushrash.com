@@ -2,20 +2,17 @@
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import FaqSection from "../components/sections/FAqSection";
-import ServicesCard from "../components/cards/ServicesCard";
-import WarningInfobox from "../components/helpers/WarningInfobox";
 import PageInfoBox from "../components/cards/PageInfoBox";
 import SEOMeta from "../components/seo/SEOMeta";
 import { ServiceSchema, FAQSchema } from "../schemas";
-import { garageServicesForSchemas } from "../assets/data/services_schema";
 
 // Function
-export default function ServicesPage() {
+export default function POSInstallationPage() {
   return (
     <Container fluid>
       {/* JSON-LS for Home Page */}
       {/* only Featured Services for home page*/}
-      <ServiceSchema services={garageServicesForSchemas} />
+      <ServiceSchema services={ServiceSchema} />
       <FAQSchema
         questions={[
           {
@@ -67,26 +64,7 @@ export default function ServicesPage() {
           </Link>
         </div>
       </div>
-      <Row className="d-flex">
-        <ServicesCard />
-      </Row>
-      <Row>
-        <Col>
-          <div className="astra-infobox d-flex flex-column flex-md-row gap-4 p-4 bg-light rounded-3 shadow-sm border border-light">
-            {/* Text Content */}
-            <WarningInfobox
-              title="Broken Springs"
-              description="There are two kinds of garage door springs — torsion springs and extension springs..."
-              warningNote="Save on service calls by replacing both springs when one fails."
-              dangerContent="Garage door springs are under extreme tension. Improper handling can cause serious injury or death."
-              imageSrc="/images/parts/garage-door-springs.jpg"
-              imageAlt="Garage door spring mechanism"
-              imageCaption="Torsion spring system (left) vs extension springs (right)"
-              className="my-4" // Optional additional classes
-            />
-          </div>
-        </Col>
-      </Row>
+
       {/* Local Customer Jobs */}
       <Row className="rounded shadow-sm">
         <Col>

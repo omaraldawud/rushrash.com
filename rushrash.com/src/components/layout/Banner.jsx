@@ -33,7 +33,6 @@ export default function Banner({
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          zIndex: 1,
           filter: "brightness(0.85)",
         }
       : {};
@@ -79,7 +78,7 @@ export default function Banner({
                   {allServices.map((svc, idx) => (
                     <div key={idx} className="col-6 col-md-4">
                       <a
-                        href={`/services#${svc.id}`}
+                        href={svc.service_href}
                         className="text-decoration-none"
                       >
                         <div className="service-card-small d-flex flex-column align-items-center p-2 h-100">

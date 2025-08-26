@@ -4,7 +4,7 @@ export default function SEOMeta({
   keywords,
   url,
   image,
-  author = "Omar Aldawud, Hostitwise for Advanced Garage Door Inc.",
+  author = "Omar Aldawud, Hostitwise for Rushrash Inc.",
   twitterHandle,
 }) {
   return (

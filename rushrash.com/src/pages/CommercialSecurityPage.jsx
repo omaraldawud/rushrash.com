@@ -3,9 +3,7 @@ import { useState } from "react";
 import "../assets/css/HeroSection.css";
 import { useLocation } from "react-router-dom";
 // import GarageDoorTypes from "../components/functional/GarageDoorTypes";
-import ServiceArea from "../components/sections/ServiceArea";
 import PageInfoBox from "../components/cards/PageInfoBox";
-import USAMadeBanner from "../components/cards/USAMadeBanner";
 import SEOMeta from "../components/seo/SEOMeta";
 // JSON-LD Scheme
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
@@ -86,14 +84,6 @@ export default function CommercialSecurityPage() {
             info_image2="/images/commercial/commercial-garage-doors-rolling_sheet.jpg"
             info_image3="/images/commercial/commercial_door_openers.jpg"
           />
-          {/* Service Area all props are taking from LocationData.ds */}
-          <ServiceArea />
-
-          {/* <!-- Replacement Process --> */}
-          <ReplacementProcess pageType="Commercial" />
-
-          {/* Made in USA */}
-          <USAMadeBanner variant="commercial" />
 
           {/* <!-- Openers Section --> */}
           <div className="opener-section text-center mt-5 p-lg-5 bg-dark text-white rounded-3">

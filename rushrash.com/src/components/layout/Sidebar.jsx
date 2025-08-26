@@ -1,5 +1,5 @@
 import "../../assets/css/SideBar.css";
-import SafetyTipsSidebar from "../helpers/SafetyTipsSidebar";
+import SafetyTipsSidebar from "../functional/SafetyTipsSidebar";
 
 function Sidebar() {
   return (
@@ -13,7 +13,7 @@ function Sidebar() {
         <div className="card-body">
           <div className="component-item">
             <div className="component-icon text-warning">
-              <i className="bi bi-record-circle-fill"></i>
+              <i className="bi bi-record-circle"></i>
             </div>
             <div className="component-content">
               <strong>CAMERAS</strong>
@@ -26,7 +26,7 @@ function Sidebar() {
 
           <div className="component-item">
             <div className="component-icon text-warning">
-              <i className="bi bi-hdd-stack-fill"></i>
+              <i className="bi bi-hdd-stack"></i>
             </div>
             <div className="component-content">
               <strong>DVR/NVR</strong>
@@ -39,7 +39,7 @@ function Sidebar() {
 
           <div className="component-item">
             <div className="component-icon text-warning">
-              <i className="bi bi-ethernet"></i>
+              <i className="bi bi-hdd-network"></i>
             </div>
             <div className="component-content">
               <strong>CABLES & NETWORK</strong>

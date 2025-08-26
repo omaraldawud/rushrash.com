@@ -1,12 +1,11 @@
 // src/components/SchemaMarkup.jsx
 // used for global business info (address, hours, contact):
 export function GlobalBusinessSchema({
-  businessName = "Advanced Garage Door Company",
+  businessName = "Rushrash Inc a CCTV Security Company",
   businessType = "Service", // or "Service" if no address
-  businessUrl = "https://advancedgaragedoorinc.com",
+  businessUrl = "https://rushrash.com",
   logoUrl = "/images/logo.png",
-  phone = "+1-630-241-2481",
-  priceRange = "$75-$2000",
+  phone = "+1-630-800-8077",
   address = {
     street: "123 Main St",
     city: "Naperville",
@@ -41,7 +40,6 @@ export function GlobalBusinessSchema({
             image: `${businessUrl}${logoUrl}`,
             url: businessUrl,
             telephone: phone,
-            priceRange: priceRange,
             ...(address && {
               address: {
                 "@type": "PostalAddress",

@@ -5,12 +5,11 @@ import companyInfo from "../../assets/data/rr_company_ds";
 import "../../assets/css/Header.css";
 import logo from "../../assets/images/logo/rushrash-inc-logo-350-tr.png";
 
-//
 export default function Header() {
-  let header_subtitle = "CCTV & Access Control Systems";
+  const header_subtitle = "CCTV & Access Control Systems";
 
   return (
-    <header className="header-sec shadow-sm">
+    <header className="header-sec shadow-sm" style={{ position: "relative" }}>
       <div className="container">
         {/* --- Top Utility Bar --- */}
         <div className="d-flex justify-content-between align-items-center py-1 utility-bar">
@@ -36,7 +35,7 @@ export default function Header() {
                   </a>
                 </div>
               </div>
-            </div>{" "}
+            </div>
             {companyInfo.socialProfiles.map((profile) => (
               <a
                 key={profile.name}
@@ -51,7 +50,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* --- Main Row --- */}
+        {/* --- Main Row: Logo + Menu --- */}
         <div className="d-flex justify-content-between align-items-center py-4">
           {/* Left: Logo + Company Name */}
           <div className="d-flex align-items-center">
@@ -59,11 +58,13 @@ export default function Header() {
             <div className="ms-3">
               <h1 className="company-title mb-0">{companyInfo.companyName}</h1>
               <small className="company-subtitle">{header_subtitle}</small>
-            </div>{" "}
+            </div>
           </div>
 
-          {/* Right: Navigation */}
-          <MainMenu className="d-none d-md-block" />
+          {/* Main Menu */}
+          <div style={{ position: "relative", zIndex: 2000 }}>
+            <MainMenu className="d-none d-md-block" />
+          </div>
         </div>
       </div>
     </header>

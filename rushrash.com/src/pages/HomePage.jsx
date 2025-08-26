@@ -1,11 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 //
-import TestimonialTabs from "../components/helpers/TestimonialTabs";
-// import ServicesCard from "../components/cards/ServicesCard";
 import Brands from "../components/functional/Brands";
 import SEOMeta from "../components/seo/SEOMeta";
 import PageInfoBox from "../components/cards/PageInfoBox";
-// import CameraInfoBox from "../components/cards/CameraInfoBox";
 import cctvTypeSections from "../assets/data/cctv_types_sections_ds";
 import cctvDvrSystemsDS from "../assets/data/cctv_dvr_systems_ds";
 import CCTVInfoTabs from "../components/cards/CCTVInfoTabs";
@@ -25,63 +22,75 @@ export default function HomePage() {
   return (
     <>
       <div>
-        {/* JSON-LS for Home Page */}
+        {/* JSON-LD for CCTV Security Home Page */}
         <BreadcrumbSchema
-          items={[{ name: "Home", url: "https://advancedgaragedoorinc.com" }]}
+          items={[{ name: "Home", url: "https://rushrash.com" }]}
         />
+
         <FAQSchema
           questions={[
             {
-              question: "Do garage doors need annual maintenance?",
+              question: "Do I need CCTV cameras for my business?",
               answer:
-                "Yes! Yearly professional maintenance of doors and openers prevents 85% of emergency repairs by catching worn springs, misaligned sensors, and lubrication needs early.",
+                "Yes. CCTV systems help deter theft, monitor employee safety, and provide critical video evidence in case of incidents.",
             },
             {
-              question: "What garage door brands do you install?",
+              question: "Can I access my security cameras remotely?",
               answer:
-                "We're authorized dealers for top-rated residential brands including C.H.I, Amarr, and Clopay doors - all backed by manufacturer warranties.",
+                "Absolutely. We provide smart CCTV solutions with mobile and desktop apps, allowing you to view live and recorded footage from anywhere.",
             },
             {
-              question: "Do you offer emergency repairs for homeowners?",
+              question: "Do you offer installation and maintenance?",
               answer:
-                "Yes! Our 24/7 emergency service handles broken springs, off-track doors, and opener failures with same-day response in most cases.",
+                "Yes. Our certified technicians handle complete installation, configuration, and ongoing maintenance of CCTV and access control systems.",
+            },
+            {
+              question: "Are your systems scalable for large properties?",
+              answer:
+                "Yes. We design scalable security solutions for small offices, warehouses, retail stores, and enterprise-level facilities.",
             },
           ]}
         />
-        {/* only Featured Services for home page*/}
+
+        {/* Featured Services for CCTV & Security */}
         <ServiceSchema
           services={[
             {
-              name: "Free Door Estimates",
-              description: "On-site measurements and price quotes",
-            },
-            {
-              name: "Over the Phone Estimates",
-              description: "Call us estimate and price quotes",
-            },
-            {
-              name: "Emergency Garage Door Spring Replacement",
+              name: "CCTV Installation",
               description:
-                "24/7 Garage Door torsion spring repair oe replacement",
-              offers: { price: "149" },
+                "Professional installation of indoor and outdoor security cameras with HD or 4K recording.",
             },
             {
-              name: "Service Call",
-              description: "Garage Door Service Call",
-              offers: { price: "75" },
+              name: "Remote Monitoring",
+              description:
+                "Access live camera feeds and recorded footage remotely from any device.",
+            },
+            {
+              name: "Access Control Systems",
+              description:
+                "Keycard, keypad, and biometric access solutions for businesses of all sizes.",
+              offers: { price: "499" },
+            },
+            {
+              name: "Maintenance & Support",
+              description:
+                "Ongoing support and preventive maintenance to keep your security system reliable.",
+              offers: { price: "1999" },
             },
           ]}
         />
-        {/* <SEO {...pageData} /> */}
+
+        {/* SEO Meta for CCTV Security */}
         <SEOMeta
-          title="Local Garage Door Repair & Installation | Garage Door Openers"
-          description="Advanced Garage Doors provide a verity of local garage door repair and installation services. We install all types of garage doors and garage door openers."
-          keywords="local garage door, garage door repair, garage door installation, garage door maintenance, emergency garage service, residential garage doors, commercial garage doors"
-          url="https://www.advancedgaragedoorinc.com/"
-          image="https://www.advancedgaragedoorinc.com/images/garage-door-service.jpg"
-          twitterHandle="@AdvancedGarageDoor"
+          title="CCTV Security & Access Control Solutions | Rushrash Inc."
+          description="Rushrash Inc. provides professional CCTV installation, remote monitoring, and access control systems for businesses and homes. Secure your property with cutting-edge surveillance solutions."
+          keywords="CCTV installation, security cameras, access control, business security, remote monitoring, biometric access, surveillance systems"
+          url="https://rushrash.com/"
+          image="https://rushrash.com/wp-content/uploads/2023/05/rushrash-logo-23.png"
+          twitterHandle="@RushrashInc"
         />
       </div>
+
       {/* main content */}
       <Container fluid>
         {/* Top Main Content */}

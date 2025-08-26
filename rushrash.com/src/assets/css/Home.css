@@ -76,3 +76,19 @@
     line-height: 1.5;
   }
 }
+
+/* Ensure dropdowns appear above other content */
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  z-index: 1001;
+}
+
+/* If you're using a fixed header, add these styles */
+header {
+  position: relative;
+  z-index: 999; /* Lower than the menu's z-index */
+}

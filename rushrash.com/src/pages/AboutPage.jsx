@@ -1,8 +1,6 @@
 //
 //
 import { Container, Row, Col, Card } from "react-bootstrap";
-import TestimonialTabs from "../components/helpers/TestimonialTabs";
-import ServicesSection from "../components/sections/ServicesSection";
 import AboutUsSection from "../components/sections/AboutUsSection";
 // JSON-LD Scheme 7 Meta SEO
 import SEOMeta from "../components/seo/SEOMeta";
@@ -77,13 +75,6 @@ export default function About() {
       </div>
       <Container fluid>
         <AboutUsSection />
-        <ServicesSection />
-        {/* Testimonials */}
-        <Row className="mt-5 py-5 bg-light rounded shadow-sm">
-          <Col>
-            <TestimonialTabs />
-          </Col>
-        </Row>
       </Container>
     </>
   );

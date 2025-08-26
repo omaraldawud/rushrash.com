@@ -9,7 +9,7 @@ import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 
 //
 // Function Starts
-export default function ResidentialSecurityPage() {
+export default function SecurityConsultationPage() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 

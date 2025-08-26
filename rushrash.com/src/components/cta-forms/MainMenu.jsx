@@ -8,8 +8,17 @@ const MainMenu = () => {
   const location = useLocation();
   const navRef = useRef(null);
 
+  const menuItemStyle = {
+    borderRadius: "6px",
+    padding: "0.5rem 1rem",
+    margin: "0.15rem 0",
+    transition: "all 0.2s ease",
+    display: "flex",
+    alignItems: "center",
+  };
+
   const getLinkClass = (path) => {
-    const isHomeLink = path === "/index.html";
+    const isHomeLink = path === "/";
     const isActive =
       location.pathname === path || (isHomeLink && location.pathname === "/");
     return `dropdown-item${isActive ? " active" : ""}`;
@@ -67,6 +76,8 @@ const MainMenu = () => {
       style={{
         borderRadius: "8px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        position: "relative", // Ensure proper positioning context
+        zIndex: 1100, // Set a high z-index to ensure it appears above other elements
       }}
     >
       <div className="container-fluid justify-content-end">
@@ -85,7 +96,7 @@ const MainMenu = () => {
             {/* Home */}
             <li className="nav-item">
               <Link
-                to="/index.html"
+                to="/"
                 className={`nav-link${
                   location.pathname === "/" ? " active" : ""
                 }`}
@@ -96,111 +107,145 @@ const MainMenu = () => {
             </li>
 
             {/* Services */}
+            {/* Services / Mega Menu */}
             <li className="nav-item dropdown">
-              <a
-                href="#!"
+              <span
                 className={getDropdownClass([
-                  "/garage_door_services.html",
-                  "/garage_door_repair.html",
+                  "/services/cctv-installation",
+                  "/services/access-control",
+                  "/services/home-surveillance",
+                  "/services/it-services",
+                  "/services/pos-installation",
+                  "/services/security-consultation",
                 ])}
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Services
-              </a>
-              <ul className="dropdown-menu dropdown-menu-end p-2 shadow rounded-3 border-0">
-                <li>
-                  <Link
-                    to="/garage_door_services.html"
-                    className={getLinkClass("/garage_door_services.html")}
-                    onClick={closeParentDropdown}
-                    style={{
-                      borderRadius: "6px",
-                      padding: "0.5rem 1rem",
-                      margin: "0.15rem 0",
-                      transition: "all 0.2s ease",
-                    }}
-                  >
-                    <i className="bi bi-door-open me-2"></i> G.D. Services
-                  </Link>
-                </li>
-                <li>
-                  <hr className="my-2 border border-secondary border-dashed" />
-                </li>
-                <li>
-                  <Link
-                    to="/garage_door_repair.html"
-                    className={getLinkClass("/garage_door_repair.html")}
-                    onClick={closeParentDropdown}
-                    style={{
-                      borderRadius: "6px",
-                      padding: "0.5rem 1rem",
-                      margin: "0.15rem 0",
-                      transition: "all 0.2s ease",
-                    }}
-                  >
-                    <i className="bi bi-lightning me-2"></i> Repair Services
-                  </Link>
-                </li>
+              </span>
+              <ul
+                className="dropdown-menu p-3 shadow rounded-3 mega-menu dropdown-menu-end border-0"
+                style={{
+                  borderLeft: "4px solid #0d6efd",
+                  width: "700px",
+                  zIndex: 1001,
+                }}
+              >
+                <div
+                  className="mega-menu-title mb-3 px-2"
+                  style={{
+                    paddingBottom: "0.5rem",
+                    borderBottom: "2px dashed #dee2e6",
+                  }}
+                >
+                  <h6 className="m-0">
+                    <i
+                      className="bi bi-gear-fill me-2"
+                      style={{ fontSize: "1.1rem", color: "#0d6efd" }}
+                    ></i>
+                    Our Professional Services
+                  </h6>
+                </div>
+
+                <div className="row gx-4">
+                  {/* Column 1 */}
+                  <div className="col-6 col-lg-4">
+                    <li>
+                      <Link
+                        to="/services/cctv-installation"
+                        className={getLinkClass("/services/cctv-installation")}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-camera-video me-2"></i> CCTV
+                        Installation & Design
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/access-control"
+                        className={getLinkClass("/services/access-control")}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-door-closed me-2"></i> Access
+                        Control Systems
+                      </Link>
+                    </li>
+                  </div>
+
+                  {/* Column 2 */}
+                  <div className="col-6 col-lg-4">
+                    <li>
+                      <Link
+                        to="/services/home-surveillance"
+                        className={getLinkClass("/services/home-surveillance")}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-house-door me-2"></i> Home
+                        Surveillance Systems
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/it-services"
+                        className={getLinkClass("/services/it-services")}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-laptop me-2"></i> IT Services
+                      </Link>
+                    </li>
+                  </div>
+
+                  {/* Column 3 */}
+                  <div className="col-6 col-lg-4">
+                    <li>
+                      <Link
+                        to="/services/pos-installation"
+                        className={getLinkClass("/services/pos-installation")}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-bag-check me-2"></i> Point-of-Sale
+                        Installation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/security-consultation"
+                        className={getLinkClass(
+                          "/services/security-consultation"
+                        )}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-shield-check me-2"></i> Security
+                        Consultation
+                      </Link>
+                    </li>
+                  </div>
+                </div>
               </ul>
             </li>
 
             {/* Residential Dropdown */}
-            <li className="nav-item dropdown">
-              <a
-                href="#!"
-                className={getDropdownClass([
-                  "/garage_door_residential.html",
-                  "/garage_door_openers.html",
-                ])}
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Residential
-              </a>
-              <ul className="dropdown-menu dropdown-menu-end p-2 shadow rounded-3 border-0">
-                <li>
-                  <Link
-                    to="/garage_door_residential.html"
-                    className={getLinkClass("/garage_door_residential.html")}
-                    onClick={closeParentDropdown}
-                    style={{
-                      borderRadius: "6px",
-                      padding: "0.5rem 1rem",
-                      margin: "0.15rem 0",
-                      transition: "all 0.2s ease",
-                    }}
-                  >
-                    <i className="bi bi-door-open me-2"></i> Doors
-                  </Link>
-                </li>
-                <li>
-                  <hr className="my-2" />
-                </li>
-                <li>
-                  <Link
-                    to="/garage_door_openers.html"
-                    className={getLinkClass("/garage_door_openers.html")}
-                    onClick={closeParentDropdown}
-                    style={{
-                      borderRadius: "6px",
-                      padding: "0.5rem 1rem",
-                      margin: "0.15rem 0",
-                      transition: "all 0.2s ease",
-                    }}
-                  >
-                    <i className="bi bi-lightning me-2"></i> Openers
-                  </Link>
-                </li>
-              </ul>
-            </li>
-
-            {/* Commercial Dropdown */}
             <li className="nav-item">
               <Link
-                to="/garage_door_commercial.html"
+                to="/residential-cctv-security"
+                className="nav-link"
+                onClick={() => setExpanded(false)}
+              >
+                Residential
+              </Link>
+            </li>
+
+            {/* Commercial */}
+            <li className="nav-item">
+              <Link
+                to="/commercial-cctv-security"
                 className="nav-link"
                 onClick={() => setExpanded(false)}
               >
@@ -223,6 +268,8 @@ const MainMenu = () => {
                 style={{
                   borderLeft: "4px solid #0d6efd !important",
                   width: "600px",
+
+                  zIndex: 1001, // Ensure dropdown appears above the menu
                 }}
               >
                 <div
@@ -245,8 +292,8 @@ const MainMenu = () => {
                   <div className="col-6 col-lg-4">
                     <li>
                       <Link
-                        to="/garage_door_aboutus.html"
-                        className={getLinkClass("/garage_door_aboutus.html")}
+                        to="/about-rushrash-inc"
+                        className={getLinkClass("/about-rushrash-inc")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -261,10 +308,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/garage_door_testimonials.html"
-                        className={getLinkClass(
-                          "/garage_door_testimonials.html"
-                        )}
+                        to="/cctv-testimonials"
+                        className={getLinkClass("/cctv-testimonials")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -279,10 +324,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/garage_door_service_area.html"
-                        className={getLinkClass(
-                          "/garage_door_service_area.html"
-                        )}
+                        to="/cctv-services"
+                        className={getLinkClass("/cctv-services")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -301,10 +344,8 @@ const MainMenu = () => {
                   <div className="col-6 col-lg-4">
                     <li>
                       <Link
-                        to="/garage_door_specials_coupons.html"
-                        className={getLinkClass(
-                          "/garage_door_specials_coupons.html"
-                        )}
+                        to="/cctv-coupons"
+                        className={getLinkClass("/cctv-coupons")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -319,10 +360,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/garage_door_safety_tips.html"
-                        className={getLinkClass(
-                          "/garage_door_safety_tips.html"
-                        )}
+                        to="/cctv-safety-tips"
+                        className={getLinkClass("/cctv-safety-tips")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -337,8 +376,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/garage_door_faqs.html"
-                        className={getLinkClass("/garage_door_faqs.html")}
+                        to="/cctv-faqs"
+                        className={getLinkClass("/cctv-faqs")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -358,8 +397,8 @@ const MainMenu = () => {
                     <li></li>
                     <li>
                       <Link
-                        to="/legal-page.html"
-                        className={getLinkClass("/legal-page.html")}
+                        to="/legal-page"
+                        className={getLinkClass("/legal-page")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -374,8 +413,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/legal-page.html"
-                        className={getLinkClass("/legal-page.html")}
+                        to="/legal-page"
+                        className={getLinkClass("/legal-page")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -391,8 +430,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/legal-page.html"
-                        className={getLinkClass("/legal-page.html")}
+                        to="/legal-page"
+                        className={getLinkClass("/legal-page")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -414,7 +453,7 @@ const MainMenu = () => {
             {/* Contact */}
             <li className="nav-item">
               <Link
-                to="/garage_door_contactus.html"
+                to="/contact-rushrash-inc"
                 className="nav-link"
                 onClick={() => setExpanded(false)}
               >

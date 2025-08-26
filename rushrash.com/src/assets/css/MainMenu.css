@@ -2,6 +2,11 @@
 .navbar {
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: visible !important;
+}
+
+.nav-item.dropdown {
+  position: relative; /* parent for absolute mega-menu */
 }
 
 .nav-link {
@@ -63,8 +68,14 @@
 
 
 .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 600px;
   min-width: 300px;
+  background: #fff;
+  z-index: 2000;
+  display: none;
 }
 
 .mega-menu li {
@@ -83,7 +94,10 @@
   margin-right: 0.5rem;
 }
 
-
+.nav-item.dropdown:hover > .mega-menu,
+.nav-item.dropdown.show > .mega-menu {
+  display: block; /* show on hover or click */
+}
 
 .mega-menu-title {
   font-weight: 600;        /* semi-bold */
@@ -142,4 +156,35 @@
 }
 
 
+/* Make sure navbar always sits above banners/sections */
+.navbar {
+  position: relative;
+  z-index: 1000; 
+}
 
+/* Dropdown menus above everything else */
+
+/* Mega menu fix (sometimes col divs clip it) */
+.mega-menu {
+  z-index: 2000;
+  position: absolute;
+  top: 100%; /* just below the nav */
+  left: auto;
+  right: 0;
+}
+
+.header-sec {
+  position: relative;
+  z-index: 100;
+}
+
+/* Ensure the menu dropdowns appear above everything */
+.navbar {
+  position: relative;
+  z-index: 101;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 2000;
+}

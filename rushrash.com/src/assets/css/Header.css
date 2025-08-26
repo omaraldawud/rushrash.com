@@ -4,7 +4,6 @@
   color: #fff;
   border-bottom: 3px solid #e63946; /* red accent line */
     position: relative; /* make it a containing block for pseudo-element */
-  overflow: hidden;   /* hide anything outside header */
 }
 /* Top scan-line (red, left → right) */
 .header-sec::after {

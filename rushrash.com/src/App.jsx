@@ -4,11 +4,16 @@ import Layout from "./components/layout/Layout";
 
 // Pages
 import HomePage from "./pages/HomePage";
-import About from "./pages/About";
-import ServicesPage from "./pages/ServicesPage";
-import Contact from "./pages/Contact";
+import AboutPage from "./pages/AboutPage";
+import CCTVServicesPage from "./pages/CCTVServicesPage";
+import ContactPage from "./pages/ContactPage";
 import ResidentialSecurityPage from "./pages/ResidentialSecurityPage";
 import CommercialSecurityPage from "./pages/CommercialSecurityPage";
+import POSInstallationPage from "./pages/POSInstallationPage";
+import SecurityConsultationPage from "./pages/SecurityConsultationPage";
+import AccessControlPage from "./pages/AccessControlPage";
+import ITServicesPage from "./pages/ITServicesPage";
+import HomeSurveillancePage from "./pages/HomeSurveillancePage";
 
 // Schema
 import { GlobalBusinessSchema } from "./schemas/GlobalBusinessSchema";
@@ -31,23 +36,45 @@ function App() {
         <Route path="/" element={<HomePage />} />
 
         {/* About */}
-        <Route path="/about" element={<About />} />
+        <Route path="/about-rushrash-inc" element={<AboutPage />} />
 
         {/* Services */}
-        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/cctv-services" element={<CCTVServicesPage />} />
+
+        <Route
+          path="/services/cctv-installation"
+          element={<CCTVServicesPage />}
+        />
+        <Route
+          path="/services/access-control"
+          element={<AccessControlPage />}
+        />
+        <Route
+          path="/services/home-surveillance"
+          element={<HomeSurveillancePage />}
+        />
+        <Route path="/services/it-services" element={<ITServicesPage />} />
+        <Route
+          path="/services/pos-installation"
+          element={<POSInstallationPage />}
+        />
+        <Route
+          path="/services/security-consultation"
+          element={<SecurityConsultationPage />}
+        />
 
         {/* Contact */}
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact-rushrash-inc" element={<ContactPage />} />
 
         {/* Residential Security */}
         <Route
-          path="/residential-security"
+          path="/residential-cctv-security"
           element={<ResidentialSecurityPage />}
         />
 
         {/* Commercial Security */}
         <Route
-          path="/commercial-security"
+          path="/commercial-cctv-security"
           element={<CommercialSecurityPage />}
         />
 
