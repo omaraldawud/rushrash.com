@@ -1,5 +1,4 @@
 import "../../assets/css/SideBar.css";
-import SafetyTipsSidebar from "../functional/SafetyTipsSidebar";
 
 function Sidebar() {
   return (
@@ -125,9 +124,6 @@ function Sidebar() {
         <div className="card-header bg-danger text-white">
           <i className="bi bi-shield-check me-2"></i>
           CCTV Safety Tips
-        </div>
-        <div className="card-body">
-          <SafetyTipsSidebar />
         </div>
       </div>
     </aside>

@@ -6,7 +6,7 @@ import SEOMeta from "../components/seo/SEOMeta";
 import CommercialSection from "../components/sections/CommercialSection";
 // JSON-LD Scheme
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
-
+import { Container } from "react-bootstrap";
 //
 // Function Starts
 export default function HomeSurveillancePage() {
@@ -82,8 +82,9 @@ export default function HomeSurveillancePage() {
           ]}
         />
       </div>
-      <Container fluid>
+      <Container>
         <h2>HomeSurveillancePage</h2>
+        <PageInfoBox pageType="residential" />
       </Container>
     </>
   );

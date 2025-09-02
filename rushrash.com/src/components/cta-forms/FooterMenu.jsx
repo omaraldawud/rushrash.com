@@ -1,60 +1,60 @@
+// src/components/layout/FooterMenu.tsx
 export default function FooterMenu() {
   return (
-    <nav className="d-flex flex-wrap justify-content-md-around gap-2 gap-md-3">
-      <a href="/" className="footer-link text-decoration-none fw-medium small">
-        Home
-      </a>{" "}
-      <a
-        href="/garage_door_contactus.html"
-        className="footer-link text-decoration-none fw-medium small"
-      >
-        Contacts
-      </a>
-      <a
-        href="/garage_door_services.html"
-        className="footer-link text-decoration-none fw-medium small"
-      >
-        Access Control
-      </a>
-      <a
-        href="/garage_door_repair.html"
-        className="footer-link text-decoration-none fw-medium small"
-      >
-        NVRs / DVRs
-      </a>
-      <a
-        href="/garage_door_openers.html"
-        className="footer-link text-decoration-none fw-medium small"
-      >
-        Technology CCTV
-      </a>
-      <a
-        href="/garage_door_service_area.html"
-        className="footer-link text-decoration-none fw-medium small"
-      >
-        Service Area
-      </a>
-      <a
-        href="/legal-page.html"
-        className="footer-link text-decoration-none fw-medium small"
-      >
-        <small>
-          <em>LEGAL (Copyright | Privacy Policy | Terms of Service)</em>
-        </small>
-      </a>
+    <div className="footer-menu-wrapper">
+      <nav className="footer-menu d-flex flex-wrap justify-content-end gap-3">
+        <a href="/" className="footer-link d-flex align-items-center">
+          <i className="bi bi-house-door me-1"></i> Home
+        </a>
+        <a
+          href="/contact-rushrash-inc"
+          className="footer-link d-flex align-items-center"
+        >
+          <i className="bi bi-telephone me-1"></i> Contacts
+        </a>
+        <a href="/" className="footer-link d-flex align-items-center">
+          <i className="bi bi-camera-video me-1"></i> CCTV Systems
+        </a>
+        <a href="/" className="footer-link d-flex align-items-center">
+          <i className="bi bi-pc me-1"></i> IT & PoS
+        </a>
+        <a href="/" className="footer-link d-flex align-items-center">
+          <i className="bi bi-key-fill me-1"></i> Access Control
+        </a>
+        <a href="/legal-page" className="footer-link d-flex align-items-center">
+          <i className="bi bi-shield-lock me-1"></i>
+          <small>
+            <em>Legal</em>
+          </small>
+        </a>
+      </nav>
+      <hr className="footer-divider" />
       <style jsx>{`
+        .footer-menu-wrapper {
+          text-align: center;
+        }
+
         .footer-link {
-          color: #3d96d6;
-          font-size: 0.6rem;
+          color: #ffd166;
+          font-size: 0.7rem;
+          font-weight: 600;
+          text-decoration: none;
           transition: color 0.2s ease;
+          margin-right: 10px;
         }
 
         .footer-link:hover,
         .footer-link:hover em {
-          color: #f8f9fa;
+          color: #ffffff;
           text-decoration: underline;
         }
+
+        .footer-divider {
+          border-color: rgba(255, 254, 254, 0.4);
+          margin: 0.5rem auto 0;
+          width: 80%;
+        }
       `}</style>
-    </nav>
+    </div>
   );
 }

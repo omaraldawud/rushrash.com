@@ -71,13 +71,13 @@ const MainMenu = () => {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light bg-light py-1"
+      className="navbar navbar-expand-lg navbar-light py-1"
       ref={navRef}
       style={{
         borderRadius: "8px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         position: "relative", // Ensure proper positioning context
-        zIndex: 1100, // Set a high z-index to ensure it appears above other elements
+        zIndex: 1100,
       }}
     >
       <div className="container-fluid justify-content-end">
@@ -106,17 +106,35 @@ const MainMenu = () => {
               </Link>
             </li>
 
-            {/* Services */}
+            {/* Residential */}
+            <li className="nav-item">
+              <Link
+                to="/residential-cctv-security"
+                className="nav-link"
+                onClick={() => setExpanded(false)}
+              >
+                Residential
+              </Link>
+            </li>
+
+            {/* Commercial */}
+            <li className="nav-item">
+              <Link
+                to="/commercial-cctv-security"
+                className="nav-link"
+                onClick={() => setExpanded(false)}
+              >
+                Commercial
+              </Link>
+            </li>
             {/* Services / Mega Menu */}
             <li className="nav-item dropdown">
               <span
                 className={getDropdownClass([
                   "/services/cctv-installation",
                   "/services/access-control",
-                  "/services/home-surveillance",
                   "/services/it-services",
                   "/services/pos-installation",
-                  "/services/security-consultation",
                 ])}
                 role="button"
                 data-bs-toggle="dropdown"
@@ -173,6 +191,19 @@ const MainMenu = () => {
                         Control Systems
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        to="/services/security-consultation"
+                        className={getLinkClass(
+                          "/services/security-consultation"
+                        )}
+                        style={menuItemStyle}
+                        onClick={closeParentDropdown}
+                      >
+                        <i className="bi bi-shield-check me-2"></i> Security
+                        Consultation
+                      </Link>
+                    </li>
                   </div>
 
                   {/* Column 2 */}
@@ -198,10 +229,6 @@ const MainMenu = () => {
                         <i className="bi bi-laptop me-2"></i> IT Services
                       </Link>
                     </li>
-                  </div>
-
-                  {/* Column 3 */}
-                  <div className="col-6 col-lg-4">
                     <li>
                       <Link
                         to="/services/pos-installation"
@@ -213,44 +240,21 @@ const MainMenu = () => {
                         Installation
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/services/security-consultation"
-                        className={getLinkClass(
-                          "/services/security-consultation"
-                        )}
-                        style={menuItemStyle}
-                        onClick={closeParentDropdown}
-                      >
-                        <i className="bi bi-shield-check me-2"></i> Security
-                        Consultation
-                      </Link>
+                  </div>
+                  {/* {Column 3 */}
+                  <div className="col-6 col-lg-4">
+                    <li className="list-unstyled">
+                      <div className="p-3 bg-light rounded">
+                        <h6 className="fw-bold mb-2">Need Help Choosing?</h6>
+                        <p className="small text-muted mb-0">
+                          Our security experts can help you select the perfect
+                          system for your specific needs and budget.
+                        </p>
+                      </div>
                     </li>
                   </div>
                 </div>
               </ul>
-            </li>
-
-            {/* Residential Dropdown */}
-            <li className="nav-item">
-              <Link
-                to="/residential-cctv-security"
-                className="nav-link"
-                onClick={() => setExpanded(false)}
-              >
-                Residential
-              </Link>
-            </li>
-
-            {/* Commercial */}
-            <li className="nav-item">
-              <Link
-                to="/commercial-cctv-security"
-                className="nav-link"
-                onClick={() => setExpanded(false)}
-              >
-                Commercial
-              </Link>
             </li>
 
             {/* About / Mega Menu */}
@@ -261,7 +265,7 @@ const MainMenu = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                About
+                Corporate
               </span>
               <ul
                 className="dropdown-menu p-3 shadow rounded-3 mega-menu dropdown-menu-end border-0"
@@ -284,7 +288,7 @@ const MainMenu = () => {
                       className="bi bi-door-open me-2"
                       style={{ fontSize: "1.1rem", color: "#0d6efd" }}
                     ></i>
-                    Everything You Need For Garage Doors & Openers!
+                    Everything You Need For Security & CCTV Services!
                   </h6>
                 </div>
                 <div className="row gx-4">
@@ -303,7 +307,24 @@ const MainMenu = () => {
                           alignItems: "center",
                         }}
                       >
-                        <i className="bi bi-building me-2"></i> Our Company
+                        <i className="bi bi-building me-2"></i> About Rushrash
+                        Inc.
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/contact-rushrash-inc"
+                        className={getLinkClass("/cctv-testimonials")}
+                        style={{
+                          borderRadius: "6px",
+                          padding: "0.5rem 1rem",
+                          margin: "0.15rem 0",
+                          transition: "all 0.2s ease",
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        <i className="bi bi-headset me-2"></i> Contact Us
                       </Link>
                     </li>
                     <li>
@@ -322,6 +343,11 @@ const MainMenu = () => {
                         <i className="bi bi-chat-quote me-2"></i> Testimonials
                       </Link>
                     </li>
+                  </div>
+
+                  {/* Column 2 */}
+                  <div className="col-6 col-lg-4">
+                    {/* Service Area  */}
                     <li>
                       <Link
                         to="/cctv-services"
@@ -338,10 +364,6 @@ const MainMenu = () => {
                         <i className="bi bi-geo-alt me-2"></i> Service Area
                       </Link>
                     </li>
-                  </div>
-
-                  {/* Column 2 */}
-                  <div className="col-6 col-lg-4">
                     <li>
                       <Link
                         to="/cctv-coupons"
@@ -356,22 +378,6 @@ const MainMenu = () => {
                         }}
                       >
                         <i className="bi bi-tag me-2"></i> Specials
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/cctv-safety-tips"
-                        className={getLinkClass("/cctv-safety-tips")}
-                        style={{
-                          borderRadius: "6px",
-                          padding: "0.5rem 1rem",
-                          margin: "0.15rem 0",
-                          transition: "all 0.2s ease",
-                          display: "flex",
-                          alignItems: "center",
-                        }}
-                      >
-                        <i className="bi bi-shield-check me-2"></i> Safety Tips
                       </Link>
                     </li>
                     <li>
@@ -448,17 +454,6 @@ const MainMenu = () => {
                   </div>
                 </div>
               </ul>
-            </li>
-
-            {/* Contact */}
-            <li className="nav-item">
-              <Link
-                to="/contact-rushrash-inc"
-                className="nav-link"
-                onClick={() => setExpanded(false)}
-              >
-                Contact
-              </Link>
             </li>
           </ul>
         </div>

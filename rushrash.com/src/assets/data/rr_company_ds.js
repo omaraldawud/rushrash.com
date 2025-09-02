@@ -26,6 +26,17 @@ const companyInfo = {
       icon: "bi-twitter",
     },
     { name: "yelp", url: "https://yelp.com/biz/rushrash", icon: "bi-yelp" },
+    {
+      name: "MapQuest",
+      url: "https://www.mapquest.com/us/illinois/rushrash-inc-345435157",
+      icon: "bi-map",
+    },
+
+    {
+      name: "Google",
+      url: "https://share.google/io2fjs4V3XE6ZAQoZ",
+      icon: "bi-google",
+    },
   ],
 };
 

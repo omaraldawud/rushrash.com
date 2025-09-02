@@ -11,7 +11,7 @@ import ResidentialSecurityPage from "./pages/ResidentialSecurityPage";
 import CommercialSecurityPage from "./pages/CommercialSecurityPage";
 import POSInstallationPage from "./pages/POSInstallationPage";
 import SecurityConsultationPage from "./pages/SecurityConsultationPage";
-import AccessControlPage from "./pages/AccessControlPage";
+import AccessControlServicesPage from "./pages/AccessControlServicesPage";
 import ITServicesPage from "./pages/ITServicesPage";
 import HomeSurveillancePage from "./pages/HomeSurveillancePage";
 
@@ -39,6 +39,8 @@ function App() {
         <Route path="/about-rushrash-inc" element={<AboutPage />} />
 
         {/* Services */}
+        <Route path="/services/it-services" element={<ITServicesPage />} />
+
         <Route path="/cctv-services" element={<CCTVServicesPage />} />
 
         <Route
@@ -47,13 +49,12 @@ function App() {
         />
         <Route
           path="/services/access-control"
-          element={<AccessControlPage />}
+          element={<AccessControlServicesPage />}
         />
         <Route
           path="/services/home-surveillance"
           element={<HomeSurveillancePage />}
         />
-        <Route path="/services/it-services" element={<ITServicesPage />} />
         <Route
           path="/services/pos-installation"
           element={<POSInstallationPage />}

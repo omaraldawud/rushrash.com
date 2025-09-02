@@ -16,7 +16,7 @@ export function ServiceSchema({ services = [], serviceType = "Service" }) {
           description: service.description,
           provider: {
             "@type": "LocalBusiness",
-            "@id": "https://advancedgaragedoorinc.com/#business", // Links to GlobalBusinessSchema
+            "@id": "https://rushrash.com/#business", // Links to GlobalBusinessSchema
           },
           ...(service.areaServed && {
             areaServed: {

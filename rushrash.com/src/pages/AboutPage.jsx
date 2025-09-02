@@ -1,24 +1,28 @@
-//
-//
-import { Container, Row, Col, Card } from "react-bootstrap";
+// pages/About.tsx
+import { Container } from "react-bootstrap";
 import AboutUsSection from "../components/sections/AboutUsSection";
-// JSON-LD Scheme 7 Meta SEO
 import SEOMeta from "../components/seo/SEOMeta";
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 
-// main
+//
+
+import PageInfoBox from "../components/cards/PageInfoBox";
+import img1 from "../assets/images/cctv-cams/cctv-system-installation.jpg";
+import img2 from "../assets/images/banners/cctv-header.jpg";
+
+//
 export default function About() {
   return (
     <>
-      // AboutUsPage.jsx
+      {/* Schemas  */}
       <div>
         {/* Breadcrumb */}
         <BreadcrumbSchema
           items={[
-            { name: "Home", url: "https://advancedgaragedoorinc.com" },
+            { name: "Home", url: "https://rushrashinc.com" },
             {
               name: "About Us",
-              url: "https://advancedgaragedoorinc.com/about",
+              url: "https://rushrashinc.com/about-rushrash-inc",
             },
           ]}
         />
@@ -27,20 +31,19 @@ export default function About() {
         <FAQSchema
           questions={[
             {
-              question: "How long has Advanced Garage Door been in business?",
+              question: "How long has Rushrash Inc. been in business?",
               answer:
-                "We've been proudly serving the Chicago suburbs since 2005.",
+                "We’ve been proudly delivering advanced security solutions for residential and commercial clients since 2005.",
             },
             {
-              question: "What brands are you authorized to install?",
+              question: "What security brands do you work with?",
               answer:
-                "We're authorized dealers for Amarr garage doors and Chamberlain/LiftMaster openers.",
+                "We are authorized dealers for top-rated CCTV, access control, and smart security equipment providers.",
             },
             {
-              question:
-                "Do you service both residential and commercial properties?",
+              question: "Do you serve both homes and businesses?",
               answer:
-                "Yes, our certified technicians handle both residential and commercial garage door systems.",
+                "Yes. Our certified technicians provide tailored solutions for residential, commercial, and multi-site facilities.",
             },
           ]}
         />
@@ -49,31 +52,63 @@ export default function About() {
         <ServiceSchema
           services={[
             {
-              name: "24/7 Emergency Services",
+              name: "Residential CCTV Installation & Design",
               description:
-                "Immediate response for broken springs, off-track doors, and opener failures",
+                "Professional home security camera system installation with custom design for optimal property protection and remote monitoring capabilities.",
+              serviceType: "InstallationService",
+            },
+            {
+              name: "Commercial CCTV Installation & Design",
+              description:
+                "Enterprise-grade surveillance system installation for businesses, warehouses, and commercial properties with advanced monitoring features.",
+              serviceType: "InstallationService",
+            },
+            {
+              name: "Access Control Systems",
+              description:
+                "Professional installation of keyless entry systems, biometric access, and integrated security management solutions for enhanced property security.",
+              serviceType: "InstallationService",
+            },
+            {
+              name: "IT Services & Network Solutions",
+              description:
+                "Comprehensive IT support, network setup, and system integration services for seamless security technology operation.",
+              serviceType: "MaintenanceService",
+            },
+            {
+              name: "Point-of-Sale Installation & Setup",
+              description:
+                "Professional POS system installation, configuration, and integration with security systems for retail and business operations.",
+              serviceType: "InstallationService",
+            },
+            {
+              name: "24/7 Emergency Security Support",
+              description:
+                "Round-the-clock technical support and emergency security system service for immediate response to security issues.",
               serviceType: "EmergencyService",
             },
             {
-              name: "Free Consultations",
+              name: "Free Security Consultation",
               description:
-                "On-site assessments and price estimates for new installations",
-              offers: { price: "0" },
+                "Comprehensive site assessments, security system design, and cost estimates for new installations with no obligation.",
+              serviceType: "ConsultationService",
             },
           ]}
         />
 
         {/* SEO Meta */}
         <SEOMeta
-          title="About Advanced Garage Door Inc | Trusted Since 2005 | Chicago Suburbs"
-          description="Family-owned garage door company serving Chicago suburbs since 2005. Authorized dealers for Amarr and LiftMaster. 24/7 emergency service available."
-          keywords="about garage door company, Chicago garage door service, authorized Amarr dealer, LiftMaster installer"
-          url="https://www.advancedgaragedoorinc.com/about"
-          image="https://www.advancedgaragedoorinc.com/images/about-team.jpg"
-          twitterHandle="@AdvancedGarageDoor"
+          title="About Rushrash Inc | Trusted CCTV & Access Control Experts"
+          description="Rushrash Inc. is a trusted provider of CCTV, access control, and smart security systems. Serving residential and commercial clients with reliable, professional solutions."
+          keywords="CCTV installation, access control, security company, smart surveillance, commercial security, residential security"
+          url="https://rushrashinc.com/about"
+          image="https://rushrashinc.com/images/about-team.jpg"
+          twitterHandle="@RushrashInc"
         />
       </div>
       <Container fluid>
+        <PageInfoBox pageType="aboutus" info_image1={img1} info_image2={img2} />
+
         <AboutUsSection />
       </Container>
     </>

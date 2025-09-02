@@ -1,10 +1,10 @@
 //
 // src/assets/data/ctv_dvr_systems_ds .js
 import imgDVR from "../images/dvrs/cctv-nvr-installation.jfif";
-import imgPoENVR from "../images/dvrs/cctv-nvr-installation.jfif";
-import imgWirelessNVR from "../images/dvrs/cctv-nvr-installation.jfif";
-import imgStandaloneNVR from "../images/dvrs/cctv-nvr-installation.jfif";
-import imgSoftwareNVR from "../images/dvrs/cctv-nvr-installation.jfif";
+import imgPoENVR from "../images/dvrs/cctv-dvr-8204e.jpg";
+import imgWirelessNVR from "../images/dvrs/nvr-wifi.jfif";
+import imgStandaloneNVR from "../images/dvrs/standalone-nvr.jfif";
+import imgSoftwareNVR from "../images/dvrs/software-based-nvr.jfif";
 
 const cctvDvrSystemsDS = [
   {
@@ -15,7 +15,8 @@ const cctvDvrSystemsDS = [
       "Cameras: Uses analog cameras that capture and send raw analog footage.",
       "Cabling: Connects to cameras via coaxial cables, each with separate power cables.",
       "Processing: Built-in analog-to-digital converter processes footage for recording and viewing.",
-      "System Type: Standalone device with self-contained operation and separate power source.",
+      "At least H.264 Digital Video Recorders (DVR)System ",
+      "Type: Standalone device with self-contained operation and separate power source.",
     ],
     bgColor: "#f3f6fb",
   },
@@ -25,7 +26,7 @@ const cctvDvrSystemsDS = [
     image: imgPoENVR,
     items: [
       "Cameras: Works with IP cameras that process video data on the camera.",
-      "Cabling: Ethernet cable provides both data and power (PoE).",
+      "Cabling: Ethernet cable provides both data and power (PoE: Power over Ethernet) over a single standard Ethernet cable (like Cat5e, Cat6, etc.)",
       "Processing: Camera encodes video digitally before sending to NVR.",
       "System Type: Convenient, scalable solution for wired IP systems.",
     ],

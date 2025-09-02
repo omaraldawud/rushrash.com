@@ -1,57 +1,30 @@
 // src/data/services.js
+// 4 services buttons on every page.
+
 export const services = [
   {
     id: "cctv",
     title: "CCTV Installation & Design",
-    subtitle: "Protect your property with professional CCTV solutions",
-    description: "Custom CCTV solutions tailored to your home or business.",
     icon: "bi-camera-video",
-    heroImage: "/images/services/cctv.jpg",
     service_href: "/cctv-services",
   },
+
   {
     id: "access_control",
     title: "Access Control Systems",
-    subtitle: "Secure your business with advanced access control",
-    description: "Secure your premises with advanced access control devices.",
     icon: "bi-key",
-    heroImage: "/images/services/access-control.jpg",
     service_href: "/services/access-control",
   },
   {
     id: "it_services",
     title: "IT Services",
-    subtitle: "Reliable IT support for your business operations",
-    description: "Network setup, maintenance, and IT support for businesses.",
     icon: "bi-laptop",
-    heroImage: "/images/services/it-services.jpg",
     service_href: "/services/it-services",
   },
   {
     id: "pos",
     title: "Point-of-Sale Installation",
-    subtitle: "Seamless POS installation & configuration",
-    description: "Efficient POS setup and configuration for retail operations.",
     icon: "bi-cash-stack",
-    heroImage: "/images/services/pos.jpg",
-    service_href: "/services/pos-installatio",
-  },
-  {
-    id: "home_surveillance",
-    title: "Home Surveillance Systems",
-    subtitle: "Monitor and protect your home remotely",
-    description: "Monitor and protect your home remotely.",
-    icon: "bi-house",
-    heroImage: "/images/services/home-surveillance.jpg",
-    service_href: "/services/home-surveillance",
-  },
-  {
-    id: "consultation",
-    title: "Security Consultation",
-    subtitle: "Expert advice on CCTV and access control planning",
-    description: "Expert advice on CCTV and access control planning.",
-    icon: "bi-person-check",
-    heroImage: "/images/services/consultation.jpg",
-    service_href: "/services/security-consultation",
+    service_href: "/services/pos-installation",
   },
 ];

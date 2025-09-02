@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import cctvTypeSections from "../../assets/data/cctv_types_sections_ds";
 import cctvSystemsDS from "../../assets/data/cctv_dvr_systems_ds";
+import posSystemsDS from "../../assets/data/pos_systems_ds";
+import accessControlSystemsDS from "../../assets/data/access_control_systems_ds";
+import brandsForTabsDS from "../../assets/data/brands_for_tabs_ds";
 
+//
 export default function CCTVInfoTabs() {
   const tabs = [
     {
@@ -10,7 +14,14 @@ export default function CCTVInfoTabs() {
       data: cctvTypeSections,
       icon: "bi-camera-video",
     },
-    { label: "DVRs / NVRs", data: cctvSystemsDS, icon: "bi-hdd-stack" },
+    { label: "DVRs/NVRs", data: cctvSystemsDS, icon: "bi-cash" },
+    { label: "PoS", data: posSystemsDS, icon: "bi-cash" },
+    {
+      label: "Access Control",
+      data: accessControlSystemsDS,
+      icon: "bi-fingerprint",
+    },
+    { label: "Brands", data: brandsForTabsDS, icon: "bi-tags" },
   ];
 
   const [activeTab, setActiveTab] = useState(0);
@@ -39,31 +50,62 @@ export default function CCTVInfoTabs() {
             </button>
           ))}
         </div>
+        {/* Active Tab Content */}
 
         {/* Active Tab Content */}
         <div className="tab-content">
           {tabs[activeTab].data.map((section, idx) => (
             <div
               key={idx}
-              className="d-flex flex-column flex-md-row align-items-start mb-4 p-4 rounded-4 bg-white shadow-sm border-0 hover-lift"
+              className="d-flex flex-column flex-md-row align-items-start mb-4 p-4 rounded-4 shadow-sm border-0 hover-lift"
               style={{
                 transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                backgroundColor: section.bgColor,
               }}
             >
               {/* Text Content */}
               <div className="flex-grow-1 pe-md-4">
                 <div className="d-flex align-items-center mb-3">
-                  {section.icon && (
+                  {/* --- CHANGED SECTION START --- */}
+                  {/* Check if this is the Brands tab AND this section has a logo */}
+                  {tabs[activeTab].label === "Brands" && section.logo ? (
+                    // Render the brand logo
+                    <div
+                      className="bg-light p-2 rounded-3 me-3"
+                      style={{
+                        width: "60px",
+                        height: "60px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <img
+                        src={section.logo}
+                        alt={`${section.heading} logo`}
+                        className="img-fluid"
+                        style={{
+                          maxHeight: "40px",
+                          maxWidth: "100%",
+                          objectFit: "contain",
+                        }}
+                      />
+                    </div>
+                  ) : section.icon ? (
+                    // Fallback: Render the icon for all other tabs/sections
                     <div className="bg-primary bg-opacity-10 p-2 rounded-3 me-3">
                       <i
                         className={`bi ${section.icon} text-primary`}
                         style={{ fontSize: "1.5rem" }}
                       ></i>
                     </div>
-                  )}
+                  ) : null}
+                  {/* --- CHANGED SECTION END --- */}
+
                   <h4 className="mb-0 text-dark fw-bold">{section.heading}</h4>
                 </div>
 
+                {/* ... rest of your items list code remains unchanged ... */}
                 {section.items && section.items.length > 0 && (
                   <ul className="list-unstyled mt-3 mb-0">
                     {section.items.map((item, i) => (

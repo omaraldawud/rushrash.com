@@ -1,114 +1,122 @@
+// components/sections/AboutUsSection.tsx
+//images
+import ourStory from "../../assets/images/ourStory-tr.png";
+import authPartners from "../../assets/images/security-locks/security-locks-s3.jpg";
 //
 //
+import { services as allServices } from "../../assets/data/rr_services_ds";
 
+//
 export default function AboutUsSection() {
   return (
-    <section className="about-us p-4 bg-light">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 mx-auto">
-            {/* Main About Content */}
-            <div className="mb-5">
-              <h2 className="display-5 fw-bold text-primary mb-4">
-                Welcome to Advanced Garage Doors
-              </h2>
+    <section className="about-us bg-light">
+      <div className="container py-5">
+        {/* Hero / Intro */}
+        <div className="text-center mb-5">
+          <h2 className="display-5 fw-bold text-primary mb-3">
+            Welcome to Rushrash Inc.
+          </h2>
+          <p className="lead text-secondary">
+            Your trusted partner in{" "}
+            <strong>CCTV, Access Control, and Smart Security</strong> for homes
+            and businesses.
+          </p>
+        </div>
 
-              <p className="lead">
-                We are proud to serve the Chicago Northwest, West, and Far West
-                Suburbs as well as South suburbs.
-              </p>
-
-              <div className="mb-4">
-                <p>
-                  We provide the best garage doors and garage door openers
-                  services and enjoy working with our customers. Our certified
-                  technicians are prepared to answer all of your questions.
-                </p>
-                <p>
-                  Whether you need repairs or installations services, Advanced
-                  Garage Door Company is here to serve you and provide you with
-                  high quality service and ensure that we leave you each and
-                  every time with a safe garage door that provides quality
-                  performance for years to come.
-                </p>
-              </div>
-
-              <div className="bg-white p-4 rounded shadow-sm mb-4">
-                <h3 className="h5 text-primary mb-3">Why Choose Us?</h3>
-                <ul className="list-unstyled">
-                  <li className="mb-2">
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>{" "}
-                    Available for both residential and commercial services
-                  </li>
-                  <li className="mb-2">
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>{" "}
-                    Trucks loaded with all parts needed for immediate repairs
-                  </li>
-                  <li className="mb-2">
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>{" "}
-                    Technicians on-duty 24/7/365
-                  </li>
-                  <li className="mb-2">
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>{" "}
-                    Service all makes and models of garage doors and openers
-                  </li>
-                  <li className="mb-2">
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>{" "}
-                    Licensed, bonded, and insured
-                  </li>
-                  <li className="mb-2">
-                    <i className="bi bi-check-circle-fill text-success me-2"></i>{" "}
-                    Evening and weekend appointments available
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Brand Partnerships */}
-            <div className="mb-5">
-              <h3 className="h4 text-primary mb-3">Authorized Dealers</h3>
-              <p>
-                We are authorized resellers and installers for{" "}
-                <strong>Amarr Garage Door</strong> and
-                <strong> Chamberlain/Liftmaster Door Opener</strong>. We offer
-                same day service and parts for all makes of garage doors and
-                openers.
-              </p>
-              <p>
-                We offer more choices, more service, and more product knowledge.
-                We hope that you find this site useful and look forward to
-                working with you.
-              </p>
-            </div>
-
-            {/* Services List */}
-            <div>
-              <h3 className="h4 text-primary mb-3">Our Services</h3>
-              <div className="row">
-                {[
-                  "Custom Wood Doors",
-                  "Broken Spring Replacement",
-                  "New Doors Installation",
-                  "Section Replacements",
-                  "Electric Door Openers",
-                  "Cable & Rollers Replacement",
-                  "Service on all Makes & Models",
-                  "Radio Controls",
-                  "Safety Equipment",
-                  "Weather Seals",
-                  "Preventive Maintenance",
-                  "24/7 Emergency Service",
-                ].map((service, index) => (
-                  <div key={index} className="col-md-6 mb-2">
-                    <div className="d-flex align-items-center">
-                      <i className="bi bi-wrench text-primary me-2"></i>
-                      <span>{service}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        {/* Company Story with alternating image */}
+        <div className="row align-items-center mb-5 g-4">
+          <div className="col-lg-6 order-lg-1 justify-content-center">
+            <img
+              src={ourStory}
+              alt="Our Security Team"
+              className="ms-5 ps-5"
+              style={{ maxHeight: "350px" }}
+            />
           </div>
+          <div className="col-lg-6 order-lg-2">
+            <h3 className="h4 text-primary mb-3">Our Story</h3>
+            <p>
+              For nearly two decades, we’ve been helping families and businesses
+              protect what matters most. Our certified technicians combine
+              experience with cutting-edge security equipment to deliver
+              tailored, reliable solutions.
+            </p>
+            <p>
+              From single-family homes to multi-site enterprises, we design
+              scalable systems with real-time monitoring, smart alerts, and
+              seamless integration with access control and alarm systems.
+            </p>
+          </div>
+        </div>
+
+        {/* Why Choose Us Cards */}
+        <div className="mb-5">
+          <h3 className="h4 text-primary mb-4 text-center">Why Choose Us</h3>
+          <div className="row g-3">
+            {[
+              "Residential & Commercial Experts",
+              "Certified Technicians & Licensed Installers",
+              "Authorized Partners with Leading Brands",
+              "24/7 Monitoring & Emergency Support",
+              "Custom Solutions for Homes & Businesses Security",
+            ].map((item, index) => (
+              <div key={index} className="col-md-6 col-lg-4">
+                <div className="card h-100 shadow-sm border-0">
+                  <div className="card-body d-flex align-items-start">
+                    <i className="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                    <p className="card-text mb-0">{item}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Authorized Dealers Section */}
+        <div className="row align-items-center mb-5 g-4">
+          <div className="col-lg-5">
+            <img
+              src={authPartners}
+              alt="Authorized Security Partners"
+              className="img-fluid rounded shadow"
+            />
+          </div>
+
+          {/* Authorized Dealers */}
+          <div className="col-lg-7">
+            <h3 className="h4 text-primary mb-3">Authorized Dealers</h3>
+            <p>
+              We partner with industry-leading manufacturers to bring you
+              certified, reliable security solutions. Our partnerships ensure
+              every installation has full warranty coverage and long-term
+              support.
+            </p>
+            <p>
+              By leveraging trusted brands, your security system is scalable,
+              future-proof, and backed by technology you can depend on.
+            </p>
+          </div>
+        </div>
+
+        {/* Services Cards */}
+        <div className="bg-dark text-light p-4">
+          <h4>Our Security/CCTV Services</h4>
+          {allServices.length > 0 && (
+            <div className="row mt-3 gx-2 gy-2">
+              {allServices.map((svc, idx) => (
+                <div key={idx} className="col-6 col-md-3">
+                  <a href={svc.service_href} className="text-decoration-none">
+                    <div className="service-gradient-card text-center p-2">
+                      {svc.icon && (
+                        <i className={`bi ${svc.icon} service-gradient-icon`} />
+                      )}
+                      <div className="service-gradient-title">{svc.title}</div>
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

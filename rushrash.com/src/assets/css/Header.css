@@ -1,113 +1,248 @@
-/* --- HEADER STYLING --- */
+body {
+  padding-top: 4px; /* match your utility bar height */
+}
+
+/* --- Header Section --- */
 .header-sec, .footer-sec {
-  background: linear-gradient(135deg, #0a192f, #1b263b); /* dark tech blue gradient */
-  color: #fff;
-  border-bottom: 3px solid #e63946; /* red accent line */
-    position: relative; /* make it a containing block for pseudo-element */
-}
-/* Top scan-line (red, left → right) */
-.header-sec::after {
-  content: "";
-  position: absolute;
-  top: 27%; /* slightly below the top */
-  left: -100%;
-  width: 100%;
-  height: 2px;
-    background:  rgba(100, 255, 255, 0.5); /* bluish-white */
-  box-shadow: 0 0 6px rgba(100, 255, 255, 0.3), 0 0 12px rgba(100, 255, 255, 0.2);
-  animation: scanline-right 8s linear infinite, pulse 2s ease-in-out infinite; /* slower movement */
-}
-
-
-/* Movement Animations */
-@keyframes scanline-right {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-@keyframes scanline-left {
-  0% { left: 100%; }
-  100% { left: -100%; }
-}
-
-/* Pulse opacity effect */
-@keyframes pulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-/* Animations */
-@keyframes scanline-right {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-@keyframes scanline-left {
-  0% { left: 100%; }
-  100% { left: -100%; }
-}
-
-/* Animations */
-@keyframes scanline-right {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-@keyframes scanline-left {
-  0% { left: 100%; }
-  100% { left: -100%; }
-}
-/* --- Utility Bar --- */
-.utility-bar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-}
-
-.social-icons a {
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-.social-icons a:hover {
-  color: #e63946;
-}
-
-/* --- Logo + Company --- */
-.logo-img {
-  max-height: 80px;
-  width: auto;
-  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.4));
-}
-
-.company-title {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #0a1a2f, #0d6efd); /* dark blue gradient */
   color: #fff;
 }
 
 .company-subtitle {
-  font-size: 0.95rem;
-  color: #64ffda; /* neon tech green accent */
-  font-weight: 500;
+  color: #adb5bd; /* muted gray */
 }
 
-/* --- Phone CTA --- */
-.phone-cta span {
-  font-size: 1rem;
-  color: #ccc;
+/* --- Utility Bar (Top Strip) - UPDATED --- */
+.utility-bar {
+  color: #fff;
+  /* position: relative; */
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
-.phone-box a {
-  background: #e63946;
+.utility-bar a {
+  color: #ecf0f1 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.utility-bar a:hover {
   color: #fff !important;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transform: translateY(-1px);
 }
-.phone-box a:hover {
-  background: #ff4d5a;
-  transform: scale(1.05);
+
+/* Active Link Styling */
+.active-link {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+/* Enhanced Phone CTA */
+/* Phone CTA Styling */
+.phone-cta {
+  background: rgba(255, 193, 7, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  transition: all 0.3s ease;
+}
+
+.phone-cta:hover {
+  background: rgba(255, 193, 7, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #e9ecef !important;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Social Links */
+.social-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e9ecef !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #ffc107;
+  color: #000 !important;
+  transform: translateY(-2px);
+}
+
+
+/* Pulsing animation for phone CTA */
+.cta-pulse {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #dc3545;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-50%) scale(0.8);
+    opacity: 1;
+  }
+}
+
+
+
+.social-link {
+  opacity: 0.8;
+}
+
+.social-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Logo Styling */
+.logo-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Company Title Styling */
+.company-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* Company Subtitle Styling */
+.company-subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+  margin-top: 0.1rem;
+}
+
+/* Container for brand content */
+.brand-content {
+  line-height: 1.2;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .utility-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .left-links, .utility-bar > div:last-child {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .phone-cta {
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-title {
+    font-size: 1.5rem;
+  }
+  
+  .company-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .logo-img {
+    height: 40px;
+  }
+  
+
+  
+  .active-link {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Social links container */
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Text nowrap for better mobile handling */
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* //top menu */
+.utility-bar {
+  background:#B32330; /* flat dark navy */
+  color: #fff;
+  font-size: 0.8rem;
+  /* position: relative; */
+  padding: 0.25rem 1rem; /* thinner strip */
+  border-bottom: 2px white solid;
+}
+
+.utility-bar a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.utility-bar a:hover {
+  color: #fff;
+}
+
+
+
+/* Active Link */
+.active-link {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+/* Social icons */
+.social-link {
+  color: #adb5bd;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.social-link:hover {
+  color: #fff;
 }

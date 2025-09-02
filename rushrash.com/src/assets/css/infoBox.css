@@ -1,0 +1,36 @@
+.info-images {
+  max-width: 380px;
+  min-width: 300px;
+}
+
+.info-images .img-main {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.info-images .img-main:hover {
+  transform: scale(1.02);
+}
+
+.info-images .img-thumb {
+  height: 120px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.info-images .img-thumb:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.info-images .img-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.info-images .img-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}

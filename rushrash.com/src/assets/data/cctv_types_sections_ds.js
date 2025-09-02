@@ -1,12 +1,11 @@
-import imgFormFactor from "../images/cctv/27825618_xxl.jpg";
-import imgTechnology from "../images/cctv/30380410_xxl.jpg";
-import imgSpecialFeatures from "../images/security-locks/39909414_xxl.jpg";
-import imgResidential from "../images/cctv/commercial-cctv-180.jpg";
-import imgCommercial from "../images/cctv/commercial-cctv-180.jpg";
-import imgOutdoor from "../images/cctv/commercial-cctv-180.jpg";
-import imgIndoor from "../images/cctv/commercial-cctv-180.jpg";
+import imgFormFactor from "../images/cctv-cams/security-camera.png";
+import imgTechnology from "../images/cctv-cams/cameras-lit90e.gif";
+import imgSpecialFeatures from "../images/security-locks/home-access-control.jpg";
+import imgResidential from "../images/cctv-cams/cctv-cameras.jpg";
+import imgCommercial from "../images/commercial/commercial-cctv-cam.jpg";
+import imgOutdoor from "../images/cctv-cams/commercial-cctv-180.jpg";
 
-const cctvTypeSections = [
+const cctvCameraTypeSections = [
   {
     heading: "By Form Factor (Shape & Design)",
     icon: "bi-camera-video",
@@ -79,4 +78,4 @@ const cctvTypeSections = [
   },
 ];
 
-export default cctvTypeSections;
+export default cctvCameraTypeSections;

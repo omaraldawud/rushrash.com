@@ -1,15 +1,23 @@
-import { useState } from "react";
-
-import "../assets/css/HeroSection.css";
 import { useLocation } from "react-router-dom";
-// import GarageDoorTypes from "../components/functional/GarageDoorTypes";
-import PageInfoBox from "../components/cards/PageInfoBox";
-import SEOMeta from "../components/seo/SEOMeta";
-// JSON-LD Scheme
-import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 
-//
-// Function Starts
+//Components
+import Brands from "../components/functional/Brands";
+import PageInfoBox from "../components/cards/PageInfoBox";
+import CCTVInfoTabs from "../components/cards/CCTVInfoTabs"; // Import your tabs component
+import CaseStudies from "../components/sections/CaseStudies"; // You'll need to create this
+// import ContactCTASection from "../components/cards/ContactCTASection"; // You'll need to create this
+
+// Assets CSS, Images
+import "../assets/css/HeroSection.css";
+
+// JSON-LD Scheme & Metas
+import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
+import SEOMeta from "../components/seo/SEOMeta";
+
+// Data Strcutres
+import brands_ds from "../assets/data/brands_ds";
+import IndustrySolutionsSection from "../components/sections/IndustrySolutionsSection";
+
 export default function CommercialSecurityPage() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -18,91 +26,98 @@ export default function CommercialSecurityPage() {
     <>
       <div>
         <SEOMeta
-          title="Commercial Garage Doors | Heavy-Duty Sectional Doors | Advanced Garage Door Inc"
-          description="Professional commercial garage door installation & repair for warehouses, auto shops, and industrial facilities. 24/7 emergency service available for sectional doors and rolling steel doors."
-          keywords="commercial garage doors, warehouse doors, sectional garage doors, rolling steel doors, industrial garage doors, commercial door repair, dock door installation, high-speed doors"
-          url="https://www.advancedgaragedoorinc.com/garage_door_commercial.html"
-          image="https://www.advancedgaragedoorinc.com/images/commercial/commercial-garage-door-service.jpg"
-          twitterHandle="@AdvancedGarageDoor"
+          title="Commercial CCTV Systems & Access Control | Professional Business Security Solutions"
+          description="Complete commercial security solutions including HD CCTV surveillance, access control systems, and 24/7 monitoring for offices, retail, warehouses, and industrial facilities."
+          keywords="commercial CCTV, business security systems, access control, surveillance cameras, video monitoring, security installation, retail security, warehouse surveillance"
+          url="https://www.rushrashinc.com/commercial-cctv-security"
+          image="https://www.rushrashinc.com/images/cctv/commercial-security-system.jpg"
+          twitterHandle="@RushrashInc"
         />
-        {/* JSON-LS for Home Page */}
+
         <BreadcrumbSchema
           items={[
-            { name: "Home", url: "https://advancedgaragedoorinc.com" },
+            { name: "Home", url: "https://rushrashinc.com" },
             {
-              name: "Residential Garage Doors",
-              url: "http://localhost:5173//garage_door_commercial.html",
-            },
-          ]}
-        />
-        <FAQSchema
-          questions={[
-            {
-              question: "What's the lifespan of commercial garage doors?",
-              answer:
-                "With proper maintenance, industrial-grade doors last 15-20 years. We recommend annual inspections for high-use facilities.",
-            },
-            {
-              question: "Can you install fire-rated commercial doors?",
-              answer:
-                "Yes, we're certified to install UL-rated fire doors meeting all local building codes.",
+              name: "Commercial Security Solutions",
+              url: "https://rushrashinc.com/commercial-cctv-security",
             },
           ]}
         />
 
-        {/* only Featured Services for home page*/}
+        <FAQSchema
+          questions={[
+            {
+              question: "What's included in a commercial CCTV system package?",
+              answer:
+                "Our commercial packages typically include HD IP cameras, NVR with ample storage, remote monitoring access, night vision capability, motion detection, and professional installation tailored to your business needs.",
+            },
+            {
+              question: "Can CCTV systems integrate with access control?",
+              answer:
+                "Yes, we specialize in integrated security solutions that combine CCTV surveillance with access control systems, alarm systems, and intercoms for comprehensive business protection.",
+            },
+            {
+              question: "Do you offer 24/7 monitoring services?",
+              answer:
+                "We offer both self-monitored and professionally monitored options, including 24/7 surveillance center support with immediate response capabilities for security breaches.",
+            },
+            {
+              question: "What industries do you serve?",
+              answer:
+                "We provide security solutions for retail stores, offices, warehouses, manufacturing facilities, healthcare, education, and multi-site commercial operations.",
+            },
+          ]}
+        />
+
         <ServiceSchema
           services={[
             {
-              name: "Commercial Sectional Door Installation",
+              name: "Commercial CCTV Installation",
               description:
-                "Heavy-duty aluminum and steel sectional doors for loading docks and warehouses",
+                "Professional installation of HD surveillance systems with remote monitoring capabilities",
               serviceType: "InstallationService",
-              offers: { price: "2499+" },
+              offers: { price: "1999+" },
             },
             {
-              name: "24/7 Commercial Door Repair",
+              name: "Access Control Systems",
               description:
-                "Emergency service for broken springs, off-track doors, and damaged panels",
+                "Keyless entry, biometric access, and integrated security management solutions",
+              serviceType: "InstallationService",
+            },
+            {
+              name: "24/7 Emergency Security Support",
+              description:
+                "Immediate response for system malfunctions or security breaches",
               serviceType: "EmergencyService",
+            },
+            {
+              name: "Security System Maintenance",
+              description:
+                "Regular system checks, updates, and performance optimization",
+              serviceType: "MaintenanceService",
             },
           ]}
         />
       </div>
-      <section className="residential-garage-doors">
-        <div className="container">
-          <PageInfoBox
-            pageType="commercial"
-            info_title="Commercial Garage Door Solutions"
-            info_top_title="Trusted by Chicagoland Businesses Since 2005"
-            info_mid_text="Advanced Garage Door Inc specializes in heavy-duty commercial garage door installation, repair, and maintenance for warehouses, auto shops, and industrial facilities. Our certified technicians work with all major brands including Hormann, Rytec, and Wayne Dalton."
-            info_link1="/garage_door_contactus.html"
-            link1_text="Free Estimate"
-            info_link2="/garage_door_openers.html"
-            link2_text="Commercial Door Openers Selection"
-            info_image1="/images/commercial/commercial-garage-doors.jpg"
-            info_image2="/images/commercial/commercial-garage-doors-rolling_sheet.jpg"
-            info_image3="/images/commercial/commercial_door_openers.jpg"
-          />
 
-          {/* <!-- Openers Section --> */}
-          <div className="opener-section text-center mt-5 p-lg-5 bg-dark text-white rounded-3">
-            <h2 className="mb-4">
-              Complete Your Commercial System With Quality Commercial Door
-              Openers
-            </h2>
-            <p className="lead mb-4">
-              We help you choose the perfect commercial electric opener for your
-              business new garage door, sectional door & commercial openers.
-            </p>
-            <a
-              href="/garage_door_openers.html"
-              className="btn btn-outline-light btn-lg"
-            >
-              Explore Openers
-            </a>
-          </div>
+      {/* Main Info Section */}
+      <section className="commercial-security">
+        <div className="container">
+          <PageInfoBox pageType="commercial" />
         </div>
+      </section>
+
+      {/* --- ADD THESE SECTIONS --- */}
+
+      {/* Industry Solutions Section */}
+      <IndustrySolutionsSection />
+
+      {/* Trusted Brands Section */}
+      <Brands />
+
+      {/* Case Studies/Testimonials Section */}
+      <section className="p2-5">
+        <CaseStudies studyType="commercial" />
       </section>
     </>
   );

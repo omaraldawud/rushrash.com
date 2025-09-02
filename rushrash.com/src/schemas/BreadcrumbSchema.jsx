@@ -17,5 +17,5 @@ export function BreadcrumbSchema({ items }) {
 
 // Default props (override when needed)
 BreadcrumbSchema.defaultProps = {
-  items: [{ name: "Home", url: "https://advancedgaragedoorinc.com" }],
+  items: [{ name: "Home", url: "https://rushrash.com" }],
 };

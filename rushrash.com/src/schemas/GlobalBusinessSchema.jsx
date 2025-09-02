@@ -23,8 +23,8 @@ export function GlobalBusinessSchema({
   services = [],
 
   socialProfiles = [
-    "https://www.yelp.com/biz/advanced-garage-door-company-naperville",
-    "https://www.bbb.org/us/il/bedford-park/profile/garage-doors/advanced-garage-doors-inc-0654-88366855",
+    "https://www.yelp.com/biz/rushrash-inc-hickory-hills",
+    "https://www.bbb.org/us/il/hickory-hills/profile/security-cameras/rush-rash-inc-0654-88432642",
   ],
   searchAction = false,
 }) {

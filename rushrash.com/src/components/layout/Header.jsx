@@ -1,69 +1,62 @@
+//
+import { useLocation } from "react-router-dom";
+
+//components
 import MainMenu from "../cta-forms/MainMenu";
 import companyInfo from "../../assets/data/rr_company_ds";
+import TopbarMenu from "../cta-forms/TopbarMenu";
 
-//✅ import logo & CSS from assets
+//css
 import "../../assets/css/Header.css";
 import logo from "../../assets/images/logo/rushrash-inc-logo-350-tr.png";
 
+//
 export default function Header() {
-  const header_subtitle = "CCTV & Access Control Systems";
+  const { pathname } = useLocation(); // ✅ clean destructure
+
+  // Pick subtitle based on current path
+  let header_subtitle = "CCTV & Access Control Systems"; // default
+  if (pathname.includes("/residential-cctv-security")) {
+    header_subtitle = "Residential CCTV & Smart Security";
+  } else if (pathname.includes("/commercial-cctv-security")) {
+    header_subtitle = "Business CCTV & Access Control";
+  } else if (pathname.includes("/contact-rushrash-inc")) {
+    header_subtitle = "Get in Touch With Us";
+  } else if (pathname.includes("/about-rushrash-inc")) {
+    header_subtitle = "Chicago's Premier Security & Surveillance Experts";
+  }
 
   return (
-    <header className="header-sec shadow-sm" style={{ position: "relative" }}>
+    <header className="header-sec shadow-sm">
       <div className="container">
         {/* --- Top Utility Bar --- */}
-        <div className="d-flex justify-content-between align-items-center py-1 utility-bar">
-          <div className="text-light small">
-            <i className="bi bi-shield-lock me-1 text-danger"></i>
-            Securing Homes & Businesses Since 2005
-          </div>
-
-          {/* --- Phone CTA --- */}
-          <div className="d-flex gap-3 social-icons">
-            <div className="d-flex justify-content-center py-2">
-              <div className="flex-column text-end phone-cta">
-                <div className="phone-box toll-free-box">
-                  <a
-                    href={`tel:${companyInfo.phoneNumbers.tollFree.replace(
-                      /\D/g,
-                      ""
-                    )}`}
-                    className="text-decoration-none text-danger fw-bold"
-                  >
-                    <i className="bi bi-telephone-plus me-2"></i>
-                    {companyInfo.phoneNumbers.tollFree}
-                  </a>
-                </div>
-              </div>
-            </div>
-            {companyInfo.socialProfiles.map((profile) => (
-              <a
-                key={profile.name}
-                href={profile.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-light"
-              >
-                <i className={`bi ${profile.icon}`}></i>
-              </a>
-            ))}
-          </div>
-        </div>
+        <TopbarMenu />
 
         {/* --- Main Row: Logo + Menu --- */}
         <div className="d-flex justify-content-between align-items-center py-4">
           {/* Left: Logo + Company Name */}
           <div className="d-flex align-items-center">
-            <img src={logo} alt="Rushrash Inc. Logo" className="logo-img" />
-            <div className="ms-3">
-              <h1 className="company-title mb-0">{companyInfo.companyName}</h1>
-              <small className="company-subtitle">{header_subtitle}</small>
+            <img
+              src={logo}
+              alt="Rushrash Inc. Logo"
+              className="logo-img me-3"
+            />
+
+            {/* <RushrashLogo width={350} height={150} /> */}
+
+            <div className="brand-content">
+              <h1 className="company-title mb-0 text-danger">
+                {companyInfo.companyName}
+              </h1>
+              <p className="company-subtitle mb-0 text-light">
+                {header_subtitle}
+              </p>
             </div>
           </div>
 
           {/* Main Menu */}
-          <div style={{ position: "relative", zIndex: 2000 }}>
-            <MainMenu className="d-none d-md-block" />
+          <div className="d-none d-md-block" style={{ zIndex: 2000 }}>
+            <MainMenu />
           </div>
         </div>
       </div>

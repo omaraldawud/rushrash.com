@@ -1,13 +1,13 @@
 import "../../assets/css/Banner.css";
 import { services as allServices } from "../../assets/data/rr_services_ds";
+import CTABannerForm from "../cta-forms/CTABannerForm";
 
 export default function Banner({
-  title,
-  subtitle,
-  ctaText,
-  ctaLink,
-  seo_brands_text,
-  banner_brands = "",
+  title = "Welcome to Rushrash Inc.",
+  subtitle = "CCTV & Access Control Experts",
+  ctaText = "Get a Free Quote",
+  seo_brands_text = "We work with all major CCTV & Access Control brands:",
+  banner_brands = "Hikvision, Dahua, Bosch, Axis, Honeywell",
   heroImages = [],
   bgImage = [],
 }) {
@@ -47,69 +47,71 @@ export default function Banner({
       >
         <div className="container">
           <div className="row d-flex gy-4 justify-content-center align-items-stretch">
-            {/* Text + CTA */}
+            {/* Text + CTA Form + Services */}
             <div className="col-lg-8 col-xl-8 order-2 order-lg-1 d-flex flex-column align-items-start">
-              {ctaText && ctaLink && (
-                <a
-                  href={ctaLink}
-                  className="px-4 py-2 fw-bold text-dark text-decoration-none mb-3 d-inline-flex align-items-center"
-                >
-                  <i className="bi-telephone-outbound text-warning me-2"></i>
-                  {ctaText}
-                </a>
-              )}
-              <h2 className="hero-heading text-center text-lg-start">
-                {title}
-              </h2>
-              {subtitle && (
-                <h3 className="subtitle text-center text-lg-start">
-                  {subtitle}
-                </h3>
-              )}
-              {seo_brands_text && (
-                <p className="seo-text text-center text-lg-start">
-                  {seo_brands_text} {banner_brands}
-                </p>
-              )}
+              <div className="w-100">
+                <h2 className="hero-heading text-center text-lg-start">
+                  {title}
+                </h2>
+                {subtitle && (
+                  <h3 className="subtitle text-center text-lg-start">
+                    {subtitle}
+                  </h3>
+                )}
+                {seo_brands_text && (
+                  <p className="seo-text text-center text-lg-start">
+                    {seo_brands_text} {banner_brands}
+                  </p>
+                )}
 
-              {/* Services Cards */}
-              {allServices.length > 0 && (
-                <div className="row mt-3 gx-2 gy-3">
-                  {allServices.map((svc, idx) => (
-                    <div key={idx} className="col-6 col-md-4">
-                      <a
-                        href={svc.service_href}
-                        className="text-decoration-none"
-                      >
-                        <div className="service-card-small d-flex flex-column align-items-center p-2 h-100">
-                          {svc.icon && (
-                            <i
-                              className={`bi ${svc.icon} service-icon-small mb-2`}
-                            />
-                          )}
-                          <h6 className="service-title-small text-center">
-                            {svc.title}
-                          </h6>
-                        </div>
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              )}
+                {/* CTA Form Component */}
+                <CTABannerForm ctaText={ctaText} />
+
+                {/* Services Cards */}
+                {allServices.length > 0 && (
+                  <div className="row mt-3 gx-2 gy-2">
+                    {allServices.slice(0, 4).map((svc, idx) => (
+                      <div key={idx} className="col-6 col-md-3">
+                        <a
+                          href={svc.service_href}
+                          className="text-decoration-none"
+                        >
+                          <div className="service-gradient-card text-center p-2">
+                            {svc.icon && (
+                              <i
+                                className={`bi ${svc.icon} service-gradient-icon`}
+                              />
+                            )}
+                            <div className="service-gradient-title">
+                              {svc.title}
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
-            {/* Hero Images */}
-            <div className="col-lg-4 col-xl-4 text-center order-1 order-lg-2 d-flex flex-column align-items-center gap-3">
-              {heroImages.map((img, idx) => (
-                <div key={idx} className="w-100 position-relative flex-fill">
+            {/* Hero Images - Reduced to 2 */}
+            <div className="col-lg-4 col-xl-4 text-center order-1 order-lg-2 d-flex flex-column align-items-center gap-2">
+              {heroImages.slice(0, 2).map((img, idx) => (
+                <div key={idx} className="w-100 position-relative d-block">
+                  {" "}
+                  {/* Changed from flex-fill to d-block */}
                   <img
                     src={img.src}
                     alt={img.alt}
                     title={img.title}
                     className="hero-img"
+                    style={{
+                      height: "200px",
+                      objectFit: "cover",
+                    }}
                   />
                   {img.caption && (
-                    <span className="position-absolute bottom-0 end-0 small text-light bg-dark bg-opacity-50 m-2 p-1 rounded">
+                    <span className="position-absolute top-0 end-0 small text-light bg-dark bg-opacity-75 m-1 p-1 rounded">
                       {img.caption}
                     </span>
                   )}

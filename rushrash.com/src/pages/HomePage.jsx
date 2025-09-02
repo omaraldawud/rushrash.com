@@ -1,18 +1,21 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 //
 import Brands from "../components/functional/Brands";
-import SEOMeta from "../components/seo/SEOMeta";
 import PageInfoBox from "../components/cards/PageInfoBox";
-import cctvTypeSections from "../assets/data/cctv_types_sections_ds";
-import cctvDvrSystemsDS from "../assets/data/cctv_dvr_systems_ds";
 import CCTVInfoTabs from "../components/cards/CCTVInfoTabs";
 
-// JSON-LD Scheme
+// Data Structures
+import cctvCameraTypeSections from "../assets/data/cctv_types_sections_ds";
+import cctvDvrSystemsDS from "../assets/data/cctv_dvr_systems_ds";
+import posSystemsDS from "../assets/data/pos_systems_ds";
+import accessControlSystemsDS from "../assets/data/access_control_systems_ds";
+import brandsForTabsDS from "../assets/data/brands_for_tabs_ds";
+
+// JSON-LD Scheme & Meta
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
+import SEOMeta from "../components/seo/SEOMeta";
 
 //Images
-import img1 from "../assets/images/cctv/cctv-cams_xxl.jpg";
-import img2 from "../assets/images/banners/cctv-header.jpg";
 import CCTVInstallationProcess from "../components/sections/CCTVInstallationProcess";
 
 /////////////////////////////////////
@@ -94,20 +97,23 @@ export default function HomePage() {
       {/* main content */}
       <Container fluid>
         {/* Top Main Content */}
-        <PageInfoBox pageType="home" info_image1={img1} info_image2={img2} />
+        <PageInfoBox pageType="home" />
+
+        {/* Camera Information Box/ */}
+        <CCTVInfoTabs
+          tabs={[
+            { label: "Cameras", data: cctvCameraTypeSections },
+            { label: "DVRs/NVRs", data: cctvDvrSystemsDS },
+            { label: "PoS", data: posSystemsDS },
+            { label: "Access ControlSystems", data: accessControlSystemsDS },
+            { label: "Security Brands", data: brandsForTabsDS },
+          ]}
+        />
 
         {/* Insallation Process */}
         <div>
           <CCTVInstallationProcess />
         </div>
-
-        {/* Camera Information Box/ */}
-        <CCTVInfoTabs
-          tabs={[
-            { label: "Cameras", data: cctvTypeSections },
-            { label: "DVRs/NVRs", data: cctvDvrSystemsDS },
-          ]}
-        />
 
         {/* Brands Section */}
         <div>
