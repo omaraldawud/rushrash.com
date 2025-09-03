@@ -10,12 +10,11 @@ import ContactPage from "./pages/ContactPage";
 import ResidentialSecurityPage from "./pages/ResidentialSecurityPage";
 import CommercialSecurityPage from "./pages/CommercialSecurityPage";
 import POSInstallationPage from "./pages/POSInstallationPage";
-import SecurityConsultationPage from "./pages/SecurityConsultationPage";
 import AccessControlServicesPage from "./pages/AccessControlServicesPage";
 import ITServicesPage from "./pages/ITServicesPage";
-import HomeSurveillancePage from "./pages/HomeSurveillancePage";
+import RushrashLegalPage from "./pages/RushrashLegalPage";
 
-// Schema
+// Schemas
 import { GlobalBusinessSchema } from "./schemas/GlobalBusinessSchema";
 
 // Banner Data
@@ -51,17 +50,10 @@ function App() {
           path="/services/access-control"
           element={<AccessControlServicesPage />}
         />
-        <Route
-          path="/services/home-surveillance"
-          element={<HomeSurveillancePage />}
-        />
+
         <Route
           path="/services/pos-installation"
           element={<POSInstallationPage />}
-        />
-        <Route
-          path="/services/security-consultation"
-          element={<SecurityConsultationPage />}
         />
 
         {/* Contact */}
@@ -78,6 +70,10 @@ function App() {
           path="/commercial-cctv-security"
           element={<CommercialSecurityPage />}
         />
+
+        {/* Legal Pages */}
+
+        <Route path="/rushrash-legal" element={<RushrashLegalPage />} />
 
         {/* Catch-all fallback to home */}
         <Route path="*" element={<HomePage />} />

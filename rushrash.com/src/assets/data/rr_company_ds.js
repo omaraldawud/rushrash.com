@@ -1,12 +1,15 @@
 // src/data/companyInfo.js
+import Logo from "../images/logo/rushrash-inc-logo-350-tr.png";
+
 const companyInfo = {
   companyName: "Rushrash Inc.",
-  logo: "/images/logo.png",
   website: "https://rushrash.com",
   email: "info@rushrash.com",
   phoneNumbers: {
     local: "(630) 800-8077",
     tollFree: "1-630-800-8077",
+    tel630: "tel:6308008077",
+    telTollFree: "tel:16308008077",
   },
   address: {
     street: "24204 Champion Dr.",

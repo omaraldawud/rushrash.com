@@ -17,13 +17,26 @@ import aboutInfoImage3 from "../images/dvrs/cctv-nvr-installation.jfif";
 import ITServicesInfoImage1 from "../images/it-services/it-services.jpg";
 import ITServicesInfoImage2 from "../images/it-services/it-services-ram-board.jpg";
 import ITServicesInfoImage3 from "../images/it-services/vcables-image-must-use_bg.jpg";
-// Access Control
+// Access Control services
 import ACServicesInfoImage1 from "../images/access-control/biometric-fingerprint.jfif";
 import ACServicesInfoImage2 from "../images/access-control/card-reader2.jfif";
 import ACServicesInfoImage3 from "../images/access-control/mac-military.jfif";
-
+// PoS services
+import PoSServicesInfoImage1 from "../images/pos/posSelfServiceKiosk.jfif";
+import PoSServicesInfoImage2 from "../images/pos/pos-business-system.webp";
+import PoSServicesInfoImage3 from "../images/pos/traditionalPOS.jfif";
+// CCTV services
+import CCTVServicesInfoImage1 from "../images/dvrs/nvr-wifi.jfif";
+import CCTVServicesInfoImage2 from "../images/dvrs/cctv-nvr-installation.jfif";
+import CCTVServicesInfoImage3 from "../images/cctv-cams/cctv-system-installation.jpg";
+// Legal
+import LegalInfoImage1 from "../images/banners/aboutus/security-experts.jpg";
+import LegalInfoImage2 from "../images/banners/aboutus/call-us-cctv-solutions.jpg";
+import LegalInfoImage3 from "../images/banners/aboutus/building-cctv.jpg";
+//
 //
 const rr_page_infoox_content_ds = {
+  //home
   home: {
     info_title: "CCTV & Security Camera Installation",
     info_top_title: "Trusted by homeowners & businesses for over 20 years",
@@ -43,6 +56,7 @@ const rr_page_infoox_content_ds = {
     info_image2: homeInfoImage2,
     info_image3: homeInfoImage3,
   },
+  //residential
   residential: {
     info_title:
       "Protect Your Home with Advanced Residential CCTV & Access Control System",
@@ -63,7 +77,7 @@ const rr_page_infoox_content_ds = {
       "Affordable packages with no hidden costs",
     ],
   },
-
+  //commercial
   commercial: {
     info_title: "Commercial CCTV Solutions",
     info_top_title: "Secure Your Business with Advanced Surveillance",
@@ -84,6 +98,7 @@ const rr_page_infoox_content_ds = {
       "Flexible solutions for offices, retail, warehouses, and industrial sites",
     ],
   },
+  //aboutus
   aboutus: {
     info_title: "About Rushrash Inc.",
     info_top_title: "Your Partner in Professional Security",
@@ -103,7 +118,7 @@ const rr_page_infoox_content_ds = {
       "Reliable 24/7 customer support & maintenance",
     ],
   },
-
+  //it
   itServices: {
     info_title: "IT Services",
     info_top_title: "Your Partner in Professional IT Architecture",
@@ -123,7 +138,7 @@ const rr_page_infoox_content_ds = {
       "Software Development",
     ],
   },
-
+  //access control
   accessControl: {
     info_title: "Access Control Services",
     info_top_title: "Your Partner in Professional Access Control Systems",
@@ -139,6 +154,62 @@ const rr_page_infoox_content_ds = {
       "Biometric Solutions",
       "Smart Card & Keypad Access",
       "Audit & Reporting",
+    ],
+  },
+  //pos
+  pos: {
+    info_title: "Point-of-Sale Solutions",
+    info_top_title: "Your Partner in Professional POS Systems",
+    info_mid_text:
+      "Rushrash Technology helps businesses streamline sales and enhance customer experiences with modern Point-of-Sale (POS) solutions. From fast and reliable checkout systems to secure payment processing and inventory integration, our POS services are designed to keep your operations running smoothly. With decades of expertise, we deliver tailored solutions that fit retail, restaurants, and service industries — ensuring efficiency, accuracy, and long-term support you can trust.",
+    info_link1: "/contact-rushrash-inc",
+    link1_text: "FREE PoS Consultation",
+    info_image1: PoSServicesInfoImage1,
+    info_image2: PoSServicesInfoImage2,
+    info_image3: PoSServicesInfoImage3,
+    features: [
+      "Seamless Payment Processing",
+      "Real-Time Inventory Management",
+      "Customizable POS for Retail & Restaurants",
+      "Secure, Scalable & Supported Solutions",
+    ],
+  },
+  //cctv
+  cctv: {
+    info_title:
+      "Surveillance System Solutions – CCTV Cameras, DVR & NVR Installation",
+    info_top_title: "Your Partner in Professional CCTV Surveillance Systems",
+    info_mid_text:
+      "Rushrash Technology provides reliable Surveillance CCTV solutions with expert installation of CCTV cameras, DVRs, and NVRs. Whether for residential or commercial properties, our systems are designed to deliver crystal-clear video quality, secure recording, and remote monitoring capabilities. With proven expertise in surveillance technology, we ensure comprehensive coverage, seamless integration, and dependable support — giving you confidence and peace of mind.",
+    info_link1: "/contact-rushrash-inc",
+    link1_text: "FREE CCTV Site Survey & Consultation",
+    info_image1: CCTVServicesInfoImage1,
+    info_image2: CCTVServicesInfoImage2,
+    info_image3: CCTVServicesInfoImage3,
+    features: [
+      "High-definition CCTV camera installation",
+      "DVR & NVR setup with secure storage",
+      "Remote monitoring via mobile & desktop",
+      "Commercial & residential surveillance solutions",
+    ],
+  },
+  //legal
+  legal: {
+    info_title:
+      "Security & IT Compliance – CCTV, Access Control, PoS, and IT Services",
+    info_top_title: "Your Trusted Partner in Secure Technology Solutions",
+    info_mid_text:
+      "Rushrash Surveillance provides professional security and IT solutions with expert installation and management of CCTV cameras, access control systems, PoS solutions, and IT infrastructure. Whether for residential or commercial properties, our services are designed to ensure data security, operational efficiency, and reliable monitoring. With proven expertise, we deliver comprehensive coverage, seamless system integration, and dependable support — giving you confidence, peace of mind, and compliance with industry standards.",
+    info_link1: "/contact-rushrash-inc",
+    link1_text: "Contact Us for More Information",
+    info_image1: LegalInfoImage1,
+    info_image2: LegalInfoImage2,
+    info_image3: LegalInfoImage3,
+    features: [
+      "We never share your personal or business information with third parties.",
+      "All data is securely stored and encrypted according to industry standards.",
+      "Services are fully compliant with local regulations and privacy laws.",
+      "Transparent policies with clear terms of service and data usage guidelines.",
     ],
   },
 };

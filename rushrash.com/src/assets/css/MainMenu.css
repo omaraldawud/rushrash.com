@@ -65,6 +65,14 @@
   font-size: 0.9rem;
 }
 
+/* Prevent Bootstrap from forcing blue background on active dropdown links */
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+  background-color: transparent !important;
+  color: red !important;
+  font-weight: 500;
+  text-transform: capitalize;
+}
 
 
 .mega-menu {
@@ -184,7 +192,16 @@
   z-index: 101;
 }
 
-.dropdown-menu {
-  position: absolute;
-  z-index: 2000;
+/* TopbarMenu */
+.nav-link.active {
+  font-weight: 600;
+  color: #ffc107 !important; /* Highlight active link with Bootstrap warning color */
 }
+
+.left-links a.active-link {
+  font-weight: 600;
+  color: #ffc107; /* Bootstrap warning color */
+  border-left: 2px solid #ffc107; /* optional left border */
+  padding-left: 0.5rem; /* space from border */
+}
+

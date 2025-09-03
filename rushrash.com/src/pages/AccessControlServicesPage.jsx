@@ -33,88 +33,90 @@ export default function AccessControlServicesPage() {
   return (
     <>
       <div>
-        {/* JSON-LD Breadcrumb for IT Services Page */}
+        {/* JSON-LD Breadcrumb for Access Control Page */}
         <BreadcrumbSchema
           items={[
             { name: "Home", url: "https://rushrash.com" },
-            { name: "IT Services", url: "https://rushrash.com/it-services" },
+            {
+              name: "Access Control",
+              url: "https://rushrash.com/services/access-control",
+            },
           ]}
         />
 
-        {/* FAQ Schema for IT Services */}
+        {/* FAQ Schema for Access Control */}
         <FAQSchema
           questions={[
             {
-              question: "What IT services do you offer?",
+              question: "What types of access control systems do you install?",
               answer:
-                "We provide comprehensive IT solutions including network setup & management, cybersecurity, cloud hosting, CDN setup, IT support & helpdesk, and software development.",
+                "We install key card systems, biometric readers, keypad entry, mobile-based access, and cloud-managed access control solutions for both residential and commercial properties.",
             },
             {
-              question: "Can you manage my company's network remotely?",
+              question: "Can access control systems be integrated with CCTV?",
               answer:
-                "Yes. Our certified IT technicians offer remote network management and monitoring to ensure uptime and security for your business.",
+                "Yes. Our access control solutions seamlessly integrate with CCTV cameras, alarms, and building management systems for complete security coverage.",
             },
             {
-              question: "Do you provide cloud hosting and backup solutions?",
+              question: "Do you offer cloud-based access control?",
               answer:
-                "Absolutely. We offer reliable cloud hosting, automated backups, and disaster recovery solutions tailored to your business needs.",
+                "Absolutely. Cloud-based access control allows remote management of doors, schedules, and user permissions from anywhere.",
             },
             {
-              question:
-                "Do you provide software integration and custom development?",
+              question: "Can you handle large-scale enterprise access control?",
               answer:
-                "Yes. We build and integrate software solutions to streamline your business processes and enhance productivity.",
+                "Yes. We design and deploy enterprise-grade access control systems that scale with multiple locations and thousands of users.",
             },
             {
-              question: "Is your IT support available on-demand?",
+              question: "Do you provide ongoing support and maintenance?",
               answer:
-                "Yes. Our helpdesk and IT support services are available to quickly resolve issues and minimize downtime.",
+                "Yes. We offer professional support, monitoring, and maintenance packages to keep your access control system running smoothly.",
             },
           ]}
         />
 
-        {/* Featured Services for IT */}
+        {/* Featured Services for Access Control */}
         <ServiceSchema
           services={[
             {
-              name: "Network Setup & Management",
+              name: "Key Card & FOB Entry Systems",
               description:
-                "Design, install, and maintain secure and reliable networks for small to enterprise-level businesses.",
+                "Secure access with programmable key cards and FOBs, ideal for offices, residential complexes, and warehouses.",
             },
             {
-              name: "Cybersecurity Solutions",
+              name: "Biometric Access Control",
               description:
-                "Protect your data and systems with firewalls, endpoint protection, threat monitoring, and compliance support.",
+                "Fingerprint, facial recognition, and retina scan systems for high-security environments.",
             },
             {
-              name: "Cloud Hosting & Backup Services",
+              name: "Cloud-Based Access Control",
               description:
-                "Reliable cloud hosting with automated backups, disaster recovery, and scalable storage solutions.",
+                "Manage and monitor your building’s access remotely with scalable cloud-based solutions.",
             },
             {
-              name: "CDN Setup",
+              name: "Mobile Access Control",
               description:
-                "Improve website speed and global performance with content delivery network (CDN) setup and optimization.",
+                "Enable entry using smartphones and mobile apps with encrypted digital credentials.",
             },
             {
-              name: "IT Support & Helpdesk",
+              name: "Multi-Site Access Solutions",
               description:
-                "On-demand support for troubleshooting, maintenance, and technical assistance for your IT infrastructure.",
+                "Centralized control for enterprises with multiple locations and thousands of users.",
             },
             {
-              name: "Software Development & Integration",
+              name: "Access Control Integration",
               description:
-                "Custom software development and integration services to streamline workflows and automate business processes.",
+                "Seamless integration with CCTV, alarms, and building automation systems.",
             },
           ]}
         />
 
-        {/* SEO Meta for IT Services */}
+        {/* SEO Meta for Access Control */}
         <SEOMeta
-          title="IT Services & Solutions | Rushrash Inc."
-          description="Rushrash Inc. offers professional IT services including network management, cybersecurity, cloud hosting, CDN setup, IT support, and custom software development for businesses of all sizes."
-          keywords="IT services, network setup, cybersecurity, cloud hosting, CDN, IT support, helpdesk, software development, software integration, business IT solutions"
-          url="https://rushrash.com/it-services"
+          title="Access Control Systems | Rushrash Inc."
+          description="Rushrash Inc. provides advanced access control solutions including key card systems, biometric readers, cloud-based access, mobile access, and enterprise-grade security integrations."
+          keywords="access control systems, key card entry, biometric access, cloud access control, mobile access, enterprise access control, building security"
+          url="https://rushrash.com/access-control"
           image="https://rushrash.com/wp-content/uploads/2023/05/rushrash-logo-23.png"
           twitterHandle="@RushrashInc"
         />

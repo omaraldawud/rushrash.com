@@ -1,15 +1,16 @@
 // pages/About.tsx
 import { Container } from "react-bootstrap";
-import AboutUsSection from "../components/sections/AboutUsSection";
 import SEOMeta from "../components/seo/SEOMeta";
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 
-//
-
+//components
+import AboutUsSection from "../components/sections/AboutUsSection";
 import PageInfoBox from "../components/cards/PageInfoBox";
+//images
 import img1 from "../assets/images/cctv-cams/cctv-system-installation.jpg";
 import img2 from "../assets/images/banners/cctv-header.jpg";
 
+//
 //
 export default function About() {
   return (

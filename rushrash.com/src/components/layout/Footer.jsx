@@ -8,6 +8,9 @@ import FooterCTA from "../cta-forms/FooterCTA";
 import CopyRightSection from "../layout/CopyRightSection";
 import Logo from "./Logo";
 
+//Data Structures
+import companyInfo from "../../assets/data/rr_company_ds";
+
 ////////////////////////////////////////////////
 export default function Footer() {
   return (
@@ -16,7 +19,7 @@ export default function Footer() {
         <div className="row mb-4 align-items-center justify-content-center">
           {/* Logo & CTA - Left */}
           <div className="col-lg-3 col-md-4 mb-3 d-none d-md-block text-center">
-            <Logo />
+            <Logo logoWidth="200px" />
 
             {/* Phone Number */}
             <h5 className="my-3 pb-4" style={{ color: "#FFD166" }}>

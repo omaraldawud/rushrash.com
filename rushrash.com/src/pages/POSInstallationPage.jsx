@@ -1,184 +1,153 @@
 //
-import { Link } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-import FaqSection from "../components/sections/FAqSection";
-import PageInfoBox from "../components/cards/PageInfoBox";
+// React, JSON-LD Scheme & Meta
+import { Container } from "react-bootstrap";
+import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 import SEOMeta from "../components/seo/SEOMeta";
-import { ServiceSchema, FAQSchema } from "../schemas";
 
-// Function
-export default function POSInstallationPage() {
+// Functionl Components
+import PageInfoBox from "../components/cards/PageInfoBox";
+import FaqSection from "../components/sections/FAqSection";
+
+//global vars - data structure
+const services = [
+  {
+    title: "Retail POS Systems",
+    icon: "bi-shop",
+    description:
+      "Efficient checkout and inventory management for retail businesses.",
+  },
+  {
+    title: "Restaurant POS Solutions",
+    icon: "bi-cup-straw",
+    description:
+      "Streamlined order and payment processing for restaurants and cafes.",
+  },
+  {
+    title: "Mobile POS",
+    icon: "bi-phone",
+    description: "Flexible mobile payment solutions for on-the-go sales.",
+  },
+  {
+    title: "POS Support & Maintenance",
+    icon: "bi-tools",
+    description:
+      "Reliable technical support to keep your POS systems running smoothly.",
+  },
+];
+
+export default function POSServices() {
   return (
-    <Container fluid>
-      {/* JSON-LS for Home Page */}
-      {/* only Featured Services for home page*/}
-      <ServiceSchema services={ServiceSchema} />
-      <FAQSchema
-        questions={[
-          {
-            question: "How often should garage door springs be replaced?",
-            answer:
-              "Torsion springs typically last 7-10 years with normal use.",
-          },
-          {
-            question: "Is spring replacement dangerous?",
-            answer:
-              "Yes! Springs are under extreme tension - always hire a professional.",
-          },
-        ]}
-      />
-      <SEOMeta
-        title="Garage Door Repair in Naperville, Aurora | Broken Spring Fix & Replacement"
-        description="Emergency garage door repair specialists serving [City]. Fast response for broken springs, off-track doors, opener failures, and more. 15-minute arrival guarantee - 24/7 service available."
-        keywords="garage door repair, broken spring replacement, garage door off track, opener not working, emergency garage door service, [City] garage door company, torsion spring repair, cable replacement"
-        url="https://www.advancedgaragedoorinc.com/garage-door-repair-[city]"
-        image="https://www.advancedgaragedoorinc.com/images/emergency-garage-repair-tech.jpg"
-        twitterHandle="@AdvancedGarageDoor"
-      />
-      {/* Welcome Section */}
-      <PageInfoBox
-        pageType="services"
-        info_title="Chicagoland & Naperville’s Most Reliable Garage Door Services—Fast, Durable & Worry-Free!"
-        info_top_title="garage door repair & installation services"
-        info_mid_text="Professional garage door services ensure your door operates smoothly, safely, and efficiently—offering repairs, maintenance, and installations to keep your home secure and convenient."
-        info_link1="/garage_door_contactus.html"
-        link1_text="Free Estimate"
-        info_link2="/garage_door_openers.html"
-        link2_text="Openers Selection"
-        info_image1="/images/services/broken-springs-technician.jpg"
-        info_image2="/images/parts/torsion_springs.png"
-        info_image3="/images/services/broken-garage-door.jpg"
-      />
-      {/* Services Cards */}
-      <div className="container">
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5 gap-3">
-          <h2 className="mb-0 text-center text-md-start">
-            Garage Door Services
-          </h2>
+    <>
+      <div>
+        {/* JSON-LD Breadcrumb for Point-of-Sale Page */}
+        <BreadcrumbSchema
+          items={[
+            { name: "Home", url: "https://rushrash.com" },
+            {
+              name: "Point-of-Sale",
+              url: "https://rushrash.com/services/pos-services",
+            },
+          ]}
+        />
 
-          <Link
-            className="btn btn-primary w-70 w-md-auto"
-            to="/garage_door_residential.html"
-          >
-            view residential doors and services
-          </Link>
-        </div>
+        {/* FAQ Schema for PoS Services */}
+        <FAQSchema
+          questions={[
+            {
+              question: "What industries do your POS systems support?",
+              answer:
+                "Our POS solutions are tailored for retail, restaurants, cafes, service providers, and enterprise-level businesses.",
+            },
+            {
+              question: "Do your POS systems support inventory management?",
+              answer:
+                "Yes. Our systems provide real-time inventory tracking, stock alerts, and seamless integration with back-office operations.",
+            },
+            {
+              question: "Can your POS handle multiple payment methods?",
+              answer:
+                "Absolutely. Our POS solutions support cash, card, mobile wallets, and contactless payments for maximum flexibility.",
+            },
+            {
+              question: "Do you provide cloud-based POS systems?",
+              answer:
+                "Yes. Cloud-based POS ensures secure remote access, scalability, and reliable backup for your business operations.",
+            },
+            {
+              question: "Is ongoing support included with your POS systems?",
+              answer:
+                "Yes. We provide professional installation, training, and 24/7 support to keep your POS system running smoothly.",
+            },
+          ]}
+        />
+
+        {/* Featured Services for PoS */}
+        <ServiceSchema
+          services={[
+            {
+              name: "Retail POS Systems",
+              description:
+                "Streamlined checkout, barcode scanning, and inventory management for retail stores of all sizes.",
+            },
+            {
+              name: "Restaurant & Hospitality POS",
+              description:
+                "Table management, kitchen display integration, and order tracking designed for food service businesses.",
+            },
+            {
+              name: "Cloud-Based POS",
+              description:
+                "Access reports, sales data, and customer insights from anywhere with secure cloud technology.",
+            },
+            {
+              name: "Payment Processing Integration",
+              description:
+                "Seamless integration with major payment providers for fast and secure transactions.",
+            },
+            {
+              name: "Mobile POS Solutions",
+              description:
+                "Enable sales anywhere with tablet and smartphone POS options for on-the-go businesses.",
+            },
+            {
+              name: "Custom POS Integration",
+              description:
+                "Tailored solutions that integrate with accounting, CRM, and e-commerce platforms.",
+            },
+          ]}
+        />
+
+        {/* SEO Meta for PoS Services */}
+        <SEOMeta
+          title="Point-of-Sale (POS) Systems & Solutions | Rushrash Inc."
+          description="Rushrash Inc. delivers modern Point-of-Sale systems for retail, restaurants, and service businesses. Features include inventory management, cloud-based POS, mobile POS, and secure payment processing."
+          keywords="point of sale, POS systems, retail POS, restaurant POS, cloud POS, mobile POS, payment processing, inventory management"
+          url="https://rushrash.com/pos-services"
+          image="https://rushrash.com/wp-content/uploads/2023/05/rushrash-logo-23.png"
+          twitterHandle="@RushrashInc"
+        />
       </div>
 
-      {/* Local Customer Jobs */}
-      <Row className="rounded shadow-sm">
-        <Col>
-          <section class="customer-feedback bg-light ">
-            <div class="container">
-              {/* <!-- Customer Testimonial Card --> */}
-              <div class="card mb-5 shadow-sm border-0">
-                <div class="card-header bg-primary text-white">
-                  <h3 class="h5 fs-2 mb-0">Recent notes from our customers</h3>
+      <Container fluid>
+        <PageInfoBox pageType="pos" />
+      </Container>
+      <div className="container my-5">
+        <div className="row g-4">
+          {services.map((service, idx) => (
+            <div key={idx} className="col-md-6 col-lg-3">
+              <div className="card h-100 text-center shadow-sm border-0">
+                <div className="card-body">
+                  <i
+                    className={`bi ${service.icon} fs-1 mb-3 text-primary`}
+                  ></i>
+                  <h5 className="card-title">{service.title}</h5>
+                  <p className="card-text">{service.description}</p>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <ul class="list-unstyled">
-                        <li>
-                          <strong>Subject:</strong> Spring replacement
-                        </li>
-                        <li>
-                          <strong>Suburb:</strong> Naperville
-                        </li>
-                        <li>
-                          <strong>When:</strong> Friday, November 5, 2010, 4:18
-                          am
-                        </li>
-                        <li>
-                          <strong>Name:</strong> Lee Sussman
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <blockquote class="blockquote mb-0">
-                        <p>
-                          "Yesterday, your technician replaced my garage door
-                          spring and rollers in a friendly, fast, and very
-                          professional manner. I would definitely recommend your
-                          firm to anyone in need of your services."
-                        </p>
-                        <footer class="blockquote-footer">Lee Sussman</footer>
-                      </blockquote>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer bg-white text-end">
-                  <a href="/testimonials" class="btn btn-outline-primary">
-                    Read more testimonials →
-                  </a>
-                </div>
-              </div>
-
-              {/* <!-- Service Examples --> */}
-              <h2 class="h4 text-center mb-4">
-                Recent garage door services in your area
-              </h2>
-              <div class="row g-4">
-                {/* <!-- Service Example 1 --> */}
-                <div class="col-md-6 col-lg-4">
-                  <div class="card h-100 border-start border-3 border-danger">
-                    <div class="card-body">
-                      <h3 class="h6 card-title text-danger">St Charles, IL</h3>
-                      <p class="card-text">
-                        Broken bottom bracket made left cable loose and door got
-                        crooked. Customer attempted DIY repair which worsened
-                        the situation. Replaced bottom brackets and balanced
-                        door.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* <!-- Service Example 2 --> */}
-                <div class="col-md-6 col-lg-4">
-                  <div class="card h-100 border-start border-3 border-warning">
-                    <div class="card-body">
-                      <h3 class="h6 card-title text-warning">Gurnee, IL</h3>
-                      <p class="card-text">
-                        Door off track due to snapped cable. Installed new
-                        cables and restored door to track.{" "}
-                        <strong>Note:</strong> Never force a door with snapped
-                        cables.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* <!-- Service Example 3 --> */}
-                <div class="col-md-6 col-lg-4">
-                  <div class="card h-100 border-start border-3 border-success">
-                    <div class="card-body">
-                      <h3 class="h6 card-title text-success">Naperville, IL</h3>
-                      <p class="card-text">
-                        Installed torsion springs, lubricated door, and
-                        performed opener tune-up for optimal performance.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <small>
-                  Testimonials from Plainfield, Chicago, Arlington Heights,
-                  Romeoville, Lockport, Westchester, Naperville, Hoffman
-                  Estates, Palatine, Naperville, Woodridge, Winfield, Downers
-                  Grove. more
-                </small>
-                {/* <!-- Additional examples would follow same pattern --> */}
               </div>
             </div>
-          </section>
-        </Col>
-      </Row>
-      {/* Testimonials */}
-      <Row className="mt-5 py-5 bg-light rounded shadow-sm">
-        <Col>
-          <FaqSection />
-        </Col>
-      </Row>
-    </Container>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

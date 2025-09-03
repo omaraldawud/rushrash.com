@@ -1,5 +1,5 @@
 // src/data/services.js
-// 4 services buttons on every page.
+// 4 service buttons on every page.
 
 export const services = [
   {

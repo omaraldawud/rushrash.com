@@ -1,19 +1,20 @@
-import "../../assets/css/Banner.css";
+import { useLocation } from "react-router-dom";
 import { services as allServices } from "../../assets/data/rr_services_ds";
 import CTABannerForm from "../cta-forms/CTABannerForm";
+import "../../assets/css/Banner.css";
 
 export default function Banner({
   title = "Welcome to Rushrash Inc.",
   subtitle = "CCTV & Access Control Experts",
   ctaText = "Get a Free Quote",
-  seo_brands_text = "We work with all major CCTV & Access Control brands:",
-  banner_brands = "Hikvision, Dahua, Bosch, Axis, Honeywell",
-  heroImages = [],
+  heroImages = null,
   bgImage = [],
 }) {
+  const location = useLocation();
+
   const bannerStyle = {
     position: "relative",
-    minHeight: "600px",
+    maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
     display: "flex",
@@ -29,7 +30,7 @@ export default function Banner({
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${bgImage[0]})`,
+          backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -43,40 +44,73 @@ export default function Banner({
 
       <section
         id="hero"
-        className="hero-images-wrapper my-5 d-flex flex-column flex-lg-row align-items-stretch justify-content-center banner-content"
+        className="hero-images-wrapper my-5 d-flex flex-column align-items-stretch justify-content-center banner-content"
       >
         <div className="container">
-          <div className="row d-flex gy-4 justify-content-center align-items-stretch">
-            {/* Text + CTA Form + Services */}
-            <div className="col-lg-8 col-xl-8 order-2 order-lg-1 d-flex flex-column align-items-start">
-              <div className="w-100">
-                <h2 className="hero-heading text-center text-lg-start">
-                  {title}
+          {/* Hero Text */}
+          <div className="row mb-4">
+            <div className="col-12">
+              <div className="hero-text-container bg-dark text-center text-md-start">
+                <h2 className="hero-heading">
+                  <span className="hero-heading-accent">{title}</span>
                 </h2>
+
                 {subtitle && (
-                  <h3 className="subtitle text-center text-lg-start">
-                    {subtitle}
-                  </h3>
+                  <div className="subtitle-wrapper">
+                    <h3 className="subtitle">
+                      <span className="subtitle-highlight">{subtitle}</span>
+                    </h3>
+                    <div className="subtitle-underline"></div>
+                  </div>
                 )}
-                {seo_brands_text && (
-                  <p className="seo-text text-center text-lg-start">
-                    {seo_brands_text} {banner_brands}
-                  </p>
-                )}
+              </div>
+            </div>
+          </div>
 
-                {/* CTA Form Component */}
-                <CTABannerForm ctaText={ctaText} />
+          {/* Hero Images and Form Side by Side */}
+          <div className="row mb-4 align-items-stretch">
+            {/* Two Hero Images */}
+            <div className="col-12 col-md-8 mb-4 mb-md-0">
+              <div className="row g-3 h-100">
+                {heroImages &&
+                  heroImages.slice(0, 2).map((image, index) => (
+                    <div key={index} className="col-12 col-sm-6">
+                      <div className="hero-image-container h-100">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          title={image.title}
+                          className="hero-img h-100"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
 
-                {/* Services Cards */}
-                {allServices.length > 0 && (
-                  <div className="row mt-3 gx-2 gy-2">
-                    {allServices.slice(0, 4).map((svc, idx) => (
+            {/* Form - Right side */}
+            <div className="col-12 col-md-4">
+              <CTABannerForm ctaText={ctaText} />
+            </div>
+          </div>
+
+          {/* Services - Full width */}
+          <div className="row">
+            <div className="col-12">
+              {allServices.length > 0 && (
+                <div className="row gx-2 gy-2">
+                  {allServices.slice(0, 4).map((svc, idx) => {
+                    const isActive = location.pathname === svc.service_href;
+                    const cardClasses = `service-gradient-card text-center p-2 ${
+                      isActive ? "active-service-card" : ""
+                    }`;
+
+                    return (
                       <div key={idx} className="col-6 col-md-3">
-                        <a
-                          href={svc.service_href}
-                          className="text-decoration-none"
-                        >
-                          <div className="service-gradient-card text-center p-2">
+                        {isActive ? (
+                          // Active: not clickable
+                          <span className={cardClasses}>
                             {svc.icon && (
                               <i
                                 className={`bi ${svc.icon} service-gradient-icon`}
@@ -85,38 +119,30 @@ export default function Banner({
                             <div className="service-gradient-title">
                               {svc.title}
                             </div>
-                          </div>
-                        </a>
+                          </span>
+                        ) : (
+                          // Inactive: link
+                          <a
+                            href={svc.service_href}
+                            className="text-decoration-none"
+                          >
+                            <div className={cardClasses}>
+                              {svc.icon && (
+                                <i
+                                  className={`bi ${svc.icon} service-gradient-icon`}
+                                />
+                              )}
+                              <div className="service-gradient-title">
+                                {svc.title}
+                              </div>
+                            </div>
+                          </a>
+                        )}
                       </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Hero Images - Reduced to 2 */}
-            <div className="col-lg-4 col-xl-4 text-center order-1 order-lg-2 d-flex flex-column align-items-center gap-2">
-              {heroImages.slice(0, 2).map((img, idx) => (
-                <div key={idx} className="w-100 position-relative d-block">
-                  {" "}
-                  {/* Changed from flex-fill to d-block */}
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    title={img.title}
-                    className="hero-img"
-                    style={{
-                      height: "200px",
-                      objectFit: "cover",
-                    }}
-                  />
-                  {img.caption && (
-                    <span className="position-absolute top-0 end-0 small text-light bg-dark bg-opacity-75 m-1 p-1 rounded">
-                      {img.caption}
-                    </span>
-                  )}
+                    );
+                  })}
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>

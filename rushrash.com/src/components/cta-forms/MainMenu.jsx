@@ -191,34 +191,10 @@ const MainMenu = () => {
                         Control Systems
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/services/security-consultation"
-                        className={getLinkClass(
-                          "/services/security-consultation"
-                        )}
-                        style={menuItemStyle}
-                        onClick={closeParentDropdown}
-                      >
-                        <i className="bi bi-shield-check me-2"></i> Security
-                        Consultation
-                      </Link>
-                    </li>
                   </div>
 
                   {/* Column 2 */}
                   <div className="col-6 col-lg-4">
-                    <li>
-                      <Link
-                        to="/services/home-surveillance"
-                        className={getLinkClass("/services/home-surveillance")}
-                        style={menuItemStyle}
-                        onClick={closeParentDropdown}
-                      >
-                        <i className="bi bi-house-door me-2"></i> Home
-                        Surveillance Systems
-                      </Link>
-                    </li>
                     <li>
                       <Link
                         to="/services/it-services"
@@ -403,8 +379,8 @@ const MainMenu = () => {
                     <li></li>
                     <li>
                       <Link
-                        to="/legal-page"
-                        className={getLinkClass("/legal-page")}
+                        to="/rushrash-legal"
+                        className={getLinkClass("/rushrash-legal")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -419,8 +395,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/legal-page"
-                        className={getLinkClass("/legal-page")}
+                        to="/rushrash-legal"
+                        className={getLinkClass("/rushrash-legal")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",
@@ -436,8 +412,8 @@ const MainMenu = () => {
                     </li>
                     <li>
                       <Link
-                        to="/legal-page"
-                        className={getLinkClass("/legal-page")}
+                        to="/rushrash-legal"
+                        className={getLinkClass("/rushrash-legal")}
                         style={{
                           borderRadius: "6px",
                           padding: "0.5rem 1rem",

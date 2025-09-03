@@ -69,7 +69,7 @@ const brands_ds = [
       "expertise in software, connectivity, and AI, offering solutions that support automation and sustainability across industries",
     cams: [
       {
-        cam: "MIC IP Fusion 9000i ",
+        cam: "MIC IP Fusion 9000i",
         best_for: "outdoor surveillance",
         img: { boschCamera },
       },
@@ -103,8 +103,6 @@ const brands_ds = [
   {
     name: "Axis Communications",
     img: AxisLogo,
-    brand_desc:
-      "Network-based security with analytics with comprehensive business solutions",
     brand_seo_text:
       "Axis Communications professional security solutions, Best for Integrated Solutions",
     brand_desc:

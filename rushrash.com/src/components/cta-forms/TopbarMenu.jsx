@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import companyInfo from "../../assets/data/rr_company_ds";
 import SocialProfiles from "../sections/SocialProfiles";
 
@@ -25,15 +25,21 @@ export default function TopbarMen() {
       <div className="left-links d-flex align-items-center small">
         <a
           href="/residential-cctv-security"
-          className={`residential-link ${isResidential ? "active-link" : ""}`}
+          className={`residential-link ${
+            isResidential ? "active-link" : ""
+          } text-decoration-none d-flex align-items-center`}
         >
           <i className="bi bi-house-door-fill text-warning me-1"></i>
           {isResidential ? "HOME SECURITY" : "Home Security"}
         </a>
+
         <span className="text-light mx-2">|||</span>
+
         <a
           href="/commercial-cctv-security"
-          className={`business-link ${isCommercial ? "active-link" : ""}`}
+          className={`business-link ${
+            isCommercial ? "active-link" : ""
+          } text-decoration-none d-flex align-items-center`}
         >
           <i className="bi bi-building me-1 text-warning"></i>
           {isCommercial ? "BUSINESS SECURITY" : "Business Security"}
@@ -54,30 +60,59 @@ export default function TopbarMen() {
 
         {/* Navigation Links with Separators */}
         <div className="d-flex align-items-center me-4">
-          <a
-            href="/contact-rushrash-inc"
-            className="text-nowrap text-light text-decoration-none me-3 nav-link"
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              "text-nowrap text-light text-decoration-none me-3 nav-link" +
+              (isActive ? " active" : "")
+            }
           >
+            <i className="bi bi-house me-2 text-warning"></i>
+            HOME
+          </NavLink>
+
+          <NavLink
+            to="/contact-rushrash-inc"
+            className={({ isActive }) =>
+              "text-nowrap text-light text-decoration-none me-3 nav-link" +
+              (isActive ? " active" : "")
+            }
+          >
+            <i className="bi bi-person me-2 text-warning"></i>
             Contact
-          </a>
+          </NavLink>
+
           <span className="text-muted">|</span>
-          <a
-            href="/about-rushrash-inc"
-            className="text-nowrap text-light text-decoration-none mx-3 nav-link"
+
+          <NavLink
+            to="/about-rushrash-inc"
+            className={({ isActive }) =>
+              "text-nowrap text-light text-decoration-none mx-3 nav-link" +
+              (isActive ? " active" : "")
+            }
           >
+            <i className="bi bi-info-circle me-2 text-warning"></i>
             About
-          </a>
+          </NavLink>
+
           <span className="text-muted">|</span>
-          <a
-            href="#"
-            className="text-nowrap text-mute text-decoration-none ms-3"
+
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              "text-nowrap text-light text-decoration-none ms-3 nav-link" +
+              (isActive ? " active" : "")
+            }
           >
+            <i className="bi bi-box-arrow-in-right me-2 text-warning"></i>
             Login
-          </a>
+          </NavLink>
         </div>
 
         {/* Social Links */}
-        <SocialProfiles />
+        <div className="border-start border-1 border-warning ps-3">
+          <SocialProfiles />
+        </div>
       </div>
     </div>
   );

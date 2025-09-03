@@ -5,10 +5,10 @@ import { useLocation } from "react-router-dom";
 import MainMenu from "../cta-forms/MainMenu";
 import companyInfo from "../../assets/data/rr_company_ds";
 import TopbarMenu from "../cta-forms/TopbarMenu";
+import Logo from "../layout/Logo";
 
 //css
 import "../../assets/css/Header.css";
-import logo from "../../assets/images/logo/rushrash-inc-logo-350-tr.png";
 
 //
 export default function Header() {
@@ -21,7 +21,8 @@ export default function Header() {
   } else if (pathname.includes("/commercial-cctv-security")) {
     header_subtitle = "Business CCTV & Access Control";
   } else if (pathname.includes("/contact-rushrash-inc")) {
-    header_subtitle = "Get in Touch With Us";
+    header_subtitle =
+      "Call or Send us a note about your cctv and security needs";
   } else if (pathname.includes("/about-rushrash-inc")) {
     header_subtitle = "Chicago's Premier Security & Surveillance Experts";
   }
@@ -35,22 +36,18 @@ export default function Header() {
         {/* --- Main Row: Logo + Menu --- */}
         <div className="d-flex justify-content-between align-items-center py-4">
           {/* Left: Logo + Company Name */}
-          <div className="d-flex align-items-center">
-            <img
-              src={logo}
-              alt="Rushrash Inc. Logo"
-              className="logo-img me-3"
-            />
+          <div className="d-flex align-items-center mt-5">
+            <Logo />
 
             {/* <RushrashLogo width={350} height={150} /> */}
 
-            <div className="brand-content">
-              <h1 className="company-title mb-0 text-danger">
-                {companyInfo.companyName}
+            <div className="ms-5 d-flex flex-column">
+              <h1 className="company-title mb-1">
+                <span className="company-name">{companyInfo.companyName}</span>
+                <span className="company-subtitle d-block">
+                  {header_subtitle}
+                </span>
               </h1>
-              <p className="company-subtitle mb-0 text-light">
-                {header_subtitle}
-              </p>
             </div>
           </div>
 

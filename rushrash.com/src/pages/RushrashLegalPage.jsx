@@ -1,17 +1,35 @@
 import SEOMeta from "../components/seo/SEOMeta";
+import { Container } from "react-bootstrap";
+//components
+import PageInfoBox from "../components/cards/PageInfoBox";
+import rr_company_ds from "../assets/data/rr_company_ds";
+import companyInfo from "../assets/data/rr_company_ds";
+import Logo from "../components/layout/Logo";
 
-export default function LegalPage() {
+//images
+import securitySrvcImg from "../assets/images/security-protection-anti-virus-software.jpeg";
+import dataPrvcyImg from "../assets/images/cyber-security.jpeg";
+import techInstalingImg from "../assets/images/cctv-installation.png";
+import certifiedTechImg from "../assets/images/parts-cables-connectores/It-and-Network-Services.jpg";
+import techItSrvcImg from "../assets/images/it-services/cat-cables-it-network-setup.jpeg";
+//
+//
+export default function RushrashLegalPage() {
   return (
     <>
       <SEOMeta
-        title="Legal Information | Advanced Garage Door Inc"
-        description="Review our terms of service, privacy policy, and company information. Licensed, bonded & insured garage door specialists serving Chicagoland."
-        keywords="garage door legal, privacy policy, terms of service, licensed garage door company"
+        title="Security & Legal Information | Rushrash Surveillance"
+        description="Review our terms of service, privacy policy, and company information. Licensed and trusted providers of CCTV, access control, PoS, and IT services across Chicagoland."
+        keywords="CCTV legal, access control privacy policy, IT services terms of service, PoS security"
       />
 
-      <div className="container ">
+      <Container fluid>
+        <PageInfoBox pageType="legal" />
+      </Container>
+
+      <div className="container">
         {/* Mission Statement Section */}
-        <section className="row align-items-center mb-5 ">
+        <section className="row align-items-center mb-5">
           <div className="col-lg-6 pe-lg-5">
             <h2 className="display-5 fw-bold mb-4 text-primary">
               Our Commitment
@@ -19,20 +37,21 @@ export default function LegalPage() {
             <div className="border-start border-4 border-primary ps-4">
               <h3 className="text-dark mb-3">Mission Statement</h3>
               <p className="lead">
-                Raise the standards of quality in garage door repair and
-                installation. Provide dependable service with personal
-                attention. Become the most trusted name in the industry.
+                Raise the standards of quality in surveillance and IT solutions.
+                Provide reliable service with personal attention. Become the
+                most trusted provider in security, access control, PoS, and IT
+                services.
               </p>
 
               <div className="mt-4">
                 <div className="d-flex align-items-center mb-3">
                   <i className="fas fa-shield-alt fa-2x text-primary me-3"></i>
                   <div>
-                    <h4 className="mb-0">Licensed, Bonded & Insured</h4>
+                    <h4 className="mb-0">Licensed & Trusted</h4>
                     <p className="mb-0">
-                      We are a fully licensed, bonded, and insured garage door
-                      company — delivering professional and trustworthy service
-                      across Chicagoland.
+                      We are fully licensed and trusted experts in CCTV, access
+                      control, PoS, and IT services — delivering professional
+                      service across Chicagoland.
                     </p>
                   </div>
                 </div>
@@ -40,7 +59,7 @@ export default function LegalPage() {
                 <div className="d-flex align-items-center">
                   <i className="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
                   <div>
-                    <h4 className="mb-0">Local Garage Door Company</h4>
+                    <h4 className="mb-0">Local Security & IT Company</h4>
                     <p className="mb-0">
                       Serving Naperville, Aurora, Plainfield, and all Chicago
                       suburbs.
@@ -50,33 +69,25 @@ export default function LegalPage() {
               </div>
             </div>
           </div>
-          {/* images */}
+
+          {/* Images */}
           <div className="col-lg-6 mt-5 mt-lg-0">
             <div className="row g-3">
               <div className="col-md-6">
-                <img
-                  src="/images/sitewide/advanced-garage-door-inc-logo-side.png"
-                  alt="Certified technician servicing garage door"
-                  className="img-fluid rounded-3 "
-                  style={{
-                    height: "250px",
-                    objectFit: "contain",
-                    width: "100%",
-                  }}
-                />
+                <Logo logoWidth="200px" />
               </div>
               <div className="col-md-6">
                 <img
-                  src="/images/sitewide/GarageDoorsTechnicians.jfif"
-                  alt="Chicago service area coverage map"
-                  className="img-fluid rounded-3 "
+                  src={techInstalingImg}
+                  alt="Technician installing security system"
+                  className="img-fluid rounded-3"
                   style={{ height: "250px", objectFit: "cover", width: "100%" }}
                 />
               </div>
               <div className="d-flex gap-3 justify-content-center my-3">
                 <img
-                  src="/images/banners/about-banner.jpg"
-                  alt="Licensed and insured certification"
+                  src={certifiedTechImg}
+                  alt="Certified security technician"
                   className="img-fluid rounded-2"
                   style={{
                     height: "150px",
@@ -87,8 +98,8 @@ export default function LegalPage() {
                   }}
                 />
                 <img
-                  src="/images/banners/residential-gif"
-                  alt="Technician performing service"
+                  src={techItSrvcImg}
+                  alt="Technician performing IT service"
                   className="img-fluid rounded-2"
                   style={{
                     height: "150px",
@@ -108,36 +119,37 @@ export default function LegalPage() {
           <div className="col-lg-6 pe-lg-5">
             <h2 className="fw-bold mb-4 text-primary">Privacy Policy</h2>
             <p>
-              Advanced Garage Door Inc. is committed to protecting your privacy.
+              Rushrash Surveillance is committed to protecting your privacy.
               This policy outlines how we collect, use, and safeguard your
-              personal information when you use our services or website.
+              personal information when you use our security, IT, or PoS
+              services.
             </p>
 
             <h4 className="mt-4">Information Collection</h4>
             <p>
-              We collect information when you schedule services, request
-              estimates, or contact our team. This may include your name,
-              address, phone number, and email address.
+              We collect information when you request services, estimates, or
+              contact our team. This may include your name, address, phone
+              number, and email.
             </p>
 
             <h4 className="mt-4">Data Security</h4>
             <p>
-              We implement security measures to maintain the safety of your
-              personal information. All sensitive/credit information is
-              transmitted via Secure Socket Layer (SSL) technology.
+              We implement strict security measures to protect your personal and
+              business information. All sensitive data is transmitted via Secure
+              Socket Layer (SSL) technology.
             </p>
 
             <h4 className="mt-4">Policy Updates</h4>
             <p>
               This policy may be updated periodically. We will notify you of any
-              changes by posting the new policy on this page.
+              changes by posting the updated policy on this page.
             </p>
           </div>
 
           <div className="col-lg-6 mt-5 mt-lg-0">
             <div className="position-relative rounded-4 overflow-hidden shadow-lg">
               <img
-                src="/images/sitewide/power-off-control.png"
+                src={dataPrvcyImg}
                 alt="Data privacy and security illustration"
                 className="img-fluid w-100"
                 style={{ minHeight: "300px", objectFit: "contain" }}
@@ -155,22 +167,22 @@ export default function LegalPage() {
             <h2 className="fw-bold mb-4 text-primary">Terms of Service</h2>
             <p>
               By using our services, you agree to these terms and conditions.
-              Please read them carefully before scheduling any services with
-              Advanced Garage Door Inc.
+              Please read them carefully before scheduling any CCTV, access
+              control, PoS, or IT services with Rushrash Surveillance.
             </p>
 
             <h4 className="mt-4">Service Agreements</h4>
             <p>
-              All services are performed according to manufacturer
-              specifications and industry standards. We provide warranties as
-              outlined in your service contract.
+              All services are performed according to industry standards and
+              manufacturer specifications. We provide warranties as outlined in
+              your service contract.
             </p>
 
             <h4 className="mt-4">Payment Terms</h4>
             <p>
               Payment is due upon completion of services unless other
-              arrangements have been made in advance. We accept cash, checks,
-              and all major credit cards.
+              arrangements are made in advance. We accept cash, checks, and all
+              major credit cards.
             </p>
 
             <h4 className="mt-4">Cancellation Policy</h4>
@@ -183,8 +195,8 @@ export default function LegalPage() {
           <div className="col-lg-6 mt-5 mt-lg-0">
             <div className="card border-0 shadow-lg rounded-4 overflow-hidden">
               <img
-                src="/images/sitewide/garage-door-service.avif"
-                alt="Technician reviewing service agreement with customer"
+                src={securitySrvcImg}
+                alt="Technician reviewing service agreement"
                 className="card-img-top"
                 style={{ height: "250px", objectFit: "cover" }}
               />
@@ -201,61 +213,34 @@ export default function LegalPage() {
 
         {/* Copyright Section */}
         <section className="row align-items-center py-4 bg-dark text-white rounded-4">
-          <div className="col-lg-6 pe-lg-5">
+          <div className="col-lg-7 pe-lg-5">
             <h2 className="fw-bold mb-4 text-light">Copyright Information</h2>
             <p>
-              © {new Date().getFullYear()} Advanced Garage Door Inc. All rights
+              © {new Date().getFullYear()} Rushrash Surveillance. All rights
               reserved.
             </p>
 
             <h4 className="mt-4">Content Usage</h4>
             <p>
               All content on this website, including text, graphics, logos, and
-              images, is the property of Advanced Garage Door Inc. and protected
-              by copyright laws.
+              images, is the property of Rushrash Surveillance and protected by
+              copyright laws.
             </p>
 
             <h4 className="mt-4">Permissions</h4>
             <p>
               For permission to use any materials from this site, please contact
               us at
-              <a
-                href="mailto:info@advancedgaragedoorinc.com"
-                className="text-white"
-              >
+              <a href="mailto:info@rushrash.com" className="text-white">
                 {" "}
-                info@advancedgaragedoorinc.com
+                {rr_company_ds.email}
               </a>
               .
             </p>
           </div>
 
-          <div className="col-lg-6 mt-5 mt-lg-0">
-            <div className="position-relative">
-              <img
-                src="/images/company-logo-full.jpg"
-                alt="Advanced Garage Door Inc. logo"
-                className="img-fluid rounded-3"
-                style={{ maxHeight: "300px", objectFit: "contain" }}
-              />
-              <div className="text-center mt-3">
-                <p className="mb-0">
-                  <i className="fas fa-phone-alt me-2"></i>
-                  <a href="tel:877-523-6677" className="text-white">
-                    877-523-6677
-                  </a>
-                </p>
-                <p className="mb-0">
-                  <i className="fas fa-envelope me-2"></i>
-                  <a
-                    href="mailto:info@advancedgaragedoorinc.com"
-                    className="text-white"
-                  >
-                    info@advancedgaragedoorinc.com
-                  </a>
-                </p>
-              </div>
-            </div>
+          <div className="col-lg-5 mt-5 mt-lg-0">
+            <Logo logoWidth="400px" />
           </div>
         </section>
       </div>
