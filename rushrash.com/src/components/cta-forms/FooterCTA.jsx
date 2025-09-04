@@ -1,7 +1,6 @@
 // src/components/cta-forms/FooterCTA.tsx
 //
-
-import { Link } from "react-router-dom";
+import FooterQuickForm from "./FooterQuickForm";
 
 export default function FooterCTA() {
   return (
@@ -18,18 +17,7 @@ export default function FooterCTA() {
           tailored security solutions.
         </p>
         <div className="d-flex justify-content-center gap-3">
-          <Link
-            to="/contact-rushrash-inc"
-            className="btn btn-warning btn-lg fw-semibold text-dark"
-          >
-            Contact Us
-          </Link>
-          <Link
-            to="/about-rushrash-inc"
-            className="btn btn-outline-light btn-lg fw-semibold"
-          >
-            Learn More
-          </Link>
+          <FooterQuickForm ctaText="Submit Info" />
         </div>
       </div>
     </footer>

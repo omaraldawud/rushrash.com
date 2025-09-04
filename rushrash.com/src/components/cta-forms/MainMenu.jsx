@@ -5,7 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../layout/Logo";
 
 const MainMenu = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState(null);
   const location = useLocation();
   const navRef = useRef(null);
 
@@ -32,17 +32,21 @@ const MainMenu = () => {
     }`;
   };
 
+  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
-        setExpanded(false);
+        setExpandedMenu(null);
       }
     };
-    if (expanded) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+    document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [expanded]);
+  }, []);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setExpandedMenu(null);
+  }, [location]);
 
   return (
     <nav
@@ -62,7 +66,7 @@ const MainMenu = () => {
           <Logo logoWidth="30px" />
         </div>
 
-        <div className={`collapse navbar-collapse ${expanded ? "show" : ""}`}>
+        <div className="collapse navbar-collapse show">
           <ul className="navbar-nav ms-auto d-flex align-items-center gap-3">
             {/* Services Mega Menu */}
             <li className="nav-item dropdown">
@@ -74,14 +78,19 @@ const MainMenu = () => {
                   "/services/pos-installation",
                 ])}
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                onClick={() =>
+                  setExpandedMenu(
+                    expandedMenu === "services" ? null : "services"
+                  )
+                }
                 style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
               >
                 Services
               </span>
               <ul
-                className="dropdown-menu dropdown-menu-end p-4 shadow-lg rounded-3 border-0"
+                className={`dropdown-menu dropdown-menu-end p-4 shadow-lg rounded-3 border-0 ${
+                  expandedMenu === "services" ? "show" : ""
+                }`}
                 style={{
                   minWidth: "650px",
                   backgroundColor: "#f8f9fa",
@@ -90,7 +99,6 @@ const MainMenu = () => {
                 }}
               >
                 <div className="row gx-3">
-                  {/* Column 1: Links */}
                   <div className="col-4">
                     <ul className="list-unstyled mb-0">
                       <li>
@@ -100,6 +108,7 @@ const MainMenu = () => {
                             "/services/cctv-installation"
                           )}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-camera-video me-2"></i> CCTV
                           Installation
@@ -110,6 +119,7 @@ const MainMenu = () => {
                           to="/services/access-control"
                           className={getLinkClass("/services/access-control")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-door-closed me-2"></i> Access
                           Control
@@ -120,6 +130,7 @@ const MainMenu = () => {
                           to="/services/it-services"
                           className={getLinkClass("/services/it-services")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-laptop me-2"></i> IT Services
                         </Link>
@@ -129,6 +140,7 @@ const MainMenu = () => {
                           to="/services/pos-installation"
                           className={getLinkClass("/services/pos-installation")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-bag-check me-2"></i> POS
                           Installation
@@ -137,7 +149,6 @@ const MainMenu = () => {
                     </ul>
                   </div>
 
-                  {/* Column 2: Info box */}
                   <div className="col-8 info-box">
                     <h6 className="fw-bold text-dark mb-2">
                       <i className="bi bi-question-circle text-warning me-2"></i>
@@ -150,6 +161,7 @@ const MainMenu = () => {
                     <a
                       href="/contact-rushrash-inc"
                       className="btn btn-warning btn-sm fw-semibold"
+                      onClick={() => setExpandedMenu(null)}
                     >
                       Contact Us
                     </a>
@@ -158,22 +170,22 @@ const MainMenu = () => {
               </ul>
             </li>
 
-            {/* About Corporate Mega Menu */}
+            {/* About Rushrash Mega Menu */}
             <li className="nav-item dropdown">
               <span
                 className="nav-link dropdown-toggle"
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{
-                  padding: "0.5rem 1rem",
-                  cursor: "pointer",
-                }}
+                onClick={() =>
+                  setExpandedMenu(expandedMenu === "about" ? null : "about")
+                }
+                style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
               >
                 About Rushrash
               </span>
               <ul
-                className="dropdown-menu dropdown-menu-end p-4 shadow-lg rounded-3 border-0"
+                className={`dropdown-menu dropdown-menu-end p-4 shadow-lg rounded-3 border-0 ${
+                  expandedMenu === "about" ? "show" : ""
+                }`}
                 style={{
                   minWidth: "600px",
                   backgroundColor: "#f8f9fa",
@@ -182,7 +194,6 @@ const MainMenu = () => {
                 }}
               >
                 <div className="row gx-2">
-                  {/* Column 1: Links */}
                   <div className="col-4">
                     <ul className="list-unstyled mb-0">
                       <li>
@@ -190,6 +201,7 @@ const MainMenu = () => {
                           to="/about-rushrash-inc"
                           className={getLinkClass("/about-rushrash-inc")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-building me-2"></i> About Us
                         </Link>
@@ -199,6 +211,7 @@ const MainMenu = () => {
                           to="/contact-rushrash-inc"
                           className={getLinkClass("/contact-rushrash-inc")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-headset me-2"></i> Contact Us
                         </Link>
@@ -208,6 +221,7 @@ const MainMenu = () => {
                           to="/cctv-coupons"
                           className={getLinkClass("/cctv-coupons")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-tag me-2"></i> Specials
                         </Link>
@@ -217,6 +231,7 @@ const MainMenu = () => {
                           to="/rushrash-legal"
                           className={getLinkClass("/rushrash-legal")}
                           style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-shield-lock me-2"></i> Legal &
                           Privacy
@@ -225,7 +240,6 @@ const MainMenu = () => {
                     </ul>
                   </div>
 
-                  {/* Column 2: Info box */}
                   <div className="col-8 info-box">
                     <h6 className="fw-bold text-dark mb-2">
                       <i className="bi bi-question-circle text-warning me-2"></i>
@@ -239,6 +253,7 @@ const MainMenu = () => {
                     <a
                       href="/contact-rushrash-inc"
                       className="btn btn-warning btn-sm fw-semibold"
+                      onClick={() => setExpandedMenu(null)}
                     >
                       Contact Us
                     </a>

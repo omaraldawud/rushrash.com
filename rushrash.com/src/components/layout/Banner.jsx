@@ -50,7 +50,7 @@ export default function Banner({
           {/* Hero Text */}
           <div className="row mb-4">
             <div className="col-12">
-              <div className="hero-text-container bg-dark text-center text-md-start">
+              <div className="hero-text-container text-center text-md-start">
                 <h2 className="hero-heading">
                   <span className="hero-heading-accent">{title}</span>
                 </h2>
@@ -90,9 +90,11 @@ export default function Banner({
             </div>
 
             {/* Form - Right side */}
-            <div className="col-12 col-md-4">
-              <CTABannerForm ctaText={ctaText} />
-            </div>
+            {location.pathname !== "/contact-rushrash-inc" ? (
+              <div className="col-12 col-md-4">
+                <CTABannerForm ctaText={ctaText} />
+              </div>
+            ) : null}
           </div>
 
           {/* Services - Full width */}

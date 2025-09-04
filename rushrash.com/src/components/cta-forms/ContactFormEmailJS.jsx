@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { BiUser, BiPhone, BiEnvelope, BiChat } from "react-icons/bi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,7 +9,7 @@ export default function ContactForm() {
   const formRef = useRef(null);
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     if (!formRef.current) return;
 
@@ -16,7 +17,7 @@ export default function ContactForm() {
     const name = formData.get("name");
     const email = formData.get("email");
     const phone = formData.get("phone");
-    const customer_message = formData.get("message");
+    const message = formData.get("message");
 
     // Optional email validation
     if (email && !/\S+@\S+\.\S+/.test(email)) {
@@ -26,25 +27,26 @@ export default function ContactForm() {
 
     setSending(true);
 
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbxm2UpEgHPRHyBsUyQtDs8zZfZgQryDxhYG1iIEecfjx_NfUWhHUo2yVuLAnKG55-R3/exec",
-        {
-          method: "POST",
-          mode: "no-cors", // required for Google Apps Script
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, phone, customer_message }),
-        }
-      );
+    // Add current time for template
+    const currentTime = new Date().toLocaleString();
 
-      toast.success("✅ Message sent successfully!");
-      formRef.current.reset();
-    } catch (err) {
-      console.error(err);
-      toast.error("❌ Failed to send message. Please try again.");
-    } finally {
-      setSending(false);
-    }
+    // Send email with time included
+    emailjs
+      .sendForm(
+        "service_wl2mv1d",
+        "template_trw1mqb",
+        formRef.current,
+        "user_ko6phmeIKmrDDuO1FzuHG"
+      )
+      .then(() => {
+        toast.success("✅ Message sent successfully!");
+        formRef.current.reset();
+      })
+      .catch((error) => {
+        toast.error("❌ Failed to send message. Check console for details.");
+        console.error("EmailJS Error:", error);
+      })
+      .finally(() => setSending(false));
   };
 
   return (
@@ -55,7 +57,7 @@ export default function ContactForm() {
           Reach us - FREE Consultation & Estimate
         </h3>
 
-        <form ref={formRef} onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={sendEmail}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label small text-muted">
               <BiUser className="me-2" /> Full Name *
@@ -107,7 +109,7 @@ export default function ContactForm() {
               name="message"
               rows={3}
               required
-              placeholder="Describe your issue..."
+              placeholder="Describe your garage door issue..."
             ></textarea>
           </div>
 

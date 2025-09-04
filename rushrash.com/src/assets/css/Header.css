@@ -9,7 +9,7 @@ body {
 }
 
 .header-sec {
-  background: linear-gradient(135deg, #0a1a2f 0%, #0d2b4e 50%, #0a1a2f 100%);
+  /* background: linear-gradient(135deg, #0a1a2f 0%, #0d2b4e 50%, #0a1a2f 100%); */
   color: #fff;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -219,7 +219,7 @@ body {
 }
 
 .company-name {
-  background: linear-gradient(45deg, #fff, #ffc107, #fff);
+  background: linear-gradient(45deg, #fff, #b91d2c, #fff);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;

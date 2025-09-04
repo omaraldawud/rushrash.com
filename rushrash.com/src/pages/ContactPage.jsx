@@ -1,9 +1,10 @@
 //Component
 import ContactForm from "../components/cta-forms/ContactForm";
 import CaseStudies from "../components/sections/CaseStudies";
+import Logo from "../components/layout/Logo";
 
-//images
-import Logo from "../assets/images/logo/rushrash-inc-logo-350-tr.png";
+// Company Data Structure
+import rr_company_ds from "../assets/data/rr_company_ds";
 
 // JSON-LD Scheme 7 Meta SEO
 import SEOMeta from "../components/seo/SEOMeta";
@@ -124,18 +125,8 @@ export default function Contact() {
             <div className="col-lg-4">
               <div className="card border-0 shadow-lg bg-gradient-primary text-white overflow-hidden">
                 {/* Logo Section */}
-                <div className="text-center py-4 bg-dark bg-opacity-20">
-                  <img
-                    className="mt-4 img-fluid"
-                    src={Logo}
-                    z-index="1000"
-                    alt="Rushrash Security Camera Logo"
-                    width="250px"
-                    style={{
-                      maxHeight: "120px",
-                      objectFit: "contain",
-                    }}
-                  />
+                <div className="text-center py-4 bg-light bg-opacity-20">
+                  <Logo />
                 </div>
 
                 {/* Main Content */}
@@ -162,10 +153,10 @@ export default function Contact() {
                       Call Now
                     </span>
                     <a
-                      href="tel:+1-555-123-4567"
+                      href={rr_company_ds.phoneNumbers.telTollFree}
                       className="text-white text-decoration-none fw-bold fs-4"
                     >
-                      (555) 123-4567
+                      {rr_company_ds.phoneNumbers.tollFree}
                     </a>
                   </div>
 
