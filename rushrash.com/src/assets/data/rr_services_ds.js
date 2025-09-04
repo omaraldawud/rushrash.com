@@ -6,7 +6,7 @@ export const services = [
     id: "cctv",
     title: "CCTV Installation & Design",
     icon: "bi-camera-video",
-    service_href: "/cctv-services",
+    service_href: "/services/cctv-installation",
   },
 
   {

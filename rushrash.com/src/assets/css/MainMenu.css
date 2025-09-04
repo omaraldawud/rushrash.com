@@ -9,12 +9,7 @@
   position: relative; /* parent for absolute mega-menu */
 }
 
-.nav-link {
-  color: #AF2235;
-  padding: 1rem 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
+
 
 .nav-link-parent-active {
   color: #c83647; /* your active color */
@@ -73,82 +68,15 @@
   font-weight: 500;
   text-transform: capitalize;
 }
+ 
 
+ 
 
-.mega-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 600px;
-  min-width: 300px;
-  background: #fff;
-  z-index: 2000;
-  display: none;
-}
-
-.mega-menu li {
-  list-style: none;
-}
-
-.mega-menu .dropdown-item {
-  display: flex;
-  align-items: center;
-  padding: 0.35rem 0.75rem;
-}
-
-.mega-menu .dropdown-item i {
+.dropdown-item i {
   color: #0d6efd;
   font-size: 1rem;
   margin-right: 0.5rem;
 }
-
-.nav-item.dropdown:hover > .mega-menu,
-.nav-item.dropdown.show > .mega-menu {
-  display: block; /* show on hover or click */
-}
-
-.mega-menu-title {
-  font-weight: 600;        /* semi-bold */
-  font-size: 0.9rem;       /* slightly smaller than default h6 */
-  color: #0d6efd;          /* Bootstrap primary color */
-  padding: 0.5rem 0.75rem; /* spacing inside the dropdown */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* subtle divider */
-  margin-bottom: 0.5rem;   /* space between title and items */
-}
-
-
-/* For Sticky Header  */
-.sticky-header {
-  position: relative;  /* no sticky or fixed */
-  margin-top: -1px;    /* optional: align with header bottom */
-  z-index: 1000;
-  background-color: #fff;
-}
-.usa-made-banner {
-  background: linear-gradient(90deg, #b22234 0%, #3c3b6e 100%); /* red & blue USA gradient */
-  color: #fff;                 /* white text */
-  font-weight: 600;             /* semi-bold */
-  text-align: center;           /* center text */
-  padding: 0.5rem 1rem;         /* top/bottom and left/right padding */
-  border-radius: 0.25rem;       /* slightly rounded corners */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
-  text-transform: uppercase;    /* make it pop */
-  letter-spacing: 0.5px;        /* slight spacing for readability */
-  margin-bottom: 1rem;          /* spacing below banner */
-}
-
-/* Optional “shiny highlight” effect */
-.usa-made-banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: rotate(25deg);
-  pointer-events: none;
-  /* animation: shine 2.5s infinite; */
-}
-
 
 
 /* Small badge inside the banner */
@@ -172,13 +100,12 @@
 
 /* Dropdown menus above everything else */
 
-/* Mega menu fix (sometimes col divs clip it) */
-.mega-menu {
-  z-index: 2000;
-  position: absolute;
-  top: 100%; /* just below the nav */
-  left: auto;
-  right: 0;
+ .info-box {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .header-sec {
@@ -198,10 +125,24 @@
   color: #ffc107 !important; /* Highlight active link with Bootstrap warning color */
 }
 
-.left-links a.active-link {
-  font-weight: 600;
-  color: #ffc107; /* Bootstrap warning color */
-  border-left: 2px solid #ffc107; /* optional left border */
-  padding-left: 0.5rem; /* space from border */
+ 
+
+/* Top-level dropdown links */
+.navbar-nav .nav-link.dropdown-toggle {
+  color: #0d6efd !important;       /* Primary blue */
+  font-weight: 600;                /* Slightly bolder */
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
 }
 
+/* Hover effect */
+.navbar-nav .nav-link.dropdown-toggle:hover,
+.navbar-nav .nav-link.dropdown-toggle:focus {
+  color: #ff3700 !important;      /* Darker blue on hover/focus */
+  text-decoration: none;
+}
+
+/* Active top-level menu link */
+.navbar-nav .nav-link.nav-link-parent-active {
+  color: #000000 !important;      /* Keeps active link colored */
+}

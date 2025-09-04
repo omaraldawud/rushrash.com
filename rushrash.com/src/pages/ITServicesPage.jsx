@@ -7,6 +7,7 @@ import SEOMeta from "../components/seo/SEOMeta";
 
 // Functionl Components
 import PageInfoBox from "../components/cards/PageInfoBox";
+import FAQsSection from "../components/sections/FAQsSection";
 
 //
 
@@ -57,7 +58,10 @@ export default function ITServices() {
         <BreadcrumbSchema
           items={[
             { name: "Home", url: "https://rushrash.com" },
-            { name: "IT Services", url: "https://rushrash.com/it-services" },
+            {
+              name: "IT Services",
+              url: "https://rushrash.com/services/it-services",
+            },
           ]}
         />
 
@@ -159,6 +163,9 @@ export default function ITServices() {
             </div>
           ))}
         </div>
+      </div>
+      <div>
+        <FAQsSection faqServiceType="IT" />
       </div>
     </>
   );

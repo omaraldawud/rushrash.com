@@ -2,6 +2,9 @@
 import { Container } from "react-bootstrap";
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 import SEOMeta from "../components/seo/SEOMeta";
+// data strcutres
+import FAQsSection from "../components/sections/FAQsSection";
+
 // Components
 import PageInfoBox from "../components/cards/PageInfoBox";
 // Images
@@ -191,6 +194,9 @@ export default function CCTVServicesPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <FAQsSection faqServiceType="cctv" />
       </div>
     </>
   );

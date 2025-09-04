@@ -33,14 +33,11 @@ export default function Header() {
         {/* --- Top Utility Bar --- */}
         <TopbarMenu />
 
-        {/* --- Main Row: Logo + Menu --- */}
-        <div className="d-flex justify-content-between align-items-center py-4">
+        {/* --- Logo + Menu --- */}
+        <div className="d-flex justify-content-between align-items-end me-5 py-4">
           {/* Left: Logo + Company Name */}
           <div className="d-flex align-items-center mt-5">
-            <Logo />
-
-            {/* <RushrashLogo width={350} height={150} /> */}
-
+            <Logo logoWidth="200px" />
             <div className="ms-5 d-flex flex-column">
               <h1 className="company-title mb-1">
                 <span className="company-name">{companyInfo.companyName}</span>
@@ -52,7 +49,7 @@ export default function Header() {
           </div>
 
           {/* Main Menu */}
-          <div className="d-none d-md-block" style={{ zIndex: 2000 }}>
+          <div className="d-none d-md-block me-3" style={{ zIndex: 2000 }}>
             <MainMenu />
           </div>
         </div>

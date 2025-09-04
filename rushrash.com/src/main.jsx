@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./assets/css/AdvancedCustom.css";
 
 // import { HelmetProvider } from "react-helmet-async";
 import App from "./App";

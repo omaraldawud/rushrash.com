@@ -7,6 +7,7 @@ import SEOMeta from "../components/seo/SEOMeta";
 
 // Functionl Components
 import PageInfoBox from "../components/cards/PageInfoBox";
+import FAQsSection from "../components/sections/FAQsSection";
 
 //
 
@@ -141,6 +142,10 @@ export default function AccessControlServicesPage() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div>
+        <FAQsSection faqServiceType="access" />
       </div>
     </>
   );
