@@ -1,7 +1,7 @@
 import { useLocation, NavLink } from "react-router-dom";
 import companyInfo from "../../assets/data/rr_company_ds";
 import SocialProfiles from "../sections/SocialProfiles";
-import MainMenu from "./MainMenu";
+import FooterQuickForm from "./FooterQuickForm";
 
 export default function TopbarMen() {
   const location = useLocation();
@@ -45,6 +45,10 @@ export default function TopbarMen() {
           <i className="bi bi-building me-1 text-warning"></i>
           {isCommercial ? "BUSINESS SECURITY" : "Business Security"}
         </a>
+      </div>{" "}
+      {/* Top Form */}
+      <div className="me-3 bg-danger-subtle py-2 px-3 rounded-2 d-flex align-items-center">
+        <FooterQuickForm />
       </div>
       {/* Right: Phone + Links + Social */}
       <div className="d-flex align-items-center fw-bold">
