@@ -1,12 +1,13 @@
 import securityBg from "../../assets/images/banners/security-cctv-top.jpg";
 import aboutUsBg from "../../assets/images/banners/aboutus/call-us-cctv-solutions.jpg";
 import residentialBg from "../../assets/images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
-import accessControlBg from "../../assets/images/access-control/access-control-system.jpg";
-import ITServicesBG from "../../assets/images/it-services/it-architecture.jpg";
-import CCTVInstallationBG from "../../assets/images/banners/cctv-installation-technician.png";
-import PoSBG from "../../assets/images/pos/point-of-sale-restaurants.jpeg";
+import commercialBG from "../../assets/images/site-wide/privacy-policy-security-lock.jpg";
 import LegalBG from "../../assets/images/site-wide/data-privecy-security.jpeg";
 import ContactBg from "../../assets/images/banners/aboutus/building-cctv.jpg";
+import accessControlBg from "../../assets/images/access-control/access-control-system.jpg";
+import ITServicesBG from "../../assets/images/it-services/vcables-image-must-use_bg.jpg";
+import CCTVInstallationBG from "../../assets/images/banners/cctv-installation-technician.png";
+import PoSBG from "../../assets/images/pos/point-of-sale-restaurants.jpeg";
 
 ////////////////////////// Hero images
 //home
@@ -41,15 +42,15 @@ import heroITServices3 from "../../assets/images/it-services/it-architecture.jpg
 
 //services/access-control
 import heroAccessControl1 from "../../assets/images/access-control/access-control-pad.webp";
-import heroAccessControl2 from "../../assets/images/access-control/drone-access-control.jpg";
+import heroAccessControl2 from "../../assets/images/access-control/security-lock-digits.jpg";
 import heroAccessControl3 from "../../assets/images/access-control/aws-biometric-fingerprint.jfif";
 
-//services/access-control
+//services/cctv-installation
 import heroCCTVInstallation1 from "../../assets/images/cctv-cams/residential-CCTV.jfif";
 import heroCCTVInstallation2 from "../../assets/images/cctv-cams/cctv-control.webp";
 import heroCCTVInstallation3 from "../../assets/images/cctv-cams/camera-commercial-cctv.jpg";
 
-//services/access-control
+//services/pos-installation
 import heroPoS1 from "../../assets/images/pos/mobile-pos-phone.jfif";
 import heroPoS2 from "../../assets/images/pos/cloud-based-pos-dashboard.jfif";
 import heroPoS3 from "../../assets/images/pos/tablet-pos-system.jfif";
@@ -175,10 +176,10 @@ const banners = {
   // Commercial
   "/commercial-cctv-security": {
     icon: "bi bi-shop",
-    bgImage: [securityBg],
+    bgImage: [commercialBG],
     title: "Commercial Security Solutions",
     subtitle:
-      "Maintain Constant Vigilance with Professional-Grade Surveillance",
+      "Maintain Constant Vigilance with Professional-Grade Surveillance & Access Control Setup",
     ctaText: "Schedule a Consultation",
     heroImages: [
       {
