@@ -4,7 +4,7 @@
 export const services = [
   {
     id: "cctv",
-    title: "CCTV Installation & Design",
+    title: "Next-Gen Surveillance",
     icon: "bi-camera-video",
     service_href: "/services/cctv-installation",
   },
@@ -17,7 +17,7 @@ export const services = [
   },
   {
     id: "it_services",
-    title: "IT Services",
+    title: "IT & Network Setup Services",
     icon: "bi-laptop",
     service_href: "/services/it-services",
   },

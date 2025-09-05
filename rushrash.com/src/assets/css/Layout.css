@@ -33,3 +33,19 @@
     font-size: 0.95rem;
   }
 }
+
+
+.vertical-border {
+  position: relative;
+}
+
+.vertical-border::before {
+  content: "";
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%; /* makes the border 60% thick */
+  border-left: 5px solid #fe0303; /* adjust thickness/color */
+  margin-right: 20px;
+}
