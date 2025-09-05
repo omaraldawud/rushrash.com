@@ -43,21 +43,17 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
   };
 
   return (
-    <div className="cta-form-container bg-white p-3 rounded-3 shadow-sm mb-3">
-      <div className="modern-cta-header mb-3">
-        <div className="cta-pulse-dot"></div>
-        <h6 className="modern-cta-title">
-          Let&apos;s Secure Your Space{" "}
-          <span className="cta-highlight">Together</span>
-        </h6>
-      </div>
+    <div className="cta-form-container p-3 mt-5 rounded-2 shadow-sm bg-light">
+      <h6 className="fw-bold text-dark mb-3 modern-cta-subtitle">
+        Let&apos;s Secure Your Space Together
+      </h6>
 
       <form onSubmit={handleSubmit} className="row g-2">
         <div className="col-12 col-sm-6">
           <input
             type="text"
             name="name"
-            placeholder="👤Your Name"
+            placeholder="👤 Name"
             className="form-control form-control-sm"
             value={formData.name}
             onChange={handleChange}
@@ -81,7 +77,7 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
           <input
             type="tel"
             name="phone"
-            placeholder="✆ Phone Number"
+            placeholder="✆ Phone"
             className="form-control form-control-sm"
             value={formData.phone}
             onChange={handleChange}
@@ -92,9 +88,9 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
         <div className="col-12">
           <textarea
             name="customer_message"
-            placeholder="💬How Can We Help? ..."
+            placeholder="💬 How can we help?"
             rows={2}
-            className="form-control form-control-lg"
+            className="form-control form-control-sm"
             value={formData.customer_message}
             onChange={handleChange}
             required
@@ -104,21 +100,16 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
         <div className="col-12">
           <button
             type="submit"
-            className="btn w-100 d-flex align-items-center justify-content-center py-2 fw-bold"
-            style={{
-              backgroundColor: "#DA3747",
-              color: "#fff",
-              border: "none",
-            }}
+            className="btn btn-danger w-100 d-flex align-items-center justify-content-center py-2 fw-bold"
           >
-            <span className="btn-icon me-2">🔒</span>
+            <span className="me-2">🔒</span>
             {ctaText}
-            <span className="btn-arrow ms-2">→</span>
+            <span className="ms-2">→</span>
           </button>
         </div>
       </form>
 
-      {status && <p className="mt-2 small text-center">{status}</p>}
+      {status && <p className="mt-2 small text-center text-muted">{status}</p>}
     </div>
   );
 };

@@ -369,3 +369,37 @@
   50% { opacity: 1; }
   100% { opacity: 0.4; }
 }
+
+
+/* Modern CTA Header */
+.modern-cta-header {
+  font-size: 1.4rem;              /* Large and attention-grabbing */
+  font-weight: 800;             /* Bold for emphasis */
+  color: #F8F9FA;              /* White text for contrast */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* subtle shadow for readability */
+  background: linear-gradient(90deg, #dc3545, #f7c948); /* gradient highlight */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* makes gradient visible */
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.modern-cta-header:hover {
+  transform: scale(1.05); /* subtle pop on hover */
+}
+
+
+.cta-form-container {
+  max-width: 350px; /* keeps it compact */
+}
+
+.modern-cta-subtitle {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
