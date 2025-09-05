@@ -1,45 +1,59 @@
 import securityBg from "../../assets/images/banners/security-cctv-top.jpg";
-import aboutUsBg from "../../assets/images/banners/aboutus/security-experts.jpg";
+import aboutUsBg from "../../assets/images/banners/aboutus/call-us-cctv-solutions.jpg";
 import residentialBg from "../../assets/images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
 import accessControlBg from "../../assets/images/access-control/access-control-system.jpg";
 import ITServicesBG from "../../assets/images/it-services/it-architecture.jpg";
 import CCTVInstallationBG from "../../assets/images/banners/cctv-installation-technician.png";
 import PoSBG from "../../assets/images/pos/point-of-sale-restaurants.jpeg";
 import LegalBG from "../../assets/images/site-wide/data-privecy-security.jpeg";
+import ContactBg from "../../assets/images/banners/aboutus/building-cctv.jpg";
 
 ////////////////////////// Hero images
 //home
-import heroHome2 from "../../assets/images/banners/commercial-building-cctv.jpg";
-import heroHome3 from "../../assets/images/banners/security-lock-open.jpg";
-import heroHome1 from "../../assets/images/banners/security-team.jfif";
+import heroHome1 from "../../assets/images/banners/security-lock-open.jpg";
+import heroHome2 from "../../assets/images/banners/security-cctv-top-blue.jpg";
+import heroHome3 from "../../assets/images/banners/commercial-building-cctv.jpg";
+
+//contacts
+import heroContacts1 from "../../assets/images/banners/security-lock-open.jpg";
+import heroContacts2 from "../../assets/images/cctv-cams/cctv-control.webp";
+import heroContacts3 from "../../assets/images/banners/security-cctv-top-blue.jpg";
+
 //about
-import heroAbout1 from "../../assets/images/banners/cctv-installation-technician.png";
+import heroAbout1 from "../../assets/images/banners/PluggedInCat5.jpg";
+import heroAbout3 from "../../assets/images/banners/indoor-cct-installation.jpg";
 import heroAbout2 from "../../assets/images/banners/aboutus/it-services-bg.jpg";
-import heroAbout3 from "../../assets/images/banners/aboutus/call-us-cctv-solutions.jpg";
+
 //residential
 import heroResidential1 from "../../assets/images/banners/indoor-cct-installation.jpg";
 import heroResidential2 from "../../assets/images/banners/cctv-cameras.jpg";
 import heroResidential3 from "../../assets/images/banners/cctv-nvr-cableing.jpg";
+
 //commercial
 import heroCommercial1 from "../../assets/images/access-control/mac-military.jfif";
 import heroCommercial2 from "../../assets/images/brands/pelco/pelco-panoramic-cameeras.avif";
 import heroCommercial3 from "../../assets/images/banners/fiber-optic-system.jpg";
+
 //services/it-services
 import heroITServices1 from "../../assets/images/it-services/cat-cables-it-network-setup.jpeg";
 import heroITServices2 from "../../assets/images/it-services/it-setup.webp";
 import heroITServices3 from "../../assets/images/it-services/it-architecture.jpg";
+
 //services/access-control
 import heroAccessControl1 from "../../assets/images/access-control/access-control-pad.webp";
 import heroAccessControl2 from "../../assets/images/access-control/drone-access-control.jpg";
 import heroAccessControl3 from "../../assets/images/access-control/aws-biometric-fingerprint.jfif";
+
 //services/access-control
 import heroCCTVInstallation1 from "../../assets/images/cctv-cams/residential-CCTV.jfif";
 import heroCCTVInstallation2 from "../../assets/images/cctv-cams/cctv-control.webp";
 import heroCCTVInstallation3 from "../../assets/images/cctv-cams/camera-commercial-cctv.jpg";
+
 //services/access-control
 import heroPoS1 from "../../assets/images/pos/mobile-pos-phone.jfif";
 import heroPoS2 from "../../assets/images/pos/cloud-based-pos-dashboard.jfif";
 import heroPoS3 from "../../assets/images/pos/tablet-pos-system.jfif";
+
 //rushrash-legal
 import heroLegal1 from "../../assets/images/banners/PluggedInCat5.jpg";
 import heroLegal2 from "../../assets/images/banners/security-team.jfif";
@@ -50,9 +64,11 @@ import heroLegal3 from "../../assets/images/pos/tablet-pos-system.jfif";
 const banners = {
   "/": {
     bgImage: [securityBg],
-    title: "Welcome to Rushrash Inc.",
-    subtitle: "CCTV & Access Control Experts",
-    ctaText: "FREE site survey",
+    title: "Rushrash Inc. – Professional CCTV & Access Control Solutions",
+    subtitle:
+      "Your trusted experts in residential and commercial security systems",
+
+    ctaText: "FREE Site Survey",
     heroImages: [
       {
         src: heroHome1,
@@ -74,10 +90,39 @@ const banners = {
       },
     ],
   },
+  //contacts
+  "/contact-rushrash-inc": {
+    bgImage: [ContactBg],
+    title: "Trusted Security Partner for Homes & Businesses",
+    subtitle: "Your Sleepless Eye in CCTV & Access Control",
+
+    ctaText: "FREE site survey",
+    heroImages: [
+      {
+        src: heroContacts1,
+        alt: "Residential CCTV Camera",
+        title: "Home CCTV Installation",
+        caption: "CCTV Protecting Your Family",
+      },
+      {
+        src: heroContacts2,
+        alt: "Smart Door Access",
+        title: "Smart Door Security",
+        caption: "Control Access Remotely",
+      },
+      {
+        src: heroContacts3,
+        alt: "Home Security System Overview",
+        title: "Integrated Security Solutions",
+        caption: "Complete Peace of Mind",
+      },
+    ],
+  },
   "/about-rushrash-inc": {
     bgImage: [aboutUsBg],
     title: "Trusted Security Partner for Homes & Businesses",
-    subtitle: "Your Sleepless Eye",
+    subtitle: "Your Sleepless Eye in CCTV & Access Control",
+
     ctaText: "FREE site survey",
     heroImages: [
       {

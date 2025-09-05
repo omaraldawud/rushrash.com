@@ -113,8 +113,25 @@
   color: #ffffff;
 }
 
+#hero.hero-images-wrapper {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.smaller-heading {
+  font-size: 2.8rem; /* was 3.5rem */
+}
+
+/* Sidebar form + services */
+.col-md-4 .service-gradient-card {
+  text-align: left;
+}
+
 /* Services Buttons */
 .service-gradient-card {
+   text-align: left;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 1rem;
@@ -132,12 +149,12 @@
 
 .service-gradient-icon {
   font-size: 1.5rem;
-  color: #fbfbfa;
+  color: #EDB307 ;
   margin-bottom: 0.5rem;
 }
 
 .service-gradient-title {
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: white;
   line-height: 1.2;

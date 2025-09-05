@@ -4,8 +4,8 @@ import CTABannerForm from "../cta-forms/CTABannerForm";
 import "../../assets/css/Banner.css";
 
 export default function Banner({
-  title = "Welcome to Rushrash Inc.",
-  subtitle = "CCTV & Access Control Experts",
+  title = "Trusted Security Partner for Homes & Businesses",
+  subtitle = "Your Sleepless Eye Watching Over Your Property",
   ctaText = "Get a Free Quote",
   heroImages = null,
   bgImage = [],
@@ -44,14 +44,15 @@ export default function Banner({
 
       <section
         id="hero"
-        className="hero-images-wrapper my-5 d-flex flex-column align-items-stretch justify-content-center banner-content"
+        className="hero-images-wrapper my-4 d-flex flex-column align-items-stretch justify-content-center banner-content"
       >
         <div className="container">
-          {/* Hero Text */}
-          <div className="row mb-4">
-            <div className="col-12">
-              <div className="hero-text-container text-center text-md-start">
-                <h2 className="hero-heading">
+          <div className="row align-items-start d-flex align-items-stretch">
+            {/* Left: Title + Images */}
+            <div className="col-12 col-md-8">
+              {/* Hero Text */}
+              <div className="hero-text-container text-center text-md-start mb-4">
+                <h2 className="hero-heading smaller-heading">
                   <span className="hero-heading-accent">{title}</span>
                 </h2>
 
@@ -64,14 +65,9 @@ export default function Banner({
                   </div>
                 )}
               </div>
-            </div>
-          </div>
 
-          {/* Hero Images and Form Side by Side */}
-          <div className="row mb-4 align-items-stretch">
-            {/* Two Hero Images */}
-            <div className="col-12 col-md-8 mb-4 mb-md-0">
-              <div className="row g-3 h-100">
+              {/* Hero Images */}
+              <div className="row g-3">
                 {heroImages &&
                   heroImages.slice(0, 2).map((image, index) => (
                     <div key={index} className="col-12 col-sm-6">
@@ -89,58 +85,50 @@ export default function Banner({
               </div>
             </div>
 
-            {/* Form - Right side */}
-            {location.pathname !== "/contact-rushrash-inc" ? (
-              <div className="col-12 col-md-4">
+            {/* Right: Form + Services */}
+            <div className="col-12 col-md-4 d-flex flex-column justify-content-between">
+              {/* Form only on pages other than contact */}
+              {location.pathname !== "/contact-rushrash-inc" && (
                 <CTABannerForm ctaText={ctaText} />
-              </div>
-            ) : null}
-          </div>
+              )}
 
-          {/* Services - Full width */}
-          <div className="row">
-            <div className="col-12">
+              {/* Services always visible */}
               {allServices.length > 0 && (
-                <div className="row gx-2 gy-2">
+                <div className="d-flex flex-column gap-2 mt-3">
                   {allServices.slice(0, 4).map((svc, idx) => {
                     const isActive = location.pathname === svc.service_href;
-                    const cardClasses = `service-gradient-card text-center p-2 ${
+                    const cardClasses = `service-gradient-card d-flex align-items-center gap-2 px-3 py-2 ${
                       isActive ? "active-service-card" : ""
                     }`;
 
-                    return (
-                      <div key={idx} className="col-6 col-md-3">
-                        {isActive ? (
-                          // Active: not clickable
-                          <span className={cardClasses}>
-                            {svc.icon && (
-                              <i
-                                className={`bi ${svc.icon} service-gradient-icon`}
-                              />
-                            )}
-                            <div className="service-gradient-title">
-                              {svc.title}
-                            </div>
-                          </span>
-                        ) : (
-                          // Inactive: link
-                          <a
-                            href={svc.service_href}
-                            className="text-decoration-none"
-                          >
-                            <div className={cardClasses}>
-                              {svc.icon && (
-                                <i
-                                  className={`bi ${svc.icon} service-gradient-icon`}
-                                />
-                              )}
-                              <div className="service-gradient-title">
-                                {svc.title}
-                              </div>
-                            </div>
-                          </a>
+                    return isActive ? (
+                      <span key={idx} className={cardClasses}>
+                        {svc.icon && (
+                          <i
+                            className={`bi ${svc.icon} service-gradient-icon`}
+                          />
                         )}
-                      </div>
+                        <span className="service-gradient-title">
+                          {svc.title}
+                        </span>
+                      </span>
+                    ) : (
+                      <a
+                        key={idx}
+                        href={svc.service_href}
+                        className="text-decoration-none"
+                      >
+                        <div className={cardClasses}>
+                          {svc.icon && (
+                            <i
+                              className={`bi ${svc.icon} service-gradient-icon`}
+                            />
+                          )}
+                          <span className="service-gradient-title">
+                            {svc.title}
+                          </span>
+                        </div>
+                      </a>
                     );
                   })}
                 </div>
