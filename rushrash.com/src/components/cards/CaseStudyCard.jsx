@@ -1,7 +1,6 @@
 //
 
 // src/components/cards/CaseStudyCard.jsx
-import React from "react";
 
 const CaseStudyCard = ({ study }) => {
   const {
@@ -95,13 +94,6 @@ const CaseStudyCard = ({ study }) => {
                 </ul>
               </div>
             )}
-
-            <div className="d-flex gap-2">
-              <button className="btn btn-outline-primary btn-sm">
-                <i className="bi bi-calendar me-2"></i>Schedule {category.name}
-                {} Consultation
-              </button>
-            </div>
           </div>
         </div>
       </div>

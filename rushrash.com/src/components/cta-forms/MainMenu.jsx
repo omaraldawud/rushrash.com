@@ -218,16 +218,6 @@ const MainMenu = () => {
                       </li>
                       <li>
                         <Link
-                          to="/cctv-coupons"
-                          className={getLinkClass("/cctv-coupons")}
-                          style={menuItemStyle}
-                          onClick={() => setExpandedMenu(null)}
-                        >
-                          <i className="bi bi-tag me-2"></i> Specials
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
                           to="/rushrash-legal"
                           className={getLinkClass("/rushrash-legal")}
                           style={menuItemStyle}

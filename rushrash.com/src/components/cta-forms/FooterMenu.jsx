@@ -12,16 +12,28 @@ export default function FooterMenu() {
         >
           <i className="bi bi-telephone me-1"></i> Contacts
         </a>
-        <a href="/" className="footer-link d-flex align-items-center">
+        <a
+          href="/services/cctv-installation"
+          className="footer-link d-flex align-items-center"
+        >
           <i className="bi bi-camera-video me-1"></i> CCTV Systems
         </a>
-        <a href="/" className="footer-link d-flex align-items-center">
-          <i className="bi bi-pc me-1"></i> IT & PoS
+        <a
+          href="/services/it-services"
+          className="footer-link d-flex align-items-center"
+        >
+          <i className="bi bi-pc me-1"></i> IT & Network Setup
         </a>
-        <a href="/" className="footer-link d-flex align-items-center">
+        <a
+          href="/services/access-control"
+          className="footer-link d-flex align-items-center"
+        >
           <i className="bi bi-key-fill me-1"></i> Access Control
         </a>
-        <a href="/legal-page" className="footer-link d-flex align-items-center">
+        <a
+          href="/rushrash-legal"
+          className="footer-link d-flex align-items-center"
+        >
           <i className="bi bi-shield-lock me-1"></i>
           <small>
             <em>Legal</em>

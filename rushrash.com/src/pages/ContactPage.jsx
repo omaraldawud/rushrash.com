@@ -1,4 +1,7 @@
-//Component
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+// Components
 import ContactForm from "../components/cta-forms/ContactForm";
 import CaseStudies from "../components/sections/CaseStudies";
 import Logo from "../components/layout/Logo";
@@ -10,8 +13,21 @@ import rr_company_ds from "../assets/data/rr_company_ds";
 import SEOMeta from "../components/seo/SEOMeta";
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 
-// main component
 export default function Contact() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.replace("#", ""));
+      if (el) {
+        // slight delay to ensure the section is rendered
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    }
+  }, [hash]);
+
   return (
     <>
       <div>
@@ -19,10 +35,7 @@ export default function Contact() {
         <BreadcrumbSchema
           items={[
             { name: "Home", url: "https://rushrashinc.com" },
-            {
-              name: "Contact",
-              url: "https://rushrashinc.com/contact",
-            },
+            { name: "Contact", url: "https://rushrashinc.com/contact" },
           ]}
         />
 
@@ -71,7 +84,7 @@ export default function Contact() {
               name: "Free Security Consultation",
               description:
                 "Schedule an in-person security assessment with our certified specialists",
-              offers: { price: "0" }, // Free service
+              offers: { price: "0" },
             },
             {
               name: "Security System Installation",
@@ -101,11 +114,11 @@ export default function Contact() {
         />
       </div>
 
-      {/* mai section   */}
+      {/* Main Section */}
       <section className="container-fluid px-0">
-        <div className="container-lg ">
+        <div className="container-lg">
           <div className="row g-4">
-            {/* Form Column - Wider */}
+            {/* Form Column */}
             <div className="col-lg-8">
               <div className="card border-0 shadow-sm">
                 <div className="card-body p-3 p-md-4">
@@ -121,33 +134,25 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Phone CTA Column - Redesigned */}
+            {/* Phone CTA Column */}
             <div className="col-lg-4">
               <div className="card border-0 shadow-lg bg-gradient-primary text-white overflow-hidden">
-                {/* Logo Section */}
                 <div className="text-center py-4 bg-light bg-opacity-20">
                   <Logo />
                 </div>
-
-                {/* Main Content */}
                 <div className="card-body text-center p-4">
-                  {/* Phone Icon */}
                   <div className="mb-3">
                     <div className="bg-white bg-opacity-20 rounded-circle d-inline-flex p-3">
                       <i className="bi bi-telephone-fill text-danger fs-2"></i>
                     </div>
                   </div>
-
-                  {/* Headline */}
-                  <h3 className="h5 mb-3 fw-bold">24/7 Emergency Response</h3>
-
-                  {/* Description */}
+                  <h3 className="h6 mb-3 fw-bold">
+                    24/7 Access Control & CCTV Emergency Response
+                  </h3>
                   <p className="mb-4 small opacity-75">
                     Immediate assistance and expedited consultation available
                     now
                   </p>
-
-                  {/* Phone Number Emphasis */}
                   <div className="bg-white bg-opacity-10 rounded-3 p-3 mb-4">
                     <span className="d-block text-warning fw-bold fs-5 mb-1">
                       Call Now
@@ -159,8 +164,6 @@ export default function Contact() {
                       {rr_company_ds.phoneNumbers.tollFree}
                     </a>
                   </div>
-
-                  {/* Service Area */}
                   <div className="bg-dark bg-opacity-30 rounded-3 p-3 mt-3">
                     <div className="d-flex align-items-start">
                       <i className="bi bi-geo-fill text-warning fs-5 me-2 mt-1"></i>
@@ -177,11 +180,9 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-
-                {/* Emergency Badge */}
                 <div className="position-absolute top-0 end-0">
                   <span className="badge bg-warning text-dark px-3 py-2 rounded-0">
-                    <i className="bi bi-lightning-fill me-1"></i>
+                    <i className="bi bi-lightning-fill text-danger me-1"></i>
                     EMERGENCY SERVICE
                   </span>
                 </div>
@@ -201,7 +202,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <CaseStudies />
+        {/* Case Studies */}
+        <div id="case-studies">
+          <CaseStudies />
+        </div>
       </section>
     </>
   );

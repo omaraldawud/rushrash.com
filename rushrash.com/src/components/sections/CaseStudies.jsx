@@ -1,41 +1,85 @@
-// src/components/section/CaseStudies.jsx
-import React from "react";
+// src/components/sections/CaseStudies.jsx
+import { useState, useEffect } from "react";
 import CaseStudyCard from "../cards/CaseStudyCard";
-
-// Data Structures
 import caseStudies from "../../assets/data/case_studies_ds";
+import "../../assets/css/CaseStudies.css"; // custom styles
 
-//
-const CaseStudies = ({ studyType = "all" }) => {
-  // Filter case studies based on studyType
+// Tabs with labels + icons
+const tabTypes = [
+  { label: "All", value: "all", icon: "bi-layers" },
+  { label: "Residential", value: "residential", icon: "bi-house-door" },
+  { label: "Commercial", value: "commercial", icon: "bi-building" },
+  { label: "Access Control", value: "Access Control", icon: "bi-key" },
+  { label: "IT & Network", value: "IT", icon: "bi-hdd-network" },
+];
+
+const CaseStudies = ({ tab = "all" }) => {
+  const [activeTab, setActiveTab] = useState(tab);
+
+  // keep in sync if prop changes later
+  useEffect(() => {
+    setActiveTab(tab);
+  }, [tab]);
+
+  // filter data
   const filteredStudies =
-    studyType === "all"
+    activeTab === "all"
       ? caseStudies
-      : caseStudies.filter((study) => study.studyType === studyType);
+      : caseStudies.filter((study) => study.studyType === activeTab);
+
+  // find the current tab object for icon + label
+  const currentTabObj = tabTypes.find((t) => t.value === activeTab);
 
   return (
-    <section className="py-2 bg-light">
+    <section id="case-studies" className="p-3 bg-success-subtle rounded-4">
       <div className="container">
-        <div className="m-3">
+        <div className="mb-4 text-center">
           <h2>Security Success Stories</h2>
-          <p className="lead mb-5">
-            See how we've helped homeowners and businesses like yours
+          <p className="lead">
+            See how we've helped homeowners and businesses across Chicago
           </p>
         </div>
 
-        <div className="row justify-content-center">
-          <div className="col-lg-12">
-            {filteredStudies.map((study, index) => (
-              <CaseStudyCard key={index} study={study} />
+        {/* Tabs Navigation */}
+        {tab === "all" ? (
+          <div className="d-flex justify-content-center mb-4 flex-wrap gap-2">
+            {tabTypes.map((t) => (
+              <button
+                key={t.value}
+                className={`case-tab-btn ${
+                  activeTab === t.value ? "active" : ""
+                }`}
+                onClick={() => setActiveTab(t.value)}
+              >
+                <i className={`bi ${t.icon} me-2`}></i>
+                {t.label}
+              </button>
             ))}
           </div>
-        </div>
+        ) : (
+          // If prop passed, show only that tab title with icon (no buttons)
+          <div className="d-flex justify-content-center mb-4">
+            <h4 className="d-flex align-items-center">
+              <i className={`bi ${currentTabObj?.icon} me-2 text-primary`}></i>
+              {currentTabObj?.label}
+            </h4>
+          </div>
+        )}
 
-        {/* <div className="text-center mt-5">
-          <a href="/case-studies" className="btn btn-outline-primary">
-            View All Case Studies <i className="bi bi-arrow-right ms-2"></i>
-          </a>
-        </div> */}
+        {/* Case Study Cards */}
+        <div className="row justify-content-center">
+          <div className="col-lg-12">
+            {filteredStudies.length > 0 ? (
+              filteredStudies.map((study, index) => (
+                <CaseStudyCard key={index} study={study} />
+              ))
+            ) : (
+              <p className="text-center text-muted">
+                No case studies available for this category.
+              </p>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );

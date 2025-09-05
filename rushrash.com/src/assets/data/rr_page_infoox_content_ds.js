@@ -42,8 +42,8 @@ const rr_page_infoox_content_ds = {
     info_top_title: "Trusted by homeowners & businesses for over 20 years",
     info_mid_text:
       "We provide professional CCTV installation, upgrades, and maintenance services. From single home systems to advanced business security solutions, we install only the top brands with crystal-clear HD video, mobile access, and AI-powered monitoring.",
-    info_link1: "/cctv_contact.html",
-    link1_text: "View CCTV Installation Services",
+    info_link1: "/contact-rushrash-incl#case-studies",
+    link1_text: "CCTV & Access Control Projects",
     features: [
       "Licensed & insured CCTV installation technicians",
       "Top CCTV brands: Hikvision, Dahua, Uniview, Axis, Lorex",
@@ -64,8 +64,8 @@ const rr_page_infoox_content_ds = {
       "Protect your home and family with reliable CCTV & Access Control",
     info_mid_text:
       "We design and install home CCTV systems that offer 24/7 protection. Stay connected with mobile viewing, smart alerts, and night vision cameras built to safeguard your property.",
-    info_link1: "/cctv_contact.html",
-    link1_text: "Book Free Residential CCTV Estimate",
+    info_link1: "/contact-rushrash-incl#case-studies",
+    link1_text: "Residential & Commercial Security Success Stories",
     info_image1: resdInfoImage1,
     info_image2: resdInfoImage2,
     info_image3: resdInfoImage3,
@@ -83,8 +83,8 @@ const rr_page_infoox_content_ds = {
     info_top_title: "Secure Your Business with Advanced Surveillance",
     info_mid_text:
       "Protect your business operations, staff, and assets with reliable commercial-grade CCTV. Whether you operate a retail store, office, or multi-site facility, our systems deliver 24/7 visibility, intelligent alerts, and compliance-ready recording for peace of mind.",
-    info_link1: "/cctv_contact.html",
-    link1_text: "Best Commercial CCTV with FREE Quote",
+    info_link1: "/contact-rushrash-incl#case-studies",
+    link1_text: "Residential & Commercial Security Success Stories",
     info_image1: commInfoImage1,
     info_image2: commInfoImage2,
     info_image3: commInfoImage3,
@@ -104,7 +104,7 @@ const rr_page_infoox_content_ds = {
     info_top_title: "Your Partner in Professional Security",
     info_mid_text:
       "Rushrash Inc. is dedicated to protecting what matters most. We specialize in commercial and residential CCTV systems, access control solutions, and integrated security technology. Our team of certified experts brings years of hands-on experience, ensuring every installation is tailored to your property’s unique needs. With a focus on reliability, innovation, and customer care, we provide more than systems — we deliver peace of mind.",
-    info_link1: "/cctv_contact.html",
+    info_link1: "/contact-rushrash-incl",
     link1_text: "Schedule Consultation",
     info_image1: aboutInfoImage1,
 
@@ -124,8 +124,8 @@ const rr_page_infoox_content_ds = {
     info_top_title: "Your Partner in Professional IT Architecture",
     info_mid_text:
       "Rushrash Inc. is dedicated to protecting what matters most. We specialize in commercial and residential CCTV systems, access control solutions, and integrated security technology. Our team of certified experts brings years of hands-on experience, ensuring every installation is tailored to your property’s unique needs. With a focus on reliability, innovation, and customer care, we provide more than systems — we deliver peace of mind.",
-    info_link1: "/cctv_contact.html",
-    link1_text: "Schedule Consultation",
+    info_link1: "/contact-rushrash-incl#case-studies",
+    link1_text: "IT Projects & Success Stories",
     info_image1: ITServicesInfoImage1,
     info_image2: ITServicesInfoImage2,
     info_image3: ITServicesInfoImage3,
@@ -144,8 +144,8 @@ const rr_page_infoox_content_ds = {
     info_top_title: "Your Partner in Professional Access Control Systems",
     info_mid_text:
       "Rushrrash Technology is committed to securing your most critical points of entry. We specialize in advanced electronic access control systems, seamless keyless entry integration, and comprehensive security management platforms. Our team of certified professionals leverages decades of industry expertise to design a solution that perfectly aligns with your operational flow and security requirements. With an unwavering focus on precision, innovation, and dedicated support, we provide more than just hardware — we deliver confidence and control.",
-    info_link1: "/cctv_contact.html",
-    link1_text: "FREE RBAC Consultation",
+    info_link1: "/contact-rushrash-incl#case-studies",
+    link1_text: "Access Control Installations Portfolio",
     info_image1: ACServicesInfoImage1,
     info_image2: ACServicesInfoImage2,
     info_image3: ACServicesInfoImage3,
@@ -181,8 +181,8 @@ const rr_page_infoox_content_ds = {
     info_top_title: "Your Partner in Professional CCTV Surveillance Systems",
     info_mid_text:
       "Rushrash Technology provides reliable Surveillance CCTV solutions with expert installation of CCTV cameras, DVRs, and NVRs. Whether for residential or commercial properties, our systems are designed to deliver crystal-clear video quality, secure recording, and remote monitoring capabilities. With proven expertise in surveillance technology, we ensure comprehensive coverage, seamless integration, and dependable support — giving you confidence and peace of mind.",
-    info_link1: "/contact-rushrash-inc",
-    link1_text: "FREE CCTV Site Survey & Consultation",
+    info_link1: "/contact-rushrash-inc#case-studies",
+    link1_text: "CCTV & Access Control Projects",
     info_image1: CCTVServicesInfoImage1,
     info_image2: CCTVServicesInfoImage2,
     info_image3: CCTVServicesInfoImage3,

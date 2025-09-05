@@ -1,4 +1,6 @@
 import { useLocation, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+//components
 import companyInfo from "../../assets/data/rr_company_ds";
 import SocialProfiles from "../sections/SocialProfiles";
 import FooterQuickForm from "./FooterQuickForm";
@@ -47,7 +49,7 @@ export default function TopbarMen() {
         </a>
       </div>{" "}
       {/* Top Form */}
-      <div className="me-3 bg-danger-subtle py-2 px-3 rounded-2 d-flex align-items-center">
+      <div className="ms-5 bg-danger py-2 px-3 rounded-2 d-flex align-items-center">
         <FooterQuickForm />
       </div>
       {/* Right: Phone + Links + Social */}
@@ -65,6 +67,15 @@ export default function TopbarMen() {
 
         {/* Navigation Links with Separators */}
         <div className="d-flex align-items-center me-4">
+          <HashLink
+            smooth
+            to="/contact-rushrash-inc#case-studies"
+            className="text-nowrap text-success text-decoration-none me-3 nav-link"
+          >
+            <i className="bi bi-book me-2 text-success"></i>
+            Success Stories
+          </HashLink>
+
           <NavLink
             to="/"
             className={({ isActive }) =>

@@ -1,4 +1,7 @@
 // components/sections/AboutUsSection.tsx
+import CaseStudies from "./CaseStudies";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 //images
 import ourStory from "../../assets/images/ourStory-tr.png";
 import authPartners from "../../assets/images/security-locks/security-locks-s3.jpg";
@@ -8,6 +11,20 @@ import { services as allServices } from "../../assets/data/rr_services_ds";
 
 //
 export default function AboutUsSection() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.replace("#", ""));
+      if (el) {
+        // slight delay to ensure the section is rendered
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    }
+  }, [hash]);
+
   return (
     <section className="about-us bg-light">
       <div className="container py-5">
@@ -59,6 +76,7 @@ export default function AboutUsSection() {
               "Authorized Partners with Leading Brands",
               "24/7 Monitoring & Emergency Support",
               "Custom Solutions for Homes & Businesses Security",
+              "Visit Our Successfull Project Section",
             ].map((item, index) => (
               <div key={index} className="col-md-6 col-lg-4">
                 <div className="card h-100 shadow-sm border-0">
@@ -70,6 +88,11 @@ export default function AboutUsSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Case Studies */}
+        <div id="case-studies">
+          <CaseStudies tab="Access Control" />
         </div>
 
         {/* Authorized Dealers Section */}

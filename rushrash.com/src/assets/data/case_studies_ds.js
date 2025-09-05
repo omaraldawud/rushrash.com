@@ -2,6 +2,8 @@
 // Images
 import imgChicagoCaseStudy from "../../assets/images/commercial/chicago-22-story-building.jpg";
 import imgHickoryHills from "../../assets/images/security-locks/home-access-control.jpg";
+import imgAccessControlOffice from "../../assets/images/access-control/tools-lock-access-control.jpg";
+import imgITNetworkSetup from "../../assets/images/it-services/cat-cables-it-network-setup.jpeg";
 
 const caseStudies = [
   {
@@ -62,6 +64,65 @@ const caseStudies = [
       "Seamless integration with smart home devices",
       "Mobile app control from anywhere",
       "Peace of mind for the entire family",
+    ],
+    isFeatured: false,
+  },
+  {
+    studyType: "Access Control",
+    image: imgAccessControlOffice,
+    altText: "Advanced access control system for corporate office",
+    category: {
+      name: "Access Control",
+      icon: "bi-door-closed",
+    },
+    title: "Corporate Office Access Control",
+    stats: [
+      { value: "15", label: "Doors Secured" },
+      { value: "Biometric", label: "Entry Points" },
+    ],
+    overview:
+      "Implementation of a multi-level access control system for a corporate office to enhance security, monitor staff access, and secure restricted zones.",
+    services: [
+      "Access Control Design",
+      "Biometric Reader Installation",
+      "RFID Card System Setup",
+      "Centralized Management Software",
+    ],
+    results: [
+      "All sensitive areas secured with biometric authentication",
+      "Centralized logging of all access activity",
+      "Reduced unauthorized entry incidents to zero",
+      "Scalable system ready for future expansion",
+    ],
+    isFeatured: false,
+  },
+  {
+    studyType: "IT",
+    image: imgITNetworkSetup,
+    altText: "Office IT and network configuration for mid-size company",
+    category: {
+      name: "IT & Network",
+      icon: "bi-laptop",
+    },
+    title: "Office IT & Network Configuration",
+    stats: [
+      { value: "50+", label: "Connected Devices" },
+      { value: "1Gbps", label: "Network Speed" },
+    ],
+    overview:
+      "Full IT and network setup for a growing company, including wired/wireless infrastructure, secure network configuration, and optimized performance for all office systems.",
+    services: [
+      "Network Design & Cabling",
+      "Server Setup",
+      "Firewall & Security Configuration",
+      "Workstation Deployment",
+      "Wi-Fi Optimization",
+    ],
+    results: [
+      "High-speed, secure network for all employees",
+      "Reduced network downtime and latency",
+      "Centralized IT management and monitoring",
+      "Future-ready infrastructure supporting remote work",
     ],
     isFeatured: false,
   },

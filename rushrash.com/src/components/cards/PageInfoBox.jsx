@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { HashLink } from "react-router-hash-link";
 import pageDataDS from "../../assets/data/rr_page_infoox_content_ds";
 import "../../assets/css/infoBox.css";
 
@@ -77,14 +77,13 @@ const PageInfoBox = ({ pageType = "home" }) => {
         {/* Button - Only show if link1 exists */}
         {pageData.info_link1 && pageData.link1_text && (
           <div className="mt-auto">
-            <Button
-              variant="primary"
-              href={pageData.info_link1}
-              className="w-100 w-sm-auto"
-              size="lg"
+            <HashLink
+              smooth
+              to={pageData.info_link1} // e.g., "/contact#case-studies"
+              className="btn btn-primary w-100 w-sm-auto btn-lg"
             >
               {pageData.link1_text}
-            </Button>
+            </HashLink>
           </div>
         )}
       </div>
