@@ -10,18 +10,23 @@ import brandsForTabsDS from "../../assets/data/brands_for_tabs_ds";
 export default function CCTVInfoTabs() {
   const tabs = [
     {
-      label: "Camera Systems",
-      data: cctvTypeSections,
-      icon: "bi-camera-video",
-    },
-    { label: "DVRs/NVRs", data: cctvSystemsDS, icon: "bi-cash" },
-    { label: "PoS", data: posSystemsDS, icon: "bi-cash" },
-    {
       label: "Access Control",
       data: accessControlSystemsDS,
-      icon: "bi-fingerprint",
+      icon: "bi-fingerprint text-warning",
     },
-    { label: "Brands", data: brandsForTabsDS, icon: "bi-tags" },
+    {
+      label: "CCTV Cameras",
+      data: cctvTypeSections,
+      icon: "bi-camera-video text-warning",
+    },
+    {
+      label: "DVRs/NVRs",
+      data: cctvSystemsDS,
+      icon: "bi-hdd-network text-warning",
+    },
+    { label: "PoS", data: posSystemsDS, icon: "bi-cash text-warning" },
+
+    { label: "Brands", data: brandsForTabsDS, icon: "bi-tags text-warning" },
   ];
 
   const [activeTab, setActiveTab] = useState(0);

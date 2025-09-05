@@ -202,7 +202,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Case Studies */}
+        {/* Success Stories & Studies */}
         <div id="case-studies">
           <CaseStudies />
         </div>

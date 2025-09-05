@@ -10,7 +10,12 @@ const tabTypes = [
   { label: "Residential", value: "residential", icon: "bi-house-door" },
   { label: "Commercial", value: "commercial", icon: "bi-building" },
   { label: "Access Control", value: "Access Control", icon: "bi-key" },
-  { label: "IT & Network", value: "IT", icon: "bi-hdd-network" },
+  { label: "IT2 & Network", value: "IT", icon: "bi-hdd-network" },
+  {
+    label: "Local Chicago Wildlife Monitoring",
+    value: "featured",
+    icon: "bi-eye",
+  },
 ];
 
 const CaseStudies = ({ tab = "all" }) => {
@@ -34,7 +39,7 @@ const CaseStudies = ({ tab = "all" }) => {
     <section id="case-studies" className="p-3 bg-success-subtle rounded-4">
       <div className="container">
         <div className="mb-4 text-center">
-          <h2>Security Success Stories</h2>
+          <h2>Access Control & Security Success Stories</h2>
           <p className="lead">
             See how we've helped homeowners and businesses across Chicago
           </p>

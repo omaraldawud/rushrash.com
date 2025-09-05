@@ -1,3 +1,11 @@
+.sidebar-divider {
+  border: 0;
+  height: 2px;                  /* line thickness */
+  background: rgba(0, 0, 0, 0.1); /* light gray line */
+  margin: 0.75rem 0;            /* spacing above and below */
+}
+
+
 .custom-sidebar {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 16px;
@@ -21,13 +29,14 @@
 }
 
 .card-header {
-  background: linear-gradient(135deg, #0dcaf0 0%, #0b5ed7 100%);
-  color: white;
-  padding: 1rem 1.25rem;
-  font-weight: 600;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
+    background: linear-gradient(135deg, #0dcaf0 0%, #0b5ed7 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex
+;
+    align-items: center;
 }
 
 .card-header.bg-danger {

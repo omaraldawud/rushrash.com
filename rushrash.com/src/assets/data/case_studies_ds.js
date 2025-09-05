@@ -4,8 +4,40 @@ import imgChicagoCaseStudy from "../../assets/images/commercial/chicago-22-story
 import imgHickoryHills from "../../assets/images/security-locks/home-access-control.jpg";
 import imgAccessControlOffice from "../../assets/images/access-control/tools-lock-access-control.jpg";
 import imgITNetworkSetup from "../../assets/images/it-services/cat-cables-it-network-setup.jpeg";
+import imgHickoryHillsLake from "../../assets/images/success-stories/osprey-nest-solar-cctv-camera.jpg";
 
 const caseStudies = [
+  {
+    studyType: "featured",
+    image: imgHickoryHillsLake,
+    altText:
+      "Solar-powered CCTV system monitoring ospreys at Hickory Hills Lake",
+    category: {
+      name: "Solar Powered CCTV - Environmental Security",
+      icon: "bi-camera-video",
+    },
+    title: "Hickory Hills Lake Osprey CCTV Monitoring",
+    stats: [
+      { value: "1", label: "Solar Panel CCTV Post" },
+      { value: "24/7", label: "Wildlife Monitoring" },
+    ],
+    overview:
+      "In partnership with Cook County, Rushrash Inc. engineered and deployed a solar-powered CCTV system on a lake post at Hickory Hills. The project was designed to provide reliable, eco-friendly monitoring of a pair of ospreys during their mating season, ensuring wildlife researchers had uninterrupted observation without disturbing the natural habitat.",
+    services: [
+      "Custom Solar-Powered CCTV Design",
+      "Weatherproof Camera Installation",
+      "Remote Monitoring Integration - Eco-Security",
+      "Wildlife Observation Support",
+    ],
+    results: [
+      "Continuous live monitoring throughout the mating season",
+      "Zero environmental disruption during installation",
+      "Valuable data collected for local wildlife research",
+      "Demonstrated feasibility of solar-powered CCTV in remote areas",
+    ],
+    isFeatured: true,
+  },
+
   {
     image: imgChicagoCaseStudy,
     studyType: "commercial",

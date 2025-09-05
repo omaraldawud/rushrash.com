@@ -3,13 +3,7 @@ import { Container } from "react-bootstrap";
 import Brands from "../components/functional/Brands";
 import PageInfoBox from "../components/cards/PageInfoBox";
 import CCTVInfoTabs from "../components/cards/CCTVInfoTabs";
-
-// Data Structures
-import cctvCameraTypeSections from "../assets/data/cctv_types_sections_ds";
-import cctvDvrSystemsDS from "../assets/data/cctv_dvr_systems_ds";
-import posSystemsDS from "../assets/data/pos_systems_ds";
-import accessControlSystemsDS from "../assets/data/access_control_systems_ds";
-import brandsForTabsDS from "../assets/data/brands_for_tabs_ds";
+import CaseStudies from "../components/sections/CaseStudies";
 
 // JSON-LD Scheme & Meta
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
@@ -99,21 +93,18 @@ export default function HomePage() {
         {/* Top Main Content */}
         <PageInfoBox pageType="home" />
 
-        {/* Camera Information Box/ */}
-        <CCTVInfoTabs
-          tabs={[
-            { label: "Cameras", data: cctvCameraTypeSections },
-            { label: "DVRs/NVRs", data: cctvDvrSystemsDS },
-            { label: "PoS", data: posSystemsDS },
-            { label: "Access ControlSystems", data: accessControlSystemsDS },
-            { label: "Security Brands", data: brandsForTabsDS },
-          ]}
-        />
+        {/* Success Stories & Studies */}
+        <div id="case-studies">
+          <CaseStudies tab="featured" />
+        </div>
 
         {/* Insallation Process */}
         <div>
           <CCTVInstallationProcess />
         </div>
+
+        {/* Camera Information Box/ */}
+        <CCTVInfoTabs />
 
         {/* Brands Section */}
         <div>

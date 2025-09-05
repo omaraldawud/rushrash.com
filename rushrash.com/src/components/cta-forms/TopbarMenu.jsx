@@ -3,7 +3,7 @@ import { HashLink } from "react-router-hash-link";
 //components
 import companyInfo from "../../assets/data/rr_company_ds";
 import SocialProfiles from "../sections/SocialProfiles";
-import FooterQuickForm from "./FooterQuickForm";
+import Logo from "../layout/Logo";
 
 export default function TopbarMen() {
   const location = useLocation();
@@ -26,6 +26,7 @@ export default function TopbarMen() {
       {" "}
       {/* Left: Residential | Business */}
       <div className="left-links d-flex align-items-center small">
+        <Logo logoheight="30px" />
         <a
           href="/residential-cctv-security"
           className={`residential-link ${
@@ -48,10 +49,6 @@ export default function TopbarMen() {
           {isCommercial ? "BUSINESS SECURITY" : "Business Security"}
         </a>
       </div>{" "}
-      {/* Top Form */}
-      <div className="ms-5 bg-danger py-2 px-3 rounded-2 d-flex align-items-center">
-        <FooterQuickForm />
-      </div>
       {/* Right: Phone + Links + Social */}
       <div className="d-flex align-items-center fw-bold">
         {/* Phone Number - Emphasized */}
