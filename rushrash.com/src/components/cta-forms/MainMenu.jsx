@@ -62,12 +62,26 @@ const MainMenu = () => {
     >
       <div className="container-fluid justify-content-between">
         {/* Logo */}
-        <div className="d-none d-md-block ">
+        <div className="d-none d-md-block">
           <Logo logoWidth="30px" />
         </div>
 
-        <div className="collapse navbar-collapse show">
-          <ul className="navbar-nav ms-auto d-flex align-items-center gap-3">
+        {/* Hamburger button - only shows on mobile */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Collapsible menu content */}
+        <div className="collapse navbar-collapse" id="navbarContent">
+          <ul className="navbar-nav me-auto d-flex align-items-center gap-3">
             {/* Services Mega Menu */}
             <li className="nav-item dropdown">
               <span
@@ -88,7 +102,7 @@ const MainMenu = () => {
                 Services
               </span>
               <ul
-                className={`dropdown-menu dropdown-menu-end p-4 shadow-lg rounded-3 border-0 ${
+                className={`dropdown-menu p-4 shadow-lg rounded-3 border-0 ${
                   expandedMenu === "services" ? "show" : ""
                 }`}
                 style={{
@@ -96,6 +110,8 @@ const MainMenu = () => {
                   backgroundColor: "#f8f9fa",
                   borderLeft: "4px solid #0d6efd",
                   zIndex: 1001,
+                  left: "0",
+                  right: "auto",
                 }}
               >
                 <div className="row gx-3">
@@ -149,7 +165,7 @@ const MainMenu = () => {
                     </ul>
                   </div>
 
-                  <div className="col-8 info-box">
+                  <div className="d-none d-md-block col-8 info-box">
                     <h6 className="fw-bold text-dark mb-2">
                       <i className="bi bi-question-circle text-warning me-2"></i>
                       Not Sure Which Service?
@@ -183,14 +199,17 @@ const MainMenu = () => {
                 About Rushrash
               </span>
               <ul
-                className={`dropdown-menu dropdown-menu-end p-4 shadow-lg rounded-3 border-0 ${
-                  expandedMenu === "about" ? "show" : ""
+                className={`dropdown-menu p-4 shadow-lg rounded-3 border-0 ${
+                  expandedMenu === "services" ? "show" : ""
                 }`}
                 style={{
-                  minWidth: "600px",
+                  minWidth: "650px",
                   backgroundColor: "#f8f9fa",
                   borderLeft: "4px solid #0d6efd",
                   zIndex: 1001,
+                  left: "0",
+                  right: "auto",
+                  transform: "translateX(-10px)", // Optional: nudge left
                 }}
               >
                 <div className="row gx-2">
@@ -230,7 +249,7 @@ const MainMenu = () => {
                     </ul>
                   </div>
 
-                  <div className="col-8 info-box">
+                  <div className="d-none d-block col-8 info-box">
                     <h6 className="fw-bold text-dark mb-2">
                       <i className="bi bi-question-circle text-warning me-2"></i>
                       Why Choose Rushrash?

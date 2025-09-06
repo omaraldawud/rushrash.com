@@ -22,31 +22,41 @@ export default function TopbarMen() {
       }}
     >
       {/* Left: Residential | Business */}
-      <div className="left-links d-flex align-items-center small">
-        <div className="d-none d-md-block">
-          <Logo logoheight="30px" />
+      <div className="position-relative w-100">
+        {/* Home icon in top left corner */}
+        <div>
+          <a href="/" className="position-absolute">
+            <i
+              className="bi bi-house-door text-info fs-4"
+              style={{ marginLeft: "-12px" }}
+            ></i>
+          </a>
         </div>
-        <a
-          href="/residential-cctv-security"
-          className={`residential-link ${
-            isResidential ? "active-link" : ""
-          } text-decoration-none d-flex align-items-center`}
-        >
-          <i className="bi bi-house-door-fill text-warning me-1"></i>
-          {isResidential ? "HOME SECURITY" : "Home Security"}
-        </a>
 
-        <span className="text-light mx-2">|||</span>
+        {/* Centered security links */}
+        <div className="d-flex justify-content-center align-items-center small">
+          <a
+            href="/residential-cctv-security"
+            className={`residential-link ${
+              isResidential ? "active-link" : ""
+            } text-decoration-none d-flex `}
+          >
+            <i className="bi bi-shield-lock me-1 text-warning"></i>
+            {isResidential ? "HOME SECURITY" : "Home Security"}
+          </a>
 
-        <a
-          href="/commercial-cctv-security"
-          className={`business-link ${
-            isCommercial ? "active-link" : ""
-          } text-decoration-none d-flex align-items-center`}
-        >
-          <i className="bi bi-building me-1 text-warning"></i>
-          {isCommercial ? "BUSINESS SECURITY" : "Business Security"}
-        </a>
+          <span className="text-light mx-2 me-3">||</span>
+
+          <a
+            href="/commercial-cctv-security"
+            className={`business-link ${
+              isCommercial ? "active-link" : ""
+            } text-decoration-none d-flex `}
+          >
+            <i className="bi bi-building me-1 text-warning"></i>
+            {isCommercial ? "BUSINESS SECURITY" : "Business Security"}
+          </a>
+        </div>
       </div>
 
       {/* Right: Phone + Links + Social */}
@@ -54,7 +64,7 @@ export default function TopbarMen() {
         {/* Phone Number - Always show */}
         <a
           href={`tel:${companyInfo.phoneNumbers.tollFree.replace(/\D/g, "")}`}
-          className="text-decoration-none me-3 d-flex align-items-center text-nowrap phone-cta"
+          className="text-decoration-none me-2 mt-2 d-flex align-items-center text-nowrap phone-cta"
         >
           <i className="bi bi-telephone text-warning me-2"></i>
           <span className="text-light">
