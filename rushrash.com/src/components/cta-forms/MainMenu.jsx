@@ -57,7 +57,7 @@ const MainMenu = () => {
         borderRadius: "10px",
         position: "relative",
         zIndex: 1100,
-        backgroundColor: "#fff",
+        backgroundColor: "#0dcaf0",
       }}
     >
       <div className="container-fluid justify-content-between">
@@ -102,7 +102,7 @@ const MainMenu = () => {
                 }
                 style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
               >
-                Services
+                <span className="text-light">Services</span>
               </button>
               <ul
                 className={`dropdown-menu p-4 shadow-lg rounded-3 border-0 ${
@@ -129,8 +129,8 @@ const MainMenu = () => {
                           style={menuItemStyle}
                           onClick={() => setExpandedMenu(null)}
                         >
-                          <i className="bi bi-camera-video me-2"></i> CCTV
-                          Installation
+                          <i className="bi bi-camera-video me-2"></i>
+                          CCTV Installation
                         </Link>
                       </li>
                       <li>
@@ -140,8 +140,8 @@ const MainMenu = () => {
                           style={menuItemStyle}
                           onClick={() => setExpandedMenu(null)}
                         >
-                          <i className="bi bi-door-closed me-2"></i> Access
-                          Control
+                          <i className="bi bi-door-closed me-2"></i>
+                          Access Control
                         </Link>
                       </li>
                       <li>
@@ -161,8 +161,8 @@ const MainMenu = () => {
                           style={menuItemStyle}
                           onClick={() => setExpandedMenu(null)}
                         >
-                          <i className="bi bi-bag-check me-2"></i> POS
-                          Installation
+                          <i className="bi bi-bag-check me-2"></i>
+                          POS Installation
                         </Link>
                       </li>
                     </ul>

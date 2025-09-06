@@ -24,12 +24,12 @@ export default function TopbarMen() {
       {/* Left: Residential | Business */}
       <div className="position-relative w-100">
         {/* Home icon in top left corner */}
-        <div>
-          <a href="/" className="position-absolute">
-            <i
-              className="bi bi-house-door text-info fs-4"
-              style={{ marginLeft: "-12px" }}
-            ></i>
+        <div
+          className="d-inline-flex align-items-center p-1 justify-content-center bg-info rounded-circle"
+          style={{ width: "32px", height: "32px" }}
+        >
+          <a href="/">
+            <i className="bi bi-house-door text-light fs-4"></i>
           </a>
         </div>
 

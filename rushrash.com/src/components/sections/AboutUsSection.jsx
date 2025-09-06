@@ -75,7 +75,7 @@ export default function AboutUsSection() {
           {[
             {
               text: "Residential & Commercial Experts",
-              icon: "bi-house-check",
+              icon: "bi-house-check text-info",
             },
             {
               text: "Certified Technicians & Licensed Installers",
@@ -83,19 +83,19 @@ export default function AboutUsSection() {
             },
             {
               text: "Authorized Partners with Leading Brands",
-              icon: "bi-award",
+              icon: "bi-award text-info",
             },
             {
               text: "24/7 Monitoring & Emergency Support",
-              icon: "bi-headset",
+              icon: "bi-headset text-info",
             },
             {
               text: "Custom Solutions for Homes & Businesses",
-              icon: "bi-gear",
+              icon: "bi-gear text-info",
             },
             {
               text: "Proven Success in Our Case Studies",
-              icon: "bi-graph-up-arrow",
+              icon: "bi-graph-up-arrow text-info",
             },
           ].map((item, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4">
