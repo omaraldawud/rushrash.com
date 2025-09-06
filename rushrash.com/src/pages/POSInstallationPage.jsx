@@ -7,6 +7,7 @@ import SEOMeta from "../components/seo/SEOMeta";
 // Functionl Components
 import PageInfoBox from "../components/cards/PageInfoBox";
 import FAQsSection from "../components/sections/FAQsSection";
+import CaseStudies from "../components/sections/CaseStudies";
 
 //global vars - data structure
 const services = [
@@ -147,6 +148,10 @@ export default function POSServices() {
             </div>
           ))}
         </div>
+      </div>
+      {/* Success Stories & Studies */}
+      <div id="case-studies">
+        <CaseStudies tab="pos" />
       </div>
       <div>
         <FAQsSection faqServiceType="PoS" />

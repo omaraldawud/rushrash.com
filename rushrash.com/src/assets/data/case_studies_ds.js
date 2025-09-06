@@ -5,10 +5,12 @@ import imgHickoryHills from "../../assets/images/security-locks/home-access-cont
 import imgAccessControlOffice from "../../assets/images/access-control/tools-lock-access-control.jpg";
 import imgITNetworkSetup from "../../assets/images/it-services/cat-cables-it-network-setup.jpeg";
 import imgHickoryHillsLake from "../../assets/images/success-stories/osprey-nest-solar-cctv-camera.jpg";
+import imgPoS from "../../assets/images/pos/point-of-sale-restaurants.jpeg";
 
 const caseStudies = [
   {
     studyType: "featured",
+    isFeatured: true,
     image: imgHickoryHillsLake,
     altText:
       "Solar-powered CCTV system monitoring ospreys at Hickory Hills Lake",
@@ -35,7 +37,6 @@ const caseStudies = [
       "Valuable data collected for local wildlife research",
       "Demonstrated feasibility of solar-powered CCTV in remote areas",
     ],
-    isFeatured: true,
   },
 
   {
@@ -70,6 +71,7 @@ const caseStudies = [
   },
   {
     studyType: "residential",
+    isFeatured: true,
     image: imgHickoryHills,
     altText: "8-camera DVR system with access control in Hickory Hills home",
     category: {
@@ -97,7 +99,6 @@ const caseStudies = [
       "Mobile app control from anywhere",
       "Peace of mind for the entire family",
     ],
-    isFeatured: false,
   },
   {
     studyType: "Access Control",
@@ -129,7 +130,7 @@ const caseStudies = [
     isFeatured: false,
   },
   {
-    studyType: "IT",
+    studyType: "it",
     image: imgITNetworkSetup,
     altText: "Office IT and network configuration for mid-size company",
     category: {
@@ -155,6 +156,35 @@ const caseStudies = [
       "Reduced network downtime and latency",
       "Centralized IT management and monitoring",
       "Future-ready infrastructure supporting remote work",
+    ],
+    isFeatured: false,
+  },
+  {
+    studyType: "pos",
+    image: imgPoS,
+    altText: "Professional POS system installation in a retail environment",
+    category: {
+      name: "Point of Sale System Installation",
+      icon: "bi-cash-register",
+    },
+    title: "Retail Store POS System Upgrade",
+    stats: [
+      { value: "4", label: "POS Terminals Installed" },
+      { value: "30%", label: "Checkout Efficiency Improvement" },
+    ],
+    overview:
+      "Rushrash Inc. designed and implemented a complete POS system upgrade for a mid-sized retail store, replacing outdated equipment with modern touchscreen terminals, barcode scanners, and receipt printers. The system integrated with inventory management and customer loyalty programs.",
+    services: [
+      "POS Hardware Installation",
+      "Payment Processing Integration",
+      "Inventory Management System Setup",
+      "Staff Training & Documentation",
+    ],
+    results: [
+      "Reduced checkout time by 30%",
+      "Improved inventory accuracy to 99.8%",
+      "Enabled seamless loyalty program integration",
+      "Increased customer satisfaction scores",
     ],
     isFeatured: false,
   },

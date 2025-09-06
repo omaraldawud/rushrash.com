@@ -84,7 +84,7 @@ const MainMenu = () => {
           <ul className="navbar-nav me-auto d-flex align-items-center gap-3">
             {/* Services Mega Menu */}
             <li className="nav-item dropdown">
-              <span
+              <button
                 className={getDropdownClass([
                   "/services/cctv-installation",
                   "/services/access-control",
@@ -100,7 +100,7 @@ const MainMenu = () => {
                 style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
               >
                 Services
-              </span>
+              </button>
               <ul
                 className={`dropdown-menu p-4 shadow-lg rounded-3 border-0 ${
                   expandedMenu === "services" ? "show" : ""
@@ -200,7 +200,7 @@ const MainMenu = () => {
               </span>
               <ul
                 className={`dropdown-menu p-4 shadow-lg rounded-3 border-0 ${
-                  expandedMenu === "services" ? "show" : ""
+                  expandedMenu === "about" ? "show" : "" // Fixed: Changed from "services" to "about"
                 }`}
                 style={{
                   minWidth: "650px",
@@ -209,7 +209,6 @@ const MainMenu = () => {
                   zIndex: 1001,
                   left: "0",
                   right: "auto",
-                  transform: "translateX(-10px)", // Optional: nudge left
                 }}
               >
                 <div className="row gx-2">
@@ -249,7 +248,7 @@ const MainMenu = () => {
                     </ul>
                   </div>
 
-                  <div className="d-none d-block col-8 info-box">
+                  <div className="d-none d-md-block col-8 info-box">
                     <h6 className="fw-bold text-dark mb-2">
                       <i className="bi bi-question-circle text-warning me-2"></i>
                       Why Choose Rushrash?

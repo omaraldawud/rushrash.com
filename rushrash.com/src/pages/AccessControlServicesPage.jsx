@@ -8,6 +8,7 @@ import SEOMeta from "../components/seo/SEOMeta";
 // Functionl Components
 import PageInfoBox from "../components/cards/PageInfoBox";
 import FAQsSection from "../components/sections/FAQsSection";
+import CaseStudies from "../components/sections/CaseStudies";
 
 //
 
@@ -142,6 +143,11 @@ export default function AccessControlServicesPage() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Success Stories & Studies */}
+      <div id="case-studies">
+        <CaseStudies tab="Access Control" />
       </div>
 
       <div>

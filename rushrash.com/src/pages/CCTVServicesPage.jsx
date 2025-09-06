@@ -7,6 +7,8 @@ import FAQsSection from "../components/sections/FAQsSection";
 
 // Components
 import PageInfoBox from "../components/cards/PageInfoBox";
+import CaseStudies from "../components/sections/CaseStudies";
+
 // Images
 import cctvResidentialIMG from "../assets/images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
 import cctvCommercialIMG from "../assets/images/banners/commercial/cctv-building-commercial.jpg";
@@ -195,6 +197,12 @@ export default function CCTVServicesPage() {
           </div>
         </div>
       </div>
+
+      {/* Success Stories & Studies */}
+      <div id="case-studies">
+        <CaseStudies tab="residential" />
+      </div>
+
       <div>
         <FAQsSection faqServiceType="cctv" />
       </div>

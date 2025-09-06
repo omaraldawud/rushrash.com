@@ -2,8 +2,7 @@
 import { Container } from "react-bootstrap";
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 import SEOMeta from "../components/seo/SEOMeta";
-
-// Images
+import CaseStudies from "../components/sections/CaseStudies";
 
 // Functionl Components
 import PageInfoBox from "../components/cards/PageInfoBox";
@@ -143,7 +142,6 @@ export default function ITServices() {
           twitterHandle="@RushrashInc"
         />
       </div>
-
       <Container fluid>
         <PageInfoBox pageType="itServices" />
       </Container>
@@ -164,7 +162,11 @@ export default function ITServices() {
           ))}
         </div>
       </div>
-      <div>
+      {/* Success Stories & Studies */}
+      <div id="case-studies">
+        <CaseStudies tab="it" />
+      </div>
+      <div className="mt-4">
         <FAQsSection faqServiceType="IT" />
       </div>
     </>

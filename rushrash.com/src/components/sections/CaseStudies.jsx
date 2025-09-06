@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import CaseStudyCard from "../cards/CaseStudyCard";
 import caseStudies from "../../assets/data/case_studies_ds";
-import "../../assets/css/CaseStudies.css"; // custom styles
+import "../../assets/css/CaseStudies.css";
 
 // Tabs with labels + icons
 const tabTypes = [
