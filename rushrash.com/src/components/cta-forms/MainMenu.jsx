@@ -81,7 +81,10 @@ const MainMenu = () => {
 
         {/* Collapsible menu content */}
         <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav me-auto d-flex align-items-center gap-3">
+          <ul
+            id="services-menu"
+            className="navbar-nav me-auto d-flex align-items-center gap-3"
+          >
             {/* Services Mega Menu */}
             <li className="nav-item dropdown">
               <button

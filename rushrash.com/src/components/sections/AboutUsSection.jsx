@@ -79,7 +79,7 @@ export default function AboutUsSection() {
             },
             {
               text: "Certified Technicians & Licensed Installers",
-              icon: "bi-person-badge-check",
+              icon: "bi-person-badge text-info",
             },
             {
               text: "Authorized Partners with Leading Brands",

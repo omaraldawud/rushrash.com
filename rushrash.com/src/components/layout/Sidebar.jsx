@@ -9,6 +9,11 @@ import rr_company_ds from "../../assets/data/rr_company_ds";
 const sidebarCardsData = {
   home: [
     {
+      icon: "bi-key",
+      title: "Local Access Control",
+      text: "Secure your home or business with expert access control solutions, smart card entry, and biometric authentication.",
+    },
+    {
       icon: "bi-bullseye",
       title: "Mission Statement",
       text: "Delivering professional CCTV installation and monitoring services with reliability and security across Chicagoland.",
@@ -22,11 +27,6 @@ const sidebarCardsData = {
       icon: "bi-eye-fill",
       title: "Local CCTV Company",
       text: "Serving Naperville, Aurora, Plainfield, and the greater Chicago area with professional CCTV installations.",
-    },
-    {
-      icon: "bi-key",
-      title: "Local Access Control",
-      text: "Secure your home or business with expert access control solutions, smart card entry, and biometric authentication.",
     },
   ],
   contact: [
@@ -46,6 +46,11 @@ const sidebarCardsData = {
       icon: "bi-bullseye",
       title: "Mission Statement",
       text: "Delivering professional CCTV installation and monitoring services with reliability and security across Chicagoland.",
+    },
+    {
+      icon: "bi-shield-check",
+      title: "Licensed, Bonded & Insured",
+      text: "Fully licensed, bonded, and insured CCTV company providing trusted security solutions for residential and commercial properties.",
     },
   ],
 };
