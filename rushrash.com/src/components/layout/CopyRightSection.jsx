@@ -10,11 +10,12 @@ export default function CopyRightSection() {
       }}
     >
       <small className="d-flex justify-content-end align-items-center gap-2">
-        <i
-          className="bi bi-shield-lock-fill"
-          style={{ color: "#f4b216ff" }}
-        ></i>
         <em>
+          {" "}
+          <i
+            className="bi bi-shield-lock-fill me-2"
+            style={{ color: "#f4b216ff" }}
+          ></i>
           &copy; {new Date().getFullYear()} Rushrash Inc. | All rights reserved.
           |
           <a

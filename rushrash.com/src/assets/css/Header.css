@@ -51,22 +51,6 @@ body {
   transform: translateY(-1px);
 }
 
-
-
-/* Phone CTA Styling */
-.phone-cta {
-  background: rgba(255, 193, 7, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(255, 193, 7, 0.2);
-  transition: all 0.3s ease;
-}
-
-.phone-cta:hover {
-  background: rgba(255, 193, 7, 0.2);
-  transform: translateY(-1px);
-}
-
 /* Navigation Links */
 .nav-link {
   color: #e9ecef !important;
@@ -267,8 +251,8 @@ body {
 
 /* Enhanced Phone CTA */
 .phone-cta {
-  background: rgba(255, 193, 7, 0.15);
-  padding: 0.4rem 1rem;
+  background: transparent;
+  padding: 0.2rem .7rem;
   border-radius: 0.4rem;
   border: 1px solid rgba(255, 193, 7, 0.3);
   transition: all 0.3s ease;

@@ -2,7 +2,7 @@
 export default function FooterMenu() {
   return (
     <div className="footer-menu-wrapper">
-      <nav className="footer-menu d-flex flex-wrap justify-content-end gap-3">
+      <nav className="footer-menu d-flex flex-wrap justify-content-center justify-content-md-end gap-2 gap-md-3">
         <a href="/" className="footer-link d-flex align-items-center">
           <i className="bi bi-house-door me-1"></i> Home
         </a>
@@ -44,15 +44,15 @@ export default function FooterMenu() {
       <style jsx>{`
         .footer-menu-wrapper {
           text-align: center;
+          padding: 0.5rem 0;
         }
 
         .footer-link {
           color: #ffd166;
-          font-size: 0.7rem;
+          font-size: 0.8rem;
           font-weight: 600;
           text-decoration: none;
           transition: color 0.2s ease;
-          margin-right: 10px;
         }
 
         .footer-link:hover,
@@ -65,6 +65,15 @@ export default function FooterMenu() {
           border-color: rgba(255, 254, 254, 0.4);
           margin: 0.5rem auto 0;
           width: 80%;
+        }
+
+        /* On very small screens, make links full-width stacked */
+        @media (max-width: 576px) {
+          .footer-menu {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+          }
         }
       `}</style>
     </div>

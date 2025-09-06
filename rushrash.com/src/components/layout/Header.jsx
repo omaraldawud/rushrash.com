@@ -15,7 +15,7 @@ export default function Header() {
   const { pathname } = useLocation(); // ✅ clean destructure
 
   // Pick subtitle based on current path
-  let header_subtitle = "CCTV & Access Control Systems"; // default
+  let header_subtitle = "CCTV & Access Control Solutions"; // default
   if (pathname.includes("/residential-cctv-security")) {
     header_subtitle = "Residential CCTV & Smart Security";
   } else if (pathname.includes("/commercial-cctv-security")) {
@@ -36,7 +36,8 @@ export default function Header() {
         {/* --- Logo + Menu --- */}
         <div className="d-flex justify-content-between align-items-end me-5 py-4">
           {/* Left: Logo + Company Name */}
-          <div className="d-flex align-items-center mt-5">
+          {/* Desktop Version */}
+          <div className="d-none d-md-flex align-items-center mt-5">
             <Logo logoWidth="200px" />
             <div className="ms-5 d-flex flex-column">
               <h1 className="company-title mb-1">
@@ -46,6 +47,23 @@ export default function Header() {
                 </span>
               </h1>
             </div>
+          </div>
+
+          {/* Mobile Version */}
+          <div
+            className="d-flex d-md-none flex-column align-items-start"
+            style={{ marginTop: "60px" }}
+          >
+            {/* Row 1: Logo + Company Name */}
+            <div className="d-flex align-items-center">
+              <Logo logoWidth="150px" />
+              <span className="company-title mb-0 ms-3">
+                <span className="company-name">{companyInfo.companyName}</span>
+              </span>
+            </div>
+
+            {/* Row 2: Subtitle (still inside <h1> for SEO) */}
+            <h1 className="company-subtitle mt-2 mb-0">{header_subtitle}</h1>
           </div>
 
           {/* Main Menu */}

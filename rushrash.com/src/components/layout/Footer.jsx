@@ -50,7 +50,9 @@ export default function Footer() {
           {/* Navigation Menu & SEO Text - Right */}
           <div className="col-lg-9 col-md-8 mb-3 mb-md-0">
             <div>
-              <FooterMenu />
+              <div className="d-none d-md-block">
+                <FooterMenu />
+              </div>
               <FooterCTA />
               <FooterSection />
               <CopyRightSection />

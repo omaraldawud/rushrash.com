@@ -62,7 +62,7 @@ const MainMenu = () => {
     >
       <div className="container-fluid justify-content-between">
         {/* Logo */}
-        <div>
+        <div className="d-none d-md-block ">
           <Logo logoWidth="30px" />
         </div>
 

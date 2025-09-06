@@ -1,3 +1,4 @@
+// src/components/layout/TopbarMen.tsx
 import { useLocation, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 //components
@@ -12,21 +13,19 @@ export default function TopbarMen() {
   );
   const isCommercial = location.pathname.includes("/commercial-cctv-security");
 
-  // Scanline color based on route
-  let scanlineColor = "#eef0f4ff";
-
   return (
     <div
       className="utility-bar fixed-top d-flex justify-content-between align-items-center py-2 fw-semibold"
       style={{
-        backgroundColor: "#2c3e50", // Add background color
-        zIndex: 1030, // Higher z-index
+        backgroundColor: "#2c3e50",
+        zIndex: 1030,
       }}
     >
-      {" "}
       {/* Left: Residential | Business */}
       <div className="left-links d-flex align-items-center small">
-        <Logo logoheight="30px" />
+        <div className="d-none d-md-block">
+          <Logo logoheight="30px" />
+        </div>
         <a
           href="/residential-cctv-security"
           className={`residential-link ${
@@ -48,22 +47,23 @@ export default function TopbarMen() {
           <i className="bi bi-building me-1 text-warning"></i>
           {isCommercial ? "BUSINESS SECURITY" : "Business Security"}
         </a>
-      </div>{" "}
+      </div>
+
       {/* Right: Phone + Links + Social */}
       <div className="d-flex align-items-center fw-bold">
-        {/* Phone Number - Emphasized */}
+        {/* Phone Number - Always show */}
         <a
           href={`tel:${companyInfo.phoneNumbers.tollFree.replace(/\D/g, "")}`}
-          className="text-decoration-none me-4 d-flex align-items-center text-nowrap phone-cta"
+          className="text-decoration-none me-3 d-flex align-items-center text-nowrap phone-cta"
         >
-          <i className="bi bi-telephone-fill text-warning me-2"></i>
+          <i className="bi bi-telephone text-warning me-2"></i>
           <span className="text-light">
             {companyInfo.phoneNumbers.tollFree}
           </span>
         </a>
 
-        {/* Navigation Links with Separators */}
-        <div className="d-flex align-items-center me-4">
+        {/* Desktop-only nav links */}
+        <div className="d-none d-md-flex align-items-center me-4">
           <HashLink
             smooth
             to="/contact-rushrash-inc#case-studies"
@@ -122,8 +122,31 @@ export default function TopbarMen() {
           </NavLink>
         </div>
 
-        {/* Social Links */}
-        <div className="border-start border-1 border-warning ps-3">
+        {/* Mobile-only nav links */}
+        <div className="d-flex d-md-none align-items-center">
+          <HashLink
+            smooth
+            to="/contact-rushrash-inc#case-studies"
+            className="text-nowrap text-success text-decoration-none me-3 nav-link"
+          >
+            <i className="bi bi-book me-2 text-success"></i>
+            Projects
+          </HashLink>
+
+          <NavLink
+            to="/contact-rushrash-inc"
+            className={({ isActive }) =>
+              "text-nowrap text-light text-decoration-none nav-link me-3" +
+              (isActive ? " active" : "")
+            }
+          >
+            <i className="bi bi-person me-2 text-warning"></i>
+            Contact
+          </NavLink>
+        </div>
+
+        {/* Social links (hide on mobile if needed) */}
+        <div className="border-start border-1 border-warning ps-3 d-none d-md-block">
           <SocialProfiles />
         </div>
       </div>

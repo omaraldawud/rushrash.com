@@ -1,4 +1,35 @@
 /* Main Menu Styles */
+.header-content {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+  }
+
+  .main-menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.company-title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.company-subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
 .navbar {
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);

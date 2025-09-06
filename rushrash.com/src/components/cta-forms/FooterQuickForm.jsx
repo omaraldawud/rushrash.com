@@ -1,3 +1,4 @@
+// src/components/cta-forms/FooterQuickForm.js
 import { useState } from "react";
 
 const FooterQuickForm = ({ ctaText = "Get a Free Quote" }) => {
@@ -45,8 +46,7 @@ const FooterQuickForm = ({ ctaText = "Get a Free Quote" }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="d-flex align-items-center gap-2"
-      style={{ flexWrap: "nowrap" }} // prevent wrapping
+      className="footer-quick-form d-flex flex-wrap justify-content-center gap-2 w-100"
     >
       <input
         type="text"
@@ -56,7 +56,6 @@ const FooterQuickForm = ({ ctaText = "Get a Free Quote" }) => {
         value={formData.name}
         onChange={handleChange}
         required
-        style={{ minWidth: "100px", maxWidth: "150px", flexShrink: 1 }}
       />
       <input
         type="email"
@@ -66,7 +65,6 @@ const FooterQuickForm = ({ ctaText = "Get a Free Quote" }) => {
         value={formData.email}
         onChange={handleChange}
         required
-        style={{ minWidth: "120px", maxWidth: "200px", flexShrink: 1 }}
       />
       <input
         type="tel"
@@ -76,19 +74,35 @@ const FooterQuickForm = ({ ctaText = "Get a Free Quote" }) => {
         value={formData.phone}
         onChange={handleChange}
         required
-        style={{ minWidth: "100px", maxWidth: "150px", flexShrink: 1 }}
       />
       <button
         type="submit"
         className="btn btn-outline-light bg-warning text-dark btn-sm fw-semibold"
-        style={{
-          whiteSpace: "nowrap",
-        }}
       >
         🔒 {ctaText} →
       </button>
 
       {status && <p className="mt-2 small text-center w-100">{status}</p>}
+
+      <style jsx>{`
+        .footer-quick-form input {
+          min-width: 100px;
+          max-width: 200px;
+          flex: 1;
+        }
+
+        /* Mobile first: stack vertically */
+        @media (max-width: 576px) {
+          .footer-quick-form {
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .footer-quick-form input,
+          .footer-quick-form button {
+            width: 100%;
+          }
+        }
+      `}</style>
     </form>
   );
 };
