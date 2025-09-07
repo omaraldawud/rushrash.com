@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "./components/layout/Layout";
+import Chatbot from "./components/ai/Chatbot";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -30,6 +31,10 @@ function App() {
   return (
     <Layout page_banner={page_banner}>
       <GlobalBusinessSchema /> {/* Global defaults only */}
+      {/* Chatbot floating in bottom-right */}
+      <div style={{ position: "fixed", bottom: 20, right: 20, zIndex: 1000 }}>
+        <Chatbot />
+      </div>
       <Routes>
         {/* Home */}
         <Route path="/" element={<HomePage />} />
