@@ -21,7 +21,7 @@ import honeywellCamera from "../images/brands/honeywell/security-camera-Honeywel
 import AvigilonCamera from "../images/brands/avigilon/avigilon-cctv-camera.avif";
 import UniViewCamera from "../images/brands/uniview/owelview-camera-specs.jpg";
 import LorexCamera from "../images/brands/lorex/lorex-security-cameras.webp";
-import FlirCamera from "../images/Brands/flir/flir-cctv-cams-teledyne-flir.jfif";
+import FlirCamera from "../images/brands/flir/flir-cctv-cams-teledyne-flir.jfif";
 
 const brandsForTabsDS = [
   {
