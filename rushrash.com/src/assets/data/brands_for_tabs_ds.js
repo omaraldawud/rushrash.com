@@ -1,4 +1,5 @@
 // src/assets/data/brands_for_tabs_ds.js
+//
 
 import HikvisionLogo from "../images/brands/hikvision-logo.png";
 import AxisLogo from "../images/brands/axis-communications-log.png";
@@ -6,10 +7,10 @@ import DahuaLogo from "../images/brands/dahua-technology-logo.png";
 import BoschLogo from "../images/brands/bosch-security-systems-logo.png";
 import HanwhaLogo from "../images/brands/hanwha-vision-logo.png";
 import AvigilonLogo from "../images/brands/avigilon-logo.jfif";
+import FlirLogo from "../images/brands/flir-systems-logo.png";
 import UniViewLogo from "../images/brands/uniview-logo.jfif";
 import HoneywellLogo from "../images/brands/honeywell-logo.jfif";
 import LorexLogo from "../images/brands/lorex-logo.jfif";
-import FlirLogo from "../images/brands/flir-systems-logo.png";
 //
 // Images
 import hikVisionCamera from "../images/brands/hikvision/security-camera-by-Hikvision.webp";
