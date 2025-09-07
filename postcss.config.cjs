@@ -1,3 +1,6 @@
+// postcss.cjs
+//
+
 const autoprefixer = require("autoprefixer");
 const purgecss = require("@fullhuman/postcss-purgecss");
 
