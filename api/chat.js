@@ -1,9 +1,11 @@
 // /api/chat.js
 import axios from "axios";
-import servicesList from "../src/components/ai/servicesList.js";
-import offersList from "../src/components/ai/offersList.js";
+import servicesList from "../data/servicesList.js";
+import offersList from "../data/offersList.js";
 
 export default async function handler(req, res) {
+  console.log("API route hit", req.method);
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }

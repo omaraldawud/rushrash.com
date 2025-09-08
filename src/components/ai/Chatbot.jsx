@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "../layout/Logo";
 import "../../assets/css/chatbot.css";
-import servicesList from "./servicesList";
-import offersList from "./offersList";
+import servicesList from "../../../data/servicesList";
+import offersList from "../../../data/offersList";
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
