@@ -54,13 +54,16 @@ export default function Chatbot() {
 
     if (!handled) {
       try {
-        const res = await fetch("/api/chat", {
-          // <-- Vercel endpoint
+        const res = await fetch(
+          "https://rushrash-com-chatbot.vercel.app/api/chat/api/chat",
+          {
+            // <-- Vercel endpoint
 
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text }),
-        });
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: text }),
+          }
+        );
         const data = await res.json();
         setMessages((prev) => [...prev, { from: "bot", text: data.reply }]);
       } catch (err) {
