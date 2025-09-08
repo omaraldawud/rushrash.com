@@ -55,7 +55,7 @@ export default function Chatbot() {
     if (!handled) {
       try {
         const res = await fetch(
-          "https://rushrash-com-chatbot.vercel.app/api/chat/api/chat",
+          "https://rushrash-com-chatbot.vercel.app/api/chat",
           {
             // <-- Vercel endpoint
 
