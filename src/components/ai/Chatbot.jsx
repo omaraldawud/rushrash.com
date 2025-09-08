@@ -54,7 +54,6 @@ export default function Chatbot() {
 
     if (!handled) {
       try {
-        // const res = await fetch("http://localhost:5000/chat", {
         const res = await fetch("/api/chat", {
           // <-- Vercel endpoint
 
