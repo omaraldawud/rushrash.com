@@ -530,5 +530,13 @@
   {"question":"Are warranties available for sound system installations?","answer":"Yes, all installations come with a 1-year labor warranty, and most equipment includes manufacturer warranties ranging from 1–5 years."},
   {"question":"Can you provide a quote for multiple rooms or large facilities?","answer":"Yes, we provide customized quotes based on your facility size, number of zones, and system complexity."},
   {"question":"Do you offer integration with video or conference systems?","answer":"Yes, our solutions can be integrated with video conferencing systems, home theaters, or commercial AV setups for a unified experience."}
-]
+],
+"policies": {
+  "installation_guarantees": "1-year labor, up to 5-year manufacturer warranty",
+  "maintenance_plans": ["Monthly","Quarterly","Annual"],
+  "service_response_times": {
+    "emergency": "2 hours",
+    "standard": "24 hours"
+  }
+}
 }
