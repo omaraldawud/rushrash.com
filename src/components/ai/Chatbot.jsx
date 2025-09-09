@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "../../assets/css/Chatbot.css";
+import "../../assets/css/chatbot.css";
 import Logo from "../layout/Logo";
 
 export default function Chatbot() {
