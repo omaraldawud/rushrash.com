@@ -19,7 +19,7 @@ export default function Chatbot() {
     try {
       console.log("Calling Api ...");
       const res = await axios.post("/api/chat", { message });
-      console.log("Reply:", res.data.message);
+      // console.log("Reply:", res.data.message);
 
       const reply = res.data.reply;
 
