@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "../../assets/css/chatbot.css";
 import Logo from "../layout/Logo";
@@ -7,22 +7,31 @@ export default function Chatbot() {
   const [message, setMessage] = useState("");
   const [chatLog, setChatLog] = useState([]);
   const [loading, setLoading] = useState(false);
+  const chatWindowRef = useRef(null); // Ref for chat window
+
+  // Auto-scroll when chatLog changes
+  useEffect(() => {
+    if (chatWindowRef.current) {
+      chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
+    }
+  }, [chatLog, loading]);
 
   const handleSend = async () => {
     if (!message.trim()) return;
 
     const userMessage = { role: "user", content: message };
-    setChatLog([...chatLog, userMessage]);
+    setChatLog((prev) => [...prev, userMessage]);
     setMessage("");
     setLoading(true);
 
     try {
-      console.log("Calling Api ...");
-      const res = await axios.post("/api/chat", { message });
-      // console.log("Reply:", res.data.message);
+      console.log("Calling API ...");
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL || ""}/api/chat`,
+        { message }
+      );
 
-      const reply = res.data.reply;
-
+      const reply = res.data?.reply || "⚠️ No reply received.";
       setChatLog((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (err) {
       console.error(err);
@@ -54,7 +63,7 @@ export default function Chatbot() {
         </div>
       </div>
 
-      <div className="chat-window">
+      <div className="chat-window" ref={chatWindowRef}>
         {chatLog.map((msg, i) => (
           <div
             key={i}
