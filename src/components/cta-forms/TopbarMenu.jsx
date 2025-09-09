@@ -24,17 +24,17 @@ export default function TopbarMen() {
       {/* Left: Residential | Business */}
       <div className="position-relative w-100">
         {/* Home icon in top left corner */}
-        <div
-          className="d-inline-flex align-items-center p-1 justify-content-center bg-info rounded-circle"
+        {/* <div
+          className="d-inline-flex align-items-center  justify-content-center bg-info rounded-circle"
           style={{ width: "32px", height: "32px" }}
         >
           <a href="/">
-            <i className="bi bi-house-door text-light fs-4"></i>
+            <i className="bi bi-house-door text-light fs-5"></i>
           </a>
-        </div>
+        </div> */}
 
         {/* Centered security links */}
-        <div className="d-flex justify-content-center align-items-center small">
+        <div className="d-flex justify-content-start align-items-center small">
           <a
             href="/residential-cctv-security"
             className={`residential-link ${

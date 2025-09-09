@@ -43,7 +43,7 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
   };
 
   return (
-    <div className="cta-form-container p-3 mt-5 rounded-2 shadow-sm bg-light">
+    <div className="cta-form-container p-3 rounded-2 shadow-sm bg-light">
       <h6 className="fw-bold text-dark mb-3 modern-cta-subtitle">
         Let&apos;s Secure Your Space Together
       </h6>

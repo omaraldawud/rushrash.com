@@ -1,10 +1,9 @@
 .sidebar-divider {
   border: 0;
-  height: 2px;                  /* line thickness */
+  height: 2px; /* line thickness */
   background: rgba(0, 0, 0, 0.1); /* light gray line */
-  margin: 0.75rem 0;            /* spacing above and below */
+  margin: 0.75rem 0; /* spacing above and below */
 }
-
 
 .custom-sidebar {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -16,6 +15,7 @@
 .sidebar-card {
   background: white;
   border-radius: 12px;
+
   overflow: hidden;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -29,18 +29,18 @@
 }
 
 .card-header {
-    background: linear-gradient(135deg, #0dcaf0 0%, #0b5ed7 100%);
-    color: white;
-    padding: 1rem 1.25rem;
-    font-weight: 400;
-    font-size: 1rem;
-    display: flex
-;
-    align-items: center;
+  background: linear-gradient(135deg, #0dcaf0 0%, #0b5ed7 100%);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .card-header.bg-danger {
-  background: linear-gradient(135deg, #dc3545 0%, #a71d2a 100%);
+  background: linear-gradient(135deg, #79111b 0%, #a71d2a 100%);
 }
 
 .card-header.bg-secondary {
@@ -98,11 +98,11 @@
   .custom-sidebar {
     padding: 1.25rem;
   }
-  
+
   .card-body {
     padding: 1rem;
   }
-  
+
   .component-item {
     margin-bottom: 1rem;
     padding-bottom: 1rem;

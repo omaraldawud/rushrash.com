@@ -20,7 +20,7 @@ const sidebarCardsData = {
     },
     {
       icon: "bi-shield-check",
-      title: "Licensed, Bonded & Insured",
+      title: "Licensed, Bonded, Insured",
       text: "Fully licensed, bonded, and insured CCTV company providing trusted security solutions for residential and commercial properties.",
     },
     {

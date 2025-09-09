@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries Explained</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 30px 20px;
+        margin-bottom: 30px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        color: #4a5568;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: #718096;
+        font-size: 1.2rem;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 40px;
+      }
+
+      .box {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        color: #4a5568;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 15px;
+        color: #4a5568;
+      }
+
+      ul {
+        list-style-position: inside;
+        margin-bottom: 15px;
+      }
+
+      li {
+        margin-bottom: 8px;
+        color: #4a5568;
+      }
+
+      .code-example {
+        background: #2d3748;
+        color: #e2e8f0;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: "Courier New", monospace;
+        line-height: 1.4;
+      }
+
+      pre {
+        white-space: pre-wrap;
+      }
+
+      code {
+        font-family: "Courier New", monospace;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer-text {
+        color: #4a5568;
+        font-weight: 500;
+      }
+
+      .element::before {
+        content: "Before - ";
+      }
+
+      .element::after {
+        content: " - After";
+      }
+      /* Mobile-first: Default styles are for mobile */
+
+      /* Tablet styles (768px and up) */
+      @media (min-width: 768px) {
+        body {
+          padding: 30px;
+        }
+
+        header {
+          padding: 40px;
+        }
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        .subtitle {
+          font-size: 1.3rem;
+        }
+
+        .content {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .box {
+          flex: 1 1 calc(50% - 25px);
+        }
+
+        .explanation {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+        }
+
+        .explanation h2,
+        .explanation p,
+        .explanation li {
+          color: white;
+        }
+      }
+
+      /* Desktop styles (1024px and up) */
+      @media (min-width: 1024px) {
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        .box {
+          flex: 1 1 calc(33.333% - 25px);
+        }
+
+        .explanation {
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .code-example {
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Large desktop styles (1200px and up) */
+      @media (min-width: 1200px) {
+        body {
+          padding: 40px;
+        }
+
+        header {
+          padding: 50px;
+        }
+
+        h1 {
+          font-size: 4rem;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: white !important;
+          color: black !important;
+          padding: 15px !important;
+        }
+
+        header,
+        footer,
+        .box {
+          box-shadow: none !important;
+          border: 2px solid #ccc !important;
+          background: white !important;
+        }
+
+        .content {
+          flex-direction: column !important;
+        }
+
+        .box {
+          page-break-inside: avoid;
+          margin-bottom: 20px !important;
+        }
+
+        .explanation {
+          background: white !important;
+          color: black !important;
+        }
+
+        .explanation h2,
+        .explanation p,
+        .explanation li {
+          color: black !important;
+        }
+
+        /* Hide unnecessary elements for printing */
+        .subtitle {
+          display: none;
+        }
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        }
+
+        .box,
+        header,
+        footer {
+          background: rgba(45, 55, 72, 0.95);
+          color: #e2e8f0;
+        }
+
+        h1,
+        h2,
+        p,
+        li,
+        .footer-text {
+          color: #e2e8f0;
+        }
+      }
+
+      /* Reduced motion for accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        .box {
+          transition: none;
+        }
+
+        .box:hover {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Understanding Media Queries</h1>
+        <p class="subtitle">
+          Resize your browser to see responsive design in action
+        </p>
+      </header>
+
+      <div class="content">
+        <div class="box explanation">
+          <h2>What are Media Queries?</h2>
+          <p>
+            Media queries are a CSS technique that allows you to apply styles
+            based on device characteristics such as:
+          </p>
+          <ul>
+            <li>Screen width and height</li>
+            <li>Device orientation (portrait/landscape)</li>
+            <li>Resolution and pixel density</li>
+            <li>Preferred color scheme (dark/light mode)</li>
+            <li>Reduced motion preferences</li>
+            <li>Print media</li>
+          </ul>
+          <p>
+            They are essential for creating responsive websites that work on all
+            devices.
+          </p>
+        </div>
+
+        <div class="box">
+          <h2>Common Breakpoints</h2>
+          <p>
+            While these can vary based on your content, common breakpoints are:
+          </p>
+          <ul>
+            <li><strong>Mobile:</strong> 0px - 767px</li>
+            <li><strong>Tablet:</strong> 768px - 1023px</li>
+            <li><strong>Desktop:</strong> 1024px - 1199px</li>
+            <li><strong>Large Desktop:</strong> 1200px+</li>
+          </ul>
+          <p>
+            Always test your design at multiple sizes rather than relying
+            strictly on these numbers.
+          </p>
+          <hr />
+          <div class="element">Actual Content</div>
+        </div>
+
+        <div class="box code-example">
+          <h2>Media Query Syntax</h2>
+          <pre><code>/* Mobile-first approach */
+.element {
+  width: 100%;
+  padding: 1rem; 
+}
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .element {
+    width: 50%;
+    padding: 1.5rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .element {
+    width: 33.33%;
+    padding: 2rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}</code></pre>
+        </div>
+      </div>
+
+      <footer>
+        <p class="footer-text">
+          Try resizing your browser, printing this page, or enabling dark mode
+          to see media queries in action!
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Add current window width display for educational purposes
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("header");
+        const widthDisplay = document.createElement("div");
+        widthDisplay.style.marginTop = "20px";
+        widthDisplay.style.padding = "10px";
+        widthDisplay.style.background = "rgba(0, 0, 0, 0.1)";
+        widthDisplay.style.borderRadius = "5px";
+        widthDisplay.style.fontWeight = "bold";
+        widthDisplay.style.color = "#4a5568";
+
+        function updateWidthDisplay() {
+          widthDisplay.textContent = `Current viewport width: ${window.innerWidth}px`;
+        }
+
+        updateWidthDisplay();
+        header.appendChild(widthDisplay);
+
+        window.addEventListener("resize", updateWidthDisplay);
+      });
+    </script>
+  </body>
+</html>

@@ -1,71 +1,74 @@
-import securityBg from "../../assets/images/banners/security-cctv-top.jpg";
-import aboutUsBg from "../../assets/images/banners/aboutus/call-us-cctv-solutions.jpg";
-import residentialBg from "../../assets/images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
-import commercialBG from "../../assets/images/site-wide/privacy-policy-security-lock.jpg";
-import LegalBG from "../../assets/images/site-wide/data-privecy-security.jpeg";
-import ContactBg from "../../assets/images/banners/aboutus/building-cctv.jpg";
-import accessControlBg from "../../assets/images/access-control/access-control-system.jpg";
-import ITServicesBG from "../../assets/images/it-services/vcables-image-must-use_bg.jpg";
-import CCTVInstallationBG from "../../assets/images/banners/cctv-installation-technician.png";
-import PoSBG from "../../assets/images/pos/point-of-sale-restaurants.jpeg";
+// import securityBg from "../images/banners/security-cctv-top.jpg";
+
+import securityBg from "../images/brands/uniview/owelview-series.png";
+
+import ContactBg from "../images/banners/aboutus/call-us-cctv-solutions.jpg";
+import residentialBg from "../images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
+import commercialBG from "../images/site-wide/privacy-policy-security-lock.jpg";
+import LegalBG from "../images/site-wide/data-privecy-security.jpeg";
+import aboutUsBg from "../images/banners/aboutus/building-cctv.jpg";
+import accessControlBg from "../images/access-control/access-control-system.jpg";
+import ITServicesBG from "../images/it-services/vcables-image-must-use_bg.jpg";
+import CCTVInstallationBG from "../images/banners/cctv-installation-technician.png";
+import PoSBG from "../images/pos/point-of-sale-restaurants.jpeg";
 
 ////////////////////////// Hero images
 //home
-import heroHome1 from "../../assets/images/banners/security-lock-open.jpg";
-import heroHome2 from "../../assets/images/banners/security-cctv-top-blue.jpg";
-import heroHome3 from "../../assets/images/banners/commercial-building-cctv.jpg";
+import heroHome2 from "../images/banners/security-lock-open.jpg";
+import heroHome1 from "../images/banners/security-cctv-top-blue.jpg";
+import heroHome3 from "../images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
 
 //contacts
-import heroContacts1 from "../../assets/images/banners/security-lock-open.jpg";
-import heroContacts2 from "../../assets/images/cctv-cams/cctv-control.webp";
-import heroContacts3 from "../../assets/images/banners/security-cctv-top-blue.jpg";
+import heroContacts1 from "../images/banners/security-lock-open.jpg";
+import heroContacts2 from "../images/cctv-cams/cctv-control.webp";
+import heroContacts3 from "../images/banners/security-cctv-top-blue.jpg";
 
 //about
-import heroAbout1 from "../../assets/images/banners/PluggedInCat5.jpg";
-import heroAbout3 from "../../assets/images/banners/indoor-cct-installation.jpg";
-import heroAbout2 from "../../assets/images/banners/aboutus/it-services-bg.jpg";
+import heroAbout1 from "../images/banners/PluggedInCat5.jpg";
+import heroAbout3 from "../images/banners/indoor-cct-installation.jpg";
+import heroAbout2 from "../images/banners/aboutus/it-services-bg.jpg";
 
 //residential
-import heroResidential1 from "../../assets/images/banners/indoor-cct-installation.jpg";
-import heroResidential2 from "../../assets/images/banners/cctv-cameras.jpg";
-import heroResidential3 from "../../assets/images/banners/cctv-nvr-cableing.jpg";
+import heroResidential1 from "../images/banners/indoor-cct-installation.jpg";
+import heroResidential2 from "../images/banners/cctv-cameras.jpg";
+import heroResidential3 from "../images/banners/cctv-nvr-cableing.jpg";
 
 //commercial
-import heroCommercial1 from "../../assets/images/access-control/mac-military.jfif";
-import heroCommercial2 from "../../assets/images/brands/pelco/pelco-panoramic-cameeras.avif";
-import heroCommercial3 from "../../assets/images/banners/fiber-optic-system.jpg";
+import heroCommercial1 from "../images/access-control/mac-military.jfif";
+import heroCommercial2 from "../images/brands/pelco/pelco-panoramic-cameeras.avif";
+import heroCommercial3 from "../images/banners/fiber-optic-system.jpg";
 
 //services/it-services
-import heroITServices1 from "../../assets/images/it-services/cat-cables-it-network-setup.jpeg";
-import heroITServices2 from "../../assets/images/it-services/it-setup.webp";
-import heroITServices3 from "../../assets/images/it-services/it-architecture.jpg";
+import heroITServices1 from "../images/it-services/cat-cables-it-network-setup.jpeg";
+import heroITServices2 from "../images/it-services/it-setup.webp";
+import heroITServices3 from "../images/it-services/it-architecture.jpg";
 
 //services/access-control
-import heroAccessControl1 from "../../assets/images/access-control/access-control-pad.webp";
-import heroAccessControl2 from "../../assets/images/access-control/security-lock-digits.jpg";
-import heroAccessControl3 from "../../assets/images/access-control/aws-biometric-fingerprint.jfif";
+import heroAccessControl1 from "../images/access-control/access-control-pad.webp";
+import heroAccessControl2 from "../images/access-control/security-lock-digits.jpg";
+import heroAccessControl3 from "../images/access-control/aws-biometric-fingerprint.jfif";
 
 //services/cctv-installation
-import heroCCTVInstallation1 from "../../assets/images/cctv-cams/residential-CCTV.jfif";
-import heroCCTVInstallation2 from "../../assets/images/cctv-cams/cctv-control.webp";
-import heroCCTVInstallation3 from "../../assets/images/cctv-cams/camera-commercial-cctv.jpg";
+import heroCCTVInstallation1 from "../images/cctv-cams/residential-CCTV.jfif";
+import heroCCTVInstallation2 from "../images/cctv-cams/cctv-control.webp";
+import heroCCTVInstallation3 from "../images/cctv-cams/camera-commercial-cctv.jpg";
 
 //services/pos-installation
-import heroPoS1 from "../../assets/images/pos/mobile-pos-phone.jfif";
-import heroPoS2 from "../../assets/images/pos/cloud-based-pos-dashboard.jfif";
-import heroPoS3 from "../../assets/images/pos/tablet-pos-system.jfif";
+import heroPoS1 from "../images/pos/mobile-pos-phone.jfif";
+import heroPoS2 from "../images/pos/cloud-based-pos-dashboard.jfif";
+import heroPoS3 from "../images/pos/tablet-pos-system.jfif";
 
 //rushrash-legal
-import heroLegal1 from "../../assets/images/banners/PluggedInCat5.jpg";
-import heroLegal2 from "../../assets/images/banners/security-team.jfif";
-import heroLegal3 from "../../assets/images/pos/tablet-pos-system.jfif";
+import heroLegal1 from "../images/banners/PluggedInCat5.jpg";
+import heroLegal2 from "../images/banners/security-team.jfif";
+import heroLegal3 from "../images/pos/tablet-pos-system.jfif";
 
 //
 // local data structre
 const banners = {
   "/": {
     bgImage: [securityBg],
-    title: "Rushrash Inc. – Professional CCTV & Access Control Solutions",
+    title: "CCTV & Access Control Solutions",
     subtitle:
       "Your trusted experts in residential and commercial security systems",
 
@@ -73,8 +76,8 @@ const banners = {
     heroImages: [
       {
         src: heroHome1,
-        alt: "CCTV Cameras and Access Control Systems",
-        title: "Professional CCTV & Access Control Installation",
+        alt: "Access Control Lock System",
+        title: "Professional Access Control Installation",
         caption: "Securing Homes & Businesses",
       },
       {

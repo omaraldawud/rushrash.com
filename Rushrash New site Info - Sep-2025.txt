@@ -1,0 +1,30 @@
+Rushrash New site Info - Sep-2025
+---------------------------------
+Google
+
+https://docs.google.com/spreadsheets/d/11BO5Oy6x2vqVmI4TzQClZDZ7OcKeLiamsWjSJJoo1HY/edit?resourcekey=&gid=1573342181#gid=1573342181
+
+
+Google Sheets Form Script
+	Head Deployment ID:  AKfycbxm2UpEgHPRHyBsUyQtDs8zZfZgQryDxhYG1iIEecfjx_NfUWhHUo2yVuLAnKG55-R3
+
+	Web app URL: https://script.google.com/macros/s/AKfycbxm2UpEgHPRHyBsUyQtDs8zZfZgQryDxhYG1iIEecfjx_NfUWhHUo2yVuLAnKG55-R3/exec
+
+Sheet ID: 1ofGHDQKWb3BU5vrwSq05vHH6zB4kO0If-OQLR-W2kOU
+Sheet Link: https://docs.google.com/spreadsheets/d/1ofGHDQKWb3BU5vrwSq05vHH6zB4kO0If-OQLR-W2kOU/edit?gid=0#gid=0
+
+
+---------------------------------
+Chatbot Deployment  to https://vercel.com/
+
+Profile: omaraldawud ( https://vercel.com/omaraldawud )
+
+
+---------------------------------
+----------
+mx	@	aspmx.l.google.com. (Priority: 1)	1 Hour		
+mx	@	alt3.aspmx.l.google.com. (Priority: 10)	1 Hour		
+mx	@	alt4.aspmx.l.google.com. (Priority: 10)	1 Hour		
+mx	@	alt2.aspmx.l.google.com. (Priority: 5)	1 Hour		
+mx	@	alt1.aspmx.l.google.com. (Priority: 5)	1 Hour		
+txt	@	google-site-verification=is9QBK_09geYFn6SwaggvtlkH7WscJunUn22CJGK_OQ

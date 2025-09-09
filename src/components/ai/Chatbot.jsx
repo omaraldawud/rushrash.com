@@ -1,143 +1,91 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import axios from "axios";
+import "../../assets/css/Chatbot.css";
 import Logo from "../layout/Logo";
-import "../../assets/css/chatbot.css";
-import servicesList from "../../../data/servicesList";
-import offersList from "../../../data/offersList";
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
+  const [message, setMessage] = useState("");
+  const [chatLog, setChatLog] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [isOpen, setIsOpen] = useState(true); // minimized by default
 
-  const chatWindowRef = useRef(null);
+  const handleSend = async () => {
+    if (!message.trim()) return;
 
-  useEffect(() => {
-    if (chatWindowRef.current) {
-      chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
-    }
-  }, [messages, loading]);
-
-  const toggleChat = () => setIsOpen(!isOpen);
-
-  const showServiceInfo = (service) => {
-    const filteredOffers = offersList.filter((o) => o.serviceId === service.id);
-    setMessages((prev) => [
-      ...prev,
-      { from: "user", text: service.name },
-      { from: "bot", text: `🔹 ${service.name}: ${service.desc}` },
-      ...filteredOffers.map((o) => ({
-        from: "bot",
-        text: `🔹 ${o.name}\nPrice: $${o.price}\nDuration: ${o.duration}`,
-      })),
-    ]);
-  };
-
-  const sendMessage = async (text) => {
-    if (!text.trim()) return;
-    setMessages((prev) => [...prev, { from: "user", text }]);
+    const userMessage = { role: "user", content: message };
+    setChatLog([...chatLog, userMessage]);
+    setMessage("");
     setLoading(true);
 
-    const lower = text.toLowerCase();
-    let handled = false;
+    try {
+      console.log("Calling Api ...");
+      const res = await axios.post("/api/chat", { message });
+      console.log("Reply:", res.data.reply);
 
-    for (const service of servicesList) {
-      if (
-        service.name.toLowerCase() === lower ||
-        service.keywords?.some((k) => lower.includes(k))
-      ) {
-        showServiceInfo(service);
-        handled = true;
-        break;
-      }
+      const reply = res.data.reply;
+
+      setChatLog((prev) => [...prev, { role: "assistant", content: reply }]);
+    } catch (err) {
+      console.error(err);
+      setChatLog((prev) => [
+        ...prev,
+        { role: "assistant", content: "⚠️ Sorry, something went wrong." },
+      ]);
+    } finally {
+      setLoading(false);
     }
+  };
 
-    if (!handled) {
-      try {
-        const res = await fetch(
-          "https://rushrash-com-chatbot.vercel.app/api/chat",
-          {
-            // <-- Vercel endpoint
-
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: text }),
-          }
-        );
-        const data = await res.json();
-        setMessages((prev) => [...prev, { from: "bot", text: data.reply }]);
-      } catch (err) {
-        setMessages((prev) => [
-          ...prev,
-          { from: "bot", text: "⚠️ Error connecting to chatbot." },
-        ]);
-      }
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
     }
-
-    setInput("");
-    setLoading(false);
   };
 
   return (
     <div className="chatbot">
-      {/* Header */}
-      <div className="chatbot-header" onClick={toggleChat}>
-        {/* Row 1: Logo + Toggle */}
+      <div className="chatbot-header">
         <div className="chatbot-header-row1">
-          <Logo className="chatbot-logo" />
-          <span className="chat-toggle">{isOpen ? "–" : "+"}</span>
+          <Logo logoWidth="36px" logoheight="36px" />
+          <div className="chat-toggle">−</div>
         </div>
-
-        {/* Row 2: Title */}
         <div className="chatbot-header-row2">
-          <span className="chatbot-title">RushRash Chat</span>
+          <div className="chatbot-title">RushRash Virtual Assistant</div>
         </div>
       </div>
 
-      {/* Chat content */}
-      {isOpen && (
-        <>
-          <div className="chat-window" ref={chatWindowRef}>
-            {messages.map((m, i) => (
-              <div key={i} className={`chat-message ${m.from}`}>
-                <span className="chat-bubble">{m.text}</span>
-              </div>
-            ))}
-            {loading && (
-              <div className="chat-message bot">⏳ Bot is typing...</div>
-            )}
+      <div className="chat-window">
+        {chatLog.map((msg, i) => (
+          <div
+            key={i}
+            className={`chat-message ${msg.role === "user" ? "user" : "bot"}`}
+          >
+            <div className="chat-bubble">{msg.content}</div>
           </div>
-
-          <div className="chat-input-container">
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
-              placeholder="Type a message..."
-              className="chat-input"
-            />
-            <button
-              onClick={() => sendMessage(input)}
-              className="chat-send-btn"
-            >
-              Send{" "}
-              <i className="bi bi-send-fill" style={{ marginLeft: "6px" }}></i>
-            </button>
-          </div>
-        </>
-      )}
-
-      {/* Always visible service buttons */}
-      <div className="service-buttons">
-        {servicesList.map((s) => (
-          <button key={s.id} onClick={() => showServiceInfo(s)}>
-            <i
-              className={`bi ${s.icon} text-warning`}
-              style={{ marginRight: "6px" }}
-            ></i>
-            {s.name}
-          </button>
         ))}
+        {loading && (
+          <div className="chat-message bot">
+            <div className="chat-bubble">Typing...</div>
+          </div>
+        )}
+      </div>
+
+      <div className="chat-input-container">
+        <textarea
+          className="chat-input"
+          rows="2"
+          placeholder="Ask me about services, offers, brands, or FAQs..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          onKeyDown={handleKeyPress}
+        />
+        <button
+          className="chat-send-btn"
+          onClick={handleSend}
+          disabled={loading}
+        >
+          {loading ? "⏳" : "➤"}
+        </button>
       </div>
     </div>
   );

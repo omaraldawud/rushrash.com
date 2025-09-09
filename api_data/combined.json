@@ -1,0 +1,534 @@
+{
+  "author": "Omar Aldawud, PhD",
+  "company": {
+    "name": "RushRash Security & IT Solutions",
+    "address": "123 Security Lane, Chicago, IL 60616",
+    "phone": "+1 312 555 0123",
+    "email": "info@rushrash.com",
+    "website": "https://rushrash.com",
+    "mission": "To deliver top-tier security, access control, and IT solutions to businesses and residences."
+  },
+  "brands": [
+    {
+      "name": "Hikvision",
+      "imgLogo": "/images/brands/hikvision-logo.png",
+      "brand_seo_text": "Hikvision CCTV cameras for home and business security, Best for High-End Brands",
+      "brand_desc": "Hikvision delivers advanced security solutions powered by AI and IoT for a diverse range of sectors.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "DeepinView Network Camera",
+          "img": "/images/products/hikvision-camera1.webp",
+          "best_for": "Advanced surveillance",
+          "keywords": ["AI", "HD", "network camera"],
+          "specs": {"resolution": "4K","night_vision": true,"smart_analytics": true}
+        },
+        {
+          "type": "Camera",
+          "name": "Turbo HD Camera",
+          "img": "/images/products/hikvision-camera2.webp",
+          "best_for": "High-definition video",
+          "keywords": ["HD", "CCTV", "Turbo HD"],
+          "specs": {"resolution": "1080p","night_vision": true,"smart_analytics": false}
+        }
+      ]
+    },
+    {
+      "name": "Avigilon",
+      "imgLogo": "/images/brands/avigilon-logo.jfif",
+      "brand_seo_text": "Avigilon high-definition security cameras",
+      "brand_desc": "Professional-grade HD cameras designed for environments requiring clarity, detail, and reliability.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "Panoramic CCTV By Avigilon",
+          "img": "/images/products/avigilon-cctv-camera-Panoramic.avif",
+          "best_for": "Wide-area coverage in stadiums, airports, and large spaces",
+          "keywords": ["Panoramic","HD","surveillance"],
+          "specs": {"resolution": "4K","panoramic_view": true,"AI_analytics": true}
+        },
+        {
+          "type": "Camera",
+          "name": "Panoramic CCTV Backup",
+          "img": "/images/products/avigilon-cctv-camera-Panoramic.avif",
+          "best_for": "Secondary panoramic coverage",
+          "keywords": ["backup","HD","surveillance"],
+          "specs": {"resolution": "4K","panoramic_view": true,"AI_analytics": false}
+        }
+      ]
+    },
+    {
+      "name": "Dahua",
+      "imgLogo": "/images/brands/dahua-technology-logo.png",
+      "brand_seo_text": "Dahua surveillance and security systems, Best for Innovation",
+      "brand_desc": "AI-powered, video-focused solutions, ideal for smart city and enterprise systems.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "WizSense Series",
+          "img": "/images/products/dahua-camera1.webp",
+          "best_for": "AI-enhanced security",
+          "keywords": ["AI","HD","surveillance"],
+          "specs": {"resolution": "4K","AI_motion_detection": true}
+        },
+        {
+          "type": "Camera",
+          "name": "XVR Series",
+          "img": "/images/products/dahua-camera2.webp",
+          "best_for": "High-resolution video across multiple sites",
+          "keywords": ["HD","XVR","remote monitoring"],
+          "specs": {"resolution": "1080p","remote_viewing": true}
+        }
+      ]
+    },
+    {
+      "name": "Bosch",
+      "imgLogo": "/images/brands/bosch-security-systems-logo.png",
+      "brand_seo_text": "Bosch Security Systems for reliable monitoring, Best for Sustainability",
+      "brand_desc": "Expertise in software, connectivity, and AI, offering solutions supporting automation and sustainability.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "MIC IP Fusion 9000i",
+          "img": "/images/products/bosch-camera1.webp",
+          "best_for": "Outdoor surveillance",
+          "keywords": ["HD","AI","weatherproof"],
+          "specs": {"resolution": "4K","night_vision": true,"AI": true}
+        },
+        {
+          "type": "Camera",
+          "name": "FLEXIDOME IP Starlight 8000i",
+          "img": "/images/products/bosch-camera2.webp",
+          "best_for": "Low-light clarity",
+          "keywords": ["HD","starlight","CCTV"],
+          "specs": {"resolution": "4K","night_vision": true}
+        }
+      ]
+    },
+    {
+      "name": "Hanwha",
+      "imgLogo": "/images/brands/hanwha-vision-logo.png",
+      "brand_seo_text": "Hanwha CCTV and access control products, Best for Cybersecurity",
+      "brand_desc": "Focuses on image quality, optical design, and cybersecurity using AI and cloud analytics.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "Wisenet X Series",
+          "img": "/images/products/hanwha-camera1.webp",
+          "best_for": "Optimized for image clarity",
+          "keywords": ["AI","HD","Wisenet"],
+          "specs": {"resolution": "4K","AI": true}
+        },
+        {
+          "type": "Camera",
+          "name": "PNM-9084QZ",
+          "img": "/images/products/hanwha-camera2.webp",
+          "best_for": "Wide-area coverage",
+          "keywords": ["panoramic","HD","AI"],
+          "specs": {"resolution": "4K","panoramic": true}
+        }
+      ]
+    },
+    {
+      "name": "Axis",
+      "imgLogo": "/images/brands/axis-communications-log.png",
+      "brand_seo_text": "Axis Communications professional security solutions, Best for Integrated Solutions",
+      "brand_desc": "Specializes in network technology, offering video surveillance, access control, and audio solutions.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "AXIS P13 Network Camera",
+          "img": "/images/products/axis-camera1.webp",
+          "best_for": "High-resolution surveillance",
+          "keywords": ["HD","network camera","AI"],
+          "specs": {"resolution": "4K"}
+        },
+        {
+          "type": "Camera",
+          "name": "AXIS Companion Line",
+          "img": "/images/products/axis-camera2.webp",
+          "best_for": "Small-scale security setups",
+          "keywords": ["HD","network camera"],
+          "specs": {"resolution": "1080p"}
+        }
+      ]
+    },
+    {
+      "name": "Honeywell",
+      "imgLogo": "/images/brands/honeywell-logo.jfif",
+      "brand_seo_text": "Honeywell security and automation systems, Best for Industrial Automation",
+      "brand_desc": "Specializes in network technology, video surveillance, and access control.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "MAXPRO NVR",
+          "img": "/images/products/honeywell-camera1.webp",
+          "best_for": "Large-scale video recording",
+          "keywords": ["HD","NVR","network"],
+          "specs": {"channels": 16,"HD": true}
+        },
+        {
+          "type": "Camera",
+          "name": "Pro-Watch Integrated Security Suite",
+          "img": "/images/products/honeywell-camera2.webp",
+          "best_for": "Access control",
+          "keywords": ["access control","network"],
+          "specs": {"integration": true}
+        }
+      ]
+    },
+    {
+      "name": "Lorex",
+      "imgLogo": "/images/brands/lorex-logo.jfif",
+      "brand_seo_text": "Lorex home and business security cameras",
+      "brand_desc": "Lorex delivers reliable home and business security solutions.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "Lorex HD Camera 1",
+          "img": "/images/products/lorex-camera1.webp",
+          "best_for": "Residential security",
+          "keywords": ["HD","CCTV","home"],
+          "specs": {"resolution": "1080p"}
+        },
+        {
+          "type": "Camera",
+          "name": "Lorex HD Camera 2",
+          "img": "/images/products/lorex-camera2.webp",
+          "best_for": "Small business security",
+          "keywords": ["HD","CCTV","business"],
+          "specs": {"resolution": "1080p"}
+        }
+      ]
+    },
+    {
+      "name": "FLIR",
+      "imgLogo": "/images/brands/flir-systems-logo.png",
+      "brand_seo_text": "FLIR Systems thermal imaging security cameras",
+      "brand_desc": "FLIR offers thermal imaging and surveillance solutions for critical environments.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "FLIR Thermal Camera 1",
+          "img": "/images/products/flir-camera1.webp",
+          "best_for": "Thermal monitoring",
+          "keywords": ["thermal","HD","surveillance"],
+          "specs": {"thermal": true,"resolution": "720p"}
+        },
+        {
+          "type": "Camera",
+          "name": "FLIR Thermal Camera 2",
+          "img": "/images/products/flir-camera2.webp",
+          "best_for": "Outdoor thermal surveillance",
+          "keywords": ["thermal","HD","outdoor"],
+          "specs": {"thermal": true,"resolution": "720p"}
+        }
+      ]
+    },
+    {
+      "name": "UniView",
+      "imgLogo": "/images/brands/uniview-logo.jfif",
+      "brand_seo_text": "UniView IP surveillance cameras",
+      "brand_desc": "UniView provides scalable and reliable IP surveillance solutions.",
+      "products": [
+        {
+          "type": "Camera",
+          "name": "UniView Network Camera 1",
+          "img": "/images/products/uniview-camera1.webp",
+          "best_for": "Enterprise surveillance",
+          "keywords": ["HD","network","AI"],
+          "specs": {"resolution": "1080p"}
+        },
+        {
+          "type": "Camera",
+          "name": "UniView Network Camera 2",
+          "img": "/images/products/uniview-camera2.webp",
+          "best_for": "Small business",
+          "keywords": ["HD","network"],
+          "specs": {"resolution": "1080p"}
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "cctv-installation",
+      "srvc_title": "Next-Gen Surveillance Systems",
+      "srvc_icon": "bi-camera-video",
+      "srvc_href": "/services/cctv-installation",
+      "srvc_hero_img": "/images/services/cctv/best-cctv-security-camera.jpg",
+      "srvc_description": "Professional CCTV installation with cameras, DVR/NVR systems, and remote app access.",
+      "srvc_categories": ["Residential","Commercial","Industrial"],
+      "srvc_keywords": ["cctv","surveillance","camera","DVR","NVR","remote monitoring"],
+      "srvc_addons": [
+        {"srvc_addon_name":"Cloud Storage","srvc_Addon_desc":"Secure cloud storage","srvc_addon_price":"monthly"},
+        {"srvc_addon_name":"Local Storage","srvc_Addon_desc":"On-site storage setup","srvc_addon_price":"fixed"}
+      ],
+      "srvc_variations": [
+        {"srvc_var_desc":"8 Channels CCTV System Installation","srvc_var_price_min":"2500","srvc_var_price_max":"5000","srvc_var_duration_min":"1","srvc_var_duration_max":"2","srvc_var_warranty":"1 year labor, 5 years manufacturer","is_active":"yes"},
+        {"srvc_var_desc":"16 Channels CCTV System Installation","srvc_var_price_min":"3500","srvc_var_price_max":"6000","srvc_var_duration_min":"2","srvc_var_duration_max":"3","srvc_var_warranty":"1 year labor, 5 years manufacturer","is_active":"yes"}
+      ]
+    },
+    {
+      "id": "access_control",
+      "srvc_title": "Access Control Systems",
+      "srvc_icon": "bi-key",
+      "srvc_href": "/services/access-control",
+      "srvc_description": "Secure access control systems to protect property and manage entry points.",
+      "srvc_categories": ["Residential","Commercial","Industrial"],
+      "srvc_keywords": ["access control","entry","security","keypad","badge"],
+      "srvc_addons": [],
+      "srvc_variations": [
+        {"srvc_var_desc":"Complete Access Control Site Analysis","srvc_var_price_min":"250","srvc_var_price_max":"250","srvc_var_duration_min":"2","srvc_var_duration_max":"4","srvc_var_warranty":"1 year","is_active":"yes"}
+      ]
+    },
+    {
+      "id": "it-services",
+      "srvc_title": "IT & Network Setup Services",
+      "srvc_icon": "bi-laptop",
+      "srvc_href": "/services/it-services",
+      "srvc_description": "Analyze and optimize business IT infrastructure, including networking, cloud setup, and cybersecurity.",
+      "srvc_categories": ["Business","Enterprise"],
+      "srvc_keywords": ["IT","network","cybersecurity","cloud"],
+      "srvc_addons": [],
+      "srvc_variations": [
+        {"srvc_var_desc":"Complete Business IT Analysis","srvc_var_price_min":"750","srvc_var_price_max":"750","srvc_var_duration_min":"8","srvc_var_duration_max":"8","srvc_var_warranty":"N/A","is_active":"yes"}
+      ]
+    },
+    {
+      "id": "pos",
+      "srvc_title": "Point-of-Sale Installation",
+      "srvc_icon": "bi-cash-stack",
+      "srvc_href": "/services/pos-installation",
+      "srvc_description": "POS system setup and integration for retail and hospitality businesses.",
+      "srvc_categories": ["Retail","Hospitality"],
+      "srvc_keywords": ["POS","point of sale","retail","cash register"],
+      "srvc_addons": [],
+      "srvc_variations": [
+        {"srvc_var_desc":"Complete PoS Setup and Configuration","srvc_var_price_min":"1750","srvc_var_price_max":"1750","srvc_var_duration_min":"8","srvc_var_duration_max":"8","srvc_var_warranty":"1 year","is_active":"yes"}
+      ]
+    },
+    {
+  "id": "sound-systems",
+  "srvc_title": "Professional Sound Systems",
+  "srvc_icon": "bi-volume-up",
+  "srvc_href": "/services/sound-systems",
+  "srvc_hero_img": "/images/services/sound/sound-system-installation.jpg",
+  "srvc_description": "Custom-designed sound systems for restaurants, facilities, and residential spaces with premium audio quality and smart integration.",
+  "srvc_categories": ["Residential","Commercial","Hospitality","Industrial"],
+  "srvc_keywords": ["sound system","audio","speakers","restaurant sound","home audio","PA system","distributed audio"],
+  "srvc_addons": [
+    {"srvc_addon_name":"Smart Home Integration","srvc_Addon_desc":"Control your sound system with Alexa, Google Home, or mobile apps.","srvc_addon_price":"fixed"},
+    {"srvc_addon_name":"Wireless Audio Expansion","srvc_Addon_desc":"Add wireless speakers for additional zones.","srvc_addon_price":"per room"},
+    {"srvc_addon_name":"Emergency Alert Integration","srvc_Addon_desc":"Tie sound system into emergency alerts and security systems.","srvc_addon_price":"custom"}
+  ],
+  "srvc_variations": [
+    {
+      "srvc_var_desc":"Restaurant Sound System Installation",
+      "srvc_var_price_min":"3000",
+      "srvc_var_price_max":"7500",
+      "srvc_var_duration_min":"2",
+      "srvc_var_duration_max":"4",
+      "srvc_var_warranty":"1 year labor, 3 years equipment",
+      "is_active":"yes"
+    },
+    {
+      "srvc_var_desc":"Residential Whole-Home Audio Setup",
+      "srvc_var_price_min":"2500",
+      "srvc_var_price_max":"6000",
+      "srvc_var_duration_min":"2",
+      "srvc_var_duration_max":"3",
+      "srvc_var_warranty":"1 year labor, 2 years equipment",
+      "is_active":"yes"
+    },
+    {
+      "srvc_var_desc":"Commercial PA & Facility Audio System",
+      "srvc_var_price_min":"5000",
+      "srvc_var_price_max":"12000",
+      "srvc_var_duration_min":"3",
+      "srvc_var_duration_max":"5",
+      "srvc_var_warranty":"1 year labor, 5 years equipment",
+      "is_active":"yes"
+    }
+  ]
+}
+
+  ],
+  "offersList": [
+    {"id":1,"serviceId":"access_control","name":"Complete Access Control Site Analysis","price":250,"duration":"2–4 hours"},
+    {"id":2,"serviceId":"cctv-installation","name":"CCTV Installation (8 cameras)","price":2500,"duration":"1–2 days"},
+    {"id":3,"serviceId":"it-services","name":"Complete Business IT Analysis","price":750,"duration":"8 hours"},
+    {"id":4,"serviceId":"pos","name":"Complete PoS Setup and Configuration","price":1750,"duration":"8 hours"}
+  ],
+"faqs": [
+  {"question":"Which services do you provide for residential properties?","answer":"We offer CCTV installation, access control, IT & network setup, sound systems, and POS system installation for residential properties."},
+  {"question":"Which services do you provide for commercial properties?","answer":"Our commercial offerings include CCTV installation, access control systems, IT & network setup, sound systems for facilities, and POS system setup for retail and hospitality businesses."},
+  {"question":"Do you handle multi-location facilities?","answer":"Yes, we provide services for multi-location properties and can manage centralized security and IT systems."},
+  {"question":"Can you install new systems and upgrade existing ones?","answer":"Absolutely. We can perform complete new installations as well as upgrades and expansions to existing systems."},
+  {"question":"Are there any services you do not provide?","answer":"We focus on security, IT, and POS systems. Specialized custom electronics outside these areas may not be covered."},
+  {"question":"How long does a typical CCTV installation take?","answer":"Small residential installations typically take 1–2 days, while larger commercial setups can take 2–5 days depending on complexity."},
+  {"question":"How long does an access control installation take?","answer":"Standard installations usually take 1–3 days, depending on the number of doors and devices being installed."},
+  {"question":"Do I need to prepare the site before installation?","answer":"We may request basic preparations such as ensuring access to electrical outlets, mounting surfaces, and clear pathways for wiring."},
+  {"question":"Can installations be scheduled after hours or on weekends?","answer":"Yes, we offer flexible scheduling to minimize disruption to your home or business operations."},
+  {"question":"Do you handle permits or code compliance for installations?","answer":"Yes, we ensure all systems meet local building codes and assist with necessary permits when required."},
+  {"question":"How do you determine pricing for CCTV or access control systems?","answer":"Pricing depends on the system size, number of devices, brand selection, and installation complexity. We provide transparent quotes before any work begins."},
+  {"question":"Are there ongoing subscription costs for cloud storage?","answer":"Some cloud storage plans are subscription-based, while on-site storage is a one-time setup cost."},
+  {"question":"Can I get a customized quote for my building?","answer":"Yes, we provide free site surveys and tailored quotes based on your specific needs."},
+  {"question":"Do you offer package deals for multiple services?","answer":"Yes, combining services like CCTV, access control, and IT setup can qualify for bundled pricing."},
+  {"question":"Which CCTV brands do you offer?","answer":"We offer top-tier brands including Hikvision, Avigilon, Dahua, Axis, Bosch, Hanwha, Honeywell, Lorex, FLIR, and UniView."},
+  {"question":"Are the cameras and systems weatherproof?","answer":"Most of our outdoor cameras are weatherproof and rated for varying environmental conditions."},
+  {"question":"Can I choose specific brands for my installation?","answer":"Yes, you can select your preferred brand from the ones we offer, subject to availability."},
+  {"question":"Do you provide sound system brands?","answer":"Yes, we provide commercial and residential sound systems from brands like Bose, JBL, and Yamaha."},
+  {"question":"Do you offer sound system installation for restaurants or facilities?","answer":"Yes, we design and install sound systems tailored for restaurants, corporate facilities, and residential homes."},
+  {"question":"What is your standard maintenance schedule?","answer":"We offer routine maintenance packages every 6–12 months, depending on the system type and customer preference."},
+  {"question":"Do you provide emergency repair services?","answer":"Yes, we offer emergency repair response for critical failures in security and IT systems."},
+  {"question":"How do I contact support after installation?","answer":"Support can be reached via phone, email, or through our online service portal for scheduling repairs or maintenance."},
+  {"question":"Do you offer software updates and remote monitoring assistance?","answer":"Yes, we provide ongoing software updates and can assist with remote monitoring configurations."},
+  {"question":"What warranties come with your installations?","answer":"All installations come with a 1-year labor warranty and up to 5-year manufacturer warranty depending on the equipment."},
+  {"question":"How long do the systems typically last?","answer":"With proper maintenance, most CCTV, access control, and IT systems last 5–10 years."},
+  {"question":"Can you replace faulty equipment under warranty?","answer":"Yes, faulty equipment covered under warranty will be repaired or replaced at no additional cost."},
+  {"question":"Are your systems covered for theft or damage?","answer":"Physical equipment is covered under manufacturer warranties for defects. We recommend insurance for theft or accidental damage."},
+  {"question":"How do you ensure data privacy for CCTV and access control?","answer":"All cloud and network systems are encrypted, password-protected, and follow best practices for cybersecurity."},
+  {"question":"Are your systems compliant with local regulations?","answer":"Yes, we ensure all systems meet local safety and security regulations."},
+  {"question":"Can you integrate security with existing IT infrastructure?","answer":"Yes, we can integrate cameras, access control, and IT systems with your current network."},
+  {"question":"How secure are cloud storage options?","answer":"Our cloud storage providers use end-to-end encryption and secure data centers."},
+  {"question":"Do you offer free site surveys?","answer":"Yes, we provide free CCTV, access control, and IT site surveys to assess your security needs before installation."},
+  {"question":"Can you provide a risk assessment before installation?","answer":"Yes, we can evaluate your site and recommend the most effective security solutions."},
+  {"question":"Do you offer design plans for large-scale security systems?","answer":"Yes, we create professional layouts and plans for complex installations."},
+  {"question":"Can I request a demo of the system before committing?","answer":"Yes, we can demonstrate CCTV, access control, and sound systems on-site or virtually."},
+  {"question":"Do you offer multi-zone sound system setups?","answer":"Yes, our sound systems can be configured for multiple zones with independent volume control."},
+  {"question":"What is the emergency repair response time?","answer":"Our emergency response time is typically within 2–4 hours for critical issues, depending on location."},
+  {"question":"Do you offer training for system use?","answer":"Yes, we provide training for staff or household members on operating CCTV, access control, POS, and sound systems."},
+  {"question":"Can I upgrade my system later?","answer":"Yes, all systems are designed to be scalable for future expansion or upgrades."},
+  {"question":"Do you provide documentation and manuals?","answer":"Yes, all installations come with full documentation, manuals, and access to online guides."},
+  {"question":"Do you provide temporary security solutions during renovations?","answer":"Yes, we offer temporary CCTV and access control solutions for construction or remodeling projects."},
+  {"question":"Do you support remote troubleshooting?","answer":"Yes, many issues can be diagnosed and resolved remotely through secure connections."},
+  {"question":"Can I monitor multiple locations from a single dashboard?","answer":"Yes, our cloud solutions allow monitoring of multiple sites from one interface."},
+  {"question":"Are your installations insured?","answer":"All our installations are fully insured for liability during installation."},
+  {"question":"Do you provide ongoing consultation after installation?","answer":"Yes, we offer periodic reviews to ensure your systems are optimized."},
+  {"question":"Can you integrate POS, CCTV, and access control?","answer":"Yes, we can integrate multiple systems for unified management and monitoring."},
+  {"question":"What is included in the initial consultation?","answer":"We discuss your requirements, survey the site, and provide a recommended solution and quote."},
+  {"question":"Do you offer seasonal maintenance packages?","answer":"Yes, we can schedule quarterly or seasonal maintenance depending on your needs."},
+  {"question":"Can sound systems be integrated with CCTV or access alerts?","answer":"Yes, we can configure sound alerts or paging systems integrated with security events."},
+  {"question":"How do I schedule an installation?","answer":"Installations can be scheduled by phone, email, or through our online booking system."},
+  {"question":"Do you offer financing options?","answer":"Yes, we provide flexible payment and financing options for qualifying customers."},
+
+  {"question":"Do you provide residential CCTV installation?","answer":"Yes, we provide full residential CCTV installation with cameras, DVR/NVR systems, and remote app monitoring."},
+  {"question":"Can I monitor my cameras remotely?","answer":"Yes, all modern CCTV and access control systems we install support remote monitoring via mobile apps or web interfaces."},
+  {"question":"Do you install access control systems for businesses?","answer":"Absolutely. We design and install secure access control systems tailored for offices, commercial spaces, and industrial sites."},
+  {"question":"What brands of CCTV cameras do you offer?","answer":"We offer top-tier brands including Hikvision, Avigilon, Dahua, Axis, Bosch, Hanwha, Honeywell, Lorex, FLIR, and UniView."},
+  {"question":"Do you offer IT and network setup services?","answer":"Yes, we provide full IT infrastructure setup, network optimization, cloud services, and cybersecurity solutions."},
+  {"question":"Can you integrate CCTV with access control?","answer":"Yes, we can integrate surveillance cameras with access control systems for unified monitoring and security management."},
+  {"question":"Do you offer Point-of-Sale (POS) system installation?","answer":"Yes, we offer POS system installation and configuration for retail and hospitality businesses."},
+  {"question":"What warranty do your installations come with?","answer":"All installations come with a 1-year labor warranty and up to 5 years manufacturer warranty depending on the equipment."},
+  {"question":"Do you offer free site surveys?","answer":"Yes, we offer free CCTV and access control site surveys to assess your security needs before installation."},
+  {"question":"Do you provide ongoing maintenance?","answer":"Yes, we offer maintenance packages, troubleshooting, and upgrades for all security, access control, and IT systems we install."},
+
+  {"question":"What is your emergency repair response time?","answer":"We provide emergency repair services within 4 hours for critical failures and within 24 hours for non-critical issues."},
+  {"question":"Do you provide 24/7 monitoring services?","answer":"Yes, we provide 24/7 professional monitoring and technical support for your security systems."},
+  {"question":"Can you install hidden or covert cameras?","answer":"Yes, we offer discreet camera installation options for sensitive locations."},
+  {"question":"Do you install video doorbells?","answer":"Yes, we install and configure smart video doorbells with remote access."},
+  {"question":"Do you support multi-site security integration?","answer":"Yes, we can connect multiple locations into one centralized monitoring platform."},
+  {"question":"Can you upgrade my existing CCTV system?","answer":"Yes, we can upgrade outdated analog systems to modern IP-based solutions."},
+  {"question":"Do you handle data storage for video footage?","answer":"Yes, we provide on-site NVR/DVR and cloud storage solutions."},
+  {"question":"Do you provide cybersecurity for surveillance systems?","answer":"Yes, we secure your networked cameras and access control against cyber threats."},
+  {"question":"Do you offer biometric access control?","answer":"Yes, we install fingerprint, facial recognition, and other biometric systems."},
+  {"question":"Can you install intercom systems?","answer":"Yes, we provide intercom and video intercom installation for homes and businesses."},
+
+  {"question":"Do you install sound systems for restaurants?","answer":"Yes, we design and install professional-grade sound systems for restaurants and hospitality venues."},
+  {"question":"Do you install residential sound systems?","answer":"Yes, we provide full-home audio systems with zone control and smart home integration."},
+  {"question":"Do you offer sound system installation for large facilities?","answer":"Yes, we design and install distributed audio for stadiums, schools, and corporate buildings."},
+  {"question":"Can you integrate sound systems with security alerts?","answer":"Yes, sound systems can be integrated with alarms and emergency notifications."},
+  {"question":"Do you offer wireless sound system solutions?","answer":"Yes, we provide both wired and wireless sound system installation options."},
+
+  {"question":"What payment methods do you accept?","answer":"We accept credit cards, debit, checks, ACH, and business invoicing."},
+  {"question":"Do you provide financing for large projects?","answer":"Yes, financing options are available for qualifying projects."},
+  {"question":"Are your technicians certified?","answer":"Yes, our technicians are fully certified and trained on all systems we install."},
+  {"question":"Do you handle permits for installation?","answer":"Yes, we handle all necessary permits and compliance documentation."},
+  {"question":"Can you install systems after business hours?","answer":"Yes, we offer flexible scheduling, including nights and weekends."},
+
+  {"question":"Do you provide training on system usage?","answer":"Yes, we provide on-site or remote training for staff and homeowners."},
+  {"question":"Do you support integration with smart home devices?","answer":"Yes, we integrate with Alexa, Google Home, and other smart platforms."},
+  {"question":"Do you offer cloud-based access control?","answer":"Yes, we install and manage cloud-based access control platforms."},
+  {"question":"Do you provide thermal cameras?","answer":"Yes, we install thermal cameras for temperature monitoring and perimeter security."},
+  {"question":"Can you integrate fire alarms with CCTV?","answer":"Yes, we integrate fire, alarm, and CCTV into unified safety platforms."},
+
+  {"question":"What industries do you serve?","answer":"We serve residential, commercial, retail, industrial, hospitality, and government sectors."},
+  {"question":"Do you offer NDA-compliant solutions?","answer":"Yes, we provide NDA-compliant systems for sensitive facilities."},
+  {"question":"Do you handle system relocation?","answer":"Yes, we move and reinstall systems when you relocate offices or homes."},
+  {"question":"Do you provide solar-powered camera options?","answer":"Yes, we install solar-powered and off-grid surveillance systems."},
+  {"question":"Do you support license plate recognition?","answer":"Yes, we install ANPR/LPR systems for vehicle monitoring and access."},
+
+  {"question":"Can you integrate POS with CCTV?","answer":"Yes, we integrate POS data with surveillance for transaction monitoring."},
+  {"question":"Do you install turnstiles and gates?","answer":"Yes, we provide access control turnstiles, gates, and barriers."},
+  {"question":"Do you provide cloud backups for video?","answer":"Yes, we offer secure encrypted cloud video backup options."},
+  {"question":"Do you provide SLA agreements?","answer":"Yes, we provide service-level agreements tailored to your needs."},
+  {"question":"Can I customize my service package?","answer":"Yes, all service packages are flexible and tailored to customer requirements."},
+
+  {"question":"Do you provide IT support contracts?","answer":"Yes, we offer managed IT support and helpdesk contracts."},
+  {"question":"Do you offer Wi-Fi setup and optimization?","answer":"Yes, we install and optimize enterprise and residential Wi-Fi networks."},
+  {"question":"Can you secure my cloud servers?","answer":"Yes, we provide cybersecurity services including cloud security hardening."},
+  {"question":"Do you install CDN services?","answer":"Yes, we configure content delivery networks for websites and applications."},
+  {"question":"Do you provide email security?","answer":"Yes, we secure business email systems against spam, phishing, and malware."},
+
+  {"question":"Do you offer maintenance contracts?","answer":"Yes, we offer annual and multi-year maintenance contracts with priority response."},
+  {"question":"Do you provide firmware updates?","answer":"Yes, we manage and apply firmware updates for installed systems."},
+  {"question":"Do you provide remote technical support?","answer":"Yes, we provide phone, chat, and remote desktop support."},
+  {"question":"Do you provide system audits?","answer":"Yes, we provide security audits for CCTV, access, and IT systems."},
+  {"question":"Do you offer system expansion?","answer":"Yes, we support upgrades and expansions as your needs grow."},
+
+  {"question":"Do you provide video wall installation?","answer":"Yes, we install and configure large-scale video walls for monitoring centers."},
+  {"question":"Do you support mobile access control?","answer":"Yes, we provide mobile credential solutions for access systems."},
+  {"question":"Do you provide environmental sensors?","answer":"Yes, we integrate smoke, gas, and motion sensors with security systems."},
+  {"question":"Do you handle HIPAA-compliant installations?","answer":"Yes, we provide HIPAA-compliant systems for healthcare facilities."},
+  {"question":"Do you support GDPR-compliant data handling?","answer":"Yes, our solutions comply with GDPR for EU-based operations."},
+
+  {"question":"Do you provide consulting?","answer":"Yes, we provide consulting for security planning and IT infrastructure."},
+  {"question":"Do you provide demo equipment?","answer":"Yes, we provide demo units for evaluation before purchase."},
+  {"question":"Do you offer rental equipment?","answer":"Yes, we offer temporary security system rentals for events."},
+  {"question":"Do you provide event security systems?","answer":"Yes, we provide CCTV, access, and sound systems for temporary events."},
+  {"question":"Do you provide nationwide service?","answer":"Yes, we provide services across the United States."},
+
+  {"question":"Do you offer bilingual support?","answer":"Yes, we provide support in English and Spanish."},
+  {"question":"Do you offer mobile app integration?","answer":"Yes, we integrate systems with mobile apps for monitoring and management."},
+  {"question":"Can you integrate alarms with law enforcement response?","answer":"Yes, we integrate alarms for automatic police or fire department alerts."},
+  {"question":"Do you support cloud-based video analytics?","answer":"Yes, we provide AI-powered analytics for object detection and alerts."},
+  {"question":"Do you provide maintenance for third-party installations?","answer":"Yes, we service and maintain third-party systems as well."},
+
+  {"question":"Do you support school security systems?","answer":"Yes, we provide CCTV, access control, and intercoms for schools."},
+  {"question":"Do you support warehouse security?","answer":"Yes, we provide perimeter and indoor monitoring for warehouses."},
+  {"question":"Do you support retail loss prevention?","answer":"Yes, we install systems to prevent theft and track suspicious activity."},
+  {"question":"Do you offer hospital-grade systems?","answer":"Yes, we install medical-grade security and access control for healthcare."},
+  {"question":"Do you provide corporate office security?","answer":"Yes, we design and install complete office security solutions."},
+
+  {"question":"Can you integrate time attendance with access control?","answer":"Yes, we provide time attendance systems integrated with access control."},
+  {"question":"Do you provide video analytics for people counting?","answer":"Yes, we provide AI-based people counting and heat mapping."},
+  {"question":"Do you support law enforcement-grade body cameras?","answer":"Yes, we provide and support body cameras for agencies."},
+  {"question":"Do you install dashcams for fleets?","answer":"Yes, we install dashcams with GPS and cloud storage for fleets."},
+  {"question":"Do you provide parking lot security systems?","answer":"Yes, we provide ANPR cameras, lighting, and monitoring for parking areas."},
+
+  {"question":"Do you install perimeter intrusion detection?","answer":"Yes, we install fence vibration sensors, radars, and IR beams."},
+  {"question":"Do you integrate drones with security systems?","answer":"Yes, we provide drone video integration with CCTV platforms."},
+  {"question":"Do you offer guard tour systems?","answer":"Yes, we provide guard tour and patrol tracking systems."},
+  {"question":"Do you install panic buttons?","answer":"Yes, we provide wired and wireless panic button solutions."},
+  {"question":"Do you offer wearable access control?","answer":"Yes, we provide access via smart badges and wearable devices."},
+
+  {"question":"Do you support multi-language video systems?","answer":"Yes, we configure systems to support multiple languages in the UI."},
+  {"question":"Do you provide disaster recovery plans?","answer":"Yes, we offer disaster recovery and business continuity planning."},
+  {"question":"Do you provide integration with HR systems?","answer":"Yes, access and attendance systems can integrate with HR platforms."},
+  {"question":"Do you install network cabling?","answer":"Yes, we provide structured cabling services for voice, data, and video."},
+  {"question":"Do you offer SLA-based IT support?","answer":"Yes, we offer guaranteed SLA response times for IT support."},
+  {"question":"What types of sound systems do you install?","answer":"We install sound systems for restaurants, facilities, and residential homes, including multi-zone audio, PA systems, and home theater setups."},
+  {"question":"Which brands of sound systems do you work with?","answer":"We offer top-tier brands including Bose, Sonos, JBL, Yamaha, Denon, and Klipsch for all commercial and residential installations."},
+  {"question":"Can you integrate sound systems with existing infrastructure?","answer":"Yes, our team can integrate new sound systems with your current wiring, smart home setups, and control systems."},
+  {"question":"How long does it take to install a sound system?","answer":"Installation times vary by system complexity. Most residential systems can be installed within a few hours, while commercial or multi-zone setups may take 1–2 days."},
+  {"question":"Do you provide calibration and tuning after installation?","answer":"Absolutely. We calibrate and tune each system to ensure optimal sound quality and coverage for your space."},
+  {"question":"Can I control the sound system remotely?","answer":"Yes, many of our systems support app-based control, multi-zone management, and integration with smart home assistants."},
+  {"question":"Do you offer maintenance for installed sound systems?","answer":"Yes, we provide ongoing maintenance packages, troubleshooting, and upgrades to keep your system running smoothly."},
+  {"question":"What is your emergency repair response time?","answer":"Our standard emergency response time is within 24 hours for commercial and residential clients, depending on location and system complexity."},
+  {"question":"Do you provide free site surveys for sound system installation?","answer":"Yes, we offer free on-site assessments to evaluate your space, acoustic needs, and optimal equipment placement."},
+  {"question":"Are warranties available for sound system installations?","answer":"Yes, all installations come with a 1-year labor warranty, and most equipment includes manufacturer warranties ranging from 1–5 years."},
+  {"question":"Can you provide a quote for multiple rooms or large facilities?","answer":"Yes, we provide customized quotes based on your facility size, number of zones, and system complexity."},
+  {"question":"Do you offer integration with video or conference systems?","answer":"Yes, our solutions can be integrated with video conferencing systems, home theaters, or commercial AV setups for a unified experience."}
+]
+}

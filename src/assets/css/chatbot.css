@@ -4,17 +4,18 @@
   bottom: 20px;
   right: 20px;
   width: 350px;
+  min-width: 350px;
+  max-width: 350px; /* lock it in place */
   max-height: 600px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background: #f8f9fa; /* light neutral for easy reading */
+  background: #f8f9fa;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   z-index: 1000;
   font-family: "Roboto", sans-serif;
 }
-
 
 /* Chat window */
 .chat-window {
@@ -25,12 +26,15 @@
   flex-direction: column;
   gap: 8px;
   background: #fff; /* white for readability */
+  align-items: flex-end;
 }
 
 /* Chat messages */
 .chat-message {
   display: flex;
   margin: 5px 0;
+  min-width: 0;
+  max-width: 100%; /* Add this line */
 }
 
 .chat-message.user {
@@ -43,14 +47,18 @@
 
 /* Chat bubbles */
 .chat-bubble {
-  max-width: 70%;
+  max-width: 85%; /* only fill part of the 350px box */
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
   padding: 8px 12px;
   border-radius: 12px;
-  background: #e9ecef; /* light gray */
+  background: #e9ecef;
   font-size: 0.9rem;
   line-height: 1.3;
-  word-wrap: break-word;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  word-break: break-word;
+  white-space: pre-wrap; /* wrap text properly */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .chat-message.user .chat-bubble {
@@ -63,7 +71,7 @@
   display: flex;
   padding: 10px 15px;
   background: #f1f3f5;
-  border-top: 2px solid #DA3747;
+  border-top: 2px solid #da3747;
   gap: 8px;
 }
 
@@ -85,7 +93,7 @@
   border: none;
   border-radius: 10px;
   font-weight: 600;
-  background: #0DCAF0;
+  background: #0dcaf0;
   color: #0a192f;
   transition: all 0.2s ease;
 }
@@ -107,8 +115,8 @@
   padding: 8px 14px;
   cursor: pointer;
   background: #0a192f; /* dark but not flashy */
-  color: #0DCAF0;      /* accent text */
-  border: 1px solid #DA3747;
+  color: #0dcaf0; /* accent text */
+  border: 1px solid #da3747;
   border-radius: 12px;
   font-size: rem;
   text-align: center;
@@ -147,8 +155,8 @@
   display: flex;
   flex-direction: column;
   padding: 8px 12px;
-  background: #0DCAF0;
-  border-bottom: 2px solid #DA3747;
+  background: #0dcaf0;
+  border-bottom: 2px solid #da3747;
   cursor: pointer;
   user-select: none;
 }
@@ -174,11 +182,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: #DA3747;
+  background: #da3747;
   color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
 }
 
