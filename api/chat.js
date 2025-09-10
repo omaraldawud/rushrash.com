@@ -1,7 +1,8 @@
 // /api/chat.js
 import axios from "axios";
 // Remove the 'with { type: "json" }' part
-import combinedData from "../api_data/combined.json";
+// import combinedData from "../api_data/combined.json";
+const combinedData = require("../api_data/combined.json");
 
 export default async function handler(req, res) {
   console.log("API route hit", req.method);
@@ -81,7 +82,7 @@ ${combinedData.faqs.map((f) => `Q: ${f.question}\nA: ${f.answer}`).join("\n\n")}
 
 Rules:
 - Only answer based on the dataset above.
-- If the question is outside these topics, reply that you only support questions about RushRash services, offers, brands, company info, and FAQs.
+- If the question is outside these topics (our products and service), reply that you only support questions about RushRash services, offers, brands, company info, and FAQs.
 - Be concise and helpful. Do not hallucinate new info.
 `;
 

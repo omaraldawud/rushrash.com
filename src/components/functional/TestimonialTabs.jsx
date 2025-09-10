@@ -44,14 +44,8 @@ const TestimonialTabs = () => {
 
         <div className="testimonial-description">
           <p>
-            We have received hundreds of feedback and complements on garage door
-            repair, installation, garage opener repair and many other recent
-            jobs. In summary, our prices, excellent service, timing, and polite
-            and courteous technicians puts us on top of the pack as number one
-            in all of these and other categories. What you get is Job done on
-            time, price is right, and much more form Advanced Garage Door
-            openers, our evidence is laid down by our own customers, here is
-            what they have to say about us.
+            We have received hundreds of feedback and complements on security
+            services. bla blas bla
           </p>
         </div>
 

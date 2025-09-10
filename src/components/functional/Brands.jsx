@@ -18,11 +18,11 @@ const Brands = () => {
             alt={brands_ds[expandedBrand].name}
             className="mx-auto mb-3 p-3border"
             style={{
-              maxHeight: "50px", // slightly larger for visibility
-              objectFit: "contain", // keeps aspect ratio
-              border: "1.5px solid #ccc", // softer neutral border
-              backgroundColor: "#fff", // ensures clarity on dark sections
-              padding: "4px 6px", // breathing room inside border
+              maxHeight: "50px",
+              objectFit: "contain",
+              border: "1.5px solid #ccc",
+              backgroundColor: "#fff",
+              padding: "4px 6px",
               boxShadow: "0 2px 6px rgba(0,0,0,0.1)", // subtle depth
             }}
           />
