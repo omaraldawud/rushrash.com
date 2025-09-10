@@ -31,7 +31,7 @@ const TestimonialTabs = () => {
               <span className="d-none d-sm-inline">Yelp Reviews</span>
             </a>
             <a
-              href="https://g.page/your-business"
+              href="https://g.page/rushrash"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline-light px-2 py-1 d-flex align-items-center gap-1 review-btn"
@@ -44,8 +44,8 @@ const TestimonialTabs = () => {
 
         <div className="testimonial-description">
           <p>
-            We have received hundreds of feedback and complements on security
-            services. bla blas bla
+            We have received hundreds of thusands of feedback and complements on
+            security services. bla blas bla
           </p>
         </div>
 

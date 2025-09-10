@@ -1,17 +1,13 @@
 // /api/chat.js
 import axios from "axios";
-// Remove the 'with { type: "json" }' part
-// import combinedData from "../api_data/combined.json";
-const combinedData = require("../api_data/combined.json");
 
 export default async function handler(req, res) {
   console.log("API route hit", req.method);
 
   // Handle CORS preflight request
   if (req.method === "OPTIONS") {
-    // These headers must match the ones in your vercel.json
     res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Allow-Origin", "https://rushrash.com");
+    res.setHeader("Access-Control-Allow-Origin", "https://rushrash.com"); // Update if testing locally
     res.setHeader(
       "Access-Control-Allow-Methods",
       "GET,OPTIONS,PATCH,DELETE,POST,PUT"
@@ -23,13 +19,16 @@ export default async function handler(req, res) {
     return res.status(204).end();
   }
 
-  // Handle the actual POST request
+  // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   const { message } = req.body;
   if (!message) return res.status(400).json({ error: "Message is required" });
+
+  // Dynamically import JSON data
+  const combinedData = (await import("../api_data/combined.json")).default;
 
   // Prepare system message for GPT
   const systemMessage = `
@@ -82,7 +81,7 @@ ${combinedData.faqs.map((f) => `Q: ${f.question}\nA: ${f.answer}`).join("\n\n")}
 
 Rules:
 - Only answer based on the dataset above.
-- If the question is outside these topics (our products and service), reply that you only support questions about RushRash services, offers, brands, company info, and FAQs.
+- If the question is outside these topics, reply that you only support questions about RushRash services, offers, brands, company info, and FAQs.
 - Be concise and helpful. Do not hallucinate new info.
 `;
 
