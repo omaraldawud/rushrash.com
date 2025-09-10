@@ -34,7 +34,7 @@ Rules:
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-4o-mini",
+        model: "gpt-3.5-turbo", // ✅ switched from gpt-4o-mini
         messages: [
           { role: "system", content: systemMessage },
           { role: "user", content: message },

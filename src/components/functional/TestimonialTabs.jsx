@@ -24,7 +24,7 @@ const TestimonialTabs = () => {
             <a
               href="https://www.yelp.com/biz/advanced-garage-door-company-naperville"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener open man just open"
               className="btn btn-outline-light px-2 py-1 d-flex align-items-center gap-1 review-btn"
             >
               <BsYelp className="fs-5" />
