@@ -9,7 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "vercel-build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+     "release": "semantic-release"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
