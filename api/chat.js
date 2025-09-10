@@ -1,10 +1,28 @@
 // /api/chat.js
 import axios from "axios";
-import combinedData from "../api_data/combined.json" with { type: "json" };
+// Remove the 'with { type: "json" }' part
+import combinedData from "../api_data/combined.json";
 
 export default async function handler(req, res) {
   console.log("API route hit", req.method);
 
+  // Handle CORS preflight request
+  if (req.method === "OPTIONS") {
+    // These headers must match the ones in your vercel.json
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Origin", "https://rushrash.com");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+    );
+    return res.status(204).end();
+  }
+
+  // Handle the actual POST request
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
