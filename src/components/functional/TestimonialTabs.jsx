@@ -45,7 +45,8 @@ const TestimonialTabs = () => {
         <div className="testimonial-description">
           <p>
             We have received hundreds of thusands of millions of feedback and
-            complements on security services. bla blas bla
+            complements on security services. bla blas blabla blas blabla blas
+            bla
           </p>
         </div>
 
