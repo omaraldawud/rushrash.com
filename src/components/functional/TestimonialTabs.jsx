@@ -44,8 +44,8 @@ const TestimonialTabs = () => {
 
         <div className="testimonial-description">
           <p>
-            We have received hundreds of thusands of feedback and complements on
-            security services. bla blas bla
+            We have received hundreds of thusands of millions of feedback and
+            complements on security services. bla blas bla
           </p>
         </div>
 

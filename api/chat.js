@@ -1,25 +1,17 @@
-// /api/chat.js
 import axios from "axios";
+import combinedData from "../api_data/combined.json" assert { type: "json" };
 
 export default async function handler(req, res) {
-  console.log("API route hit", req.method);
-
-  // Handle CORS preflight request
   if (req.method === "OPTIONS") {
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Allow-Origin", "https://rushrash.com"); // Update if testing locally
+    res.setHeader("Access-Control-Allow-Origin", "https://rushrash.com");
     res.setHeader(
       "Access-Control-Allow-Methods",
-      "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+      "GET,OPTIONS,POST,PUT,PATCH,DELETE"
     );
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-    );
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type,Authorization");
     return res.status(204).end();
   }
 
-  // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -27,62 +19,15 @@ export default async function handler(req, res) {
   const { message } = req.body;
   if (!message) return res.status(400).json({ error: "Message is required" });
 
-  // Dynamically import JSON data
-  const combinedData = (await import("../api_data/combined.json")).default;
-
-  // Prepare system message for GPT
   const systemMessage = `
 You are RushRash's AI assistant.
-Only use the following structured dataset:
-
-Company:
-${JSON.stringify(combinedData.company, null, 2)}
-
-Services:
-${combinedData.services
-  .map(
-    (s) =>
-      `${s.srvc_title}: ${s.srvc_description}\nVariations:\n${s.srvc_variations
-        .map(
-          (v) =>
-            `- ${v.srvc_var_desc}: $${v.srvc_var_price_min} - $${v.srvc_var_price_max}, Duration: ${v.srvc_var_duration_min} - ${v.srvc_var_duration_max} hours, Warranty: ${v.srvc_var_warranty}`
-        )
-        .join("\n")}`
-  )
-  .join("\n\n")}
-
-Offers:
-${combinedData.offersList
-  .map(
-    (o) =>
-      `${
-        combinedData.services.find((s) => s.id === o.serviceId)?.srvc_title
-      }: ${o.name} — $${o.price}, Duration: ${o.duration}`
-  )
-  .join("\n")}
-
-Brands:
-${combinedData.brands
-  .map(
-    (b) =>
-      `${b.name}: ${b.brand_desc}\nProducts: ${b.products
-        .map(
-          (p) =>
-            `- ${p.name} (${p.type}), Best for: ${
-              p.best_for
-            }, Specs: ${JSON.stringify(p.specs)}`
-        )
-        .join("\n")}`
-  )
-  .join("\n\n")}
-
-FAQs:
-${combinedData.faqs.map((f) => `Q: ${f.question}\nA: ${f.answer}`).join("\n\n")}
+Use only the structured dataset from combined.json:
+${JSON.stringify(combinedData, null, 2)}
 
 Rules:
-- Only answer based on the dataset above.
-- If the question is outside these topics, reply that you only support questions about RushRash services, offers, brands, company info, and FAQs.
-- Be concise and helpful. Do not hallucinate new info.
+- Answer only based on this dataset.
+- If question is outside these topics, reply that you only support RushRash info.
+- Be concise and helpful.
 `;
 
   try {
