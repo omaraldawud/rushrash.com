@@ -4,25 +4,31 @@ on:
   push:
     branches:
       - main
+      - 'release/**'
 
 jobs:
   release:
     name: Semantic Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      # Checkout the repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      # Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 22
-          cache: npm
+          cache: 'npm'
 
-      - name: Install dependencies
+      # Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Run semantic-release
+      # Run semantic-release
+      - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # Optional if publishing to npm
         run: npx semantic-release
