@@ -1,5 +1,5 @@
 import axios from "axios";
-import combinedData from "../api_data/combined.json" assert { type: "json" };
+import combinedData from "../api_data/combined.json" assert { type: "json" }; //assert is only supported in >node22
 
 export default async function handler(req, res) {
   if (req.method === "OPTIONS") {
@@ -34,7 +34,7 @@ Rules:
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-3.5-turbo", // ✅ switched from gpt-4o-mini
+        model: "gpt-3.5-turbo", // ✅ switched from gpt-4o-mini you can switchback
         messages: [
           { role: "system", content: systemMessage },
           { role: "user", content: message },
