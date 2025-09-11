@@ -18,6 +18,8 @@ This chatbot demonstrates how to combine a **React frontend**, **Vercel serverle
 * ✅ CORS-ready API (works locally and on Vercel)
 * ✅ Semantic-release versioning
 
+[![Release](https://github.com/omaraldawud/rushrash-chatbot/actions/workflows/release.yml/badge.svg)](https://github.com/omaraldawud/rushrash-chatbot/actions/workflows/release.yml)
+[![semantic-release](https://img.shields.io/badge/semantic--release-automated-brightgreen)](https://semantic-release.gitbook.io/semantic-release/)
 ---
 
 ## 🏗 Architecture
@@ -47,7 +49,7 @@ This chatbot demonstrates how to combine a **React frontend**, **Vercel serverle
 ### 1. Clone repo
 
 ```bash
-git clone https://github.com/YOUR-USER/rushrash-chatbot.git
+git clone https://github.com/omaraldawud/rushrash-chatbot.git
 cd rushrash-chatbot
 ```
 

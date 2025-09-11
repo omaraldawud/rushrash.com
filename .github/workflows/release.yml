@@ -34,5 +34,5 @@ jobs:
       - name: Release
         env:
           env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # this is the correct way worked for mongo project and ryshrash
         run: npx semantic-release
