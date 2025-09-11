@@ -2,7 +2,7 @@
   "framework": "vite",
   "functions": {
      "api/**/*.js": {
-      "runtime": "nodejs@22"
+      "runtime": "@vercel/nodejs@22"
     }
   },
   "rewrites": [
