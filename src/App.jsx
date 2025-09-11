@@ -32,9 +32,9 @@ function App() {
     <Layout page_banner={page_banner}>
       <GlobalBusinessSchema /> {/* Global defaults only */}
       {/* Chatbot floating in bottom-right */}
-      <div style={{ position: "fixed", bottom: 20, right: 20, zIndex: 1000 }}>
+      {/* <div style={{ position: "fixed", bottom: 20, right: 20, zIndex: 1000 }}>
         <Chatbot />
-      </div>
+      </div> */}
       <Routes>
         {/* Home */}
         <Route path="/" element={<HomePage />} />
