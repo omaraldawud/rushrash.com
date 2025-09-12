@@ -1,0 +1,185 @@
+// src/assets/data/articles_list_ds.js
+
+const articles = [
+  {
+    id: 1,
+    published: true,
+    category: "cctv",
+    mainEntityOfPage: "https://rushrash.com/articles/cctv-inspection-checklist",
+    headline: "CCTV Inspection Checklist: Keep Your System Reliable",
+    description:
+      "A monthly CCTV inspection can save you costly downtime. Learn what to check for reliability and safety.",
+    content: "/content/articles/cctv-inspection-checklist.md",
+    image: "/src/assets/images/cctv-cams/cctv-component.jfif",
+    productLinks: ["/products/cctv-maintenance-kit"],
+    tags: ["cctv", "inspection", "maintenance", "safety"],
+    datePublished: new Date("2023-11-15"),
+    dateModified: new Date("2023-11-15"),
+    readingTime: "5 min read",
+    author: "CCTV Department",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+  {
+    id: 2,
+    published: true,
+    category: "access_control",
+    mainEntityOfPage: "https://rushrash.com/articles/access-control-endpoints",
+    headline: "Where to Place Access Control Endpoints",
+    description:
+      "A guide to designing secure entry points with access control systems for maximum protection.",
+    content: "/content/articles/access-control-design.md",
+    image: "/src/assets/images/access-control/access-control-card-sweep.jpg",
+    productLinks: ["/products/smart-access-controller"],
+    tags: ["access control", "design", "security"],
+    datePublished: new Date("2024-01-10"),
+    dateModified: new Date("2024-01-10"),
+    readingTime: "6 min read",
+    author: "Access Control Department",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+  {
+    id: 3,
+    published: true,
+    category: "access_control",
+    mainEntityOfPage:
+      "https://rushrash.com/articles/access-control-small-business",
+    headline: "Best Access Control Systems for Small Businesses",
+    description:
+      "A comprehensive guide to choosing the right access control system for your small business security needs.",
+    content: "/content/articles/access-control-small-business.md",
+    image: "/src/assets/images/access-control/access-control-system.jpg",
+    productLinks: ["/products/smart-access-controller"],
+    tags: ["access control", "design", "security", "small business"],
+    datePublished: new Date("2024-02-05"),
+    dateModified: new Date("2024-02-05"),
+    readingTime: "7 min read",
+    author: "Access Control Department",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+  {
+    id: 4,
+    published: true,
+    category: "alarm",
+    mainEntityOfPage: "https://rushrash.com/articles/alarm-testing-guide",
+    headline: "How to Test Your Alarm System Monthly",
+    description:
+      "Testing your alarm system every month ensures sensors and sirens work when you need them most.",
+    content: "/content/articles/alarm-testing-guide.md",
+    image: "/src/assets/images/access-control/access-control-key.jpeg",
+    productLinks: ["/products/wireless-alarm-system"],
+    tags: ["alarm", "testing", "security", "maintenance"],
+    datePublished: new Date("2024-03-12"),
+    dateModified: new Date("2024-03-12"),
+    readingTime: "4 min read",
+    author: "Alarms & Monitoring Department",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+  {
+    id: 5,
+    published: true,
+    category: "alarm",
+    mainEntityOfPage: "https://rushrash.com/articles/alarm-detection-systems",
+    headline: "Alarm Detection Systems",
+    description:
+      "An overview of modern alarm detection systems and how they integrate with smart monitoring solutions.",
+    content: "/content/articles/alarm-detection-systems.md",
+    image: "/src/assets/images/access-control/access-control-key.jpeg",
+    productLinks: ["/products/wireless-alarm-system"],
+    tags: ["alarm", "detection", "security", "monitoring"],
+    datePublished: new Date("2024-03-20"),
+    dateModified: new Date("2024-03-20"),
+    readingTime: "5 min read",
+    author: "Alarms & Monitoring Department",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+  {
+    id: 6,
+    published: true,
+    category: "pa",
+    mainEntityOfPage: "https://rushrash.com/articles/pa-sound-tips",
+    headline: "PA and Sound System Optimization Tips",
+    description:
+      "Best practices for configuring PA and sound systems to achieve clarity and reliability.",
+    content: "/content/articles/pa-sound-tips.md",
+    image: "/src/assets/images/services/pa/pa-sound-communication-audio.jpg",
+    productLinks: ["/products/wireless-pa-system"],
+    tags: ["pa", "microphone", "sound", "public address"],
+    datePublished: new Date("2024-04-05"),
+    dateModified: new Date("2024-04-05"),
+    readingTime: "4 min read",
+    author: "PA Systems Department",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+  {
+    id: 7,
+    published: true,
+    category: "it",
+    mainEntityOfPage: "https://rushrash.com/articles/avoid-remote-access-scams",
+    headline: "Beware of Remote Access Scams: Don’t Give Strangers Control",
+    description:
+      "Learn how scammers trick users into giving remote access to their PCs and how to protect yourself from these attacks.",
+    content: "/content/articles/avoid-remote-access-scams.md",
+    image: "/src/assets/images/it-services/it-services-ram-board.jpg",
+    productLinks: [
+      "/products/antivirus-suite",
+      "/products/cybersecurity-training",
+    ],
+    tags: ["cybersecurity", "scams", "remote access", "phishing"],
+    datePublished: new Date("2024-02-10"),
+    dateModified: new Date("2024-02-10"),
+    readingTime: "6 min read",
+    author: "Cybersecurity Team",
+    publisher: {
+      type: "Organization",
+      name: "Rushrash Security Systems",
+      logo: {
+        type: "ImageObject",
+        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
+      },
+    },
+  },
+];
+
+export default articles;

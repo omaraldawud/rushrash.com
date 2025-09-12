@@ -151,7 +151,7 @@ export default function POSServices() {
       </div>
       {/* Success Stories & Studies */}
       <div id="case-studies">
-        <CaseStudies tab="pos" />
+        <CaseStudies category="pa" />
       </div>
       <div>
         <FAQsSection faqServiceType="PoS" />

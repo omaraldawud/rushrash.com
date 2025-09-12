@@ -9,8 +9,10 @@ const tabTypes = [
   { label: "All", value: "all", icon: "bi-layers" },
   { label: "Residential", value: "residential", icon: "bi-house-door" },
   { label: "Commercial", value: "commercial", icon: "bi-building" },
-  { label: "Access Control", value: "Access Control", icon: "bi-key" },
-  { label: "IT2 & Network", value: "IT", icon: "bi-hdd-network" },
+  { label: "Access Control", value: "access_control", icon: "bi-key" },
+  { label: "IT & Network", value: "it", icon: "bi-hdd-network" },
+  { label: "PA System", value: "pa", icon: "bi-bi-megaphone" },
+
   {
     label: "Local Chicago Wildlife Monitoring",
     value: "featured",
@@ -18,35 +20,39 @@ const tabTypes = [
   },
 ];
 
-const CaseStudies = ({ tab = "all" }) => {
-  const [activeTab, setActiveTab] = useState(tab);
+const normalizeCategory = (cat) =>
+  cat?.toLowerCase().replace(/\s+/g, "_") || "all";
 
-  // keep in sync if prop changes later
+const CaseStudies = ({ category = "all" }) => {
+  const [activeTab, setActiveTab] = useState(category);
+
+  // sync with parent-provided category
   useEffect(() => {
-    setActiveTab(tab);
-  }, [tab]);
+    setActiveTab(category);
+  }, [category]);
 
   // filter data
   const filteredStudies =
     activeTab === "all"
       ? caseStudies
-      : caseStudies.filter((study) => study.studyType === activeTab);
-
-  // find the current tab object for icon + label
-  const currentTabObj = tabTypes.find((t) => t.value === activeTab);
+      : caseStudies.filter(
+          (study) => normalizeCategory(study.studyType) === activeTab
+        );
+  //logs
+  console.log("ActiveTab: ", activeTab);
+  console.log("filtered cases: ", filteredStudies);
 
   return (
     <section id="case-studies" className="p-3 bg-success-subtle rounded-4">
       <div className="container">
         <div className="mb-4 text-center">
-          <h2>Access Control & Security Success Stories</h2>
           <p className="lead">
             See how we've helped homeowners and businesses across Chicago
           </p>
         </div>
 
-        {/* Tabs Navigation */}
-        {tab === "all" ? (
+        {/* Tabs only if no external category filter is active */}
+        {category === "all" && (
           <div className="d-flex justify-content-center mb-4 flex-wrap gap-2">
             {tabTypes.map((t) => (
               <button
@@ -60,14 +66,6 @@ const CaseStudies = ({ tab = "all" }) => {
                 {t.label}
               </button>
             ))}
-          </div>
-        ) : (
-          // If prop passed, show only that tab title with icon (no buttons)
-          <div className="d-flex justify-content-center mb-4">
-            <h4 className="d-flex align-items-center">
-              <i className={`bi ${currentTabObj?.icon} me-2 text-primary`}></i>
-              {currentTabObj?.label}
-            </h4>
           </div>
         )}
 

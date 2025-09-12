@@ -147,7 +147,7 @@ export default function AccessControlServicesPage() {
 
       {/* Success Stories & Studies */}
       <div id="case-studies">
-        <CaseStudies tab="Access Control" />
+        <CaseStudies category="access_control" />
       </div>
 
       <div>

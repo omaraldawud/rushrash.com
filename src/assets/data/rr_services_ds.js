@@ -22,9 +22,15 @@ export const services = [
     service_href: "/services/it-services",
   },
   {
-    id: "pos",
+    id: "Commercial PA System",
     title: "Point-of-Sale Installation",
     icon: "bi-cash-stack",
     service_href: "/services/pos-installation",
+  },
+  {
+    id: "PA Systems",
+    title: "Public Address (PA) Sound System",
+    icon: "bi-speaker",
+    service_href: "/services/pa-systems",
   },
 ];

@@ -9,7 +9,7 @@ import imgPoS from "../../assets/images/pos/point-of-sale-restaurants.jpeg";
 
 const caseStudies = [
   {
-    studyType: "featured",
+    studyType: "cctv",
     isFeatured: true,
     image: imgHickoryHillsLake,
     altText:
@@ -40,8 +40,8 @@ const caseStudies = [
   },
 
   {
-    image: imgChicagoCaseStudy,
     studyType: "commercial",
+    image: imgChicagoCaseStudy,
     altText: "32-camera IP NVR system installation at Chicago high-rise",
     category: {
       name: "Commercial Security",
@@ -101,7 +101,7 @@ const caseStudies = [
     ],
   },
   {
-    studyType: "Access Control",
+    studyType: "access_control",
     image: imgAccessControlOffice,
     altText: "Advanced access control system for corporate office",
     category: {
@@ -160,22 +160,23 @@ const caseStudies = [
     isFeatured: false,
   },
   {
-    studyType: "pos",
+    studyType: "pa",
     image: imgPoS,
-    altText: "Professional POS system installation in a retail environment",
+    altText:
+      "Professional PA and PoS system installation in a retail environment",
     category: {
       name: "Point of Sale System Installation",
       icon: "bi-cash-register",
     },
-    title: "Retail Store POS System Upgrade",
+    title: "Retail Store PA & PoS System Upgrade",
     stats: [
-      { value: "4", label: "POS Terminals Installed" },
+      { value: "4", label: "PoS Terminals Installed" },
       { value: "30%", label: "Checkout Efficiency Improvement" },
     ],
     overview:
-      "Rushrash Inc. designed and implemented a complete POS system upgrade for a mid-sized retail store, replacing outdated equipment with modern touchscreen terminals, barcode scanners, and receipt printers. The system integrated with inventory management and customer loyalty programs.",
+      "Rushrash Inc. designed and implemented a complete PoS system upgrade for a mid-sized retail store, replacing outdated equipment with modern touchscreen terminals, barcode scanners, and receipt printers. The system integrated with inventory management and customer loyalty programs.",
     services: [
-      "POS Hardware Installation",
+      "PoS Hardware Installation",
       "Payment Processing Integration",
       "Inventory Management System Setup",
       "Staff Training & Documentation",

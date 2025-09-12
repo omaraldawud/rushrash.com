@@ -24,7 +24,7 @@ const services = [
   },
   {
     title: "CCTV Camera Installation",
-    icon: "bi-camera-fill",
+    icon: "bi-camera",
     description:
       "Professional CCTV camera installation with proper placement and wiring for maximum coverage.",
   },
@@ -200,7 +200,7 @@ export default function CCTVServicesPage() {
 
       {/* Success Stories & Studies */}
       <div id="case-studies">
-        <CaseStudies tab="residential" />
+        <CaseStudies category="residential" />
       </div>
 
       <div>

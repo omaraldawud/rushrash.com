@@ -110,10 +110,40 @@ export default function AboutUsSection() {
         </div>
       </div>
 
-      {/* Case Studies */}
-      <div id="case-studies" className="mb-5">
-        <CaseStudies tab="Access Control" />
+      {/* Services */}
+      <div className="bg-dark text-light p-5 rounded-4 shadow">
+        <h4 className="mb-4 text-center text-warning">
+          Our Security & CCTV Services
+        </h4>
+        {allServices.length > 0 && (
+          <div className="row mt-4 g-4">
+            {allServices.map((svc, idx) => (
+              <div key={idx} className="col-6 col-md-3">
+                <a href={svc.service_href} className="text-decoration-none">
+                  <div className="service-card bg-gradient-dark text-center p-4 rounded-3 h-100 transition-all">
+                    {svc.icon && (
+                      <i className={`bi ${svc.icon} text-warning mb-3 fs-2`} />
+                    )}
+                    <div className="fw-semibold text-light">{svc.title}</div>
+                    <div className="small text-success mt-2">Learn more →</div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
+
+      <section className="mb-5">
+        <h2 className="text-center my-5 text-light">
+          <i className="bi bi-award me-3 text-warning"></i>
+          Access Control & Security Success Stories
+          <i className="bi bi-award ms-3 text-warning"></i>
+        </h2>
+        <div className="p-4 bg-white rounded-4 shadow-sm border">
+          <CaseStudies category="access_control" />
+        </div>
+      </section>
 
       {/* Authorized Dealers */}
       <div className="row align-items-center mb-5 g-0 bg-dark text-light rounded shadow overflow-hidden">
@@ -138,29 +168,6 @@ export default function AboutUsSection() {
             future-proof, and backed by technology you can depend on.
           </p>
         </div>
-      </div>
-
-      {/* Services */}
-      <div className="bg-dark text-light p-5 rounded shadow">
-        <h4 className="mb-4 text-center">Our Security & CCTV Services</h4>
-        {allServices.length > 0 && (
-          <div className="row mt-3 gx-3 gy-3">
-            {allServices.map((svc, idx) => (
-              <div key={idx} className="col-6 col-md-3">
-                <a href={svc.service_href} className="text-decoration-none">
-                  <div className="service-gradient-card text-center p-3 rounded shadow-sm h-100">
-                    {svc.icon && (
-                      <i
-                        className={`bi ${svc.icon} service-gradient-icon mb-2`}
-                      />
-                    )}
-                    <div className="fw-semibold">{svc.title}</div>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );

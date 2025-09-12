@@ -164,7 +164,7 @@ export default function ITServices() {
       </div>
       {/* Success Stories & Studies */}
       <div id="case-studies">
-        <CaseStudies tab="it" />
+        <CaseStudies category="it" />
       </div>
       <div className="mt-4">
         <FAQsSection faqServiceType="IT" />

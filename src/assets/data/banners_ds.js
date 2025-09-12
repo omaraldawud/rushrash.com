@@ -1,6 +1,6 @@
 // import securityBg from "../images/banners/security-cctv-top.jpg";
 
-import securityBg from "../images/brands/uniview/owelview-series.png";
+import securityBg from "../images/banners/security-team.jfif";
 
 import ContactBg from "../images/banners/aboutus/call-us-cctv-solutions.jpg";
 import residentialBg from "../images/banners/residential/setup-residential-cctv-wireless-camera.jpg";

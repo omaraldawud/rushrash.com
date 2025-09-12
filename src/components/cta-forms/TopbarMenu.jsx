@@ -121,14 +121,14 @@ export default function TopbarMen() {
           <span className="text-muted">|</span>
 
           <NavLink
-            to="/login"
+            to="/access-control-and-monitoring-articles"
             className={({ isActive }) =>
-              "text-nowrap text-light text-decoration-none ms-3 nav-link" +
+              "text-nowrap text-decoration-none ms-3 nav-link" +
               (isActive ? " active" : "")
             }
           >
-            <i className="bi bi-box-arrow-in-right me-2 text-warning"></i>
-            Login
+            Articles
+            <i className="bi bi-box-arrow-in-right ms-2 text-warning"></i>
           </NavLink>
         </div>
 

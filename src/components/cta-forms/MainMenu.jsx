@@ -215,7 +215,7 @@ const MainMenu = () => {
                 }}
               >
                 <div className="row gx-2">
-                  <div className="col-4">
+                  <div className="col-5">
                     <ul className="list-unstyled mb-0">
                       <li>
                         <Link
@@ -248,10 +248,32 @@ const MainMenu = () => {
                           Privacy
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          to="/access-control-and-monitoring-articles"
+                          className={getLinkClass("/articles")}
+                          style={{ ...menuItemStyle, whiteSpace: "normal" }}
+                          onClick={() => setExpandedMenu(null)}
+                        >
+                          <div className="d-flex align-items-start">
+                            {" "}
+                            {/* Changed from align-items-center to align-items-start */}
+                            <i className="bi bi-file-earmark-lock me-2 mt-1"></i>{" "}
+                            {/* Added mt-1 for minor top adjustment */}
+                            <div>
+                              <div>Access Control & Monitoring Articles</div>
+                              <small className="text-info">
+                                PA systems, CCTV, alarms, etc.
+                              </small>
+                            </div>
+                          </div>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
 
-                  <div className="d-none d-md-block col-8 info-box">
+                  {/* why choose us section */}
+                  <div className="d-none d-md-block col-7 info-box">
                     <h6 className="fw-bold text-dark mb-2">
                       <i className="bi bi-question-circle text-warning me-2"></i>
                       Why Choose Rushrash?
@@ -266,7 +288,14 @@ const MainMenu = () => {
                       className="btn btn-warning btn-sm fw-semibold"
                       onClick={() => setExpandedMenu(null)}
                     >
-                      Contact Us
+                      <i className="bi bi-envelope me-2"></i>Contact Us
+                    </a>
+                    <a
+                      href="/contact-rushrash-inc#case-studies"
+                      className="btn btn-success btn-sm ms-2 fw-semibold"
+                      onClick={() => setExpandedMenu(null)}
+                    >
+                      <i className="bi bi-trophy me-2"></i>Success Stories
                     </a>
                   </div>
                 </div>
