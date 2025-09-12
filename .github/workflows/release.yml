@@ -15,9 +15,11 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      # Checkout the repository
+      # Checkout the repository with full history
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetches all history for all branches and tags
 
       # Setup Node.js
       - name: Setup Node
@@ -33,9 +35,5 @@ jobs:
       # Run semantic-release
       - name: Release
         env:
-          env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # this is the correct way worked for mongo project and ryshrash
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-
-      - name: Fetch tags
-        run: git fetch --tags
