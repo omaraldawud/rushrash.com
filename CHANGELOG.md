@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/omaraldawud/rushrash.com/compare/v1.1.0...v1.1.1) (2025-09-12)
+
+
+### Bug Fixes
+
+* fixed vercel CI/CD -2- ([bc89a9e](https://github.com/omaraldawud/rushrash.com/commit/bc89a9e96ebf3f9271d98b9739fc59141eec09ae))
+
 # [1.1.0](https://github.com/omaraldawud/rushrash.com/compare/v1.0.0...v1.1.0) (2025-09-12)
 
 
