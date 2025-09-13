@@ -5,6 +5,23 @@
 
 * fixed vercel CI/CD -2- ([bc89a9e](https://github.com/omaraldawud/rushrash.com/commit/bc89a9e96ebf3f9271d98b9739fc59141eec09ae))
 * fixed vercel CI/CD -3- ([66eb643](https://github.com/omaraldawud/rushrash.com/commit/66eb6432c343f5f9532c352957dee2c55e837dfe))
+* fixed vercel.json ([88d888e](https://github.com/omaraldawud/rushrash.com/commit/88d888e93318a9482b69d6098f9f7ce9d9c4677e))
+* fixed vercel.json ([da14c32](https://github.com/omaraldawud/rushrash.com/commit/da14c32f94d950f10cf7cb266cc96bceb235925d))
+* fixed vercel.json ([6784205](https://github.com/omaraldawud/rushrash.com/commit/6784205c24278a782f90ea2b4bd1327b3cb4ebd8))
+* fixed vercel.json -2- ([4cf9e4c](https://github.com/omaraldawud/rushrash.com/commit/4cf9e4c9c36922456de046977ebde03874b273cb))
+
+
+### Features
+
+* Added PA Service ([a705370](https://github.com/omaraldawud/rushrash.com/commit/a70537005d9d626c232cfafce1f3344124060190))
+
+# [1.2.0](https://github.com/omaraldawud/rushrash.com/compare/v1.1.0...v1.2.0) (2025-09-13)
+
+
+### Bug Fixes
+
+* fixed vercel CI/CD -2- ([bc89a9e](https://github.com/omaraldawud/rushrash.com/commit/bc89a9e96ebf3f9271d98b9739fc59141eec09ae))
+* fixed vercel CI/CD -3- ([66eb643](https://github.com/omaraldawud/rushrash.com/commit/66eb6432c343f5f9532c352957dee2c55e837dfe))
 * fixed vercel.json ([6784205](https://github.com/omaraldawud/rushrash.com/commit/6784205c24278a782f90ea2b4bd1327b3cb4ebd8))
 
 
