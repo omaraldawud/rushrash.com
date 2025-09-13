@@ -148,7 +148,7 @@ export default function ResidentialSecurityPage() {
           </div>
           {/* Case Studies/Testimonials Section */}
           <section>
-            <CaseStudies studyType="residential" />
+            <CaseStudies category="residential" />
           </section>
           <CommercialSection />
           {/* Quality CCTV SEction */}{" "}

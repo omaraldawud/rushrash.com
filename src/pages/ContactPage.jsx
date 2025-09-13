@@ -204,7 +204,7 @@ export default function Contact() {
 
         {/* Success Stories & Studies */}
         <div id="case-studies">
-          <CaseStudies />
+          <CaseStudies category="all" />
         </div>
       </section>
     </>

@@ -10,26 +10,9 @@ import PageInfoBox from "../components/cards/PageInfoBox";
 import FAQsSection from "../components/sections/FAQsSection";
 import CaseStudies from "../components/sections/CaseStudies";
 
-//
-
-const services = [
-  {
-    title: "Door Access Systems",
-    icon: "bi-person-lock",
-    description:
-      "Secure and monitor access to your facilities with modern systems.",
-  },
-  {
-    title: "Biometric Solutions",
-    icon: "bi-fingerprint",
-    description: "Advanced biometric authentication for staff and visitors.",
-  },
-  {
-    title: "Smart Card & Keypad Access",
-    icon: "bi-key",
-    description: "Flexible access methods for employees and contractors.",
-  },
-];
+//ds
+import services from "../assets/data/access_control_services_ds";
+import ServicesGrid from "../components/cards/ServicesGrid";
 
 export default function AccessControlServicesPage() {
   return (
@@ -127,23 +110,12 @@ export default function AccessControlServicesPage() {
       <Container fluid>
         <PageInfoBox pageType="accessControl" />
       </Container>
-      <div className="container my-5">
-        <div className="row g-4">
-          {services.map((service, idx) => (
-            <div key={idx} className="col-md-6 col-lg-4">
-              <div className="card h-100 text-center shadow-sm border-0">
-                <div className="card-body">
-                  <i
-                    className={`bi ${service.icon} fs-1 mb-3 text-primary`}
-                  ></i>
-                  <h5 className="card-title">{service.title}</h5>
-                  <p className="card-text">{service.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+
+      <ServicesGrid
+        services={services}
+        title="Access Control Systems"
+        description="Comprehensive security solutions for your property"
+      />
 
       {/* Success Stories & Studies */}
       <div id="case-studies">

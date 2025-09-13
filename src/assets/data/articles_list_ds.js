@@ -1,5 +1,13 @@
 // src/assets/data/articles_list_ds.js
+import cctvImg from "/src/assets/images/cctv-cams/cctv-component.jfif";
+import acImg1 from "/src/assets/images/access-control/access-control-card-sweep.jpg";
+import acImg2 from "/src/assets/images/access-control/access-control-system.jpg";
+import alarmImg1 from "/src/assets/images/access-control/access-control-key.jpeg";
+import alarmImg2 from "/src/assets/images/access-control/access-control-key.jpeg";
+import paImg1 from "/src/assets/images/services/pa/pa-sound-communication-audio.jpg";
+import itImg1 from "/src/assets/images/it-services/it-services-ram-board.jpg";
 
+//
 const articles = [
   {
     id: 1,
@@ -10,7 +18,7 @@ const articles = [
     description:
       "A monthly CCTV inspection can save you costly downtime. Learn what to check for reliability and safety.",
     content: "/content/articles/cctv-inspection-checklist.md",
-    image: "/src/assets/images/cctv-cams/cctv-component.jfif",
+    image: cctvImg,
     productLinks: ["/products/cctv-maintenance-kit"],
     tags: ["cctv", "inspection", "maintenance", "safety"],
     datePublished: new Date("2023-11-15"),
@@ -35,7 +43,7 @@ const articles = [
     description:
       "A guide to designing secure entry points with access control systems for maximum protection.",
     content: "/content/articles/access-control-design.md",
-    image: "/src/assets/images/access-control/access-control-card-sweep.jpg",
+    image: acImg1,
     productLinks: ["/products/smart-access-controller"],
     tags: ["access control", "design", "security"],
     datePublished: new Date("2024-01-10"),
@@ -61,7 +69,7 @@ const articles = [
     description:
       "A comprehensive guide to choosing the right access control system for your small business security needs.",
     content: "/content/articles/access-control-small-business.md",
-    image: "/src/assets/images/access-control/access-control-system.jpg",
+    image: acImg2,
     productLinks: ["/products/smart-access-controller"],
     tags: ["access control", "design", "security", "small business"],
     datePublished: new Date("2024-02-05"),
@@ -86,7 +94,7 @@ const articles = [
     description:
       "Testing your alarm system every month ensures sensors and sirens work when you need them most.",
     content: "/content/articles/alarm-testing-guide.md",
-    image: "/src/assets/images/access-control/access-control-key.jpeg",
+    image: alarmImg1,
     productLinks: ["/products/wireless-alarm-system"],
     tags: ["alarm", "testing", "security", "maintenance"],
     datePublished: new Date("2024-03-12"),
@@ -111,7 +119,7 @@ const articles = [
     description:
       "An overview of modern alarm detection systems and how they integrate with smart monitoring solutions.",
     content: "/content/articles/alarm-detection-systems.md",
-    image: "/src/assets/images/access-control/access-control-key.jpeg",
+    image: alarmImg2,
     productLinks: ["/products/wireless-alarm-system"],
     tags: ["alarm", "detection", "security", "monitoring"],
     datePublished: new Date("2024-03-20"),
@@ -136,7 +144,7 @@ const articles = [
     description:
       "Best practices for configuring PA and sound systems to achieve clarity and reliability.",
     content: "/content/articles/pa-sound-tips.md",
-    image: "/src/assets/images/services/pa/pa-sound-communication-audio.jpg",
+    image: paImg1,
     productLinks: ["/products/wireless-pa-system"],
     tags: ["pa", "microphone", "sound", "public address"],
     datePublished: new Date("2024-04-05"),
@@ -161,7 +169,7 @@ const articles = [
     description:
       "Learn how scammers trick users into giving remote access to their PCs and how to protect yourself from these attacks.",
     content: "/content/articles/avoid-remote-access-scams.md",
-    image: "/src/assets/images/it-services/it-services-ram-board.jpg",
+    image: itImg1,
     productLinks: [
       "/products/antivirus-suite",
       "/products/cybersecurity-training",

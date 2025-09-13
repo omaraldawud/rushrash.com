@@ -95,7 +95,7 @@ export default function HomePage() {
 
         {/* Success Stories & Studies */}
         <div id="case-studies">
-          <CaseStudies tab="featured" />
+          <CaseStudies category="featured" />
         </div>
 
         {/* Insallation Process */}

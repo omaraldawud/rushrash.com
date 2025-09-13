@@ -16,7 +16,7 @@ export default function FooterMenu() {
           href="/services/cctv-installation"
           className="footer-link d-flex align-items-center"
         >
-          <i className="bi bi-camera-video me-1"></i> CCTV Systems
+          <i className="bi bi-camera-video me-1"></i> CCTV
         </a>
         <a
           href="/services/it-services"
@@ -31,13 +31,10 @@ export default function FooterMenu() {
           <i className="bi bi-key-fill me-1"></i> Access Control
         </a>
         <a
-          href="/rushrash-legal"
+          href="/services/pa-systems"
           className="footer-link d-flex align-items-center"
         >
-          <i className="bi bi-shield-lock me-1"></i>
-          <small>
-            <em>Legal</em>
-          </small>
+          <i className="bi bi-mic me-1"></i> PA
         </a>
       </nav>
       <hr className="footer-divider" />

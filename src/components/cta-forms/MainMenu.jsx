@@ -156,13 +156,24 @@ const MainMenu = () => {
                       </li>
                       <li>
                         <Link
+                          to="/services/pa-systems"
+                          className={getLinkClass("/services/pa-systems")}
+                          style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
+                        >
+                          <i className="bi bi-mic me-2"></i>
+                          PA Systems
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
                           to="/services/pos-installation"
                           className={getLinkClass("/services/pos-installation")}
                           style={menuItemStyle}
                           onClick={() => setExpandedMenu(null)}
                         >
                           <i className="bi bi-bag-check me-2"></i>
-                          POS Installation
+                          PoS Installation
                         </Link>
                       </li>
                     </ul>

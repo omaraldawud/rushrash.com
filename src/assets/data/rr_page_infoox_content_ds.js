@@ -33,6 +33,11 @@ import CCTVServicesInfoImage3 from "../images/cctv-cams/cctv-system-installation
 import LegalInfoImage1 from "../images/banners/aboutus/security-experts.jpg";
 import LegalInfoImage2 from "../images/banners/aboutus/call-us-cctv-solutions.jpg";
 import LegalInfoImage3 from "../images/banners/aboutus/building-cctv.jpg";
+// PA Systems
+import PAServicesInfoImage1 from "../images/services/pa/pa-microphone-installation.jpeg";
+import PAServicesInfoImage2 from "../images/services/pa/pa-sound-communication-audio.jpg";
+import PAServicesInfoImage3 from "../images/services/pa/pa-system-full.jpeg";
+
 //
 //
 const rr_page_infoox_content_ds = {
@@ -210,6 +215,26 @@ const rr_page_infoox_content_ds = {
       "All data is securely stored and encrypted according to industry standards.",
       "Services are fully compliant with local regulations and privacy laws.",
       "Transparent policies with clear terms of service and data usage guidelines.",
+    ],
+  },
+  // PA Systems
+  pa: {
+    info_title: "PA Sound Systems & Audio Solutions",
+    info_top_title: "Professional Audio Systems",
+    info_mid_text:
+      "Rushrash Technology provides comprehensive PA (Public Address) and sound system solutions for both commercial and residential environments. Our expert team designs and installs high-quality audio systems including speakers, amplifiers, mixers, and microphones for clear communication and sound distribution. Whether for background music, public announcements, emergency notifications, or entertainment systems, we deliver reliable audio solutions with seamless integration and professional support.",
+    info_link1: "/contact-rushrash-inc#case-studies",
+    link1_text: "View Our Audio System Projects",
+    info_image1: PAServicesInfoImage1,
+    info_image2: PAServicesInfoImage2,
+    info_image3: PAServicesInfoImage3,
+    features: [
+      "Commercial PA system installation & configuration",
+      "Background music and zoning systems",
+      "Emergency notification and paging systems",
+      "Audio system integration with existing infrastructure",
+      "Speaker placement optimization for optimal sound coverage",
+      "Ongoing maintenance and support services",
     ],
   },
 };

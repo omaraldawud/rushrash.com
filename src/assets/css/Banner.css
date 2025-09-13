@@ -73,7 +73,7 @@
   color: #f7c948;
 }
 .banner-subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: beige;
   margin-bottom: 1.5rem;
@@ -82,13 +82,29 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
+/* // */
 .banner-features {
+  color: #ffffff;
+  font-size: 1.1rem;
   list-style: none;
-  padding: 0;
+  padding: 1.5rem;
+  /* background: rgba(255, 255, 255, 0.1); */
+  border-radius: 12px;
 }
+
 .banner-features li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-weight: 500;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.banner-features li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* CTA */

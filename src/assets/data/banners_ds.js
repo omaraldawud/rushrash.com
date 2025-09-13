@@ -1,7 +1,6 @@
-// import securityBg from "../images/banners/security-cctv-top.jpg";
+//
 
 import securityBg from "../images/banners/security-team.jfif";
-
 import ContactBg from "../images/banners/aboutus/call-us-cctv-solutions.jpg";
 import residentialBg from "../images/banners/residential/setup-residential-cctv-wireless-camera.jpg";
 import commercialBG from "../images/site-wide/privacy-policy-security-lock.jpg";
@@ -11,6 +10,7 @@ import accessControlBg from "../images/access-control/access-control-system.jpg"
 import ITServicesBG from "../images/it-services/vcables-image-must-use_bg.jpg";
 import CCTVInstallationBG from "../images/banners/cctv-installation-technician.png";
 import PoSBG from "../images/pos/point-of-sale-restaurants.jpeg";
+import PASystemsBG from "../images/services/pa/pa-system-full.jpeg";
 
 ////////////////////////// Hero images
 //home
@@ -27,6 +27,11 @@ import heroContacts3 from "../images/banners/security-cctv-top-blue.jpg";
 import heroAbout1 from "../images/banners/PluggedInCat5.jpg";
 import heroAbout3 from "../images/banners/indoor-cct-installation.jpg";
 import heroAbout2 from "../images/banners/aboutus/it-services-bg.jpg";
+
+//rushrash-legal
+import heroLegal1 from "../images/banners/PluggedInCat5.jpg";
+import heroLegal2 from "../images/banners/security-team.jfif";
+import heroLegal3 from "../images/pos/tablet-pos-system.jfif";
 
 //residential
 import heroResidential1 from "../images/banners/indoor-cct-installation.jpg";
@@ -58,21 +63,35 @@ import heroPoS1 from "../images/pos/mobile-pos-phone.jfif";
 import heroPoS2 from "../images/pos/cloud-based-pos-dashboard.jfif";
 import heroPoS3 from "../images/pos/tablet-pos-system.jfif";
 
-//rushrash-legal
-import heroLegal1 from "../images/banners/PluggedInCat5.jpg";
-import heroLegal2 from "../images/banners/security-team.jfif";
-import heroLegal3 from "../images/pos/tablet-pos-system.jfif";
+//services/pa-systems
+import heroPA1 from "../images/services/pa/pa-microphone-installation.jpeg";
+import heroPA2 from "../images/services/pa/pa-sound-communication-audio.jpg";
+import heroPA3 from "../images/services/pa/pa-system-full.jpeg";
 
 //
-// local data structre
 const banners = {
   "/": {
     bgImage: [securityBg],
     title: "CCTV & Access Control Solutions",
     subtitle:
       "Your trusted experts in residential and commercial security systems",
-
     ctaText: "FREE Site Survey",
+    heroParagraph:
+      "With over 17 years of expertise, we provide cutting-edge security solutions tailored to protect what matters most. Our systems combine advanced CCTV surveillance with access control technology—seamless protection for homes and businesses.",
+    heroBullets: [
+      {
+        name: "24/7 Professional Monitoring",
+        icon: "bi-shield-check",
+      },
+      {
+        name: "Latest Technology Systems",
+        icon: "bi-cpu",
+      },
+      {
+        name: "Customized Security Solutions",
+        icon: "bi-gear",
+      },
+    ],
     heroImages: [
       {
         src: heroHome1,
@@ -94,13 +113,29 @@ const banners = {
       },
     ],
   },
-  //contacts
+
   "/contact-rushrash-inc": {
     bgImage: [ContactBg],
     title: "Trusted Security Partner for Homes & Businesses",
     subtitle: "Your Sleepless Eye in CCTV & Access Control",
-
     ctaText: "FREE site survey",
+    heroParagraph:
+      "Get in touch with our security experts for personalized solutions. We provide comprehensive consultations, site assessments, and professional installations for all your CCTV and access control needs.",
+    heroBullets: [
+      {
+        name: "Free Site Surveys",
+        icon: "bi-clipboard-check",
+      },
+      {
+        name: "Expert Consultations",
+        icon: "bi-people",
+      },
+      {
+        name: "Quick Response Times",
+        icon: "bi-lightning",
+      },
+    ],
+
     heroImages: [
       {
         src: heroContacts1,
@@ -122,12 +157,28 @@ const banners = {
       },
     ],
   },
+
   "/about-rushrash-inc": {
     bgImage: [aboutUsBg],
     title: "Trusted Security Partner for Homes & Businesses",
     subtitle: "Your Sleepless Eye in CCTV & Access Control",
-
     ctaText: "FREE site survey",
+    heroParagraph:
+      "Since 2007, Rushrash Inc. has been delivering exceptional security solutions across Illinois. Our team of certified professionals brings decades of combined experience in CCTV, access control, and IT security systems.",
+    heroBullets: [
+      {
+        name: "17+ Years Experience",
+        icon: "bi-award",
+      },
+      {
+        name: "Certified Technicians",
+        icon: "bi-patch-check",
+      },
+      {
+        name: "Local Illinois Company",
+        icon: "bi-geo-alt",
+      },
+    ],
     heroImages: [
       {
         src: heroAbout1,
@@ -149,12 +200,28 @@ const banners = {
       },
     ],
   },
-  // Residential
+
   "/residential-cctv-security": {
     bgImage: [residentialBg],
     title: "Residential Security Solutions",
     subtitle: "Protect Your Home with Smart Systems",
     ctaText: "Schedule a FREE Site Visit",
+    heroParagraph:
+      "Secure your home and family with our comprehensive residential security solutions. We offer customized CCTV systems, smart access control, and integrated security packages designed specifically for residential properties.",
+    heroBullets: [
+      {
+        name: "Home CCTV Systems",
+        icon: "bi-camera",
+      },
+      {
+        name: "Smart Door Access",
+        icon: "bi-door-open",
+      },
+      {
+        name: "Remote Monitoring",
+        icon: "bi-phone",
+      },
+    ],
     heroImages: [
       {
         src: heroResidential1,
@@ -166,17 +233,17 @@ const banners = {
         src: heroResidential2,
         alt: "Smart Door Access",
         title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        caption: "Access Home Remotely",
       },
       {
         src: heroResidential3,
         alt: "CCTV Cables",
         title: "CCTV CAT6+ Cables",
-        caption: "Cabeling CCTV System",
+        caption: "Cabling CCTV System",
       },
     ],
   },
-  // Commercial
+
   "/commercial-cctv-security": {
     icon: "bi bi-shop",
     bgImage: [commercialBG],
@@ -184,170 +251,297 @@ const banners = {
     subtitle:
       "Maintain Constant Vigilance with Professional-Grade Surveillance & Access Control Setup",
     ctaText: "Schedule a Consultation",
+    heroParagraph:
+      "Protect your business assets, employees, and customers with enterprise-grade security solutions. Our commercial systems include high-resolution CCTV monitoring, advanced access control, and integrated security management for businesses of all sizes.",
+    heroBullets: [
+      {
+        name: "Enterprise CCTV",
+        icon: "bi-camera-video",
+      },
+      {
+        name: "Access Control",
+        icon: "bi-shield-lock",
+      },
+      {
+        name: "24/7 Monitoring",
+        icon: "bi-record-circle",
+      },
+    ],
     heroImages: [
       {
         src: heroCommercial1,
-        alt: "Residential CCTV Camera",
-        title: "Indoor Home CCTV Installation",
-        caption: "Indoor CCTV",
+        alt: "Military-Grade Access Control",
+        title: "Enterprise Access Control Systems",
+        caption: "Commercial Access Control",
       },
       {
         src: heroCommercial2,
-        alt: "Smart Door Access",
-        title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        alt: "Panoramic Security Cameras",
+        title: "360° Surveillance Solutions",
+        caption: "Complete Coverage",
       },
       {
         src: heroCommercial3,
-        alt: "Home Security System Overview",
-        title: "Integrated Security Solutions",
-        caption: "Quality CCTV Cams",
+        alt: "Fiber Optic Security Infrastructure",
+        title: "High-Speed Security Networks",
+        caption: "Fiber Optic Systems",
       },
     ],
   },
-  // services/it-services
+
   "/services/it-services": {
-    icon: "bi bi-shop",
+    icon: "bi bi-laptop",
     bgImage: [ITServicesBG],
-    title: "IT Services",
-    subtitle: "Control Every Entry with Enterprise-Grade Access Solutions.",
+    title: "Professional IT Services & Network Solutions",
+    subtitle: "Reliable IT Infrastructure for Modern Businesses",
     ctaText: "Schedule an IT Consultation",
+    heroParagraph:
+      "Our comprehensive IT services include network setup, maintenance, cybersecurity, and system integration. We ensure your technology infrastructure supports your business operations securely and efficiently.",
+    heroBullets: [
+      {
+        name: "Network Setup",
+        icon: "bi-hdd-network",
+      },
+      {
+        name: "Cybersecurity",
+        icon: "bi-shield-check",
+      },
+      {
+        name: "System Integration",
+        icon: "bi-puzzle",
+      },
+    ],
     heroImages: [
       {
         src: heroITServices1,
-        alt: "Residential CCTV Camera",
-        title: "Indoor Home CCTV Installation",
-        caption: "Indoor CCTV",
+        alt: "Network Cable Installation",
+        title: "Structured Cabling Systems",
+        caption: "Professional Wiring",
       },
       {
         src: heroITServices2,
-        alt: "Smart Door Access",
-        title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        alt: "IT Network Setup",
+        title: "Network Infrastructure Installation",
+        caption: "IT System Setup",
       },
       {
         src: heroITServices3,
-        alt: "Home Security System Overview",
-        title: "Integrated Security Solutions",
-        caption: "Quality CCTV Cams",
+        alt: "Server Room Architecture",
+        title: "Enterprise IT Solutions",
+        caption: "Server Infrastructure",
       },
     ],
   },
-  // services/access-control
+
   "/services/access-control": {
-    icon: "bi bi-shop",
+    icon: "bi bi-shield-lock",
     bgImage: [accessControlBg],
     title:
       "Advanced Access Control Systems for Secure & Efficient Entry Management",
     subtitle: "Control Every Entry with Enterprise-Grade Access Solutions.",
     ctaText: "Schedule an Access Control Site Survey",
+    heroParagraph:
+      "Secure your facilities with state-of-the-art access control systems. We provide biometric solutions, keycard systems, and integrated access management that gives you complete control over who enters your premises.",
+    heroBullets: [
+      {
+        name: "Biometric Access",
+        icon: "bi-fingerprint",
+      },
+      {
+        name: "Keycard Systems",
+        icon: "bi-key",
+      },
+      {
+        name: "Cloud Management",
+        icon: "bi-cloud",
+      },
+    ],
     heroImages: [
       {
         src: heroAccessControl1,
-        alt: "Residential CCTV Camera",
-        title: "Indoor Home CCTV Installation",
-        caption: "Indoor CCTV",
+        alt: "Access Control Keypad",
+        title: "Electronic Access Systems",
+        caption: "Keypad Entry",
       },
       {
         src: heroAccessControl2,
-        alt: "Smart Door Access",
-        title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        alt: "Digital Door Lock",
+        title: "Smart Lock Solutions",
+        caption: "Digital Security",
       },
       {
         src: heroAccessControl3,
-        alt: "Home Security System Overview",
-        title: "Integrated Security Solutions",
-        caption: "Quality CCTV Cams",
+        alt: "Biometric Fingerprint Scanner",
+        title: "Biometric Access Control",
+        caption: "Fingerprint Security",
       },
     ],
   },
-  ///services/cctv-installation
+
   "/services/cctv-installation": {
-    icon: "bi bi-shop",
+    icon: "bi bi-camera-video",
     bgImage: [CCTVInstallationBG],
     title:
       "Professional CCTV Installation Services for Reliable Security Coverage",
     subtitle:
       "Protect Your Property with Expertly Designed Surveillance Solutions.",
     ctaText: "Book a Free CCTV Site Assessment",
+    heroParagraph:
+      "Our expert technicians design and install comprehensive CCTV systems tailored to your specific security needs. From residential monitoring to enterprise surveillance, we deliver crystal-clear video coverage and reliable recording solutions.",
+    heroBullets: [
+      {
+        name: "HD Surveillance",
+        icon: "bi-camera",
+      },
+      {
+        name: "Remote Viewing",
+        icon: "bi-phone",
+      },
+      {
+        name: "Professional Installation",
+        icon: "bi-tools",
+      },
+    ],
     heroImages: [
       {
         src: heroCCTVInstallation1,
-        alt: "Residential CCTV Camera",
-        title: "Indoor Home CCTV Installation",
-        caption: "Indoor CCTV",
+        alt: "Residential CCTV Installation",
+        title: "Home Surveillance Systems",
+        caption: "Residential CCTV",
       },
       {
         src: heroCCTVInstallation2,
-        alt: "Smart Door Access",
-        title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        alt: "CCTV Monitoring Station",
+        title: "Professional Monitoring Solutions",
+        caption: "24/7 Surveillance",
       },
       {
         src: heroCCTVInstallation3,
-        alt: "Home Security System Overview",
-        title: "Integrated Security Solutions",
-        caption: "Quality CCTV Cams",
+        alt: "Commercial CCTV Camera",
+        title: "Business Security Systems",
+        caption: "Commercial Surveillance",
       },
     ],
   },
-  ///services/pos-installation
+
   "/services/pos-installation": {
-    icon: "bi bi-shop",
+    icon: "bi bi-cash-register",
     bgImage: [PoSBG],
     title:
       "Point-of-Sale Installation Services for Seamless Business Operations",
     subtitle:
       "Enhance Checkout Speed, Accuracy, and Security with Modern POS Solutions.",
     ctaText: "Request a Free POS Consultation",
+    heroParagraph:
+      "Streamline your business operations with our professional POS system installation services. We provide complete point-of-sale solutions including hardware setup, software configuration, and payment processing integration.",
+    heroBullets: [
+      {
+        name: "POS Hardware",
+        icon: "bi-cash-coin",
+      },
+      {
+        name: "Payment Processing",
+        icon: "bi-credit-card",
+      },
+      {
+        name: "Inventory Management",
+        icon: "bi-clipboard-data",
+      },
+    ],
     heroImages: [
       {
         src: heroPoS1,
-        alt: "Residential CCTV Camera",
-        title: "Indoor Home CCTV Installation",
-        caption: "Indoor CCTV",
+        alt: "Mobile POS System",
+        title: "Mobile Payment Solutions",
+        caption: "Portable POS",
       },
       {
         src: heroPoS2,
-        alt: "Smart Door Access",
-        title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        alt: "Cloud-Based POS Dashboard",
+        title: "Digital POS Management",
+        caption: "Cloud POS Systems",
       },
       {
         src: heroPoS3,
-        alt: "Home Security System Overview",
-        title: "Integrated Security Solutions",
-        caption: "Quality CCTV Cams",
+        alt: "Tablet POS System",
+        title: "Modern POS Technology",
+        caption: "Tablet-Based POS",
       },
     ],
   },
-  // /rushrash-legal
-  "/rushrash-legal": {
-    icon: "bi bi-shop",
-    bgImage: [LegalBG],
-    title: "Secure Surveillance & IT Solutions for Your Business",
+
+  "/services/pa-systems": {
+    icon: "bi-megaphone",
+    bgImage: [PASystemsBG],
+    title: "Professional PA System Installation & Audio Solutions",
     subtitle:
-      "Protect Your Premises, Streamline Access, and Optimize Operations with CCTV, Access Control, PoS, and IT Services.",
-    ctaText: "Request a Free Security & IT Consultation",
+      "Crystal-Clear Sound for Announcements, Background Music & Emergency Communications",
+    ctaText: "Request a Free PA System Consultation",
+    heroParagraph:
+      "Deliver clear audio throughout your facility with our professional PA system installation services. We design and install complete audio solutions for announcements, background music, emergency notifications, and conference room sound systems.",
+    heroBullets: [
+      {
+        name: "PA System Installation",
+        icon: "bi-megaphone",
+      },
+      {
+        name: "Emergency Alerts",
+        icon: "bi-bell",
+      },
+      {
+        name: "Audio Conferencing",
+        icon: "bi-mic",
+      },
+    ],
+    heroImages: [
+      {
+        src: heroPA1,
+        alt: "Commercial PA System Installation",
+        title: "Commercial Public Address System Installation",
+        caption: "Commercial PA Systems",
+      },
+      {
+        src: heroPA2,
+        alt: "Audio Conference Room System",
+        title: "Conference Room Audio Solutions",
+        caption: "Meeting Room Audio",
+      },
+      {
+        src: heroPA3,
+        alt: "Outdoor Weatherproof Speaker Installation",
+        title: "Outdoor Weather-Resistant Speaker Systems",
+        caption: "Outdoor Audio Solutions",
+      },
+    ],
+  },
+
+  "/rushrash-legal": {
+    icon: "bi bi-file-earmark-text",
+    bgImage: [LegalBG],
+    title: "Legal & Compliance Solutions for Security Systems",
+    subtitle:
+      "Ensuring Regulatory Compliance and Data Protection for Your Security Infrastructure",
+    ctaText: "Request a Security Compliance Consultation",
+    heroParagraph:
+      "Navigate the complex landscape of security system regulations and data protection requirements with our expert guidance. We ensure your CCTV, access control, and data systems comply with all relevant privacy laws and industry standards.",
     heroImages: [
       {
         src: heroLegal1,
-        alt: "Residential CCTV Camera",
-        title: "Indoor Home CCTV Installation",
-        caption: "Indoor CCTV",
+        alt: "Network Security Compliance",
+        title: "Security System Compliance",
+        caption: "Regulatory Standards",
       },
       {
         src: heroLegal2,
-        alt: "Smart Door Access",
-        title: "Smart Door Security",
-        caption: "Access Home  Remotely",
+        alt: "Security Team Consultation",
+        title: "Professional Security Guidance",
+        caption: "Expert Consultation",
       },
       {
         src: heroLegal3,
-        alt: "Home Security System Overview",
-        title: "Integrated Security Solutions",
-        caption: "Quality CCTV Cams",
+        alt: "Secure POS System",
+        title: "Payment System Security",
+        caption: "PCI Compliance",
       },
     ],
   },

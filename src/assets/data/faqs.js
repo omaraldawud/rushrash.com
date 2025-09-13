@@ -168,4 +168,53 @@ export const faqs = [
       "Absolutely, we provide cloud migration services, ensuring data integrity and minimal downtime.",
     icon: "bi-cloud-upload",
   },
+  {
+    id: 21,
+    faqServiceType: "PA",
+    question: "What types of PA systems do you install?",
+    answer:
+      "We install commercial-grade PA systems including background music systems, emergency notification systems, voice evacuation systems, and multi-zone audio distribution for both indoor and outdoor environments.",
+    icon: "bi-megaphone",
+  },
+  {
+    id: 22,
+    faqServiceType: "PA",
+    question: "How long does PA system installation typically take?",
+    answer:
+      "Most standard PA system installations take 1-3 days, depending on the size of the facility and complexity of the audio zoning requirements.",
+    icon: "bi-clock",
+  },
+  {
+    id: 23,
+    faqServiceType: "PA",
+    question: "Can you integrate PA systems with existing security systems?",
+    answer:
+      "Yes, we specialize in integrating PA systems with access control, fire alarm, and security systems for unified emergency response and announcements.",
+    icon: "bi-puzzle",
+  },
+  {
+    id: 24,
+    faqServiceType: "PA",
+    question: "Do you provide ongoing maintenance for PA systems?",
+    answer:
+      "Absolutely, we offer maintenance plans including regular system testing, speaker checks, amplifier diagnostics, and emergency repair services.",
+    icon: "bi-tools",
+  },
+  {
+    id: 25,
+    faqServiceType: "PA",
+    question: "What's the typical range for PA system costs?",
+    answer:
+      "Commercial PA systems typically range from $3,000 to $15,000+ depending on the building size, number of zones, audio quality requirements, and integration needs.",
+    icon: "bi-currency-dollar",
+  },
+  {
+    id: 26,
+    faqServiceType: "PA",
+    question:
+      "Can PA systems be used for background music and emergency alerts?",
+    answer:
+      "Yes, modern PA systems are designed for dual-purpose use - providing background music during normal operations and switching to emergency alerts when needed.",
+    icon: "bi-music-note-beaker",
+  },
 ];

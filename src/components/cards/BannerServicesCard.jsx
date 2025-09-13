@@ -8,7 +8,7 @@ export default function BannerServicesCard() {
     <>
       {allServices.length > 0 && (
         <div className="services-card-list d-flex   flex-column gap-3 mt-5">
-          {allServices.slice(0, 4).map((svc, idx) => {
+          {allServices.slice(0, 5).map((svc, idx) => {
             const isActive = location.pathname === svc.service_href;
             const cardClasses = `service-card d-flex align-items-center gap-3 px-3 py-3 ${
               isActive ? "active" : ""

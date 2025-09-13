@@ -13,7 +13,7 @@ import SafetyTips from "../components/functional/SafetyTips";
 import ArticleList from "../components/functional/ArticleList";
 
 //list - FIXED: Changed "access control" to "access_control" to match data structure
-const categories = ["all", "cctv", "access_control", "pa", "it"];
+const categories = ["cctv", "access_control", "pa", "it"];
 
 export default function ArticleLanding() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -213,6 +213,7 @@ export default function ArticleLanding() {
             <i className="bi bi-journal-text ms-3 text-warning"></i>
           </h2>
           <div className="p-4 bg-light rounded-4 shadow-sm">
+            {console.log("activeCat=", activeCategory)}
             <ArticleList category={activeCategory} />
           </div>
         </section>

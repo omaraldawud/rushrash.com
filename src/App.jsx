@@ -15,6 +15,7 @@ import AccessControlServicesPage from "./pages/AccessControlServicesPage";
 import ITServicesPage from "./pages/ITServicesPage";
 import RushrashLegalPage from "./pages/RushrashLegalPage";
 import ArticlesLanding from "./pages/ArticlesLanding";
+import PASystemsPage from "./pages/PASystemsPAge";
 
 // Schemas
 import { GlobalBusinessSchema } from "./schemas/GlobalBusinessSchema";
@@ -78,12 +79,13 @@ function App() {
         />
 
         {/* Legal Pages */}
-
         <Route path="/rushrash-legal" element={<RushrashLegalPage />} />
+        {/* PA, articles routes */}
         <Route
           path="/access-control-and-monitoring-articles"
           element={<ArticlesLanding />}
         ></Route>
+        <Route path="/services/pa-systems" element={<PASystemsPage />} />
 
         {/* Catch-all fallback to home */}
         <Route path="*" element={<HomePage />} />

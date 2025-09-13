@@ -9,6 +9,16 @@ export default function CopyRightSection() {
         borderTop: "1px solid rgba(255, 255, 255, 0.25)", // subtle divider
       }}
     >
+      {" "}
+      <a
+        href="/rushrash-legal"
+        className="footer-link d-flex align-items-center"
+      >
+        <i className="bi bi-shield-lock me-1"></i>
+        <small>
+          <em>Legal</em>
+        </small>
+      </a>
       <small className="d-flex justify-content-end align-items-center gap-2">
         <em>
           {" "}

@@ -117,7 +117,7 @@ export default function CommercialSecurityPage() {
 
       {/* Case Studies/Testimonials Section */}
       <section className="p2-5">
-        <CaseStudies studyType="commercial" />
+        <CaseStudies category="commercial" />
       </section>
     </>
   );
