@@ -42,23 +42,27 @@
     "semantic-release": "^24.2.7",
     "vite": "^5.2.10"
   },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/github",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ]
+"release": {
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md", "package.json"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
     ]
-  }
+  ],
+  "preset": "conventionalcommits",
+  "releaseRules": [
+    { "type": "chore", "release": "patch" },
+    { "type": "docs", "release": "patch" }
+  ]
+}
+
 }
