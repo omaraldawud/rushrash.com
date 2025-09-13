@@ -1,5 +1,7 @@
 import axios from "axios";
-import combinedData from "../api_data/combined.json" assert { type: "json" }; //assert is only supported in >node22
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const combinedData = require("../api_data/combined.json");
 
 export default async function handler(req, res) {
   if (req.method === "OPTIONS") {
@@ -34,7 +36,7 @@ Rules:
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-3.5-turbo", // ✅ switched from gpt-4o-mini you can switchback
+        model: "gpt-3.5-turbo",
         messages: [
           { role: "system", content: systemMessage },
           { role: "user", content: message },
