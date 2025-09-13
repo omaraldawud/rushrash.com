@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/omaraldawud/rushrash.com/compare/v1.2.0...v1.2.1) (2025-09-13)
+
+
+### Bug Fixes
+
+* fixed semantic-release deployment file ([e62dfb2](https://github.com/omaraldawud/rushrash.com/commit/e62dfb2e2f214aedb6880d0133691790cc1b7a67))
+
 # [1.2.0](https://github.com/omaraldawud/rushrash.com/compare/v1.1.0...v1.2.0) (2025-09-13)
 
 
