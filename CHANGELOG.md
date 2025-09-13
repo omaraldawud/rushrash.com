@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/omaraldawud/rushrash.com/compare/v1.1.0...v1.2.0) (2025-09-13)
+
+
+### Bug Fixes
+
+* fixed vercel CI/CD -2- ([bc89a9e](https://github.com/omaraldawud/rushrash.com/commit/bc89a9e96ebf3f9271d98b9739fc59141eec09ae))
+* fixed vercel CI/CD -3- ([66eb643](https://github.com/omaraldawud/rushrash.com/commit/66eb6432c343f5f9532c352957dee2c55e837dfe))
+* fixed vercel.json ([6784205](https://github.com/omaraldawud/rushrash.com/commit/6784205c24278a782f90ea2b4bd1327b3cb4ebd8))
+
+
+### Features
+
+* Added PA Service ([a705370](https://github.com/omaraldawud/rushrash.com/commit/a70537005d9d626c232cfafce1f3344124060190))
+
 # [1.1.0](https://github.com/omaraldawud/rushrash.com/compare/v1.0.0...v1.1.0) (2025-09-12)
 
 
