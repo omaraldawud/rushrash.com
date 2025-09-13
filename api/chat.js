@@ -54,6 +54,10 @@ Rules:
     res.status(200).json({ reply });
   } catch (err) {
     console.error("OpenAI fetch error:", err.response?.data || err.message);
-    res.status(500).json({ reply: "⚠️ Sorry, something went wrong." });
+    res
+      .status(500)
+      .json({
+        reply: "⚠️ Sorry, something went wrong. Cannot reach OpenAI ...",
+      });
   }
 }
