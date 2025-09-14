@@ -16,6 +16,8 @@ import ITServicesPage from "./pages/ITServicesPage";
 import RushrashLegalPage from "./pages/RushrashLegalPage";
 import ArticlesLanding from "./pages/ArticlesLanding";
 import PASystemsPage from "./pages/PASystemsPAge";
+// pages template
+import ArticlePageTemplate from "./components/articles/ArticlePageTemplate";
 
 // Schemas
 import { GlobalBusinessSchema } from "./schemas/GlobalBusinessSchema";
@@ -85,6 +87,10 @@ function App() {
           path="/access-control-and-monitoring-articles"
           element={<ArticlesLanding />}
         ></Route>
+        {/* Article route using slug */}
+        <Route path="/articles/:slug" element={<ArticlePageTemplate />} />
+
+        {/* //pa-systems */}
         <Route path="/services/pa-systems" element={<PASystemsPage />} />
 
         {/* Catch-all fallback to home */}

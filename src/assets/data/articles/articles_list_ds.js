@@ -19,7 +19,10 @@ const articles = [
       "A monthly CCTV inspection can save you costly downtime. Learn what to check for reliability and safety.",
     content: "/content/articles/cctv-inspection-checklist.md",
     image: cctvImg,
-    productLinks: ["/products/cctv-maintenance-kit"],
+    relatedProduct: {
+      title: "CCTV Camera 1",
+      link: "/products/cctv-maintenance-kit",
+    },
     tags: ["cctv", "inspection", "maintenance", "safety"],
     datePublished: new Date("2023-11-15"),
     dateModified: new Date("2023-11-15"),
@@ -113,31 +116,6 @@ const articles = [
   {
     id: 5,
     published: true,
-    category: "alarm",
-    mainEntityOfPage: "https://rushrash.com/articles/alarm-detection-systems",
-    headline: "Alarm Detection Systems",
-    description:
-      "An overview of modern alarm detection systems and how they integrate with smart monitoring solutions.",
-    content: "/content/articles/alarm-detection-systems.md",
-    image: alarmImg2,
-    productLinks: ["/products/wireless-alarm-system"],
-    tags: ["alarm", "detection", "security", "monitoring"],
-    datePublished: new Date("2024-03-20"),
-    dateModified: new Date("2024-03-20"),
-    readingTime: "5 min read",
-    author: "Alarms & Monitoring Department",
-    publisher: {
-      type: "Organization",
-      name: "Rushrash Security Systems",
-      logo: {
-        type: "ImageObject",
-        url: "http://rushrash.com/assets/images/logo/rushrash-inc-new-logo-tr.png",
-      },
-    },
-  },
-  {
-    id: 6,
-    published: true,
     category: "pa",
     mainEntityOfPage: "https://rushrash.com/articles/pa-sound-tips",
     headline: "PA and Sound System Optimization Tips",
@@ -161,7 +139,7 @@ const articles = [
     },
   },
   {
-    id: 7,
+    id: 6,
     published: true,
     category: "it",
     mainEntityOfPage: "https://rushrash.com/articles/avoid-remote-access-scams",

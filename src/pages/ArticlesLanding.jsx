@@ -10,10 +10,10 @@ import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 //compopnents
 import CaseStudies from "../components/sections/CaseStudies";
 import SafetyTips from "../components/functional/SafetyTips";
-import ArticleList from "../components/functional/ArticleList";
+import ArticleList from "../components/articles/ArticleList";
 
-//list - FIXED: Changed "access control" to "access_control" to match data structure
-const categories = ["cctv", "access_control", "pa", "it"];
+//list -
+const categories = ["cctv", "access_control", "pa", "it", "alarm"];
 
 export default function ArticleLanding() {
   const [activeCategory, setActiveCategory] = useState("all");

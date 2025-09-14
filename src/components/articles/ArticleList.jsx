@@ -1,7 +1,7 @@
 // src/components/functional/ArticleList.jsx
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import articles from "../../assets/data/articles_list_ds";
+import articles from "../../assets/data/articles";
 
 export default function ArticleList({ category = "all" }) {
   const cat = (category || "all").toString().toLowerCase();
@@ -20,23 +20,31 @@ export default function ArticleList({ category = "all" }) {
       <div className="row">
         {filtered.length ? (
           filtered.map((article) => (
-            <div className="col-md-4 mb-3" key={article.id}>
+            <div className="col-md-4 mb-4" key={article.id}>
               <Card className="shadow-sm h-100">
                 {article.image && (
-                  <Card.Img variant="top" src={article.image} />
+                  <Card.Img
+                    variant="top"
+                    src={article.image}
+                    style={{ height: "100px", objectFit: "cover" }}
+                  />
                 )}
                 <Card.Body>
                   <Card.Title>{article.headline}</Card.Title>
                   <Card.Text>{article.description}</Card.Text>
-                  <Button href="#" variant="primary">
-                    Read More
-                  </Button>
                 </Card.Body>
-                <Card.Footer>
+                <Card.Footer className="d-flex justify-content-between align-items-center">
                   <small className="text-muted">
                     {article.readingTime} •{" "}
                     {new Date(article.datePublished).toLocaleDateString()}
                   </small>
+                  <Button
+                    href={`/articles/${article.slug}`}
+                    variant="outline-primary"
+                    size="sm"
+                  >
+                    Read More
+                  </Button>
                 </Card.Footer>
               </Card>
             </div>

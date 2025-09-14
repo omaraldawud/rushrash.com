@@ -160,10 +160,9 @@ const caseStudies = [
     isFeatured: false,
   },
   {
-    studyType: "pa",
+    studyType: "pos",
     image: imgPoS,
-    altText:
-      "Professional PA and PoS system installation in a retail environment",
+    altText: "Professional PoS system installation in a retail environment",
     category: {
       name: "Point of Sale System Installation",
       icon: "bi-cash-register",
