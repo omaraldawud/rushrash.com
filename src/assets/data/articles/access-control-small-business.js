@@ -5,7 +5,7 @@ import acImg2 from "/src/assets/images/access-control/access-control-system.jpg"
 export default {
   id: 3,
   slug: "access-control-small-business",
-  content: "/public/content/articles/access-control-small-business.md",
+  content: "/content/articles/access-control-small-business.md",
   published: true,
   category: "access_control",
   mainEntityOfPage:

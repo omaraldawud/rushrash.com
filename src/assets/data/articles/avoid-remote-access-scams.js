@@ -14,7 +14,10 @@ export default {
   description:
     "Learn how scammers trick users into giving remote access to their PCs and how to protect yourself from these attacks.",
   image: itImg1,
-  relatedArticles: ["alarm-testing-guide", "access-control-small-business"],
+  relatedArticles: [
+    "cctv-inspection-checklist",
+    "access-control-small-business",
+  ],
 
   relatedProduct: {
     title: "CCTV Camera 1",
