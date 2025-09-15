@@ -46,7 +46,7 @@ export default function ArticleBody({ contentPath }) {
   return (
     <div className="container-fluid">
       <div className="row mb-4">
-        <div className="col-lg-12">
+        <div className="col-lg-12 text-primary">
           <ReactMarkdown>{head}</ReactMarkdown>
         </div>
       </div>

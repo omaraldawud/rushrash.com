@@ -30,7 +30,9 @@ export default function ArticleList({ category = "all" }) {
                   />
                 )}
                 <Card.Body>
-                  <Card.Title>{article.headline}</Card.Title>
+                  <Card.Title className="text-success">
+                    {article.headline}
+                  </Card.Title>
                   <Card.Text>{article.description}</Card.Text>
                 </Card.Body>
                 <Card.Footer className="d-flex justify-content-between align-items-center">

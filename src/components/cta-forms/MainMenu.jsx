@@ -4,6 +4,9 @@ import "../../assets/css/MainMenu.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../layout/Logo";
 
+import productImg from "../../assets/images/cctv-cams/12080839_xl.jpg";
+
+//
 const MainMenu = () => {
   const [expandedMenu, setExpandedMenu] = useState(null);
   const location = useLocation();
@@ -308,6 +311,118 @@ const MainMenu = () => {
                     >
                       <i className="bi bi-trophy me-2"></i>Success Stories
                     </a>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            {/* Products Mega Menu */}
+            {/* Products Mega Menu */}
+            <li className="nav-item dropdown">
+              <button
+                className={getDropdownClass([
+                  "/security-products",
+                  "/products",
+                ])}
+                role="button"
+                onClick={() =>
+                  setExpandedMenu(
+                    expandedMenu === "products" ? null : "products"
+                  )
+                }
+                style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
+              >
+                <span className="text-light">Products</span>
+              </button>
+              <ul
+                className={`dropdown-menu p-4 shadow-lg rounded-3 border-0 ${
+                  expandedMenu === "products" ? "show" : ""
+                }`}
+                style={{
+                  minWidth: "650px",
+                  backgroundColor: "#f8f9fa",
+                  borderLeft: "4px solid #198754",
+                  zIndex: 1001,
+                  left: "0",
+                  right: "auto", // forces open to the left
+                }}
+              >
+                <div className="row gx-3">
+                  <div className="col-5">
+                    <ul className="list-unstyled mb-0">
+                      <li>
+                        <Link
+                          to="/security-products"
+                          className={getLinkClass("/security-products")}
+                          style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
+                        >
+                          <i className="bi bi-box-seam me-2"></i> All Products
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/security-products?tab=access"
+                          className={getLinkClass(
+                            "/security-products?tab=access"
+                          )}
+                          style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
+                        >
+                          <i className="bi bi-door-closed me-2"></i> Access
+                          Control
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/security-products?tab=cctv"
+                          className={getLinkClass(
+                            "/security-products?tab=cctv"
+                          )}
+                          style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
+                        >
+                          <i className="bi bi-camera-video me-2"></i> CCTV
+                          Cameras
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/security-products?tab=recorders"
+                          className={getLinkClass(
+                            "/security-products?tab=recorders"
+                          )}
+                          style={menuItemStyle}
+                          onClick={() => setExpandedMenu(null)}
+                        >
+                          <i className="bi bi-hdd-network me-2"></i> Recorders
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* SEO / Image box */}
+                  <div className="d-none d-md-block col-7 info-box">
+                    <h6 className="fw-bold text-dark mb-2">
+                      <i className="bi bi-lightbulb text-info me-2"></i>
+                      Choosing the Right Product
+                    </h6>
+                    <p className="small text-muted mb-3">
+                      From CCTV cameras to advanced access control, explore
+                      products trusted by security professionals worldwide.
+                    </p>
+                    <img
+                      src={productImg}
+                      alt="Products overview"
+                      className="img-fluid rounded shadow-sm mb-2"
+                    />
+                    <Link
+                      to="/security-products"
+                      className="btn btn-success btn-sm fw-semibold"
+                      onClick={() => setExpandedMenu(null)}
+                    >
+                      Explore Products
+                    </Link>
                   </div>
                 </div>
               </ul>

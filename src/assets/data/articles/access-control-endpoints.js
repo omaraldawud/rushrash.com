@@ -8,12 +8,16 @@ export default {
   content: "/content/articles/access-control-endpoints.md",
   published: true,
   category: "access_control",
+  image: acImg1,
   mainEntityOfPage: "https://rushrash.com/articles/access-control-endpoints",
   headline: "Where to Place Access Control Endpoints",
   description:
     "A guide to designing secure entry points with access control systems for maximum protection.",
-  image: acImg1,
-  relatedArticles: ["alarm-testing-guide", "access-control-small-business"],
+
+  relatedArticles: [
+    "avoid-remote-access-scams",
+    "access-control-small-business",
+  ],
   relatedProduct: {
     title: "comming soon",
     link: "#",

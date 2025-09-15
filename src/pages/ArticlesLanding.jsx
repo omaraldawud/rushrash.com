@@ -213,7 +213,6 @@ export default function ArticleLanding() {
             <i className="bi bi-journal-text ms-3 text-warning"></i>
           </h2>
           <div className="p-4 bg-light rounded-4 shadow-sm">
-            {console.log("activeCat=", activeCategory)}
             <ArticleList category={activeCategory} />
           </div>
         </section>

@@ -14,10 +14,13 @@ import POSInstallationPage from "./pages/POSInstallationPage";
 import AccessControlServicesPage from "./pages/AccessControlServicesPage";
 import ITServicesPage from "./pages/ITServicesPage";
 import RushrashLegalPage from "./pages/RushrashLegalPage";
-import ArticlesLanding from "./pages/ArticlesLanding";
 import PASystemsPage from "./pages/PASystemsPAge";
-// pages template
+import ArticlesLanding from "./pages/ArticlesLanding";
 import ArticlePageTemplate from "./components/articles/ArticlePageTemplate";
+
+// prodcuts
+import ProductListingPage from "./pages/ProductListingPage";
+import SingleProductPage from "./components/products/SingleProductPage";
 
 // Schemas
 import { GlobalBusinessSchema } from "./schemas/GlobalBusinessSchema";
@@ -42,15 +45,11 @@ function App() {
       <Routes>
         {/* Home */}
         <Route path="/" element={<HomePage />} />
-
         {/* About */}
         <Route path="/about-rushrash-inc" element={<AboutPage />} />
-
         {/* Services */}
         <Route path="/services/it-services" element={<ITServicesPage />} />
-
         <Route path="/cctv-services" element={<CCTVServicesPage />} />
-
         <Route
           path="/services/cctv-installation"
           element={<CCTVServicesPage />}
@@ -59,40 +58,35 @@ function App() {
           path="/services/access-control"
           element={<AccessControlServicesPage />}
         />
-
         <Route
           path="/services/pos-installation"
           element={<POSInstallationPage />}
         />
-
         {/* Contact */}
         <Route path="/contact-rushrash-inc" element={<ContactPage />} />
-
         {/* Residential Security */}
         <Route
           path="/residential-cctv-security"
           element={<ResidentialSecurityPage />}
         />
-
         {/* Commercial Security */}
         <Route
           path="/commercial-cctv-security"
           element={<CommercialSecurityPage />}
         />
-
         {/* Legal Pages */}
         <Route path="/rushrash-legal" element={<RushrashLegalPage />} />
-        {/* PA, articles routes */}
+        {/* articles routes */}
         <Route
           path="/access-control-and-monitoring-articles"
           element={<ArticlesLanding />}
         ></Route>
-        {/* Article route using slug */}
         <Route path="/articles/:slug" element={<ArticlePageTemplate />} />
-
+        {/* Product Routes */}
+        <Route path="/security-products" element={<ProductListingPage />} />
+        <Route path="/products/:brand/:slug" element={<SingleProductPage />} />
         {/* //pa-systems */}
         <Route path="/services/pa-systems" element={<PASystemsPage />} />
-
         {/* Catch-all fallback to home */}
         <Route path="*" element={<HomePage />} />
       </Routes>

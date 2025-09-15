@@ -1,6 +1,3 @@
-// /src/components/articles/ArticlePageTemplate
-//
-
 import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../../schemas";
 
 //components
@@ -11,13 +8,19 @@ import ArticleBody from "./ArticleBody";
 import ArticleFooter from "./ArticleFooter";
 
 // Import the individual article JSON files
-import articles from "../../assets/data/articles"; // this is your index exporting all articles
+import articles from "../../assets/data/articles"; // index exporting all articles
+import { allProducts } from "../products/data/allProductsDS"; // aggregator for all products
 
 export default function ArticlePageTemplate() {
   const { slug } = useParams();
 
   const articleData = articles.find((a) => a.slug === slug);
   if (!articleData) return <div>Article not found.</div>;
+
+  // Match products by category
+  const relatedProducts = allProducts.filter(
+    (product) => product.product_category === articleData.category
+  );
 
   return (
     <>
@@ -55,7 +58,9 @@ export default function ArticlePageTemplate() {
         <div>
           <ArticleFooter
             relatedArticles={articleData.relatedArticles}
-            relatedProduct={articleData.relatedProduct}
+            relatedProducts={
+              relatedProducts.length > 0 ? relatedProducts : null
+            }
           />
         </div>
       </div>

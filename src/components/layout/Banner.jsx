@@ -41,7 +41,7 @@ export default function Banner({
                 <span className="accent">Rushrash Inc.</span> {subtitle}
               </h2>
               <p className="banner-description">{heroParagraph}</p>
-              {console.log("Hero Bullets: ", heroBullets)}
+              {/* {console.log("Hero Bullets: ", heroBullets)} */}
               <ul className="banner-features d-none d-md-flex flex-wrap justify-content-center gap-3">
                 {heroBullets.map((bullet, index) => (
                   <li
