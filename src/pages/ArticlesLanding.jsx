@@ -11,6 +11,9 @@ import { ServiceSchema, BreadcrumbSchema, FAQSchema } from "../schemas";
 import CaseStudies from "../components/sections/CaseStudies";
 import SafetyTips from "../components/functional/SafetyTips";
 import ArticleList from "../components/articles/ArticleList";
+import infoIMG1 from "../assets/images/brands/lts/products/dvrs/TVI-DVR-16-Channel-ltd8316d.png";
+import infoIMG2 from "../assets/images/brands/lts/products/dvrs/TVI-DVR-16-Channel-ltd8316d.png";
+import PageInfoBox from "../components/cards/PageInfoBox";
 
 //list -
 const categories = ["cctv", "access_control", "pa", "it", "alarm"];
@@ -36,7 +39,15 @@ export default function ArticleLanding() {
             { name: "Articles", url: "https://rushrashinc.com/articles" },
           ]}
         />
-
+        {/* SEO Meta */}
+        <SEOMeta
+          title="Security Articles & Guides | CCTV, Access Control, Alarms & PA Systems"
+          description="Read expert articles on CCTV inspection, access control design, alarm detection, PA systems, and IT services. Stay updated with security tips from Rushrash Inc."
+          keywords="security articles, CCTV tips, access control guides, alarm detection systems, PA system setup, cybersecurity"
+          url="https://rushrashinc.com/articles"
+          image="https://rushrashinc.com/images/articles/articles-landing-banner.jpg"
+          twitterHandle="@RushrashInc"
+        />
         {/* FAQ Schema */}
         <FAQSchema
           questions={[
@@ -98,17 +109,12 @@ export default function ArticleLanding() {
             },
           ]}
         />
-
-        {/* SEO Meta */}
-        <SEOMeta
-          title="Security Articles & Guides | CCTV, Access Control, Alarms & PA Systems"
-          description="Read expert articles on CCTV inspection, access control design, alarm detection, PA systems, and IT services. Stay updated with security tips from Rushrash Inc."
-          keywords="security articles, CCTV tips, access control guides, alarm detection systems, PA system setup, cybersecurity"
-          url="https://rushrashinc.com/articles"
-          image="https://rushrashinc.com/images/articles/articles-landing-banner.jpg"
-          twitterHandle="@RushrashInc"
-        />
       </div>
+      <PageInfoBox
+        pageType="articles"
+        info_image1={infoIMG1}
+        info_image2={infoIMG2}
+      />
       <div
         className="position-relative px-5 rounded-4 overflow-hidden shadow-sm"
         style={{

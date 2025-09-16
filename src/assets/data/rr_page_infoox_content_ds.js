@@ -37,6 +37,14 @@ import LegalInfoImage3 from "../images/banners/aboutus/building-cctv.jpg";
 import PAServicesInfoImage1 from "../images/services/pa/pa-microphone-installation.jpeg";
 import PAServicesInfoImage2 from "../images/services/pa/pa-sound-communication-audio.jpg";
 import PAServicesInfoImage3 from "../images/services/pa/pa-system-full.jpeg";
+// Products
+import PoductsInfoImage1 from "../images/brands/top-cctv-brands.png";
+import PoductsInfoImage2 from "../images/brands/lts/products/dvrs/TVI-DVR-16-Channel-ltd8316d.png";
+import PoductsInfoImage3 from "../images/brands/unifi/unifi-cloud-gateway.jpg";
+// Articles
+import ArticlesInfoImage1 from "../images/articles/laptop-shield-cyber-security.webp";
+import ArticlesInfoImage2 from "../images/articles/cyber-security-lock.jfif";
+import ArticlesInfoImage3 from "../images/articles/article-landing-preview.jpeg";
 
 //
 //
@@ -60,6 +68,45 @@ const rr_page_infoox_content_ds = {
     info_image1: homeInfoImage1,
     info_image2: homeInfoImage2,
     info_image3: homeInfoImage3,
+  },
+  //legal
+  legal: {
+    info_title:
+      "Security & IT Compliance – CCTV, Access Control, PoS, and IT Services",
+    info_top_title: "Your Trusted Partner in Secure Technology Solutions",
+    info_mid_text:
+      "Rushrash Surveillance provides professional security and IT solutions with expert installation and management of CCTV cameras, access control systems, PoS solutions, and IT infrastructure. Whether for residential or commercial properties, our services are designed to ensure data security, operational efficiency, and reliable monitoring. With proven expertise, we deliver comprehensive coverage, seamless system integration, and dependable support — giving you confidence, peace of mind, and compliance with industry standards.",
+    info_link1: "/contact-rushrash-inc",
+    link1_text: "Contact Us for More Information",
+    info_image1: LegalInfoImage1,
+    info_image2: LegalInfoImage2,
+    info_image3: LegalInfoImage3,
+    features: [
+      "We never share your personal or business information with third parties.",
+      "All data is securely stored and encrypted according to industry standards.",
+      "Services are fully compliant with local regulations and privacy laws.",
+      "Transparent policies with clear terms of service and data usage guidelines.",
+    ],
+  },
+  //aboutus
+  aboutus: {
+    info_title: "About Rushrash Inc.",
+    info_top_title: "Your Partner in Professional Security",
+    info_mid_text:
+      "Rushrash Inc. is dedicated to protecting what matters most. We specialize in commercial and residential CCTV systems, access control solutions, and integrated security technology. Our team of certified experts brings years of hands-on experience, ensuring every installation is tailored to your property’s unique needs. With a focus on reliability, innovation, and customer care, we provide more than systems — we deliver peace of mind.",
+    info_link1: "/contact-rushrash-incl",
+    link1_text: "Schedule Consultation",
+    info_image1: aboutInfoImage1,
+
+    info_image2: aboutInfoImage2,
+    info_image3: aboutInfoImage3,
+    features: [
+      "Certified CCTV & Access Control Experts",
+      "Residential & Commercial Coverage",
+      "Tailored security solutions for every property",
+      "Authorized partnerships with leading brands",
+      "Reliable 24/7 customer support & maintenance",
+    ],
   },
   //residential
   residential: {
@@ -103,26 +150,7 @@ const rr_page_infoox_content_ds = {
       "Flexible solutions for offices, retail, warehouses, and industrial sites",
     ],
   },
-  //aboutus
-  aboutus: {
-    info_title: "About Rushrash Inc.",
-    info_top_title: "Your Partner in Professional Security",
-    info_mid_text:
-      "Rushrash Inc. is dedicated to protecting what matters most. We specialize in commercial and residential CCTV systems, access control solutions, and integrated security technology. Our team of certified experts brings years of hands-on experience, ensuring every installation is tailored to your property’s unique needs. With a focus on reliability, innovation, and customer care, we provide more than systems — we deliver peace of mind.",
-    info_link1: "/contact-rushrash-incl",
-    link1_text: "Schedule Consultation",
-    info_image1: aboutInfoImage1,
-
-    info_image2: aboutInfoImage2,
-    info_image3: aboutInfoImage3,
-    features: [
-      "Certified CCTV & Access Control Experts",
-      "Residential & Commercial Coverage",
-      "Tailored security solutions for every property",
-      "Authorized partnerships with leading brands",
-      "Reliable 24/7 customer support & maintenance",
-    ],
-  },
+  //Services
   //it
   itServices: {
     info_title: "IT Services",
@@ -198,25 +226,6 @@ const rr_page_infoox_content_ds = {
       "Commercial & residential surveillance solutions",
     ],
   },
-  //legal
-  legal: {
-    info_title:
-      "Security & IT Compliance – CCTV, Access Control, PoS, and IT Services",
-    info_top_title: "Your Trusted Partner in Secure Technology Solutions",
-    info_mid_text:
-      "Rushrash Surveillance provides professional security and IT solutions with expert installation and management of CCTV cameras, access control systems, PoS solutions, and IT infrastructure. Whether for residential or commercial properties, our services are designed to ensure data security, operational efficiency, and reliable monitoring. With proven expertise, we deliver comprehensive coverage, seamless system integration, and dependable support — giving you confidence, peace of mind, and compliance with industry standards.",
-    info_link1: "/contact-rushrash-inc",
-    link1_text: "Contact Us for More Information",
-    info_image1: LegalInfoImage1,
-    info_image2: LegalInfoImage2,
-    info_image3: LegalInfoImage3,
-    features: [
-      "We never share your personal or business information with third parties.",
-      "All data is securely stored and encrypted according to industry standards.",
-      "Services are fully compliant with local regulations and privacy laws.",
-      "Transparent policies with clear terms of service and data usage guidelines.",
-    ],
-  },
   // PA Systems
   pa: {
     info_title: "PA Sound Systems & Audio Solutions",
@@ -237,6 +246,51 @@ const rr_page_infoox_content_ds = {
       "Ongoing maintenance and support services",
     ],
   },
+  products: {
+    info_title: "Professional-Grade Security & Audio Products",
+    info_top_title: "CCTV, Access Control, PA Systems & IT Infrastructure",
+    info_mid_text:
+      "Explore our curated selection of high-performance security and audio equipment. From cutting-edge 4K CCTV cameras and intelligent access control systems to robust PA systems and reliable network hardware, Rushrash Technology provides the products you need to build a smarter, safer environment. We supply the technology for both DIY enthusiasts and professional installers.",
+    info_link1: "/security-products",
+    link1_text: "Shop All Products",
+    info_link2: "/contact-rushrash-inc",
+    link2_text: "Get a Free Consultation",
+    info_image1: PoductsInfoImage1,
+    info_image2: PoductsInfoImage2,
+    info_image3: PoductsInfoImage3,
+    features: [
+      "4K & AI-Powered CCTV Cameras",
+      "Network Video Recorders (NVRs)",
+      "Access Control Systems & Kits",
+      "Video Intercoms & Door Stations",
+      "Professional PA & Sound Systems",
+      "Network Switches & WiFi Solutions",
+    ],
+  },
+  //articles - Security Insights
+  articles: {
+    info_title: "Expert Insights & Security Solutions",
+    info_top_title: "Guides, Tips & Industry Updates on Security Technology",
+    info_mid_text:
+      "Stay informed with our curated collection of security articles. From in-depth guides on CCTV and access control to the latest industry news and practical installation tips, Rushrash Technology provides knowledge to help both professionals and enthusiasts enhance safety and efficiency.",
+    info_link1: "/security-articles",
+    link1_text: "Read All Articles",
+    info_link2: "/contact-rushrash-inc",
+    link2_text: "Contact Our Experts",
+    info_image1: ArticlesInfoImage1,
+    info_image2: ArticlesInfoImage2,
+    info_image3: ArticlesInfoImage3,
+    features: [
+      "Step-by-Step Installation Guides",
+      "CCTV & Access Control Best Practices",
+      "Security System Reviews & Comparisons",
+      "Industry Trends & Technology Updates",
+      "Expert Tips for Home & Business Security",
+      "Troubleshooting & Optimization Advice",
+    ],
+  },
 };
 
 export default rr_page_infoox_content_ds;
+
+// you are an expert in React/Vite/js development and a master of SEO  and in charge of building an SEO structure for Rushrash security company (rushrash.com) with main services PA * Intercom, Access Control, CCTV, IT services.

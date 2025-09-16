@@ -130,6 +130,16 @@ export default function TopbarMen() {
             Articles
             <i className="bi bi-box-arrow-in-right ms-2 text-warning"></i>
           </NavLink>
+          <NavLink
+            to="/security-products"
+            className={({ isActive }) =>
+              "text-nowrap text-decoration-none ms-3 nav-link" +
+              (isActive ? " active" : "")
+            }
+          >
+            Products
+            <i className="bi bi-box ms-2 text-warning"></i>
+          </NavLink>
         </div>
 
         {/* Mobile-only nav links */}

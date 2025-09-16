@@ -11,6 +11,8 @@ import ITServicesBG from "../images/it-services/vcables-image-must-use_bg.jpg";
 import CCTVInstallationBG from "../images/banners/cctv-installation-technician.png";
 import PoSBG from "../images/pos/point-of-sale-restaurants.jpeg";
 import PASystemsBG from "../images/services/pa/pa-system-full.jpeg";
+import ArticlesBG from "../images/articles/article-landing-preview.jpeg";
+import ProductsBG from "../images/banners/e-security-banner.jfif";
 
 ////////////////////////// Hero images
 //home
@@ -67,6 +69,17 @@ import heroPoS3 from "../images/pos/tablet-pos-system.jfif";
 import heroPA1 from "../images/services/pa/pa-microphone-installation.jpeg";
 import heroPA2 from "../images/services/pa/pa-sound-communication-audio.jpg";
 import heroPA3 from "../images/services/pa/pa-system-full.jpeg";
+
+///security-insights
+import heroArticles1 from "../images/services/pa/pa-microphone-installation.jpeg";
+import heroArticles2 from "../images/services/pa/pa-microphone-installation.jpeg";
+import heroArticles3 from "../images/services/pa/pa-microphone-installation.jpeg";
+
+///security-products
+
+import heroProducts1 from "../images/banners/aboutus/it-services-bg.jpg";
+import heroProducts2 from "../images/brands/lorex-camera-logo.jfif";
+import heroProducts3 from "../images/brands/uniview/owelview-series.png";
 
 //
 const banners = {
@@ -542,6 +555,94 @@ const banners = {
         alt: "Secure POS System",
         title: "Payment System Security",
         caption: "PCI Compliance",
+      },
+    ],
+  },
+  "/security-insights": {
+    icon: "bi bi-shield",
+    bgImage: [ArticlesBG],
+    title: "Articles and Professional Security Insights",
+    subtitle:
+      "Covering: Access Control, Intercom, CCTV and Cyber Security articles.",
+    ctaText: "Request a Security Compliance Consultation",
+    heroParagraph:
+      "Navigate the complex landscape of security system regulations and data protection requirements with our expert guidance. We ensure your CCTV, access control, and data systems comply with all relevant privacy laws and industry standards.",
+    heroBullets: [
+      {
+        name: "CCTV & Access Control Guides",
+        icon: "bi-camera-video",
+      },
+      {
+        name: "Cybersecurity & Data Protection Tips",
+        icon: "bi-shield-lock",
+      },
+      {
+        name: "Industry Trends & Best Practices",
+        icon: "bi-bar-chart-line",
+      },
+    ],
+    heroImages: [
+      {
+        src: heroArticles1,
+        alt: "Security Article 1",
+        title: "Optimizing CCTV Installations",
+        caption: "Tips and best practices for camera placement and setup.",
+      },
+      {
+        src: heroArticles2,
+        alt: "Security Article 2",
+        title: "Access Control Trends",
+        caption: "Latest innovations in secure access systems for businesses.",
+      },
+      {
+        src: heroArticles3,
+        alt: "Security Article 3",
+        title: "Cyber Security Essentials",
+        caption: "Protecting your systems from modern digital threats.",
+      },
+    ],
+  },
+
+  "/security-products": {
+    icon: "bi bi-box-seam",
+    bgImage: [ProductsBG],
+    title: "Professional-Grade Security & Audio Products",
+    subtitle: "CCTV, Access Control, PA Systems & IT Infrastructure.",
+    ctaText: "Shop Our Complete Product Range",
+    heroParagraph:
+      "Explore our curated selection of high-performance security and audio equipment. From cutting-edge 4K CCTV cameras and intelligent access control systems to robust PA systems and reliable network hardware, Rushrash Technology provides the products you need to build a smarter, safer environment.",
+    heroBullets: [
+      {
+        name: "Emergency Alerts & Notifications",
+        icon: "bi-bell",
+      },
+      {
+        name: "4K CCTV Cameras",
+        icon: "bi-camera-video",
+      },
+      {
+        name: "Video Intercom & Door Stations",
+        icon: "bi-door-open",
+      },
+    ],
+    heroImages: [
+      {
+        src: heroProducts1,
+        alt: "CCTV Camera",
+        title: "High-Resolution CCTV",
+        caption: "Monitor your property with 4K clarity.",
+      },
+      {
+        src: heroProducts2,
+        alt: "Access Control System",
+        title: "Smart Access Control",
+        caption: "Secure your building with advanced technology.",
+      },
+      {
+        src: heroProducts3,
+        alt: "PA System",
+        title: "Professional PA Systems",
+        caption: "Clear audio for any environment.",
       },
     ],
   },
