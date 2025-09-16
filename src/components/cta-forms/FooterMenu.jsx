@@ -3,15 +3,6 @@ export default function FooterMenu() {
   return (
     <div className="footer-menu-wrapper">
       <nav className="footer-menu d-flex flex-wrap justify-content-center justify-content-md-end gap-2 gap-md-3">
-        <a href="/" className="footer-link d-flex align-items-center">
-          <i className="bi bi-house-door me-1"></i> Home
-        </a>
-        <a
-          href="/contact-rushrash-inc"
-          className="footer-link d-flex align-items-center"
-        >
-          <i className="bi bi-telephone me-1"></i> Contacts
-        </a>
         <a
           href="/services/cctv-installation"
           className="footer-link d-flex align-items-center"
@@ -60,8 +51,8 @@ export default function FooterMenu() {
 
         .footer-divider {
           border-color: rgba(255, 254, 254, 0.4);
-          margin: 0.5rem auto 0;
-          width: 80%;
+          margin: 0.5rem 0 0 auto;
+          width: 38%;
         }
 
         /* On very small screens, make links full-width stacked */

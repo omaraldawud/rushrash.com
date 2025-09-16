@@ -15,7 +15,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 .header-sec::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -24,8 +24,6 @@ body {
   background: linear-gradient(90deg, transparent, #ffc107, transparent);
   z-index: 1;
 }
-
-
 
 /* --- Utility Bar (Top Strip) - UPDATED --- */
 .utility-bar {
@@ -79,7 +77,6 @@ body {
   transform: translateY(-2px);
 }
 
-
 /* Pulsing animation for phone CTA */
 .cta-pulse {
   position: absolute;
@@ -108,10 +105,6 @@ body {
   }
 }
 
-
-
-
-
 /* Logo Styling */
 .logo-img {
   height: 100px;
@@ -119,20 +112,19 @@ body {
   object-fit: contain;
 }
 
-
-
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
   .utility-bar {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
-  .left-links, .utility-bar > div:last-child {
+
+  .left-links,
+  .utility-bar > div:last-child {
     width: 100%;
     justify-content: center;
   }
-  
+
   .phone-cta {
     order: -1;
     margin-bottom: 0.5rem;
@@ -152,8 +144,6 @@ body {
   }
 }
 
-
-
 /* Text nowrap for better mobile handling */
 .text-nowrap {
   white-space: nowrap;
@@ -161,7 +151,6 @@ body {
 
 /* //top menu */
 .utility-bar {
-
   padding: 0.25rem 1rem; /* thinner strip */
   border-bottom: 2px white solid;
 }
@@ -174,7 +163,6 @@ body {
 .utility-bar a:hover {
   color: #fff;
 }
-
 
 /* Brand Section */
 .header-brand-section {
@@ -212,36 +200,17 @@ body {
   animation: titleGradient 4s ease infinite;
 }
 
-
 @keyframes titleGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
-.company-subtitle {
-  font-size: 1.2rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  color: #adb5bd;
-  text-transform: lowercase;
-  display: block;
-}
-
-
-
-/* .company-subtitle::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background: #ffc107;
-  border-radius: 70%;
-  animation: pulse 2s infinite;
-} */
 
 /* Header Menu Section */
 .header-menu-section {
@@ -252,7 +221,7 @@ body {
 /* Enhanced Phone CTA */
 .phone-cta {
   background: transparent;
-  padding: 0.2rem .7rem;
+  padding: 0.2rem 0.7rem;
   border-radius: 0.4rem;
   border: 1px solid rgba(255, 193, 7, 0.3);
   transition: all 0.3s ease;
@@ -270,9 +239,8 @@ body {
   .company-title {
     font-size: 1.3rem;
   }
-  
+
   .header-logo {
     height: 50px;
-
   }
 }

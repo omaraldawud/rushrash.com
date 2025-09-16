@@ -1,28 +1,100 @@
-/* Main Menu Styles */
-/* In your MainMenu.css */
-@media (max-width: 991.98px) {
-  .dropdown-menu {
-    left: 0 !important;
-    right: auto !important;
-    transform: translateX(-10px); /* Optional */
-  }
+/* ============================= */
+/* General Navbar & Header Styles */
+/* ============================= */
+
+.navbar {
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 101;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: visible !important;
 }
 
-.header-content {
-  flex-direction: column;
+.nav-item.dropdown {
+  position: relative; /* parent for absolute dropdowns */
 }
 
-@media (min-width: 768px) {
-  .header-content {
-    flex-direction: row;
-  }
-
-  .main-menu-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+.nav-link {
+  transition: color 0.2s ease;
 }
+
+/* Top-level dropdown links */
+.navbar-nav .nav-link.dropdown-toggle {
+  color: #0d6efd !important; /* Primary blue */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link.dropdown-toggle:hover,
+.navbar-nav .nav-link.dropdown-toggle:focus {
+  color: #ff3700 !important; /* Hover color */
+  text-decoration: none;
+}
+
+/* Active link highlighting for all nav links */
+.nav-link.active {
+  font-weight: 600;
+  color: #ff3700 !important;
+  text-transform: uppercase;
+}
+
+.nav-link-parent-active {
+  color: #ff3700; /* your active color */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ============================= */
+/* Dropdown Menu Styles */
+/* ============================= */
+
+.dropdown-menu {
+  min-width: 220px;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #3b71a7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1001;
+}
+
+.dropdown-menu .dropdown-item i {
+  font-size: 1rem;
+  color: #0d6efd; /* Icons primary color */
+  margin-right: 0.5rem;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: #0d6efd !important;
+  background-color: #e9ecef !important;
+}
+
+/* ============================= */
+/* Header Section (Transparent) */
+/* ============================= */
+
+.header-sec {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.header-sec.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-sec .container {
+  background: transparent !important;
+}
+
+/* ============================= */
+/* Company Title & Subtitle */
+/* ============================= */
 
 .company-title {
   font-size: 1.2rem;
@@ -36,111 +108,51 @@
 
 .company-subtitle {
   font-size: 1rem;
-  color: #666;
+  color: #fff; /* White for transparent header */
 }
 
-.navbar {
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  overflow: visible !important;
-}
+/* ============================= */
+/* Responsive / Mobile Styles */
+/* ============================= */
 
-.nav-item.dropdown {
-  position: relative; /* parent for absolute mega-menu */
-}
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: 100%;
+    border-radius: 0;
+  }
 
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
 
+  .navbar-nav .nav-link {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-.nav-link-parent-active {
-  color: #c83647; /* your active color */
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-
-.nav-link:hover {
-  color: #ff0019;
-}
-
-.nav-link.active {
-  color: #dc3545;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/* Mobile menu styles */
-@media (max-width: 992px) {
   .navbar-collapse {
     padding: 1rem;
     background: white;
     border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .nav-item {
-    margin: 0.25rem 0;
+
+  .dropdown-menu {
+    left: 0 !important;
+    right: auto !important;
   }
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
-  min-width: 220px;
-  border-radius: 0.5rem;
-  border: 1px solid #ddd;
-}
+/* ============================= */
+/* Info boxes inside dropdowns */
+/* ============================= */
 
-.dropdown-menu .dropdown-item i {
-  font-size: 1rem;
-  color: #0d6efd; /* Bootstrap primary blue */
-}
-.dropdown-menu .dropdown-item {
-  display: flex;
-  align-items: center;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.9rem;
-}
-
-/* Prevent Bootstrap from forcing blue background on active dropdown links */
-.dropdown-menu .dropdown-item.active,
-.dropdown-menu .dropdown-item:active {
-  background-color: transparent !important;
-  color: red !important;
-  font-weight: 500;
-  text-transform: capitalize;
-}
- 
-
- 
-
-.dropdown-item i {
-  color: #0d6efd;
-  font-size: 1rem;
-  margin-right: 0.5rem;
-}
-
-
-/* Small badge inside the banner */
-.usa-made-banner .usa-badge {
-  background-color: #fff;       /* white badge */
-  color: #2b2b2b;               /* red text */
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.2rem;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-  display: inline-block;
-  font-weight: 600;
-}
-
-
-/* Make sure navbar always sits above banners/sections */
-.navbar {
-  position: relative;
-  z-index: 1000; 
-}
-
-/* Dropdown menus above everything else */
-
- .info-box {
+.info-box {
   background: #fff;
   border: 1px solid #e9ecef;
   border-radius: 8px;
@@ -148,41 +160,34 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.header-sec {
-  position: relative;
-  z-index: 100;
+/* Additions  */
+/* Dropdown menu width */
+.navbar-nav .dropdown-menu {
+  min-width: 600px; /* wider than default 220px */
+  max-width: 500px; /* prevent it from getting too wide */
+  background-color: #1b5c9d; /* light gray */
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure the menu dropdowns appear above everything */
-.navbar {
-  position: relative;
-  z-index: 101;
-}
-
-/* TopbarMenu */
-.nav-link.active {
-  font-weight: 600;
-  color: #ffc107 !important; /* Highlight active link with Bootstrap warning color */
-}
-
- 
-
-/* Top-level dropdown links */
-.navbar-nav .nav-link.dropdown-toggle {
-  color: #0d6efd !important;       /* Primary blue */
-  font-weight: 600;                /* Slightly bolder */
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  display: flex;
+  align-items: center;
   padding: 0.5rem 1rem;
-  transition: color 0.2s ease;
+  color: #edf4fa; /* dark text for visibility */
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
 }
 
-/* Hover effect */
-.navbar-nav .nav-link.dropdown-toggle:hover,
-.navbar-nav .nav-link.dropdown-toggle:focus {
-  color: #ff3700 !important;      /* Darker blue on hover/focus */
-  text-decoration: none;
+.dropdown-menu .dropdown-item:hover {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: #fff;
 }
 
-/* Active top-level menu link */
-.navbar-nav .nav-link.nav-link-parent-active {
-  color: #000000 !important;      /* Keeps active link colored */
+.dropdown-menu .dropdown-item i {
+  color: #0d6efd;
+  margin-right: 0.5rem;
 }

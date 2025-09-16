@@ -10,22 +10,12 @@ import Logo from "../layout/Logo";
 //css
 import "../../assets/css/Header.css";
 
-//
-export default function Header() {
-  const { pathname } = useLocation(); // ✅ clean destructure
+import { getHeaderSubtitle } from "../../utils/getHeaderSubtitle";
 
-  // Pick subtitle based on current path
-  let header_subtitle = "CCTV & Access Control Solutions"; // default
-  if (pathname.includes("/residential-cctv-security")) {
-    header_subtitle = "Residential CCTV & Smart Security";
-  } else if (pathname.includes("/commercial-cctv-security")) {
-    header_subtitle = "Business CCTV & Access Control";
-  } else if (pathname.includes("/contact-rushrash-inc")) {
-    header_subtitle =
-      "Call or Send us a note about your cctv and security needs";
-  } else if (pathname.includes("/about-rushrash-inc")) {
-    header_subtitle = "Chicago's Premier Security & Surveillance Experts";
-  }
+export default function Header() {
+  const { pathname } = useLocation(); // ✅ destructure
+
+  const header_subtitle = getHeaderSubtitle(pathname); // pass pathname
 
   return (
     <header className="header-sec shadow-sm">
@@ -41,8 +31,17 @@ export default function Header() {
             <Logo logoWidth="200px" />
             <div className="ms-5 d-flex flex-column">
               <h1 className="company-title mb-1">
-                <span className="company-name">{companyInfo.companyName}</span>
-                <span className="company-subtitle d-block">
+                <span className="company-name ">{companyInfo.companyName}</span>
+                <span
+                  className="d-block"
+                  style={{
+                    color: "#212529",
+                    fontSize: "1.2rem",
+                    fontWeight: 400,
+                    letterSpacing: "0.5px",
+                    display: "block",
+                  }}
+                >
                   {header_subtitle}
                 </span>
               </h1>

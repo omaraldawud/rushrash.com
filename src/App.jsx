@@ -77,10 +77,7 @@ function App() {
         {/* Legal Pages */}
         <Route path="/rushrash-legal" element={<RushrashLegalPage />} />
         {/* articles routes */}
-        <Route
-          path="/access-control-and-monitoring-articles"
-          element={<ArticlesLanding />}
-        ></Route>
+        <Route path="/security-insights" element={<ArticlesLanding />}></Route>
         <Route path="/articles/:slug" element={<ArticlePageTemplate />} />
         {/* Product Routes */}
         <Route path="/security-products" element={<ProductListingPage />} />

@@ -17,7 +17,7 @@ export default function TopbarMen() {
     <div
       className="utility-bar fixed-top d-flex justify-content-between align-items-center py-2 fw-semibold"
       style={{
-        backgroundColor: "#2c3e50",
+        backgroundColor: "#1b5c9d",
         zIndex: 1030,
       }}
     >
@@ -121,24 +121,13 @@ export default function TopbarMen() {
           <span className="text-muted">|</span>
 
           <NavLink
-            to="/access-control-and-monitoring-articles"
+            to="/security-insights"
             className={({ isActive }) =>
               "text-nowrap text-decoration-none ms-3 nav-link" +
               (isActive ? " active" : "")
             }
           >
             Articles
-            <i className="bi bi-box-arrow-in-right ms-2 text-warning"></i>
-          </NavLink>
-
-          <NavLink
-            to="/security-products"
-            className={({ isActive }) =>
-              "text-nowrap text-decoration-none ms-3 nav-link" +
-              (isActive ? " active" : "")
-            }
-          >
-            Products
             <i className="bi bi-box-arrow-in-right ms-2 text-warning"></i>
           </NavLink>
         </div>
