@@ -2,9 +2,9 @@ export default function CCTVSystemComponents() {
   return (
     <>
       <div className="sidebar-card">
-        <div className="card-header">
+        <div className="card-header bg-success text-white">
           <i className="bi bi-camera-video text-warning me-2"></i>
-          <span style={{}}>CCTV System Components</span>
+          <span>CCTV System Components</span>
         </div>
         <div className="card-body">
           <div className="component-item">
@@ -12,10 +12,11 @@ export default function CCTVSystemComponents() {
               <i className="bi bi-record-circle"></i>
             </div>
             <div className="component-content">
-              <strong>CAMERAS</strong>
+              <strong>Cameras</strong>
               <p>
-                Dome, bullet, PTZ, turret, and fisheye cameras for indoor and
-                outdoor surveillance.
+                A variety of cameras, including dome, bullet, PTZ, turret, and
+                fisheye, designed for both indoor and outdoor surveillance
+                applications.
               </p>
             </div>
           </div>
@@ -25,10 +26,10 @@ export default function CCTVSystemComponents() {
               <i className="bi bi-hdd-stack"></i>
             </div>
             <div className="component-content">
-              <strong>DVR/NVR</strong>
+              <strong>DVR/NVR Recorders</strong>
               <p>
-                Digital and network video recorders to store, manage, and
-                playback footage.
+                Digital and network video recorders that securely store footage
+                and allow easy playback and management of video data.
               </p>
             </div>
           </div>
@@ -38,10 +39,11 @@ export default function CCTVSystemComponents() {
               <i className="bi bi-hdd-network"></i>
             </div>
             <div className="component-content">
-              <strong>CABLES & NETWORK</strong>
+              <strong>Cables & Networking</strong>
               <p>
-                Coaxial for analog, Ethernet/PoE for IP systems. Ensure proper
-                routing and power supply.
+                Coaxial cables for analog setups and Ethernet/PoE for IP
+                systems, ensuring reliable connectivity and power delivery for
+                all devices.
               </p>
             </div>
           </div>
@@ -51,10 +53,10 @@ export default function CCTVSystemComponents() {
               <i className="bi bi-bell"></i>
             </div>
             <div className="component-content">
-              <strong>SENSORS & ACCESSORIES</strong>
+              <strong>Sensors & Accessories</strong>
               <p>
-                Motion detectors, door contacts, alarms, and auxiliary
-                components for enhanced security.
+                Motion detectors, door contacts, alarms, and other add-ons that
+                enhance security and integrate seamlessly with the CCTV system.
               </p>
             </div>
           </div>
@@ -64,10 +66,11 @@ export default function CCTVSystemComponents() {
               <i className="bi bi-display"></i>
             </div>
             <div className="component-content">
-              <strong>MONITORING & SOFTWARE</strong>
-              <p small text-secondary>
-                Mobile apps, client software, and cloud storage integrations for
-                live and recorded surveillance.
+              <strong>Monitoring & Software</strong>
+              <p>
+                Mobile apps, client software, and cloud storage options for live
+                monitoring, alerts, and reviewing recorded footage from
+                anywhere.
               </p>
             </div>
           </div>

@@ -9,6 +9,9 @@ import rr_company_ds from "../../assets/data/rr_company_ds";
 // Import products and articles
 import { allProducts } from "../products/data/allProductsDS";
 import allArticles from "../../assets/data/articles";
+import PAComponents from "./PAComponents";
+import ITComponents from "./ITComponents";
+import PoSComponents from "./PoSComponents";
 
 //
 const sidebarCardsData = {
@@ -89,6 +92,9 @@ function Sidebar() {
   function getOtherComponents() {
     if (location.pathname.includes("access-control")) return "access";
     else if (location.pathname.includes("cctv")) return "cctv";
+    else if (location.pathname.includes("pa-systems")) return "pa";
+    else if (location.pathname.includes("it-services")) return "it";
+    else if (location.pathname.includes("pos-installation")) return "pos";
     else return "all";
   }
 
@@ -233,12 +239,18 @@ function Sidebar() {
       {/* Other  components */}
 
       {/* Mount components based on slug */}
+      {console.log("PA=", getOtherComponents())}
       {getOtherComponents() === "access" && <AccessControlComponents />}
       {getOtherComponents() === "cctv" && <CCTVSystemComponents />}
+      {getOtherComponents() === "pa" && <PAComponents />}
+      {getOtherComponents() === "it" && <ITComponents />}
+      {getOtherComponents() === "pos" && <PoSComponents />}
+
       {getOtherComponents() === "all" && (
         <>
           <AccessControlComponents />
           <CCTVSystemComponents />
+          <PAComponents />
         </>
       )}
     </aside>
