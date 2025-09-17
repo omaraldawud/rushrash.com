@@ -10,7 +10,7 @@ import dvrIMG1 from "../../../assets/images/brands/lts/products/dvrs/TVI-DVR-16-
 //
 export const recorder_products_ds = [
   {
-    id: "DVR-8CH-1080P",
+    id: "DVR-8CH-1080P000",
     SKU: "LTDVR8-1080P",
     slug: "dvr-8ch-1080p",
     brand: "LTS",

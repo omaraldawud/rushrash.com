@@ -1,19 +1,30 @@
-// Reusable SidebarCard
-
 export default function SidebarCard({
   icon,
   title,
   text,
-  bgClass = "bg-danger text-white",
+  link,
+  linkText = "Learn more",
+  cardHeaderBgColorClass,
 }) {
   return (
-    <div className="sidebar-card mb-3">
-      <div className={`card-header ${bgClass}`}>
-        <i className={`bi ${icon} me-2`}></i>
+    <div className="sidebar-card">
+      <div className={`card-header ${cardHeaderBgColorClass || ""}`}>
+        {" "}
+        <i className={`bi ${icon} me-2 text-warning`}></i>
         {title}
       </div>
       <div className="card-body">
-        <p className="small text-secondary mb-0">{text}</p>
+        <p>
+          {text}
+          {link && (
+            <>
+              {" "}
+              <a href={link} className="text-decoration-none">
+                {linkText}
+              </a>
+            </>
+          )}
+        </p>
       </div>
     </div>
   );

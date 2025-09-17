@@ -2,7 +2,7 @@ export default function AccessControlComponents() {
   return (
     <>
       <div className="sidebar-card">
-        <div className="card-header">
+        <div className="card-header bg-secondary">
           <i className="bi bi-door-closed text-warning me-2"></i>
           <span>Access Control System Components</span>
         </div>

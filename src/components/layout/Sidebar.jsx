@@ -1,11 +1,16 @@
 import "../../assets/css/SideBar.css";
 import { HashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import SidebarCard from "./SidebarCard"; // default import
+import SidebarCard from "./SidebarCard";
 import AccessControlComponents from "./AccessControlComponents";
 import CCTVSystemComponents from "./CCTVSystemComponents";
 import rr_company_ds from "../../assets/data/rr_company_ds";
 
+// Import products and articles
+import { allProducts } from "../products/data/allProductsDS";
+import allArticles from "../../assets/data/articles";
+
+//
 const sidebarCardsData = {
   home: [
     {
@@ -59,20 +64,98 @@ function Sidebar() {
   const location = useLocation();
 
   let pageType = null;
+  let serviceCategory = null;
 
+  // Determine page type or service category
   if (location.pathname === "/") {
     pageType = "home";
   } else if (location.pathname.includes("/contact")) {
     pageType = "contact";
   } else if (location.pathname.includes("/about")) {
     pageType = "about";
+  } else if (location.pathname.includes("/services/")) {
+    // Extract service category from URL
+    const segments = location.pathname.split("/");
+    serviceCategory = segments[2]; // e.g. "access-control"
   }
 
-  const cardsToShow = sidebarCardsData[pageType] || [];
+  // Default cards (home, contact, about)
+  let cardsToShow = sidebarCardsData[pageType] || [];
+
+  // Service page: separate products and articles
+  let productCards = [];
+  let articleCards = [];
+
+  function getOtherComponents() {
+    if (location.pathname.includes("access-control")) return "access";
+    else if (location.pathname.includes("cctv")) return "cctv";
+    else return "all";
+  }
+
+  function getActiveProdCat(serviceCategory) {
+    switch (serviceCategory) {
+      case "cctv-installation":
+        return ["cctv-cameras", "recorders"];
+      case "access-control":
+      case "access":
+        return ["access-control"];
+      case "it-services":
+        return ["it-services"]; // adjust if needed
+      case "pa-systems":
+        return ["pa-systems"]; // adjust if needed
+      default:
+        return [];
+    }
+  }
+
+  //map to article cats used in records.
+  function getActiveArticleCat(serviceCategory) {
+    switch (serviceCategory) {
+      case "cctv-installation":
+        return ["cctv"];
+      case "access-control":
+      case "access":
+        return ["access_control"];
+      case "it-services":
+        return ["it"];
+      case "pa-systems":
+        return ["pa"];
+      default:
+        return [];
+    }
+  }
+
+  if (serviceCategory) {
+    // 🔹 Products
+    const activeProdCategories = getActiveProdCat(serviceCategory);
+    productCards = allProducts
+      .filter((p) => activeProdCategories.includes(p.category))
+      .map((p) => ({
+        icon: "bi-box-seam",
+        title: p.title,
+        text: p.description,
+        link: `/products/${p.brand}/${p.slug}`, // ✅ add product link
+      }));
+    // 🔹 Articles
+    const activeArticleCategories = getActiveArticleCat(serviceCategory);
+    articleCards = allArticles
+      .filter(
+        (a) => activeArticleCategories.includes(a.category) && a.published
+      )
+      .map((a) => ({
+        icon: "bi-journal-text",
+        title: a.slug.replace(/-/g, " "),
+        text: "Read our article about: " + a.slug.replace(/-/g, " "),
+        link: `/articles/${a.slug}`, // ✅ add article link
+      }));
+
+    console.log("Final productCards:", productCards);
+    console.log("Final articleCards:", articleCards);
+  }
 
   return (
     <aside className="custom-sidebar">
-      {/* Success Stories */}
+      {/* Success Stories Hash Link*/}
       <div className="mb-4">
         <HashLink
           smooth
@@ -87,7 +170,7 @@ function Sidebar() {
         </p>
       </div>
       <hr className="sidebar-divider" />
-      <hr className="sidebar-divider" />
+      {/* Request a Free Consultation */}
       <div className="sidebar-card">
         <div className="card-header bg-info text-white">
           <i className="bi bi-telephone me-2"></i> Contact Us
@@ -101,7 +184,7 @@ function Sidebar() {
           </a>
         </div>
       </div>
-      {/* Page-dependent sidebar cards */}
+      {/* Default cards (home, about, contact) */}
       {cardsToShow.map((card, idx) => (
         <SidebarCard
           key={idx}
@@ -109,11 +192,55 @@ function Sidebar() {
           title={card.title}
           text={card.text}
         />
-      ))}{" "}
-      {/* CCTV System Components */}
-      <CCTVSystemComponents />
-      {/* Access Control System Components */}
-      <AccessControlComponents />
+      ))}
+      {/* Products Section */}
+      {productCards.length > 0 && (
+        <>
+          <hr className="sidebar-divider" />
+          <h5 className="px-3 py-2 mt-4 mb-3 text-white bg-gradient-primary rounded shadow-sm border-bottom border-primary">
+            Related Products
+          </h5>
+          {productCards.map((card, idx) => (
+            <SidebarCard
+              key={`product-${idx}`}
+              icon={card.icon}
+              title={card.title}
+              text={card.text}
+              link={card.link}
+            />
+          ))}
+        </>
+      )}
+      {/* Articles Section */}
+      {articleCards.length > 0 && (
+        <>
+          <hr className="sidebar-divider" />
+          <h5 className="px-3 py-2 mt-4 mb-3 text-white bg-gradient-primary rounded shadow-sm border-bottom border-primary">
+            Related Articles
+          </h5>
+          {articleCards.map((card, idx) => (
+            <SidebarCard
+              key={`article-${idx}`}
+              icon={card.icon}
+              title={card.title}
+              text={card.text}
+              link={card.link}
+              cardHeaderBgColorClass="bg-danger"
+            />
+          ))}
+        </>
+      )}
+      {/* Other  components */}
+
+      {/* Mount components based on slug */}
+      {getOtherComponents() === "access" && <AccessControlComponents />}
+      {getOtherComponents() === "cctv" && <CCTVSystemComponents />}
+      {getOtherComponents() === "all" && (
+        <>
+          <AccessControlComponents />
+          <CCTVSystemComponents />
+        </>
+      )}
     </aside>
   );
 }
