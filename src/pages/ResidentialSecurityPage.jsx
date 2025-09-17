@@ -185,7 +185,7 @@ export default function ResidentialSecurityPage() {
                 or business.
               </p>
               <a
-                href="/garage_door_openers.html"
+                href="/services/cctv-installation"
                 className="btn btn-outline-light btn-lg px-4 py-2 fw-semibold"
               >
                 Explore CCTV Options - Near Me
