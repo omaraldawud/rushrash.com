@@ -2,6 +2,8 @@ import { useLocation } from "react-router-dom";
 import CTABannerForm from "../cta-forms/CTABannerForm";
 import BannerServicesCard from "../cards/BannerServicesCard";
 
+//cutom hooks
+
 // CSS
 import "../../assets/css/Banner.css";
 

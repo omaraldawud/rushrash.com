@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useUtilityBarBG } from "../../utils/hooks/useUtilityBarBG";
 
+//
 const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -9,6 +11,7 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
   });
 
   const [status, setStatus] = useState("");
+  const bg = useUtilityBarBG();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -101,6 +104,7 @@ const CTABannerForm = ({ ctaText = "Get a Free Quote" }) => {
           <button
             type="submit"
             className="btn btn-danger w-100 d-flex align-items-center justify-content-center py-2 fw-bold"
+            style={{ background: bg }}
           >
             <span className="me-2">🔒</span>
             {ctaText}

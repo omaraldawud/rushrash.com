@@ -4,20 +4,23 @@ import { HashLink } from "react-router-hash-link";
 //components
 import companyInfo from "../../assets/data/rr_company_ds";
 import SocialProfiles from "../sections/SocialProfiles";
-import Logo from "../layout/Logo";
+import { useUtilityBarBG } from "../../utils/hooks/useUtilityBarBG";
 
+//
 export default function TopbarMen() {
   const location = useLocation();
   const isResidential = location.pathname.includes(
     "/residential-cctv-security"
   );
   const isCommercial = location.pathname.includes("/commercial-cctv-security");
+  const bg = useUtilityBarBG();
 
   return (
     <div
       className="utility-bar fixed-top d-flex justify-content-between align-items-center py-2 fw-semibold"
       style={{
-        backgroundColor: "#1b5c9d",
+        // backgroundColor: "#1b5c9d",
+        background: bg,
         zIndex: 1030,
       }}
     >
