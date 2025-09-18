@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/omaraldawud/rushrash.com/compare/v1.3.0...v1.3.1) (2025-09-18)
+
+
+### Bug Fixes
+
+* correct background gradient on utility bar ([4b59fa0](https://github.com/omaraldawud/rushrash.com/commit/4b59fa0d23e26d58df1af4cba414f9dc99b7bf8b))
+
 ## [1.2.1](https://github.com/omaraldawud/rushrash.com/compare/v1.2.0...v1.2.1) (2025-09-13)
 
 
