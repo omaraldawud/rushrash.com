@@ -235,6 +235,8 @@ export default function ProductListingPage() {
             </div>
           ))}
         </div>
+
+        {/* Brand */}
       </div>
     </>
   );

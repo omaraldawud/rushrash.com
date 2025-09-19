@@ -10,6 +10,11 @@ import RecorderLanding from "./landing/RecorderLanding";
 import CCTVCameraLanding from "./landing/CCTVCameraLanding";
 import AccessControlLanding from "./landing/AccessControlLanding";
 
+// brands ds
+import brands from "../../assets/data/brands_ds";
+import BrandCard from "../brands/cards/BrandCard";
+
+//
 export default function SingleProductPage() {
   const { brand, slug } = useParams();
 
@@ -93,6 +98,29 @@ export default function SingleProductPage() {
         <a href="/security-products" class="btn btn-primary btn-lg shadow">
           All Products
         </a>
+      </div>
+
+      <div className="row mb-5">
+        <div className="col-12 text-center">
+          <h2 className="display-5 fw-bold text-primary mb-3">
+            Security Products Brands and Manufacturers
+          </h2>
+          <p className="lead text-muted mx-auto" style={{ maxWidth: "600px" }}>
+            Discover trusted security solution providers offering
+            enterprise-grade protection for your organization's needs
+          </p>
+          <div className="mt-4">
+            <div
+              className="bg-primary mb-4 mx-auto"
+              style={{ width: "80px", height: "4px" }}
+            ></div>
+          </div>
+        </div>
+        <div className="row">
+          {brands.map((brand, idx) => (
+            <BrandCard key={idx} brand={brand} />
+          ))}
+        </div>
       </div>
     </div>
   );

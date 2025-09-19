@@ -125,9 +125,9 @@ function App() {
         <Route path="/articles/:slug" element={<ArticlePageTemplate />} />
         {/* Products */}
         <Route path="/security-products" element={<ProductListingPage />} />
+        <Route path="/products/:brand" element={<BrandPage />} /> {/* new */}
         <Route path="/products/:brand/:slug" element={<SingleProductPage />} />
         {/* Brands */}
-        <Route path="/products/:brand" element={<BrandPage />} /> {/* new */}
         {/* Catch-all fallback */}
         <Route path="*" element={<HomePage />} />
       </Routes>

@@ -41,6 +41,7 @@ const brands_ds = [
   {
     name: "Hikvision",
     brandLogo: HikvisionLogo,
+    brandSlug: "hikvision",
     brand_desc:
       "Hikvision delivers advanced security solutions powered by AI and IoT for a diverse range of sectors. A prime example is their DS-2CD2147G2-LSU camera, a top-tier model widely deployed in retail and office environments.",
     brand_seo_text:
@@ -50,6 +51,7 @@ const brands_ds = [
   {
     name: "DahuaTechnology",
     brandLogo: DahuaLogo,
+    brand_slug: "dahua-technology",
     brand_seo_text:
       "Dahua Technology surveillance and security systems, best for Innovation",
     brand_desc:
@@ -59,6 +61,7 @@ const brands_ds = [
   {
     name: "BoschSecurity",
     brandLogo: BoschLogo,
+    brand_slug: "bosch-security",
     brand_seo_text:
       "Bosch Security Systems for reliable monitoring, Best for Sustainability",
     brand_desc:
@@ -68,6 +71,7 @@ const brands_ds = [
   {
     name: "HanwhaVision",
     brandLogo: HanwhaLogo,
+    brand_slug: "hanwha-vision",
     brand_seo_text:
       "Hanwha Vision CCTV and access control products, Best for Cybersecurity",
     brand_desc:
@@ -77,6 +81,7 @@ const brands_ds = [
   {
     name: "AxisCommunications",
     brandLogo: AxisLogo,
+    brand_slug: "axis-communications",
     brand_seo_text:
       "Axis Communications professional security solutions, Best for Integrated Solutions",
     brand_desc:
@@ -87,6 +92,7 @@ const brands_ds = [
   {
     name: "Honeywell",
     brandLogo: HoneywellLogo,
+    brand_slug: "honeywell",
     brand_seo_text:
       "Honeywell security and automation systems, Best for Industrial Automation",
     brand_desc:
@@ -97,6 +103,7 @@ const brands_ds = [
   {
     name: "Avigilon",
     brandLogo: AvigilonLogo,
+    brand_slug: "avigilon",
     brand_seo_text: "Avigilon Panoramic CCTV Camera",
     brand_seo_text: "Avigilon high-definition security cameras",
     brand_desc:
@@ -106,6 +113,7 @@ const brands_ds = [
   {
     name: "Lorex",
     brandLogo: LorexLogo,
+    brand_slug: "lorex",
     brand_seo_text:
       "Lorex home and business security cameras, Best for DIY and affordability",
     brand_desc:
@@ -116,6 +124,7 @@ const brands_ds = [
   {
     name: "FLIRSystems",
     brandLogo: FlirLogo,
+    brand_slug: "FLir Systems",
     brand_seo_text:
       "FLIR Systems thermal imaging cameras, Best for challenging environments",
     brand_desc:
@@ -126,6 +135,7 @@ const brands_ds = [
   {
     name: "UniView Systems",
     brandLogo: UniViewLogo,
+    brand_slug: "uniview",
     brand_seo_text: "UniView S...",
     brand_desc: "UniView ...",
   },
