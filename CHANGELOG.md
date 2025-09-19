@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/omaraldawud/rushrash.com/compare/v1.3.1...v1.4.0) (2025-09-19)
+
+
+### Features
+
+* Added Brand Route ([1c21228](https://github.com/omaraldawud/rushrash.com/commit/1c21228cbcc14f81d4ba2201ad458d3c07c2be77))
+* Added brands to to Prodcut View Page ([855f770](https://github.com/omaraldawud/rushrash.com/commit/855f770175999e33b7e17d772ac60f21b3d25774))
+
 ## [1.3.1](https://github.com/omaraldawud/rushrash.com/compare/v1.3.0...v1.3.1) (2025-09-18)
 
 
