@@ -76,13 +76,20 @@ import heroArticles2 from "../images/services/pa/pa-microphone-installation.jpeg
 import heroArticles3 from "../images/services/pa/pa-microphone-installation.jpeg";
 
 ///security-products
-
 import heroProducts1 from "../images/banners/aboutus/it-services-bg.jpg";
 import heroProducts2 from "../images/brands/lorex-camera-logo.jfif";
 import heroProducts3 from "../images/brands/uniview/owelview-series.png";
 
+//single product
+import heroSingleProd1 from "../images/brands/hikvision/security-camera-by-Hikvision.webp";
+import heroSingleProd2 from "../images/brands/hikvision-logo.png";
+import heroSingleProd3 from "../images/brands/hikvision/security-camera-by-Hikvision.webp";
+
+//ds
+import brands_ds from "./brands_ds.js";
+
 //
-const banners = {
+export const banners = {
   "/": {
     bgImage: [securityBg],
     title: "CCTV & Access Control Solutions",
@@ -583,13 +590,13 @@ const banners = {
     ],
     heroImages: [
       {
-        src: heroArticles1,
+        src: heroArticles3,
         alt: "Security Article 1",
         title: "Optimizing CCTV Installations",
         caption: "Tips and best practices for camera placement and setup.",
       },
       {
-        src: heroArticles2,
+        src: heroArticles3,
         alt: "Security Article 2",
         title: "Access Control Trends",
         caption: "Latest innovations in secure access systems for businesses.",
@@ -602,50 +609,116 @@ const banners = {
       },
     ],
   },
-
   "/security-products": {
-    icon: "bi bi-box-seam",
-    bgImage: [ProductsBG],
-    title: "Professional-Grade Security & Audio Products",
-    subtitle: "CCTV, Access Control, PA Systems & IT Infrastructure.",
-    ctaText: "Shop Our Complete Product Range",
+    icon: "bi bi-shield",
+    bgImage: [ArticlesBG],
+    title: "Comprehensive Security Products & Solutions",
+    subtitle:
+      "Featuring: CCTV Cameras, NVR/DVR Recorders, Access Control, and Smart Security Systems",
+    ctaText: "Explore Security Products",
     heroParagraph:
-      "Explore our curated selection of high-performance security and audio equipment. From cutting-edge 4K CCTV cameras and intelligent access control systems to robust PA systems and reliable network hardware, Rushrash Technology provides the products you need to build a smarter, safer environment.",
+      "Discover a wide range of professional-grade security products designed for residential and commercial installations. From surveillance cameras to access control systems, we provide reliable solutions to protect your people, assets, and data.",
     heroBullets: [
       {
-        name: "Emergency Alerts & Notifications",
-        icon: "bi-bell",
-      },
-      {
-        name: "4K CCTV Cameras",
+        name: "High-Quality CCTV & Cameras",
         icon: "bi-camera-video",
       },
       {
-        name: "Video Intercom & Door Stations",
-        icon: "bi-door-open",
+        name: "Access Control & Smart Locks",
+        icon: "bi-key",
+      },
+      {
+        name: "Integrated Security Solutions",
+        icon: "bi-diagram-3",
       },
     ],
     heroImages: [
       {
         src: heroProducts1,
-        alt: "CCTV Camera",
-        title: "High-Resolution CCTV",
-        caption: "Monitor your property with 4K clarity.",
+        alt: "CCTV Cameras",
+        title: "Professional CCTV Cameras",
+        caption: "High-resolution cameras for monitoring homes and businesses.",
       },
       {
         src: heroProducts2,
-        alt: "Access Control System",
-        title: "Smart Access Control",
-        caption: "Secure your building with advanced technology.",
+        alt: "Access Control Systems",
+        title: "Advanced Access Control",
+        caption:
+          "Secure your premises with smart access panels and biometric readers.",
       },
       {
         src: heroProducts3,
-        alt: "PA System",
-        title: "Professional PA Systems",
-        caption: "Clear audio for any environment.",
+        alt: "Recorders & NVR",
+        title: "Reliable Recording Solutions",
+        caption:
+          "NVR/DVR systems with remote monitoring and cloud integration.",
       },
     ],
   },
 };
 
-export default banners;
+// Function to generate dynamic product banner
+export function getProductBanner(product) {
+  return {
+    icon: "bi bi-box-seam",
+    bgImage: ProductsBG,
+    title: `${product.brand}: ${product.title}`,
+    subtitle: `Commercial and residential ${
+      product.categoryDescription || "cameras"
+    }`,
+    ctaText: `Shop ${product.brand} Cameras`,
+    heroParagraph: product.description,
+    heroBullets:
+      product.heroBullets?.map((f) => ({
+        name: f.name,
+        icon: f.icon || "bi-camera-video",
+      })) || [],
+    heroImages: product.product_banner_images?.length
+      ? product.product_banner_images
+      : [
+          {
+            src: product.productImage,
+            alt: product.title,
+            title: product.title,
+            caption: product.brand,
+          },
+        ],
+  };
+}
+
+// Function to generate dynamic brand banner
+export function getBrandBanner(brandName, bLogo, products) {
+  // Filter products for this brand
+  const brandProducts = products.filter(
+    (p) => p.brand.toLowerCase() === brandName.toLowerCase()
+  );
+
+  return {
+    icon: "bi bi-building",
+    brandLogo: [bLogo],
+    title: `${brandName} Security Products`,
+    subtitle: `Explore our range of ${brandProducts.length} ${brandName} products`,
+    ctaText: `Shop ${brandName} Products`,
+    heroParagraph: `Discover professional-grade ${brandName} security solutions for home and business. Browse cameras, access control, and integrated systems designed for reliability and performance.`,
+    heroBullets: [
+      {
+        name: "CCTV Cameras",
+        icon: "bi-camera-video",
+      },
+      {
+        name: "Access Control Systems",
+        icon: "bi-key",
+      },
+      {
+        name: "Complete Security Solutions",
+        icon: "bi-diagram-3",
+      },
+    ],
+    heroImages: brandProducts.slice(0, 3).map((p) => ({
+      src: p.productImage,
+      alt: p.title,
+      title: p.title,
+      caption: p.brand,
+    })),
+  };
+}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 //css
 import "../css/products.css";
+import brandToSlug from "../../../utils/brandToSlug";
 
 //
 export default function RecorderCard({ product }) {
@@ -58,10 +59,10 @@ export default function RecorderCard({ product }) {
 
         <div className="card-footer">
           <Link
-            to={`/products/${product.brand}/${product.slug}`}
+            to={`/products/${brandToSlug(product.brand)}/${product.slug}`}
             className="techy-btn"
           >
-            <span className="btn-text">View Details</span>
+            <span className="btn-text">View {product.title} Details</span>
             <span className="btn-icon">→</span>
           </Link>
         </div>

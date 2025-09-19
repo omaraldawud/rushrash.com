@@ -15,9 +15,10 @@ export default function Banner({
   title = "Trusted Security Partner for Homes & Businesses",
   subtitle = "Your Sleepless Eye Watching Over Your Property",
   bgImage = heroBgImg,
-  heroImages = heroImages,
+  heroImages,
   heroParagraph = "Update banners_ds. for this page",
   heroBullets = [],
+  brandLogo,
 }) {
   const location = useLocation();
 
@@ -37,13 +38,28 @@ export default function Banner({
           {/* Text Content */}
           <div className="text-light d-flex flex-column justify-content-between h-100 ">
             {/* Top Section - Text Content */}
+
             <div>
+              {brandLogo && brandLogo.length > 0 && (
+                <div className="banner-brand-logo mb-3 text-center">
+                  {brandLogo.map((logo, i) => (
+                    <img
+                      key={i}
+                      src={logo}
+                      alt={`${title} Logo`}
+                      className="brand-logo img-fluid"
+                      style={{ maxHeight: "80px" }} // adjust as needed
+                    />
+                  ))}
+                </div>
+              )}
+
               <h1 className="banner-title pt-5">{title}</h1>
               <h2 className="banner-subtitle">
                 <span className="accent">Rushrash Inc.</span> {subtitle}
               </h2>
               <p className="banner-description">{heroParagraph}</p>
-              {/* {console.log("Hero Bullets: ", heroBullets)} */}
+
               <ul className="banner-features d-none d-md-flex flex-wrap justify-content-center gap-3">
                 {heroBullets.map((bullet, index) => (
                   <li

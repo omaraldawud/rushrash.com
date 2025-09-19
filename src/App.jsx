@@ -17,35 +17,79 @@ import RushrashLegalPage from "./pages/RushrashLegalPage";
 import PASystemsPage from "./pages/PASystemsPAge";
 import ArticlesLanding from "./pages/ArticlesLanding";
 import ArticlePageTemplate from "./components/articles/ArticlePageTemplate";
+import BrandPage from "./components/brands/BrandPage";
 
-// prodcuts
+// Products  & Brands
 import ProductListingPage from "./pages/ProductListingPage";
 import SingleProductPage from "./components/products/SingleProductPage";
+import { allProducts } from "./components/products/data/allProductsDS";
+import brands_ds from "./assets/data/brands_ds";
 
 // Schemas
 import { GlobalBusinessSchema } from "./schemas/GlobalBusinessSchema";
 
 // Banner Data
-import banners from "./assets/data/banners_ds";
+import {
+  banners,
+  getProductBanner,
+  getBrandBanner,
+} from "./assets/data/banners_ds";
 
-// App Component
+function getPageBanner() {
+  // Default banner from static pages
+  let pb = banners[location.pathname] || banners["/"];
+
+  console.log("Pathname: ", location.pathname);
+
+  if (location.pathname.startsWith("/products/")) {
+    const parts = location.pathname.split("/");
+    // ['', 'products', brand, slug?]
+    const brand = parts[2];
+    const slug = parts[3]; // may be undefined
+
+    console.log("---------------- brand:", brand, "----------- slug", slug);
+
+    if (slug) {
+      // Case 1: Product page
+      const product = allProducts.find(
+        (p) => p.brand.toLowerCase() === brand.toLowerCase()
+      );
+
+      console.log("---------------- prodcut:", product);
+
+      if (product) {
+        pb = getProductBanner(product);
+      }
+    } else {
+      // Brand pag
+      const brandObj = brands_ds.find(
+        (b) => b.name.toLowerCase() === brand.toLowerCase()
+      );
+      const brandLogo = brandObj ? brandObj.brandLogo : null;
+      pb = getBrandBanner(brand, brandLogo, allProducts);
+    }
+  }
+
+  return pb;
+}
 function App() {
   const location = useLocation();
 
-  // Get current banner based on pathname, fallback to home
-  const page_banner = banners[location.pathname] || banners["/"];
+  let page_banner = getPageBanner();
 
   return (
     <Layout page_banner={page_banner}>
-      <GlobalBusinessSchema /> {/* Global defaults only */}
-      {/* Chatbot floating in bottom-right */}
+      {/* Global schemas */}
+      <GlobalBusinessSchema />
+
+      {/* Chatbot (optional) */}
       {/* <div style={{ position: "fixed", bottom: 20, right: 20, zIndex: 1000 }}>
         <Chatbot />
       </div> */}
+
       <Routes>
         {/* Home */}
         <Route path="/" element={<HomePage />} />
-        {/* About */}
         <Route path="/about-rushrash-inc" element={<AboutPage />} />
         {/* Services */}
         <Route path="/services/it-services" element={<ITServicesPage />} />
@@ -62,29 +106,29 @@ function App() {
           path="/services/pos-installation"
           element={<POSInstallationPage />}
         />
+        <Route path="/services/pa-systems" element={<PASystemsPage />} />
         {/* Contact */}
         <Route path="/contact-rushrash-inc" element={<ContactPage />} />
-        {/* Residential Security */}
+        {/* Residential/Commercial */}
         <Route
           path="/residential-cctv-security"
           element={<ResidentialSecurityPage />}
         />
-        {/* Commercial Security */}
         <Route
           path="/commercial-cctv-security"
           element={<CommercialSecurityPage />}
         />
-        {/* Legal Pages */}
+        {/* Legal */}
         <Route path="/rushrash-legal" element={<RushrashLegalPage />} />
-        {/* articles routes */}
-        <Route path="/security-insights" element={<ArticlesLanding />}></Route>
+        {/* Articles */}
+        <Route path="/security-insights" element={<ArticlesLanding />} />
         <Route path="/articles/:slug" element={<ArticlePageTemplate />} />
-        {/* Product Routes */}
+        {/* Products */}
         <Route path="/security-products" element={<ProductListingPage />} />
         <Route path="/products/:brand/:slug" element={<SingleProductPage />} />
-        {/* //pa-systems */}
-        <Route path="/services/pa-systems" element={<PASystemsPage />} />
-        {/* Catch-all fallback to home */}
+        {/* Brands */}
+        <Route path="/products/:brand" element={<BrandPage />} /> {/* new */}
+        {/* Catch-all fallback */}
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Layout>

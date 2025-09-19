@@ -1,28 +1,29 @@
 // src/assets/data/brands_ds.js
 //
-// images
-import HikvisionLogo from "../images/brands/hikvision-logo.png";
 
+// images
+// import hikVisionCamera from "../images/brands/hikvision/security-camera-by-Hikvision.webp";
+// import dahuaCamera from "../images/brands/dohua/security-camera-dohua.webp";
+// import boschCamera from "../images/brands/bosch/security-camera-Bosch.webp";
+// import hanwhaCamera from "../images/brands/hanwha/security-camera-Hanwha.webp";
+// import axisCamera from "../images/brands/axis/security-camera-Axis.webp";
+// import honeywellCamera from "../images/brands/honeywell/security-camera-Honeywell.webp";
+// import avigilonCamera from "../images/brands/avigilon/avigilon-cctv-camera-Panoramic.avif";
+// import flirCamera from "../images/brands/flir/flir-cctv-cam.jfif";
+// import lorexCamera from "../images/brands/lorex/lorex-4k-camera-system.jpg";
+//
+//
+import HikvisionLogo from "../images/brands/hikvision-logo.png";
 import AxisLogo from "../images/brands/axis-communications-log.png";
 import DahuaLogo from "../images/brands/dahua-technology-logo.png";
 import BoschLogo from "../images/brands/bosch-security-systems-logo.webp";
-
 import HanwhaLogo from "../images/brands/hanwha-vision-logo.png";
 import AvigilonLogo from "../images/brands/avigilon-logo.jfif";
 import UniViewLogo from "../images/brands/uniview-logo.jfif";
 import HoneywellLogo from "../images/brands/honeywell-logo.jfif";
 import LorexLogo from "../images/brands/lorex-logo.jfif";
 import FlirLogo from "../images/brands/flir-systems-logo.png";
-// images
-import hikVisionCamera from "../images/brands/hikvision/security-camera-by-Hikvision.webp";
-import dahuaCamera from "../images/brands/dohua/security-camera-dohua.webp";
-import boschCamera from "../images/brands/bosch/security-camera-Bosch.webp";
-import hanwhaCamera from "../images/brands/hanwha/security-camera-Hanwha.webp";
-import axisCamera from "../images/brands/axis/security-camera-Axis.webp";
-import honeywellCamera from "../images/brands/honeywell/security-camera-Honeywell.webp";
-import avigilonCamera from "../images/brands/avigilon/avigilon-cctv-camera-Panoramic.avif";
-import flirCamera from "../images/brands/flir/flir-cctv-cam.jfif";
-import lorexCamera from "../images/brands/lorex/lorex-4k-camera-system.jpg";
+
 import ltsLogo from "../images/brands/ltsLogo.png";
 
 //
@@ -47,7 +48,7 @@ const brands_ds = [
   },
   //Dahua Technology
   {
-    name: "Dahua Technology",
+    name: "DahuaTechnology",
     brandLogo: DahuaLogo,
     brand_seo_text:
       "Dahua Technology surveillance and security systems, best for Innovation",
@@ -56,7 +57,7 @@ const brands_ds = [
   },
   //Bosch Security
   {
-    name: "Bosch Security",
+    name: "BoschSecurity",
     brandLogo: BoschLogo,
     brand_seo_text:
       "Bosch Security Systems for reliable monitoring, Best for Sustainability",
@@ -65,7 +66,7 @@ const brands_ds = [
   },
   // Hanwha Vision
   {
-    name: "Hanwha Vision",
+    name: "HanwhaVision",
     brandLogo: HanwhaLogo,
     brand_seo_text:
       "Hanwha Vision CCTV and access control products, Best for Cybersecurity",
@@ -74,7 +75,7 @@ const brands_ds = [
   },
   //Axis Communications
   {
-    name: "Axis Communications",
+    name: "AxisCommunications",
     brandLogo: AxisLogo,
     brand_seo_text:
       "Axis Communications professional security solutions, Best for Integrated Solutions",
@@ -113,12 +114,20 @@ const brands_ds = [
 
   //FLIR
   {
-    name: "FLIR Systems",
+    name: "FLIRSystems",
     brandLogo: FlirLogo,
     brand_seo_text:
       "FLIR Systems thermal imaging cameras, Best for challenging environments",
     brand_desc:
       "FLIR specializes in thermal imaging and infrared technology, making them a leader in monitoring critical infrastructure, industrial environments, and defense applications.",
+  },
+
+  //UniView
+  {
+    name: "UniView Systems",
+    brandLogo: UniViewLogo,
+    brand_seo_text: "UniView S...",
+    brand_desc: "UniView ...",
   },
 ];
 

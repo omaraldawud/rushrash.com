@@ -15,6 +15,9 @@ import infoIMG1 from "../assets/images/brands/lts/products/dvrs/TVI-DVR-16-Chann
 import infoIMG2 from "../assets/images/brands/lts/products/dvrs/TVI-DVR-16-Channel-ltd8316d.png";
 import PageInfoBox from "../components/cards/PageInfoBox";
 
+//util function
+import { mapCategoryName } from "../utils/mapCategoryName";
+
 //list -
 const categories = ["cctv", "access_control", "pa", "it", "alarm"];
 
@@ -223,23 +226,11 @@ export default function ArticleLanding() {
           </div>
         </section>
 
-        {/* Case Studies Section */}
-        <section className="mb-5">
-          <h2 className="text-center my-5 text-light">
-            <i className="bi bi-award me-3 text-warning"></i>
-            Access Control & Security Success Stories
-            <i className="bi bi-award ms-3 text-warning"></i>
-          </h2>
-          <div className="p-4 bg-white rounded-4 shadow-sm border">
-            <CaseStudies category={activeCategory} />
-          </div>
-        </section>
-
         {/* Safety Tips Section */}
         <section className="mb-5">
           <h2 className="text-center my-5 text-light">
             <i className="bi bi-shield-exclamation me-3 text-warning"></i>
-            Safety Tips
+            Safety Tips - {mapCategoryName(activeCategory).toUpperCase()}
             <i className="bi bi-shield-exclamation ms-3 text-warning"></i>
           </h2>
           <div className="p-4 bg-light rounded-4 shadow-sm">

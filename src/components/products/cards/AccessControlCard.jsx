@@ -1,6 +1,7 @@
 // src/components/products/cards/AccessControlCard.jsx
 import { Link } from "react-router-dom";
 import "../css/products.css";
+import brandToSlug from "../../../utils/brandToSlug";
 
 export default function AccessControlCard({ product }) {
   const {
@@ -43,10 +44,10 @@ export default function AccessControlCard({ product }) {
 
         <div className="card-footer">
           <Link
-            to={`/products/${product.brand}/${product.slug}`}
+            to={`/products/${brandToSlug(product.brand)}/${product.slug}`}
             className="techy-btn"
           >
-            <span className="btn-text">View Details</span>
+            <span className="btn-text">View {product.title} Details</span>
             <span className="btn-icon">→</span>
           </Link>
         </div>

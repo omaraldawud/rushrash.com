@@ -66,7 +66,6 @@ export default function ProductListingPage() {
   return (
     <>
       <div>
-        {" "}
         <BreadcrumbSchema
           items={[
             { name: "Home", url: "https://rushrashinc.com" },

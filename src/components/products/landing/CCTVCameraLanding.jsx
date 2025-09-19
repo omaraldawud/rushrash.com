@@ -1,6 +1,7 @@
 // /src/components/products/CCTVCameraLanding.jsx
 
 import "../css/products.css";
+import brandToSlug from "../../../utils/brandToSlug";
 
 //
 export default function CCTVCameraLanding({ product }) {
@@ -35,6 +36,7 @@ export default function CCTVCameraLanding({ product }) {
     ([key]) => product[key] !== undefined && product[key] !== null
   );
 
+  //
   return (
     <div className="techy-product-landing">
       <div className="techy-product-container">
@@ -44,7 +46,7 @@ export default function CCTVCameraLanding({ product }) {
           <span className="breadcrumb-divider">/</span>
           <a href="/security-products">Products</a>
           <span className="breadcrumb-divider">/</span>
-          <a href={`/products/${product.brand.toLowerCase()}`}>
+          <a href={`/products/${brandToSlug(product.brand)}`}>
             {product.brand}
           </a>
           <span className="breadcrumb-divider">/</span>
